@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+@import './import/_import';
+
+/* ===== news ===== */
+#mainArea.news {
+	.newsWrap {
+		.newsList {
+			li {
+				line-height:150%;
+			}
+		}
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	#mainArea.news {
+		.newsWrap {
+			margin-bottom:_vw(80);
+
+			.newsList {
+				border-top:_vw(2) solid #ccc;
+				margin-bottom:_vw(60);
+
+				li {
+					border-bottom:_vw(2) solid #ccc;
+					font-size:_vw(26);
+					padding:_vw(25) 0;
+
+					dt {
+						margin-bottom:_vw(15)
+					}
+				}
+			}
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	#mainArea.news {
+		.newsWrap {
+			margin-bottom:80px;
+
+			.newsList {
+				border-top:1px solid #ccc;
+				margin-bottom:60px;
+
+				li {
+					border-bottom:1px solid #ccc;
+					font-size:_fs(15);
+					padding:20px 0;
+
+					dl {
+						@include _flex("","jcS");
+
+						dt {
+							width:160px;
+						}
+						dd {
+							width:920px;
+						}
+					}
+				}
+			}
+		}
+	} //mainArea
+}

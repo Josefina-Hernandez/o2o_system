@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / photobox
+===========================*/
+._demonstrate{
+	.hlt-photobox{
+		@include _mq(pc) {
+			display: flex;
+			flex-wrap:wrap;
+			margin: 20px 0 0;
+		}
+		@include _mq(sp) {
+			margin: _vw(20) 0 0;
+		}
+		&__text{
+			@include _mq(pc) {
+				width: 400px;
+				font-size:_fs(16);
+				margin-bottom: 20px;
+			}
+			@include _mq(sp) {
+				font-size:_vw(26);
+			}
+		}
+		&__img{
+			text-align: center;
+			@include _mq(pc) {
+				width: 400px;
+				margin-bottom: 20px;
+			}
+			@include _mq(sp) {
+				margin: _vw(20) 0 0;
+			}
+			&._right{
+				@include _mq(pc) {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}

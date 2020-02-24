@@ -1,0 +1,5 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,_\t,
+m_lang_id_\t,lang_code_\t,is_default_\t,sort_order_\t,del_flg
+1_\t,en_\t,1_\t,1_\t,0
+2_\t,th_\t,0_\t,2_\t,0

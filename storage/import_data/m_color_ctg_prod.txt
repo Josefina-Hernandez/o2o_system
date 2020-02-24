@@ -1,0 +1,20 @@
+Hint:_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,
+m_color_id_\t,ctg_prod_id_\t,img_path_\t,img_name_\t,del_flg
+1_\t,1_\t,_\t,_\t,0
+2_\t,1_\t,Color_\t,Natural Silver.jpg_\t,0
+3_\t,1_\t,Color_\t,Ivory White.jpg_\t,0
+4_\t,1_\t,Color_\t,Shine Grey.jpg_\t,0
+5_\t,1_\t,Color_\t,Autumn brown.jpg_\t,0
+6_\t,1_\t,_\t,_\t,0
+2_\t,2_\t,Color_\t,Silver.jpg_\t,0
+4_\t,2_\t,Color_\t,Grey.jpg_\t,0
+5_\t,2_\t,Color_\t,Autumn.jpg_\t,0
+6_\t,2_\t,Color_\t,Black.jpg_\t,0
+5_\t,3_\t,_\t,_\t,
+7_\t,3_\t,_\t,_\t,
+8_\t,3_\t,_\t,_\t,
+9_\t,3_\t,_\t,_\t,
+10_\t,3_\t,_\t,_\t,
+11_\t,3_\t,_\t,_\t,
+12_\t,3_\t,_\t,_\t,

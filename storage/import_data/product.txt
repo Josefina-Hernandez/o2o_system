@@ -1,0 +1,10 @@
+Hint:_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+product_id_\t,sort_order_\t,ctg_prod_id_\t,ctg_rise_id_\t,viewer_flg_\t,img_path_\t,img_name_\t,del_flg
+1_\t,3_\t,1_\t,5_\t,1_\t,_\t,_\t,0
+2_\t,4_\t,1_\t,6_\t,3_\t,_\t,_\t,0
+3_\t,5_\t,1_\t,6_\t,3_\t,_\t,_\t,0
+4_\t,6_\t,1_\t,5_\t,3_\t,_\t,_\t,0
+5_\t,7_\t,3_\t,null_\t,3_\t,_\t,_\t,0
+6_\t,8_\t,2_\t,null_\t,3_\t,_\t,_\t,0
+7_\t,9_\t,4_\t,null_\t,3_\t,_\t,_\t,0

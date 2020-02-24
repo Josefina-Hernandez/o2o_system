@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+// ===========================
+// config
+// ===========================
+
+// media query
+$breakPointList: 767px, 768px;
+$mq: (
+	'sp': 'screen and (max-width: #{nth($breakPointList, 1)})',
+	'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})'
+) !default;
+
+// image dir
+$imgPath: '../img/health/';
+
+// color setting
+$col_red:#c00;
+$col_main:#ed6d00;
+$col_green:#369f00;

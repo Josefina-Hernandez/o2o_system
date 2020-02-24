@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+// ===========================
+// media query
+// ===========================
+
+@mixin _mq($value){
+    @media #{map-get($mq, $value)}{
+        @content;
+    }
+}

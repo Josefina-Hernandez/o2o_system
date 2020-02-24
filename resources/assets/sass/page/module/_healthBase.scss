@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*===========================
+healthBase
+===========================*/
+.cmncts-health{
+	@include _mq(pc) {
+		width: 820px;
+		line-height: _lh(16,30);
+	}
+	@include _mq(sp) {
+		line-height: 1.6;
+	}
+}
+
+// パンくず
+#mainArea .topicPath{
+	line-height: 1.5;
+}
+
+img{
+	max-width: 100%;
+}
+
+.hlt-forSP{
+	@include _mq(pc) {
+		display: none;
+	}
+	@include _mq(sp) {
+		display: block;
+	}
+}
+.hlt-forPC{
+	@include _mq(pc) {
+		display: block;
+	}
+	@include _mq(sp) {
+		display: none;
+	}
+}

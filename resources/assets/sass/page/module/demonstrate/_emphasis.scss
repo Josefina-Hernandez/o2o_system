@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / emphasis
+===========================*/
+._demonstrate{
+	.hlt-emphasis{
+		background-color: #fffde5;
+		@include _mq(pc) {
+			border:2px solid #ed6e00;
+			border-radius: 10px;
+			padding: 20px 20px 30px;
+			margin: 30px 0 0;
+		}
+		@include _mq(sp) {
+			border:_vw(2) solid #ed6e00;
+			border-radius: _vw(15);
+			padding: _vw(30) _vw(30) _vw(45);
+			margin: _vw(30) 0 0;
+		}
+		&__heading{
+			color: #ed6e00;
+			font-weight: bold;
+			line-height: 1.5;
+			@include _mq(pc) {
+				font-size: _fs(27);
+			}
+			@include _mq(sp) {
+				font-size: _vw(32);
+			}
+			span{
+				color: #333333;
+				font-weight: normal;
+				display: inline-block;
+				@include _mq(pc) {
+					padding: 0 0 0 5px;
+					font-size:58%;
+				}
+				@include _mq(sp) {
+					padding: 0;
+					font-size: _vw(24);
+				}
+			}
+		}
+		&__sub-heading{
+			font-weight: bold;
+			line-height: 1.5;
+			@include _mq(pc) {
+				font-size: _fs(20);
+				margin: 20px 0 0 ;
+			}
+			@include _mq(sp) {
+				font-size: _vw(28);
+				margin: _vw(30) 0 0 ;
+ 			}
+ 			&._orange{
+				color: #ed6d00;
+				@include _mq(sp) {
+					font-size: _vw(32);
+				}
+			}
+		}
+		&__img{
+			text-align: center;
+			@include _mq(pc) {
+				margin: 15px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(25) 0 0;
+			}
+		}
+		&__text{
+			@include _mq(pc) {
+				font-size: _fs(16);
+				margin: 15px 0 0;
+			}
+			@include _mq(sp) {
+				font-size:_vw(26);
+				margin: _vw(10) 0 0;
+			}
+		}
+		&__flex-img-wrap{
+			@include _mq(pc) {
+				display: flex;
+				margin: 10px 0 0 ;
+				padding: 0 0 10px;
+			}
+		}
+		&__flex-img{
+			@include _mq(sp) {
+				text-align: center;
+				margin: _vw(30) 0 0 ;
+			}
+			& + .hlt-emphasis__flex-img{
+				@include _mq(pc) {
+					margin: 0 0 0 auto;
+				}
+				img{
+					@include _mq(sp) {
+						width: 100px;
+					}
+				}
+			}
+		}
+		&__charactor-box {
+			@include _clear;
+			@include _mq(pc) {
+				margin: 15px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(10) 0 0;
+			}
+		}
+		&__charactor-box-text {
+			@include _mq(pc) {
+				font-size: _fs(16);
+			}
+			@include _mq(sp) {
+				font-size:_vw(26);
+			}
+		}
+		&__charactor-box-img {
+			float: right;
+			@include _mq(pc) {
+				margin: 0 0 20px 40px;
+			}
+			@include _mq(sp) {
+				margin: 0 0 _vw(20) _vw(40);
+			}
+			img{
+				@include _mq(sp) {
+					width: _vw(126);
+					height: _vw(95);
+				}
+			}
+		}
+	}
+}

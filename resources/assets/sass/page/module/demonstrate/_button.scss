@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / button
+===========================*/
+._demonstrate{
+	.hlt-button{
+		a{
+			color:#ed6d00;
+			background-color: #FFF;
+			display:table;
+			font-weight:bold;
+			margin:0 auto;
+			line-height: 1.5;
+			text-align: center;
+			@include _mq(pc) {
+				border:3px solid #ed6d00;
+				border-radius:10px;
+				box-shadow:0 3px 2px 0 #999;
+				font-size:128.57143%;
+				margin-top:20px;
+				padding:10px 20px;
+				&:hover{
+					background:#ed6d00;
+					color:#fff;
+				}
+			}
+			@include _mq(sp) {
+				border:0.375vw solid #ed6d00;
+				border-radius:1.25vw;
+				box-shadow:0 0.625vw 0 0 #999;
+				font-size:3.5vw;
+				margin-top:5vw;
+				padding:1.875vw 3.75vw;
+			}
+			.fas{
+				font-size:130%;
+				@include _mq(pc) {
+					margin-right:5px;
+					vertical-align:-2px;
+				}
+				@include _mq(sp) {
+					margin-right:0.625vw;
+					vertical-align:-0.25vw;
+				}
+			}
+		}
+		&._mw390{
+			a{
+				@include _mq(pc) {
+					min-width: 390px;
+				}
+				@include _mq(sp) {
+					min-width: _vw(605);
+				}
+			}
+		}
+	}
+}

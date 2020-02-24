@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* page_common
+========================================*/
+
+@import '../import/_import';
+
+/* SPandPC */
+main > article {
+	* {
+		box-sizing:content-box;
+	}
+	strong {
+		font-weight:bold;
+	}
+	picture {
+		display:block;
+	}
+}
+#premium {
+	.cmncts-search-block {
+		display:none;
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	main > article {
+		.pconly {
+			display:none;
+		}
+		.img100 img {
+			width:100%;
+		}
+		.cmncts-search-block {
+			margin-top:_vw(80);
+		}
+		.cmncts-search-consult {
+			margin-bottom:_vw(60);
+
+			img {
+				width:100%;
+			}
+		}
+		.cmncts-search-btn {
+			img {
+				width:100%;
+			}
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	main > article {
+		font-size:14px;
+		.sponly {
+			display:none;
+		}
+		.cmncts-search-block {
+			margin-top:50px;
+		}
+		.cmncts-search-consult {
+			margin-bottom:60px;
+		}
+		.cmncts-search-btn {
+			&:hover {
+				display:block;
+				opacity:0.8;
+			}
+		}
+	}
+}

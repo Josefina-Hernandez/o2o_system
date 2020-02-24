@@ -1,0 +1,90 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    #特定の店舗をリダイレクトを行う
+    # 1 横浜トーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/kanagawa/yokohamatoyojyuki)(.*)$
+    RewriteRule ^(.*)yokohamatoyojyuki(.*)$ /shop/kanagawa/mh000001$2 [L,R=301]
+
+    # 2 有限会社中嶋トーヨー住器
+    RewriteCond %{REQUEST_URI} (^/shop/aichi/nakajima-toyo)(.*)$
+    RewriteRule ^(.*)nakajima-toyo(.*)$ /shop/aichi/mh000002$2 [L,R=301]
+    
+    # 4 大和アルミトーヨー住器
+    RewriteCond %{REQUEST_URI} (^/shop/saga/aruyo-toyo)(.*)$
+    RewriteRule ^(.*)aruyo-toyo(.*)$ /shop/saga/mh000004$2 [L,R=301]
+
+    # 5 株式会社広海クラシオ
+    RewriteCond %{REQUEST_URI} (^/shop/tokushima/hiromi-crasio)(.*)$
+    RewriteRule ^(.*)hiromi-crasio(.*)$ /shop/tokushima/mh000005$2 [L,R=301]
+    
+    # 7 村島硝子商事株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/nara/murashima-garasu)(.*)$
+    RewriteRule ^(.*)murashima-garasu(.*)$ /shop/nara/mh000007$2 [L,R=301]
+
+    # 8 株式会社セレックス
+    RewriteCond %{REQUEST_URI} (^/shop/aichi/serex)(.*)$
+    RewriteRule ^(.*)serex(.*)$ /shop/aichi/mh000008$2 [L,R=301]
+
+    # 9 株式会社シーエス建材トーヨー住器
+    RewriteCond %{REQUEST_URI} (^/shop/okayama/cs-toyo)(.*)$
+    RewriteRule ^(.*)cs-toyo(.*)$ /shop/okayama/mh000009$2 [L,R=301]
+
+    # 11 葵トーヨー株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/saitama/aoi-toyo)(.*)$
+    RewriteRule ^(.*)aoi-toyo(.*)$ /shop/saitama/mh000011$2 [L,R=301]
+    
+    # 12 株式会社寺本トーヨー住器
+    RewriteCond %{REQUEST_URI} (^/shop/fukui/teramoto-toyo)(.*)$
+    RewriteRule ^(.*)teramoto-toyo(.*)$ /shop/fukui/mh000012$2 [L,R=301]
+
+    # 13 青梅トーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/tokyo/oumi-toyo)(.*)$
+    RewriteRule ^(.*)oumi-toyo(.*)$ /shop/tokyo/mh000013$2 [L,R=301]
+
+    # 14 山商トーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/nagasaki/sansho-toyo)(.*)$
+    RewriteRule ^(.*)sansho-toyo(.*)$ /shop/nagasaki/mh000014$2 [L,R=301]
+
+    # 15 サン建材トーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/hiroshima/sun-kenzai)(.*)$
+    RewriteRule ^(.*)sun-kenzai(.*)$ /shop/hiroshima/mh000015$2 [L,R=301]
+    
+    # 16 コーズトーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/okayama/kozu-toyo)(.*)$
+    RewriteRule ^(.*)kozu-toyo(.*)$ /shop/okayama/mh000016$2 [L,R=301]
+
+    # 19 株式会社ミヤケ
+    RewriteCond %{REQUEST_URI} (^/shop/hokkaido/miyake)(.*)$
+    RewriteRule ^(.*)miyake(.*)$ /shop/hokkaido/mh000019$2 [L,R=301]
+
+    # 22 平野硝子株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/shizuoka/hiranoglass)(.*)$
+    RewriteRule ^(.*)hiranoglass(.*)$ /shop/shizuoka/mh000022$2 [L,R=301]
+
+    # 24 スルガリックス株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/shizuoka/surugarix-shizuoka)(.*)$
+    RewriteRule ^(.*)surugarix-shizuoka(.*)$ /shop/shizuoka/mh000024$2 [L,R=301]
+    
+    # 25 唐津トーヨー住器株式会社
+    RewriteCond %{REQUEST_URI} (^/shop/saga/karatsu-toyojyuki)(.*)$
+    RewriteRule ^(.*)karatsu-toyojyuki(.*)$ /shop/saga/mh000025$2 [L,R=301]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

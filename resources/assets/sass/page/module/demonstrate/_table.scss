@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / table
+===========================*/
+._demonstrate{
+	.hlt-table{
+		&__scroll{
+			@include _mq(sp) {
+				overflow-x: scroll;
+				overflow-y: hidden;
+				-webkit-overflow-scrolling: touch;
+			}
+		}
+		&__tbl{
+			@include _mq(sp) {
+				width: 820px;
+			}
+			border-left:solid 1px #cccccc;
+			border-bottom:solid 1px #cccccc;
+			.cell_1{
+				background-color: #ed6d00;
+			}
+			.cell_2{
+				background-color: #f0862b;
+			}
+			.cell_3{
+				background-color: #f29240;
+			}
+			.cell_4{
+				background-color: #fad6b7;
+			}
+			.cell_5{
+				background-color: #fdf0e5;
+			}
+			.cell_6{
+				background-color: #eaeaea;
+			}
+			.cell_7{
+				background-color: #333333;
+			}
+			.cell_left{
+				text-align: left;
+			}
+			.ico_01{
+				position: relative;
+				&:after{
+					content: '';
+					background-image: url('../img/health/demonstrate_table_ico_01.png');
+					width: 48px;
+					height: 48px;
+					background-size: cover;
+					background-position: 0 0;
+					background-repeat: no-repeat;
+					position: absolute;
+					right: -10px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+			.ico_02{
+				position: relative;
+				&:after{
+					content: '';
+					background-image: url('../img/health/demonstrate_table_ico_02.png');
+					width: 48px;
+					height: 48px;
+					background-size: cover;
+					background-position: 0 0;
+					background-repeat: no-repeat;
+					position: absolute;
+					right: -10px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+			th,td{
+				padding: 8px 8px;
+				vertical-align: middle;
+				border-top:solid 1px #cccccc;
+				border-right:solid 1px #cccccc;
+			}
+			th{
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				line-height: _lh(14,21);
+			}
+			td{
+				width: 20%;
+				text-align: center;
+			}
+		}
+		&__note{
+			@include _mq(pc) {
+				margin-top: 15px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(20);
+			}
+		}
+		&__item{
+			line-height: 1.5;
+			@include _mq(sp) {
+				font-size: _vw(24);
+				& + li{
+					margin-top: _vw(10);
+				}
+			}
+			a{
+				&:hover{
+					@include _mq(pc) {
+						// text-decoration: underline;
+						opacity: .8;
+					}
+				}
+			}
+		}
+
+	}
+}

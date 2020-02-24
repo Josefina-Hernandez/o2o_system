@@ -1,0 +1,37 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
+ctg_id_\t,m_lang_id_\t,ctg_name_\t,del_flg
+1_\t,1_\t,WINDOW and DOOR_\t,0
+2_\t,1_\t,Exterior_\t,0
+3_\t,1_\t,Tostem DOOR_\t,0
+4_\t,1_\t,Interior_\t,0
+5_\t,1_\t,High rise_\t,0
+6_\t,1_\t,Low rise_\t,0
+7_\t,1_\t,Sliding Window_\t,0
+8_\t,1_\t,Sliding Door_\t,0
+9_\t,1_\t,Entrance_\t,0
+10_\t,1_\t,Casement_\t,0
+11_\t,1_\t,Awning_\t,0
+12_\t,1_\t,FIX_\t,0
+13_\t,1_\t,Corner Fix_\t,0
+14_\t,1_\t,Terrace door_\t,0
+15_\t,1_\t,Folding door_\t,0
+16_\t,1_\t,Sliding gate_\t,0
+17_\t,1_\t,Folding gate_\t,0
+18_\t,1_\t,Swing gate_\t,0
+19_\t,1_\t,Fence_\t,0
+20_\t,1_\t,Tostem DOOR_\t,0
+21_\t,1_\t,DOOR_\t,0
+22_\t,1_\t,WINDOW_\t,0
+23_\t,1_\t,Carport_\t,0
+25_\t,1_\t,Partition_\t,0
+26_\t,1_\t,Hanging door_\t,0
+27_\t,1_\t,On-wall_\t,0
+28_\t,1_\t,In-wall_\t,0
+29_\t,1_\t,Door_\t,0
+30_\t,1_\t,Series_\t,0
+31_\t,1_\t,Sill type_\t,0
+32_\t,1_\t,Panel_\t,0
+33_\t,1_\t,Movement_\t,0
+34_\t,1_\t,Insect screen_\t,0
+35_\t,1_\t,Door closer_\t,0

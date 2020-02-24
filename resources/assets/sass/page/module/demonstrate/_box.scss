@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / box
+===========================*/
+._demonstrate{
+	.hlt-box{
+		background-color: #f7f7f7;
+		@include _mq(pc) {
+			margin: 25px 0 0;
+			padding: 30px;
+			border-radius: 15px;
+		}
+		@include _mq(sp) {
+			margin: _vw(20) 0 0;
+			padding: _vw(30);
+			border-radius: _vw(15);
+		}
+		&__heading{
+			font-weight: bold;
+			@include _mq(pc) {
+				font-size: _fs(18);
+			}
+			@include _mq(sp) {
+				font-size: _vw(28);
+			}
+			&._orange{
+				color: #ed6d00;
+				@include _mq(pc) {
+					font-size: _fs(20);
+				}
+				@include _mq(sp) {
+					font-size: _vw(32);
+				}
+			}
+		}
+		&__ind-list{
+			@include _mq(pc) {
+				margin: 5px 0 0;
+				font-size: _fs(16);
+			}
+			@include _mq(sp) {
+				margin: _vw(10) 0 0;
+				font-size:_vw(26);
+			}
+		}
+		&__ind-item{
+			text-indent: -1em;
+			padding-left: 1em;
+			line-height: 1.5;
+			& + .box__ind-item{
+				@include _mq(pc) {
+					margin: 5px 0 0;
+				}
+				@include _mq(sp) {
+					margin: _vw(10) 0 0;
+				}
+			}
+		}
+		&__block-list{
+			background-color: #FFFFFF;
+			color: #ed6e00;
+			@include _mq(pc) {
+				font-size: _fs(16);
+				margin: 15px 0 0;
+				padding: 20px;
+			}
+			@include _mq(sp) {
+				font-size:_vw(26);
+				margin: _vw(20) 0 0;
+				padding: _vw(25);
+			}
+		}
+		&__block-item{
+			text-indent: -1em;
+			padding-left: 1em;
+			line-height: 1.5;
+			& + .box__block-item{
+				@include _mq(pc) {
+					margin: 5px 0 0;
+				}
+				@include _mq(sp) {
+					margin: _vw(10) 0 0;
+				}
+			}
+		}
+		&__text{
+			@include _mq(pc) {
+				margin: 5px 0 0;
+				font-size:_fs(16);
+			}
+			@include _mq(sp) {
+				margin: _vw(10) 0 0;
+				font-size:_vw(26);
+			}
+		}
+	}
+}

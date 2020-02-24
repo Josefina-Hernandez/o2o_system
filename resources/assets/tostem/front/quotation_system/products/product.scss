@@ -1,0 +1,142 @@
+// @import "slick-theme.min";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+@import "node_modules/slick-carousel/slick/slick.scss";
+
+.d-flex{
+	display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+	border-color: #333;
+}
+
+#page{
+	margin-top: 1.5rem;
+
+	.item{
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	.c-btn{
+	    max-width: 100%;
+	    margin-bottom: 0.5rem;
+	    white-space: normal;
+	    word-break: break-all;
+	    padding: 0.3rem 0.5rem;
+	    font-size: 1.3rem;
+	    background: #FFFFFF;
+	    border: 0.1rem solid #ddd;
+	    &.black{
+	    	background: #000000;
+		    color: #FFFFFF;
+	    }
+	    &.small {
+	    	width: 6rem;
+	    }
+	    &.medium{
+	    	width: 12rem;
+	    }
+	    &.large{
+			width: 16rem;
+	    }
+	    &.is-active{
+	    	background: #000000;
+		    color: #FFFFFF;
+	    }
+	    & + .c-btn {
+	    	margin-left: 8px;
+	    }
+	    &:focus{
+	    	outline: none;
+	    }
+	}
+
+	.option{
+		margin-left: 2rem;
+		margin-bottom: 0;
+		li{
+			display: inline-block;
+			padding: 0.5rem;
+		}
+	}
+
+	.option-group.inline{
+		.option{
+			margin-left: 0;
+			display: inline-block;
+		}
+	}
+
+	.product-detail{
+		.thumb{
+			width: 10rem;
+			display: inline-block;
+			float: left
+		}
+		.description{
+			width: calc(100% - 10rem);
+			float: left;
+			padding: 1.5rem;
+		}
+	}
+
+	#featured-img{
+		img{
+			max-height: 40rem;
+		}
+	}
+
+	.color-img{
+		border-radius: 50%;
+	    border: .2rem solid #e6e4e4;
+	    height: 4rem;
+	    outline: none;
+	}
+
+	.price{
+		font-size: 2.5rem;
+	    font-weight: 600;
+	    color: #000000;
+	}
+
+	.slick-slide{
+		outline: none;
+		text-align: center;
+
+		img{
+			max-height: 9rem;
+		}
+
+		a{
+			display: inline-block;
+			&.active{
+				border: 1px solid #ddd;
+			}
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+
+	.slick-next, .slick-prev{
+		width: 3rem;
+		height: 100%;
+		border: 0.1rem solid;
+		border-color: #ddd;
+		&:not(.slick-disabled){
+			border-color: #333;
+		}
+		&:before{
+			color: #000;
+			font-family: initial;
+			font-weight: bold;
+			font-size: 2.2rem;
+		}
+	}
+}

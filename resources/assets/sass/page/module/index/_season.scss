@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/*===========================
+index / season
+===========================*/
+._index{
+	.hlt-season {
+		@include _mq(pc) {
+			margin-top: 50px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(40);
+		}
+		&__unit {
+			&:before{
+				content: '';
+				background-size: cover;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			@include _mq(pc) {
+				display: flex;
+				justify-content: space-between;
+				padding: 16px 25px 30px 30px;
+				position: relative;
+				&:before{
+					width: 60px;
+					height: 60px;
+					left: 12px;
+					top: 12px;
+				}
+			}
+			@include _mq(sp) {
+				padding: _vw(40);
+			}
+			&._summer {
+				background-color: #feeee9;
+				border:solid 2px #f15a24;
+				&:before{
+					background-image: url('../img/health/index_season_ico_01.png');
+				}
+
+			}
+			&._winter {
+				background-color: #e5f4f9;
+				border:solid 2px #008cbe;
+				&:before{
+					background-image: url('../img/health/index_season_ico_02.png');
+				}
+				@include _mq(pc) {
+					margin-top: 30px;
+				}
+				@include _mq(sp) {
+					margin-top: _vw(40);
+				}
+			}
+		}
+		&__contents {
+			@include _mq(pc) {
+				width: 320px;
+			}
+		}
+		&__title {
+			font-weight: bold;
+			line-height: 1.4;
+			@include _mq(pc) {
+				font-size: _fs(19);
+				padding-top: 60px;
+			}
+			@include _mq(sp) {
+				font-size: _vw(36);
+			}
+			&._summer {
+				color: #f15a24;
+			}
+			&._winter {
+				color: #008cbe;
+			}
+		}
+		&__people{
+			vertical-align: middle;
+			@include _mq(pc) {
+				font-size: _fs(24);
+			}
+			@include _mq(sp) {
+				font-size: _vw(50);
+			}
+			sup{
+				color: #333333;
+				@include _mq(pc) {
+					font-size: _fs(6);
+				}
+				@include _mq(sp) {
+					font-size: _vw(20);
+				}
+			}
+		}
+		&__number{
+			@include _mq(pc) {
+				font-size: 150%;
+			}
+			@include _mq(sp) {
+				font-size: _vw(80);
+			}
+
+		}
+		&__text {
+			@include _mq(pc) {
+				margin-top: 10px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(10);
+			}
+		}
+		&__img {
+			@include _mq(pc) {
+				width: 440px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(20);
+			}
+		}
+		&__note{
+			@include _mq(pc) {
+				margin-top: 20px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(20);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

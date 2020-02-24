@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/*===========================
+risk / sec
+===========================*/
+._risk{
+	.hlt-sec{
+		@include _mq(pc) {
+			margin-top: 40px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(60);
+		}
+		&._mt20{
+			@include _mq(pc) {
+				margin-top: 20px;
+			}
+		}
+		&__txt{
+			@include _mq(pc) {
+				margin: 20px 0 0;
+				font-size:_fs(16);
+			}
+			@include _mq(sp) {
+				margin: _vw(25) 0 0;
+				font-size:_vw(26);
+			}
+			&._img{
+				&:before{
+					content: ("");
+					display: block;
+					background: url("../img/health/why_03.png");
+					background-repeat: no-repeat;
+					float: right;
+					@include _mq(pc) {
+						width: 149px;
+						height: 113px;
+						margin: 0 0 36px 50px;
+					}
+					@include _mq(sp) {
+						width: _vw(256);
+						height: _vw(194);
+						background-size: contain;
+						margin: _vw(15) 0 _vw(20) _vw(30);
+					}
+				}
+			}
+			&._sub{
+				line-height: _lh(14,20);
+				@include _mq(pc) {
+					margin-top: 10px;
+					font-size:_fs(14);
+				}
+				@include _mq(sp) {
+					margin-top: _vw(20);
+					font-size:_vw(22);
+				}
+			}
+			&._top{
+				@include _mq(pc) {
+					margin-top: 30px;
+				}
+				@include _mq(sp) {
+					margin-top: _vw(25);
+				}
+			}
+			&._mt0{
+				@include _mq(pc) {
+					margin-top: 0;
+				}
+				@include _mq(sp) {
+					margin-top: 0;
+				}
+			}
+			&._heading{
+				margin: 0;
+				color: $col_main;
+				font-size: 27px;
+				font-weight: bold;
+				line-height: 1;
+			}
+			sup{
+				@include _mq(pc) {
+					font-size: _fs(8);
+				}
+				@include _mq(sp) {
+					font-size: _vw(20);
+				}
+			}
+		}
+		&__img{
+			text-align: center;
+			@include _mq(pc) {
+				margin: 20px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(25) 0 0;
+			}
+		}
+		&__list-num{
+			@include _mq(pc) {
+				margin: 20px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(25) 0 0;
+			}
+			&._top{
+				@include _mq(pc) {
+					margin-top: 45px;
+				}
+				@include _mq(sp) {
+					margin-top: _vw(70);
+				}
+			}
+			li{
+				padding-left: 2em;
+				line-height: _lh(14,20);
+				position: relative;
+				@include _mq(pc) {
+					font-size:_fs(14);
+				}
+				@include _mq(sp) {
+					font-size:_vw(22);
+				}
+				span{
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+		&__catch{
+			text-align: center;
+			@include _mq(pc) {
+				margin: 25px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(50) 0 0;
+			}
+			em{
+				display: inline-block;
+				background: #f15a24;
+				color: #fff;
+				font-weight: bold;
+				line-height: _lh(24,36);
+				@include _mq(pc) {
+					padding: 5px 10px;
+					font-size:_fs(24);
+				}
+				@include _mq(sp) {
+					padding: 5px 10px;
+					font-size: _vw(32);
+				}
+			}
+		}
+		&__box{
+			background: #fffde5;
+			@include _mq(pc) {
+				margin: 50px 0 0;
+				padding: 5px 25px 25px;
+			}
+			@include _mq(sp) {
+				margin: _vw(50) 0 0;
+				padding: _vw(14) _vw(30) _vw(40);
+			}
+			h3{
+				@include _mq(pc) {
+					margin-top: 20px;
+				}
+				@include _mq(sp) {
+					margin-top: _vw(30);
+				}
+			}
+			ol{
+				@include _mq(pc) {
+					margin-top: 20px;
+				}
+				@include _mq(sp) {
+					margin-top: _vw(30);
+				}
+			}
+		}
+		&__col{
+			@include _mq(pc) {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 22px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(25) 0 0;
+			}
+			> p{
+				@include _mq(pc) {
+					flex: 1;
+				}
+			}
+			&-text{
+				@include _mq(pc) {
+					flex: 1;
+					font-size:_fs(16);
+				}
+				@include _mq(sp) {
+					font-size:_vw(26);
+				}
+			}
+			&-list{
+				@include _mq(pc) {
+					padding-top: 15px;
+					font-size: _fs(14,16);
+				}
+				@include _mq(sp) {
+					font-size: _vw(22);
+					margin: _vw(25) 0 0;
+				}
+			}
+			figure{
+				@include _mq(pc) {
+					margin-left: 35px;
+				}
+				@include _mq(sp) {
+					margin: _vw(25) 0 0;
+					text-align: center;
+					img{
+						width: 40%;
+					}
+				}
+			}
+			&._area30{
+				@include _mq(pc) {
+					margin-bottom: -30px;
+				}
+			}
+			&._area90{
+				@include _mq(pc) {
+					margin-bottom: -80px;
+				}
+			}
+		}
+		&__tbl{
+			width: 100%;
+			line-height: _lh(14,17);
+			th{
+				background-color: #7ac943;
+				border: 1px solid #CCC;
+				color: #FFF;
+				font-weight: bold;
+				text-align: center;
+				vertical-align: middle;
+				@include _mq(pc) {
+					padding: 10px;
+				}
+				@include _mq(sp) {
+					padding: _vw(15);
+				}
+				&:last-child{
+					background-color: #f15a24;
+				}
+			}
+			td{
+				border: 1px solid #CCC;
+				vertical-align: middle;
+				@include _mq(pc) {
+					padding: 10px;
+				}
+				@include _mq(sp) {
+					padding: _vw(15);
+				}
+				&:nth-child(3){
+					color: #f15a24;
+				}
+			}
+		}
+	}
+}

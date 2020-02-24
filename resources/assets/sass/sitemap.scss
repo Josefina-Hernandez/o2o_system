@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* sitemap用CSS
+========================================*/
+
+@import './import/_import';
+
+#mainArea.sitemap {
+	> article {
+		h1 {
+			color:$col_main;
+			font-weight:bold;
+			line-height:120%;
+		}
+		section {
+			h2 {
+				font-weight:bold;
+				line-height:120%;
+
+				.fas {
+					color:$col_main;
+				}
+				span {
+					display:inline-block;
+				}
+			}
+			ul {
+				li {
+					a:before {
+						content:"\f138";
+						color:$col_main;
+						font-family:"Font Awesome 5 Free";
+						font-weight:900;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	#mainArea.sitemap {
+		> article {
+			border-top:_vw(7) solid $col_main;
+			padding:_vw(60) _vw(20) 0;
+
+			h1 {
+				border-bottom:_vw(3) solid $col_main;
+				font-size:_vw(48);
+				margin-bottom:_vw(60);
+				padding-bottom:_vw(20);
+			}
+			section {
+				margin-bottom:_vw(50);
+
+				h2 {
+					border-bottom:_vw(2) solid #333;
+					font-size:_vw(36);
+					margin-bottom:_vw(40);
+					padding-bottom:_vw(10);
+
+					span {
+						border-left:_vw(10) solid $col_main;
+						padding-left:_vw(10);
+					}
+				}
+				ul {
+					padding:0 _vw(20);
+
+					li {
+						font-size:_vw(28);
+						margin-bottom:_vw(20);
+
+						a:before {
+							margin-right:_vw(8);
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	#mainArea.sitemap {
+		> article {
+			@include _center(1120px);
+
+			h1 {
+				border-bottom:2px solid $col_main;
+				font-size:_fs(32);
+				margin-bottom:40px;
+				padding-bottom:15px;
+			}
+			.wrap {
+				padding:0 40px;
+			}
+			section {
+				margin-bottom:40px;
+
+				a:hover {
+					opacity:0.8;
+				}
+				h2 {
+					border-bottom:1px solid #333;
+					font-size:_fs(24);
+					margin-bottom:25px;
+					padding-bottom:7px;
+
+					span {
+						border-left:7px solid $col_main;
+						padding-left:10px;
+					}
+				}
+				ul {
+					@include _flex("","jcS");
+					padding:0 20px;
+
+					li {
+						font-size:_fs(16);
+						margin-bottom:10px;
+						width:500px;
+
+						a:before {
+							margin-right:5px;
+						}
+					}
+				}
+			}
+		}
+	} //mainArea
+}

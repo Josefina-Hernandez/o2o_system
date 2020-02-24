@@ -1,0 +1,10 @@
+//変数定義
+$breakPointList: 767px, 768px, 719px, 720px;
+$mq: (
+	'sp': 'screen and (max-width: #{nth($breakPointList, 1)})',
+	'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})'
+) !default;
+
+$col_red:#c00;
+$col_main:#ed6d00;
+$col_green:#369f00;

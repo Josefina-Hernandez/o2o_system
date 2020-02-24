@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* ==========================
+	default style
+============================= */
+
+html{
+	color:#333;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+h1,h2,h3,h4,h5,h6,em,strong {
+	font-size:100%;
+	font-weight:normal;
+	font-style:normal;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+th {
+	font-weight:normal;
+	text-align:left;
+	vertical-align:top;
+}
+ul,ol,li {
+	list-style-type:none;
+}
+img {
+	border:0;
+	vertical-align:bottom;
+}
+a img {
+	vertical-align:middle;
+}
+strong {
+	font-weight:bold;
+}
+
+/* font reset */
+
+body {
+	font-family:sans-serif;
+	font-size:14px;
+	font-size:small\9; /*IE8用*/
+	line-height:150%;
+}
+:root body {
+	font-size:small \0/; /*IE9以上用*/
+}
+select,input,button,textarea {
+	font-size:99%;
+}
+table {
+	font-size:inherit;
+	font:100%;
+}
+
+/* clearfix
+----------------------------------------------------------------------*/
+.clearfix:after {
+	content:"";
+	display:block;
+	clear:both;
+	overflow:hidden;
+}
+.clearfix {
+	zoom:1;
+}
+
+/* HTML5 */
+article, aside, dialog, figure, figcaption, footer, header,
+hgroup, nav, section, main, picture {
+	display:block;
+	margin:0;
+	padding:0;
+}

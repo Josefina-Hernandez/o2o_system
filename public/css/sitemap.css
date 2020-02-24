@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* sitemap用CSS
+========================================*/
+#mainArea.sitemap > article h1 {
+	color:#ed6d00;
+	font-weight:bold;
+	line-height:120%;
+}
+
+#mainArea.sitemap > article section h2 {
+	font-weight:bold;
+	line-height:120%;
+}
+#mainArea.sitemap > article section h2 .fas {
+	color:#ed6d00;
+}
+#mainArea.sitemap > article section h2 span {
+	display:inline-block;
+}
+
+#mainArea.sitemap > article section ul li a:before {
+	content:"\f138";
+	color:#ed6d00;
+	font-family:"Font Awesome 5 Free";
+	font-weight:900;
+}
+
+/* SPonly */
+@media screen and (max-width: 767px) {
+	#mainArea.sitemap > article {
+		border-top:0.875vw solid #ed6d00;
+		padding:7.5vw 2.5vw 0;
+	}
+	#mainArea.sitemap > article h1 {
+		border-bottom:0.375vw solid #ed6d00;
+		font-size:6vw;
+		margin-bottom:7.5vw;
+		padding-bottom:2.5vw;
+	}
+	#mainArea.sitemap > article section {
+		margin-bottom:6.25vw;
+	}
+	#mainArea.sitemap > article section h2 {
+		border-bottom:0.25vw solid #333;
+		font-size:4.5vw;
+		margin-bottom:5vw;
+		padding-bottom:1.25vw;
+	}
+	#mainArea.sitemap > article section h2 span {
+		border-left:1.25vw solid #ed6d00;
+		padding-left:1.25vw;
+	}
+	#mainArea.sitemap > article section ul {
+		padding:0 2.5vw;
+	}
+	#mainArea.sitemap > article section ul li {
+		font-size:3.5vw;
+		margin-bottom:2.5vw;
+	}
+	#mainArea.sitemap > article section ul li a:before {
+		margin-right:1vw;
+	}
+}
+
+/* PConly */
+@media print, screen and (min-width: 768px) {
+	#mainArea.sitemap > article {
+		margin-left:auto;
+		margin-right:auto;
+		width:1120px;
+	}
+	#mainArea.sitemap > article h1 {
+		border-bottom:2px solid #ed6d00;
+		font-size:228.57143%;
+		margin-bottom:40px;
+		padding-bottom:15px;
+	}
+	#mainArea.sitemap > article .wrap {
+		padding:0 40px;
+	}
+	#mainArea.sitemap > article section {
+		margin-bottom:40px;
+	}
+	#mainArea.sitemap > article section a:hover {
+		opacity:0.8;
+	}
+	#mainArea.sitemap > article section h2 {
+		border-bottom:1px solid #333;
+		font-size:171.42857%;
+		margin-bottom:25px;
+		padding-bottom:7px;
+	}
+	#mainArea.sitemap > article section h2 span {
+		border-left:7px solid #ed6d00;
+		padding-left:10px;
+	}
+	#mainArea.sitemap > article section ul {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+		justify-content:flex-start;
+		padding:0 20px;
+	}
+	#mainArea.sitemap > article section ul li {
+		font-size:114.28571%;
+		margin-bottom:10px;
+		width:500px;
+	}
+	#mainArea.sitemap > article section ul li a:before {
+		margin-right:5px;
+	}
+}

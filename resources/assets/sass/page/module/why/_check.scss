@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/*===========================
+why / check
+===========================*/
+._why{
+	.hlt-check{
+		background: #f7f7f7;
+		@include _mq(pc) {
+			margin-top: 40px;
+			padding: 40px 30px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(40);
+			padding: _vw(40) _vw(30);
+		}
+		&__ttl{
+			text-align: center;
+			color: $col_main;
+			font-weight: bold;
+			line-height: _lh(27,39);
+			@include _mq(pc) {
+				font-size: _fs(27);
+			}
+			@include _mq(sp) {
+				font-size: _vw(38);
+			}
+			span{
+				display: inline-block;
+				position: relative;
+				@include _mq(pc) {
+					margin: 0 45px;
+				}
+				@include _mq(sp) {
+					margin: 0 _vw(80);
+				}
+				&:after{
+					content: '';
+					display: block;
+					background: url('#{$imgPath}why_check_ttl.png') no-repeat 0 0;
+					background-size: cover;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					@include _mq(pc) {
+						width: 31px;
+						height: 30px;
+						right: -45px;
+					}
+					@include _mq(sp) {
+						width: _vw(51);
+						height: _vw(50);
+						right: _vw(-80);
+					}
+				}
+			}
+		}
+		&__box{
+			@include _mq(pc) {
+				margin: 30px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(40) 0 0;
+			}
+			p{
+				background: #ccc;
+				text-align: center;
+				color: #fff;
+				font-weight: bold;
+				line-height: _lh(24,39);
+				@include _mq(pc) {
+					font-size: _fs(27);
+				}
+				@include _mq(sp) {
+					font-size: _vw(38);
+				}
+			}
+			ul{
+				@include _mq(pc) {
+					padding: 20px 20px 0;
+				}
+				@include _mq(sp) {
+					padding: _vw(30) _vw(20) 0;
+				}
+				li{
+					line-height: 1.4;
+					position: relative;
+					@include _mq(pc) {
+						padding-left: 35px;
+						font-size: _fs(18);
+					}
+					@include _mq(sp) {
+						padding-left: _vw(55);
+						font-size: _vw(30);
+					}
+					&:before{
+						content: '';
+						display: block;
+						background: #fff;
+						border: solid 2px #ccc;
+						border-radius: 2px;
+						position: absolute;
+						left: 0;
+						@include _mq(pc) {
+							width: 18px;
+							height: 18px;
+							top: 2px;
+						}
+						@include _mq(sp) {
+							width: _vw(28);
+							height: _vw(28);
+							top: 0;
+						}
+					}
+					+ li {
+						@include _mq(pc) {
+							margin-top: 16px;
+						}
+						@include _mq(sp) {
+							margin-top: _vw(28);
+						}
+					}
+				}
+			}
+			&._blue{
+				p{
+					background: #008cbe;
+				}
+				ul{
+					li{
+						&:before{
+							border: solid 2px #008cbe;
+						}
+					}
+				}
+			}
+			&._red{
+				p{
+					background: #f15a24;
+				}
+				ul{
+					li{
+						&:before{
+							border: solid 2px #f15a24;
+						}
+					}
+				}
+			}
+		}
+	}
+}

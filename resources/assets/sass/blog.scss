@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* blog
+========================================*/
+@import './import/_import';
+
+#mainArea.blog {
+	> article {
+		h1 {
+			color:$col_main;
+			font-weight:bold;
+			line-height:120%;
+		}
+	}
+	.caseWrap {
+		.caseList {
+			li {
+				a {
+					display:block;
+					position:relative;
+					@include _blank;
+				}
+				img {
+					width:100%;
+				}
+			}
+			&._main {
+				li {
+					.date {
+						@include _flex("","jcS");
+					}
+				}
+			}
+		}
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	#mainArea.blog {
+		> article {
+			border-top:_vw(7) solid $col_main;
+			padding:_vw(60) _vw(20) 0;
+
+			h1 {
+				border-bottom:_vw(3) solid $col_main;
+				font-size:_vw(48);
+				margin-bottom:_vw(60);
+				padding-bottom:_vw(20);
+			}
+		}
+		.caseWrap {
+			margin-bottom:_vw(80);
+
+			.caseList {
+				li {
+					margin-bottom:_vw(40);
+	
+					figure {
+						margin-bottom:_vw(20);
+					}
+					dt {
+						font-size:_vw(30);
+						font-weight:bold;
+						line-height:150%;
+						margin-bottom:_vw(5);
+					}
+					.date {
+						margin-bottom:_vw(3);
+					}
+					.text,
+					.continue {
+						font-size:_vw(26);
+						line-height:150%;
+					}
+				}
+				&._main {
+					li {
+						figure {
+							overflow:hidden;
+							height:_vw(550);
+	
+							img {
+								height:_vw(550);
+								width:100%;
+								object-fit:cover;
+								font-family:"object-fit:cover;"; /*IE対策*/
+							}
+						}
+						.date {
+							p {
+								margin-right:_vw(30);
+							}
+						}
+					}
+				}
+				&._sub {
+					@include _flex("","");
+	
+					li {
+						width:_vw(370);
+	
+						figure {
+							overflow:hidden;
+							height:_vw(260);
+	
+							img {
+								height:_vw(260);
+								width:100%;
+								object-fit:cover;
+								font-family:"object-fit:cover;"; /*IE対策*/
+							}
+						}
+					}
+				}
+			} //caseList
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	#mainArea.blog {
+		> article {
+			@include _center(1120px);
+
+			h1 {
+				border-bottom:2px solid $col_main;
+				font-size:_fs(32);
+				margin-bottom:40px;
+				padding-bottom:15px;
+			}
+		}
+		.caseWrap {
+			margin-bottom:60px;
+
+			.caseList {
+				@include _flex("","");
+	
+				li {
+					a {
+						&:hover {
+							img {
+								opacity:0.8;
+							}
+						}
+					}
+					figure {
+						margin-bottom:15px;
+					}
+					dt {
+						font-size:_fs(19);
+						font-weight:bold;
+						line-height:150%;
+					}
+					.text,
+					.continue {
+						font-size:_fs(15);
+						line-height:150%;
+					}
+				}
+				&._main {
+					margin-bottom:40px;
+	
+					li {
+						width:548px;
+	
+						figure {
+							overflow:hidden;
+							height:397px;
+	
+							img {
+								height:397px;
+								width:100%;
+								object-fit:cover;
+								font-family:"object-fit:cover;"; /*IE対策*/
+							}
+						}
+						.date {
+							p {
+								margin-right:20px;
+							}
+						}
+					}
+				}
+				&._sub {
+					justify-content:flex-start;
+					li {
+						margin-right:24px;
+						margin-bottom:30px;
+						width:262px;
+						&:nth-of-type(4n) {
+							margin-right:0;
+						}
+						figure {
+							overflow:hidden;
+							height:190px;
+	
+							img {
+								height:190px;
+								width:100%;
+								object-fit:cover;
+								font-family:"object-fit:cover;"; /*IE対策*/
+							}
+						}
+					}
+				}
+			} //caseList
+		}
+	} //mainArea
+}

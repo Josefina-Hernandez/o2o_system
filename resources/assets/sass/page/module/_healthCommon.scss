@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/*===========================
+healthCommon
+===========================*/
+
+// title
+.cmncts-health{
+	&-ttl {
+		color:$col_main;
+		font-weight:bold;
+		line-height:125%;
+		text-align:center;
+		@include _mq(pc) {
+			border-bottom:10px solid $col_main;
+			font-size:_fs(44);
+			margin-bottom:40px;
+			padding-bottom:20px;
+		}
+		@include _mq(sp) {
+			border-bottom:_vw(10) solid $col_main;
+			font-size:_vw(60);
+			margin-bottom:_vw(30);
+			padding-bottom:_vw(20);
+		}
+	}
+	&-ttlH2{
+		background:$col_main;
+		color:#fff;
+		font-weight:bold;
+		line-height:130%;
+		text-align:center;
+		@include _mq(pc) {
+			border-radius:15px;
+			font-size:_fs(26);
+			margin-bottom:30px;
+			padding:10px;
+		}
+		@include _mq(sp) {
+			border-radius:_vw(15);
+			font-size:_vw(38);
+			margin-bottom:_vw(30);
+			padding:_vw(15) _vw(10);
+		}
+	}
+	&-ttlH3{
+		font-weight:bold;
+		line-height:130%;
+		span {
+			color:$col_main;
+		}
+		@include _mq(pc) {
+			font-size:_fs(20);
+			margin-bottom:20px;
+		}
+		@include _mq(sp) {
+			font-size:_vw(28);
+			margin-bottom:_vw(20);
+		}
+		sup{
+			@include _mq(pc) {
+				font-size: _fs(8);
+			}
+			@include _mq(sp) {
+				font-size: _vw(20);
+			}
+		}
+	}
+}

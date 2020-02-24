@@ -1,0 +1,15 @@
+Hint:_\t,_\t,_\t,
+_\t,_\t,_\t,
+m_color_id_\t,color_code_price_\t,sort_order_\t,del_flg
+1_\t,N_\t,1_\t,0
+2_\t,D_\t,2_\t,0
+3_\t,W_\t,3_\t,0
+4_\t,K_\t,4_\t,0
+5_\t,G_\t,5_\t,0
+6_\t,T_\t,6_\t,0
+7_\t,B_\t,7_\t,0
+8_\t,C_\t,8_\t,0
+9_\t,F_\t,9_\t,0
+10_\t,J_\t,10_\t,0
+11_\t,Waiting_confirm_\t,11_\t,0
+12_\t,H_\t,12_\t,0

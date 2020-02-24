@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+// ===========================
+// function
+// ===========================
+
+$initBase: 800;
+$fsBase: 14;
+
+@function _vw($value,$base:$initBase){
+	@return unquote((($value/$base)*100)+'vw');
+}
+
+@function _fs($value,$base:$fsBase){
+	@return unquote((($value/$base)*100)+'%');
+}
+
+@function _per($value, $base:$initBase){
+	@return percentage($value/$base);
+}
+
+@function _half($value){
+	@return unquote($value/2+'px');
+}
+
+@function _ls($value){
+	@return unquote($value/1000+'em');
+}
+
+@function _lh($a, $b){
+	@return $b / $a;
+}

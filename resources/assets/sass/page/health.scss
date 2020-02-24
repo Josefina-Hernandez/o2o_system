@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+// ===========================
+// setting
+// ===========================
+@import "./setting/_function";
+@import "./setting/_config";
+
+// ===========================
+// mixin
+// ===========================
+@import "./mixin/_clear";
+@import "./mixin/_mq";
+@import "./mixin/_mixin";
+
+// ===========================
+// base
+// ===========================
+// @import "./base/_reset";
+// @import "./base/_base";
+
+// ===========================
+// module
+// ===========================
+// common
+@import "./module/_healthBase";
+@import "./module/_healthCommon";
+@import "./module/_pageFooter";
+@import './_common';
+
+// index
+@import "./module/index/_mv";
+@import "./module/index/_season";
+@import "./module/index/_point";
+@import "./module/index/_contents";
+@import "./module/index/_issue";
+
+// why
+@import "./module/why/_sec";
+@import "./module/why/_check";
+@import "./module/why/_case";
+
+// risk
+@import "./module/risk/_sec";
+
+// demonstrate
+@import "./module/demonstrate/_sec";
+@import "./module/demonstrate/_box";
+@import "./module/demonstrate/_emphasis";
+@import "./module/demonstrate/_button";
+@import "./module/demonstrate/_table";
+@import "./module/demonstrate/_photobox";
+@import "./module/demonstrate/_products";
+

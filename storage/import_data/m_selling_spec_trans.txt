@@ -1,0 +1,112 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
+spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
+1.1_\t,1_\t,Awning_\t,0
+1.2_\t,1_\t,Car port_\t,0
+1.3_\t,1_\t,Casement_\t,0
+1.4_\t,1_\t,Fence_\t,0
+1.5_\t,1_\t,FIX_\t,0
+1.6_\t,1_\t,Folding door_\t,0
+1.7_\t,1_\t,Folding gate_\t,0
+1.8_\t,1_\t,Louver_\t,0
+1.9_\t,1_\t,Sliding_\t,0
+1.10_\t,1_\t,Sliding gate_\t,0
+1.11_\t,1_\t,Swing gate_\t,0
+1.12_\t,1_\t,Terrace door_\t,0
+1.13_\t,1_\t,Ventilation door_\t,0
+1.14_\t,1_\t,Mullion_\t,0
+1.15_\t,1_\t,Transom_\t,0
+2.1_\t,1_\t,2 Panel_\t,0
+2.2_\t,1_\t,3 panel_\t,0
+2.3_\t,1_\t,4 Panel_\t,0
+2.4_\t,1_\t,6 panel_\t,0
+2.5_\t,1_\t,8 panel_\t,0
+2.6_\t,1_\t,12 panel_\t,0
+2.7_\t,1_\t,16 panel_\t,0
+3.1_\t,1_\t,Door_\t,0
+3.2_\t,1_\t,Door large_\t,0
+3.3_\t,1_\t,Entrance Door_\t,0
+3.4_\t,1_\t,HKK Door_\t,0
+3.5_\t,1_\t,HKK Window_\t,0
+3.6_\t,1_\t,Large_\t,0
+3.7_\t,1_\t,Normal_\t,0
+3.8_\t,1_\t,Window_\t,0
+4.1_\t,1_\t,For floor_\t,0
+4.2_\t,1_\t,No floor_\t,0
+4.3_\t,1_\t,Partition door_\t,0
+5.1_\t,1_\t,Multi lock_\t,0
+5.2_\t,1_\t,Multi lock large_\t,0
+5.3_\t,1_\t,Single lock_\t,0
+6.1_\t,1_\t,Double_\t,0
+6.2_\t,1_\t,Single_\t,0
+7.1_\t,1_\t,In-swing_\t,0
+7.2_\t,1_\t,Out-swing_\t,0
+8.1_\t,1_\t,Flat sill_\t,0
+8.2_\t,1_\t,No sill_\t,0
+8.3_\t,1_\t,Normal_\t,0
+8.4_\t,1_\t,With sill_\t,0
+8.5_\t,1_\t,Without si_\t,0
+8.6_\t,1_\t,Without sill_\t,0
+9.1_\t,1_\t,Aluminum_\t,0
+9.2_\t,1_\t,Glass_\t,0
+10.1_\t,1_\t,Center_\t,0
+10.2_\t,1_\t,L_\t,0
+10.3_\t,1_\t,R_\t,0
+10.4_\t,1_\t,LR_\t,0
+11.1_\t,1_\t,Free side_\t,0
+11.2_\t,1_\t,One side L_\t,0
+11.3_\t,1_\t,One side R_\t,0
+11.4_\t,1_\t,Two side_\t,0
+11.5_\t,1_\t,Two side L_\t,0
+11.6_\t,1_\t,Two side R_\t,0
+12.1_\t,1_\t,Corner FIX_\t,0
+12.2_\t,1_\t,FIX_\t,0
+13.1_\t,1_\t,1 mullion_\t,0
+13.2_\t,1_\t,2 mullion_\t,0
+13.3_\t,1_\t,3 mullion_\t,0
+13.4_\t,1_\t,No mullion_\t,0
+13.5_\t,1_\t,No transom_\t,0
+13.6_\t,1_\t,With transom_\t,0
+13.7_\t,1_\t,Without transom_\t,0
+13.8_\t,1_\t,With mullion_\t,0
+13.9_\t,1_\t,Normal_\t,0
+14.1_\t,1_\t,Inside_\t,0
+14.2_\t,1_\t,Outside_\t,0
+15.1_\t,1_\t,2 stacks_\t,0
+15.2_\t,1_\t,3 stacks_\t,0
+16.1_\t,1_\t,Glass_\t,0
+16.2_\t,1_\t,Glass & Louver_\t,0
+16.3_\t,1_\t,Louver_\t,0
+16.4_\t,1_\t,LOW_\t,0
+16.5_\t,1_\t,MID_\t,0
+16.6_\t,1_\t,UP_\t,0
+17.1_\t,1_\t,With middle frame_\t,0
+17.2_\t,1_\t,Without middle frame_\t,0
+18.1_\t,1_\t,100mm_\t,0
+18.2_\t,1_\t,120mm_\t,0
+18.3_\t,1_\t,140mm_\t,0
+18.4_\t,1_\t,60mm_\t,0
+18.5_\t,1_\t,80mm_\t,0
+19.1_\t,1_\t,anchor base_\t,0
+19.2_\t,1_\t,side setting wall_\t,0
+20.1_\t,1_\t,180°_\t,0
+20.2_\t,1_\t,90°_\t,0
+21.1_\t,1_\t,Mullion C_\t,0
+21.2_\t,1_\t,Mullion D_\t,0
+21.3_\t,1_\t,Mullion A_\t,0
+21.4_\t,1_\t,Mullion CorD_\t,0
+22.1_\t,1_\t,Without terrace_\t,0
+22.2_\t,1_\t,With terrace_\t,0
+23.1_\t,1_\t,Edge_\t,0
+23.2_\t,1_\t,Hinge_\t,0
+24.3_\t,1_\t,Transom A_\t,0
+24.4_\t,1_\t,Transom B_\t,0
+25.1_\t,1_\t,B_\t,0
+25.2_\t,1_\t,A_\t,0
+26.1_\t,1_\t,Top_\t,0
+26.2_\t,1_\t,Bottom_\t,0
+26.3_\t,1_\t,Top & bottom_\t,0
+o1.1_\t,1_\t,With screen_\t,0
+o1.2_\t,1_\t,Without screen_\t,0
+o2.1_\t,1_\t,With closer_\t,0
+o2.2_\t,1_\t,Without closer_\t,0

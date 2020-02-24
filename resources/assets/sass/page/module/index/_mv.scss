@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*===========================
+index / mv
+===========================*/
+._index{
+	.hlt-mv {
+		&__img {
+			text-align: center;
+			@include _mq(pc) {
+				margin-bottom: 50px;
+			}
+			@include _mq(sp) {
+				margin-bottom: _vw(30);
+			}
+		}
+		&__lead {
+			@include _mq(pc) {
+				font-size:_fs(16);
+			}
+			@include _mq(sp) {
+				font-size:_vw(26);
+			}
+		}
+	}
+}

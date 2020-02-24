@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* problem_syscom（あとで本体と合体してコンパイル）
+========================================*/
+
+@import '../import/_import';
+
+/* SPandPC */
+article.cmncts-problem {
+	.cmncts-problem {
+		&-togetlist {
+			&-way {
+				min-height: 3em;
+				font-weight: bold;
+				color: #fff;
+				background: #5cb531;
+				@include _flex("aiC","");
+			}
+		}
+	}
+
+	/* ===== mado02 ===== */
+	&._mado02 {
+		.cmncts-problem {
+			&-mainsec {
+				&-txt {
+					.mb20 {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	} //mado02
+
+	/* ===== door03 ===== */
+	&._door03 {
+		.cmncts-problem {
+			&-mainsec {
+				&-box {
+					&._mt20{
+						margin-top:20px;
+					}
+				}
+			}
+		}
+	} //door03
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	article.cmncts-problem {
+		.cmncts-problem {
+			&-mainsec {
+				&-txt {
+					&._mb20 {
+						margin-bottom:_vw(25);
+					}
+					&._spmb20 {
+						margin-bottom:_vw(25);
+					}
+				}
+			}
+			&-togetlist {
+				&-way {
+					margin-top: _vw(10);
+					padding: _vw(4) _vw(8);
+				}
+			}
+		}
+
+		/* ===== mado07 ===== */
+		&._mado07 {
+			.cmncts-problem-mainsec-imgbox {
+				picture {
+					margin-top: _vw(25);
+				}
+			}
+		} //mado07
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	article.cmncts-problem {
+		.cmncts-problem {
+			&-mainsec {
+				&-col2 {
+					&._end {
+						align-items: flex-end;
+					}
+				}
+				&-box {
+					&._w460 {
+						width:460px;
+					}
+					&._w600 {
+						width:600px;
+					}
+				}
+				&-txt {
+					font-size:_fs(18);
+					&._mb20 {
+						margin-bottom: 20px;
+					}
+				}
+			}
+			&-togetlist {
+				&-way {
+					margin-top: 6px;
+					padding: 4px 8px;
+				}
+			}
+		}
+
+		/* ===== mado07 ===== */
+		&._mado07 {
+			.cmncts-problem-mainsec-imgbox {
+				width: 200px;
+			}
+		} //mado07
+
+		/* ===== door03 ===== */
+		&._door03 {
+			.cmncts-problem {
+				&-mainsec {
+					&-box {
+						&._w200{
+							width:200px;
+						}
+					}
+				}
+			}
+		} //door03
+	}
+}

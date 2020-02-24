@@ -1,0 +1,65 @@
+Hint:_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+m_model_id_\t,viewer_flg_\t,public_flg_\t,img_path_\t,img_name_\t,ctg_model_id _\t,del_flg_\t,sort_order
+1_\t,3_\t,1_\t,_\t,_\t,7_\t,1_\t,1
+2_\t,3_\t,1_\t,Sliding window_\t,2P2T door window.png_\t,7_\t,0_\t,2
+3_\t,3_\t,1_\t,Sliding window_\t,3P2T door window.jpg_\t,7_\t,0_\t,3
+4_\t,3_\t,1_\t,Sliding window_\t,3P3T door window.png_\t,7_\t,0_\t,4
+5_\t,3_\t,1_\t,Sliding window_\t,4P2T door window.png_\t,7_\t,0_\t,5
+6_\t,3_\t,1_\t,Sliding door_\t,2P2T door window.png_\t,8_\t,0_\t,6
+7_\t,3_\t,1_\t,Sliding door_\t,3P2T door window.jpg_\t,8_\t,0_\t,7
+8_\t,3_\t,1_\t,Sliding door_\t,3P3T door window.png_\t,8_\t,0_\t,8
+9_\t,3_\t,1_\t,Sliding door_\t,4P2T door window.png_\t,8_\t,0_\t,9
+10_\t,3_\t,1_\t,Sliding door_\t,6P3T door.jpg_\t,8_\t,0_\t,10
+11_\t,3_\t,1_\t,Entrance door_\t,2P2T  entrance door.jpg_\t,9_\t,0_\t,11
+12_\t,3_\t,1_\t,Entrance door_\t,4P2T entrance door.jpg_\t,9_\t,0_\t,12
+13_\t,3_\t,1_\t,_\t,_\t,10_\t,0_\t,13
+14_\t,3_\t,1_\t,_\t,_\t,10_\t,0_\t,14
+15_\t,3_\t,1_\t,Other window_\t,Double casement.jpg_\t,10_\t,0_\t,15
+16_\t,3_\t,1_\t,Other window_\t,Awning single.jpg_\t,11_\t,0_\t,16
+17_\t,3_\t,1_\t,Other window_\t,Awning single multi lock.jpg_\t,11_\t,0_\t,17
+18_\t,3_\t,1_\t,Other window_\t,FIX.jpg_\t,12_\t,0_\t,18
+19_\t,3_\t,1_\t,Other window_\t,Corner FIX.jpg_\t,13_\t,0_\t,19
+20_\t,3_\t,1_\t,_\t,_\t,14_\t,0_\t,20
+21_\t,3_\t,1_\t,_\t,_\t,14_\t,0_\t,21
+22_\t,3_\t,1_\t,Terrace door_\t,Terrace Door Single out.png_\t,14_\t,0_\t,22
+23_\t,3_\t,1_\t,Terrace door_\t,TerraceDoor Double out.png_\t,14_\t,0_\t,23
+24_\t,3_\t,1_\t,Terrace door_\t,Ventilation door.png_\t,14_\t,0_\t,24
+25_\t,3_\t,1_\t,Folding door_\t,Folding door 4P.png_\t,15_\t,0_\t,25
+26_\t,3_\t,1_\t,Folding door_\t,Folding door 6P.png_\t,15_\t,0_\t,26
+27_\t,3_\t,1_\t,Folding door_\t,Folding door 8P.png_\t,15_\t,0_\t,27
+28_\t,1_\t,1_\t,_\t,_\t,15_\t,0_\t,28
+29_\t,1_\t,1_\t,_\t,_\t,15_\t,0_\t,29
+30_\t,3_\t,1_\t,Exterior_\t,Single_Type.jpg_\t,16_\t,0_\t,30
+31_\t,3_\t,1_\t,Exterior_\t,Double sliding.jpg_\t,16_\t,0_\t,31
+32_\t,3_\t,1_\t,_\t,_\t,17_\t,0_\t,32
+33_\t,3_\t,1_\t,_\t,_\t,17_\t,0_\t,33
+34_\t,3_\t,1_\t,_\t,_\t,18_\t,0_\t,34
+35_\t,3_\t,1_\t,_\t,_\t,18_\t,0_\t,35
+36_\t,3_\t,1_\t,Exterior_\t,Fence.jpg_\t,19_\t,0_\t,36
+37_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,37
+38_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,38
+39_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,39
+40_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,40
+41_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,41
+42_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,42
+43_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,43
+44_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,44
+45_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,45
+46_\t,3_\t,1_\t,_\t,_\t,20_\t,0_\t,46
+47_\t,1_\t,1_\t,_\t,_\t,23_\t,0_\t,47
+48_\t,1_\t,1_\t,_\t,_\t,23_\t,0_\t,48
+49_\t,1_\t,1_\t,_\t,_\t,23_\t,0_\t,49
+50_\t,3_\t,1_\t,_\t,_\t,25_\t,0_\t,50
+51_\t,3_\t,1_\t,_\t,_\t,25_\t,0_\t,51
+52_\t,3_\t,1_\t,_\t,_\t,25_\t,0_\t,52
+53_\t,3_\t,1_\t,_\t,_\t,25_\t,0_\t,53
+54_\t,3_\t,1_\t,_\t,_\t,27_\t,0_\t,54
+55_\t,3_\t,1_\t,_\t,_\t,27_\t,0_\t,55
+56_\t,3_\t,1_\t,_\t,_\t,28_\t,0_\t,56
+57_\t,3_\t,1_\t,_\t,_\t,28_\t,0_\t,57
+58_\t,3_\t,1_\t,_\t,_\t,29_\t,0_\t,58
+59_\t,3_\t,1_\t,_\t,_\t,29_\t,0_\t,59
+60_\t,3_\t,1_\t,_\t,_\t,29_\t,0_\t,60
+61_\t,3_\t,1_\t,_\t,_\t,23_\t,0_\t,61
+62_\t,3_\t,1_\t,_\t,_\t,23_\t,0_\t,62

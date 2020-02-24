@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/*===========================
+demonstrate / sec
+===========================*/
+._demonstrate{
+	.hlt-sec{
+		@include _mq(pc) {
+			margin: 40px 0 0;
+		}
+		@include _mq(sp) {
+			margin: _vw(30) 0 0;
+		}
+		&__lead{
+			font-weight: bold;
+			text-align: center;
+			@include _mq(pc) {
+				font-size:_fs(25);
+				line-height: _lh(25,34);
+				padding: 0 0 10px;
+			}
+			@include _mq(sp) {
+				font-size: _vw(34);
+				padding: 0 0 _vw(10);
+			}
+		}
+		&__text{
+			@include _mq(pc) {
+				margin: 20px 0 0;
+				font-size:_fs(16);
+			}
+			@include _mq(sp) {
+				margin: _vw(20) 0 0;
+				font-size:_vw(26);
+			}
+			&._fan{
+				position: relative;
+				@include _mq(pc) {
+					padding-right: 180px;
+				}
+				@include _mq(sp) {
+					padding-right: _vw(200);
+				}
+				&:after{
+					content: "";
+					display: block;
+					position: absolute;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+					background-image: url('../img/health/demonstrate_fan.png');
+					@include _mq(pc) {
+						width: 167px;
+						height: 150px;
+						right: 0;
+						top:0;
+					}
+					@include _mq(sp) {
+						width: _vw(180);
+						height: _vw(170);
+						right: 0;
+						top:0;
+					}
+				}
+			}
+		}
+		&__img{
+			text-align: center;
+			@include _mq(pc) {
+				margin: 30px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(20) 0 0;
+			}
+		}
+		&__inner{
+			@include _mq(pc) {
+				margin: 40px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(40) 0 0;
+			}
+		}
+	}
+}

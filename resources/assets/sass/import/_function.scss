@@ -1,0 +1,10 @@
+//function定義
+$initBase: 800;
+$fsBase: 14;
+
+@function _vw($value,$base:$initBase){
+	@return unquote((($value/$base)*100)+'vw');
+}
+@function _fs($value,$base:$fsBase){
+	@return unquote((($value/$base)*100)+'%');
+}

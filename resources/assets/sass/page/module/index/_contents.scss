@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/*===========================
+index / contents
+===========================*/
+._index{
+	.hlt-contents {
+		@include _mq(pc) {
+			margin-top: 50px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(40);
+		}
+		&__heading {
+			color: #ed6d00;
+			font-weight: bold;
+			text-align: center;
+			@include _mq(pc) {
+				font-size: _fs(36);
+				margin-bottom: 30px;
+			}
+			@include _mq(sp) {
+				font-size: _vw(40);
+				margin-bottom: _vw(30);
+			}
+		}
+		&__unit {
+			@include _mq(pc) {
+				padding: 20px;
+				margin-bottom: 20px;
+				border:solid 4px #ed6e00;
+			}
+			@include _mq(sp) {
+				padding: _vw(30);
+				margin-bottom: _vw(20);
+				border:solid _vw(4) #ed6e00;
+			}
+			a{
+				display: block;
+				@include _mq(pc) {
+					&:hover{
+						opacity: .8;
+					}
+				}
+			}
+			&._pbnone{
+				padding-bottom: 0;
+			}
+		}
+		&__unit-inner{
+			position: relative;
+			&:after{
+				content: "\f138";
+				color: #ed6d00;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				line-height: 1;
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				@include _mq(pc) {
+					width: 21px;
+					height: 21px;
+					font-size:_fs(20);
+				}
+				@include _mq(sp) {
+					width: _vw(30);
+					height: _vw(30);
+					font-size:_vw(32);
+				}
+			}
+			&._no-allow{
+				&:after{
+					content: none;
+				}
+			}
+			&._duck{
+				&:before{
+					content: '';
+					background-image: url('../img/health/index_contents_ico_01.png');
+					background-size: cover;
+					background-position: 0 0;
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					@include _mq(pc) {
+						width: 88px;
+						height: 82px;
+						right: 40px;
+					}
+					@include _mq(sp) {
+						content: none;
+					}
+				}
+			}
+			&._flog{
+				&:before{
+					content: '';
+					width: 85px;
+					height: 74px;
+					background-image: url('../img/health/index_contents_ico_02.png');
+					background-size: cover;
+					background-position: 0 0;
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					@include _mq(pc) {
+						right: 40px;
+						width: 85px;
+						height: 74px;
+					}
+					@include _mq(sp) {
+						content: none;
+					}
+				}
+			}
+		}
+		&__title {
+			line-height: 1;
+			font-weight: bold;
+			color: #ed6d00;
+			@include _mq(pc) {
+				margin-bottom: 10px;
+				font-size: _fs(36);
+			}
+			@include _mq(sp) {
+				font-size: _vw(36);
+				margin-bottom: _vw(10);
+			}
+		}
+		&__lead {
+			color: #333333;
+			font-weight: bold;
+			@include _mq(pc) {
+				font-size: _fs(20);
+			}
+			@include _mq(sp) {
+				font-size: _vw(28);
+				padding-right: _vw(30);
+			}
+		}
+		&__list {
+			@include _mq(pc) {
+				margin-top: 25px;
+				padding-right: 20px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(30);
+			}
+		}
+		&__item {
+			border-top: dashed 2px #ed6d00;
+			a{
+				display: flex;
+				align-items: center;
+				position: relative;
+				&:after{
+					content: "\f138";
+					color: #ed6d00;
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					line-height: 1;
+					display: inline-block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					@include _mq(pc) {
+						width: 21px;
+						height: 21px;
+						font-size:_fs(20);
+					}
+					@include _mq(sp) {
+						width: _vw(30);
+						height: _vw(30);
+						font-size:_vw(32);
+					}
+				}
+				@include _mq(pc) {
+					padding: 20px 0;
+				}
+				@include _mq(sp) {
+					padding: _vw(20) 0;
+				}
+			}
+		}
+		&__label {
+			background: #ed6d00;
+			color: #fff;
+			text-align: center;
+			font-weight: bold;
+			line-height: 1;
+			@include _mq(pc) {
+				width: 100px;
+				padding: 12px 0;
+				border-radius: 6px;
+				font-size: _fs(18);
+			}
+			@include _mq(sp) {
+				width: _vw(130);
+				padding:  _vw(20) 0;
+				border-radius: _vw(10);
+				font-size: _vw(24);
+			}
+		}
+		&__text {
+			@include _mq(pc) {
+				padding-left: 24px;
+				font-size: _fs(18);
+			}
+			@include _mq(sp) {
+				padding: 0 _vw(40) 0 _vw(20);
+				font-size: _vw(28);
+				flex: 1;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

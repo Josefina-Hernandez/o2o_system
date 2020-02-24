@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*===========================
+index / point
+===========================*/
+._index{
+	.hlt-point{
+		@include _mq(pc) {
+			margin-top: 40px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(40);
+		}
+		&__text{
+			font-weight: bold;
+			text-align: center;
+			line-height: _lh(20,32);
+			@include _mq(pc) {
+				margin-top: 45px;
+				font-size: _fs(20);
+			}
+			@include _mq(sp) {
+				margin-top: _vw(30);
+				font-size: _vw(28);
+			}
+		}
+	}
+}

@@ -1,0 +1,618 @@
+@charset "utf-8";
+
+/* case_study用CSS
+========================================*/
+
+@import '../import/_import';
+@import './_common';
+
+/* SPandPC */
+article.cmncts-casestudy {
+	.cmncts-casestudy {
+		&-ttl {
+			@include _flex("","");
+			span {
+				color:$col_main;
+				display:block;
+				font-weight:bold;
+			}
+		}
+		&-mainsec {
+			h2 {
+				color:$col_main;
+				font-weight:bold;
+				line-height:130%;
+			}
+			&-txt {
+				line-height:150%;
+			}
+		}
+		&-ownerssec {
+			h4 {
+				color:$col_main;
+				font-weight:bold;
+				line-height:120%;
+			}
+		}
+		&-commentsec {
+			background:#fffde5;
+			h3 {
+				color:$col_main;
+				font-weight:bold;
+
+				.fas {
+					font-size:120%;
+				}
+			}
+			&:after {
+				content:"";
+				display:block;
+				position:relative;
+			}
+		}
+		&-prevnext {
+			@include _flex("","");
+			li {
+				a {
+					background:#f5f5f5;
+					display:block;
+					p {
+						text-align:center;
+						&:before {
+							content:"";
+							display:inline-block;
+						}
+					}
+					picture {
+						img {
+							width:100%;
+						}
+					}
+					dt {
+						font-weight:bold;
+					}
+				}
+			}
+			&._next {
+				justify-content:flex-end;
+			}
+		}
+		&-togetsec {
+			h2 {
+				background:$col_main;
+				color:#fff;
+				font-weight:bold;
+				line-height:130%;
+				text-align:center;
+			}
+		}
+		&-togetlist {
+			@include _flex("","");
+	
+			li {
+				background:#f5f5f5;
+				position:relative;
+	
+				a {
+					display:block;
+				}
+				dt {
+					color:$col_main;
+					font-weight:bold;
+				}
+			}
+			&-label {
+				background:rgba(50,50,50,0.9);
+				color:#fff;
+				position:absolute;
+			}
+		}
+	}
+
+	/* ===== index ===== */
+	&._index {
+		.cmncts-casestudy {
+			&-ttl {
+				color:$col_main;
+				display:block;
+				font-weight:bold;
+				text-align:center;
+			}
+			&-index-list {
+				li {
+					line-height:150%;
+
+					a {
+						display:block;
+					}
+					picture {
+						overflow:hidden;
+
+						img {
+							object-fit:cover;
+							font-family:"object-fit:cover;"; /*IE対策*/
+							width:100%;
+						}
+					}
+					h2 {
+						font-weight:bold;
+
+						span {
+							background:$col_main;
+							color:#fff;
+							display:inline-block;
+							font-size:75%;
+							font-weight:normal;
+							line-height:140%;
+						}
+					}
+				}
+			}
+		}
+	} //index
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	article.cmncts-casestudy {
+		.cmncts-casestudy {
+			&-ttl {
+				margin-bottom:_vw(30);
+				picture {
+					img {
+						width:_vw(123);
+					}
+				}
+				span {
+					font-size:_vw(42);
+					line-height:120%;
+					width:_vw(610);
+				}
+			}
+			&-mainimg {
+				margin-bottom:_vw(40);
+				img {
+					width:100%;
+				}
+			}
+			&-mainsec {
+				margin-bottom:_vw(60);
+				h2 {
+					border-bottom:_vw(2) solid #333;
+					font-size:_vw(38);
+					margin-bottom:_vw(20);
+					padding-bottom:_vw(15);
+				}
+				&-txt {
+					font-size:_vw(26);
+					margin-bottom:_vw(50);
+				}
+				&-img {
+					margin-bottom:_vw(30);
+					img {
+						width:100%;
+					}
+				}
+			}
+			&-ownerssec {
+				margin-top:_vw(60);
+
+				h3 {
+					margin-bottom:_vw(20);
+					img {
+						width:_vw(337);
+					}
+				}
+				h4 {
+					border-bottom:_vw(2) solid #333;
+					font-size:_vw(38);
+					margin-bottom:_vw(20);
+					padding-bottom:_vw(15);
+				}
+			}
+			&-commentsec {
+				border-radius:_vw(10);
+				margin-top:_vw(40);
+				padding:_vw(40) _vw(30);
+				h3 {
+					background:url(../img/case_study/comment_line.png) repeat-x left bottom;
+					background-size:_vw(10) auto;
+					font-size:_vw(38);
+					margin-bottom:_vw(20);
+					padding-bottom:_vw(25);
+					text-align:center;
+
+					.fas {
+						margin-right:_vw(10);
+						vertical-align:_vw(-2);
+					}
+				}
+				&:after {
+					background:url(../img/case_study/img_torikaeru.png) no-repeat;
+					background-size:100%;
+					margin:0 auto;
+					height:_vw(129);
+					width:_vw(168);
+				}
+				.cmncts-casestudy-mainsec-txt {
+					margin-bottom:_vw(25);
+				}
+			}
+			&-prevnext {
+				margin-bottom:_vw(80);
+				li {
+					width:_vw(370);
+					a {
+						border-radius:_vw(20);
+						display:block;
+						padding:_vw(20);
+						p {
+							margin-bottom:_vw(15);
+							&:before {
+								background:url(../img/case_study/arrow_l.png) no-repeat;
+								background-size:100%;
+								margin-right:_vw(20);
+								vertical-align:middle;
+								height:_vw(52);
+								width:_vw(52);
+							}
+						}
+						dl {
+							margin-top:_vw(15);
+						}
+					}
+					&:last-of-type {
+						a {
+							p {
+								&:before {
+									background:url(../img/case_study/arrow_r.png) no-repeat;
+									background-size:100%;
+								}
+							}
+						}
+					}
+				}
+				&._prev {
+					&:last-of-type {
+						a {
+							p {
+								&:before {
+									background:url(../img/case_study/arrow_l.png) no-repeat;
+									background-size:100%;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-togetsec {
+				margin-bottom:_vw(60);
+
+				h2 {
+					border-radius:_vw(15);
+					font-size:_vw(38);
+					margin-bottom:_vw(30);
+					padding:_vw(15) _vw(10);
+				}
+			}
+			&-togetlist {
+				margin-top:_vw(30);
+
+				li {
+					margin-bottom:_vw(30);
+					padding:_vw(20);
+					width:_vw(328);
+		
+					img {
+						width:100%;
+					}
+					dl {
+						margin-top:_vw(20);
+					}
+					dt {
+						font-size:_vw(30);
+						font-weight:bold;
+						line-height:120%;
+						margin-bottom:_vw(5);
+					}
+				}
+				&-label {
+					padding:_vw(10) _vw(20);
+					top:_vw(35);
+					left:_vw(5);
+				}
+				&-icon {
+					margin-top:_vw(20);
+				}
+			}
+			&-consult {
+				margin-bottom:_vw(60);
+	
+				img {
+					width:100%;
+				}
+			}
+			&-search {
+				img {
+					width:100%;
+				}
+			}
+		}
+		/* ===== index ===== */
+		&._index {
+			.cmncts-casestudy {
+				&-ttl {
+					font-size:_vw(42);
+					line-height:120%;
+					margin-bottom:_vw(60);
+				}
+				&-index-list {
+					li {
+						font-size:_vw(26);
+						margin-bottom:_vw(40);
+
+						picture {
+							margin-bottom:_vw(20);
+							height:_vw(300);
+
+							img {
+								height:_vw(300);
+							}
+						}
+						h2 {
+							font-size:115%;
+							margin-bottom:_vw(10);
+
+							span {
+								border-radius:_vw(5);
+								padding:_vw(5) _vw(12);
+								vertical-align:_vw(5);
+							}
+						}
+					}
+				}
+			}
+		} //index
+		
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	article.cmncts-casestudy {
+		width:820px;
+
+		.cmncts-casestudy {
+			&-ttl {
+				margin-bottom:30px;
+				span {
+					font-size:_fs(34);
+					line-height:130%;
+					width:710px;
+				}
+			}
+			&-mainimg {
+				margin-bottom:40px;
+			}
+			&-mainsec {
+				margin-bottom:60px;
+				h2 {
+					border-bottom:1px solid #333;
+					font-size:_fs(29);
+					margin-bottom:17px;
+					padding-bottom:17px;
+				}
+				&-txt {
+					font-size:_fs(15);
+					margin-bottom:50px;
+				}
+				&-img {
+					margin-bottom:30px;
+				}
+				&-col {
+					@include _flex("","");
+				}
+				&-box {
+					&._w500 {
+						width:500px;
+					}
+				}
+			}
+			&-ownerssec {
+				margin-top:60px;
+				h3 {
+					margin-bottom:20px;
+				}
+				h4 {
+					border-bottom:1px solid #333;
+					font-size:_fs(29);
+					margin-bottom:17px;
+					padding-bottom:17px;
+				}
+				.cmncts-casestudy-mainsec-txt {
+					margin:0;
+				}
+			}
+			&-commentsec {
+				@include _flex("aiC","");
+				border-radius:10px;
+				padding:30px 40px;
+				h3 {
+					background:url(../img/case_study/comment_line.png) repeat-x left bottom;
+					font-size:_fs(29);
+					margin-bottom:15px;
+					padding-bottom:20px;
+
+					.fas {
+						margin-right:10px;
+						vertical-align:-2px;
+					}
+				}
+				&:after {
+					background:url(../img/case_study/img_torikaeru.png) no-repeat;
+					height:129px;
+					width:168px;
+				}
+				&-box {
+					width:535px;
+				}
+				.cmncts-casestudy-mainsec-txt {
+					margin:0;
+				}
+			}
+			&-prevnext {
+				margin-bottom:60px;
+				li {
+					width:400px;
+					a {
+						border-radius:20px;
+						padding:25px;
+						&:hover {
+							opacity:0.8;
+						}
+					}
+					.cmncts-casestudy-prevnext-box {
+						@include _flex("aiC","");
+						p {
+							width:110px;
+							&:before {
+								background:url(../img/case_study/arrow_l.png) no-repeat;
+								background-size:100%;
+								display:block;
+								margin:0 auto 15px;
+								height:42px;
+								width:42px;
+							}
+						}
+						picture {
+							width:221px;
+						}
+					}
+					dl {
+						font-size:_fs(15);
+						margin-top:15px;
+					}
+					&:last-of-type {
+						.cmncts-casestudy-prevnext-box {
+							flex-direction:row-reverse;
+							p {
+								&:before {
+									background:url(../img/case_study/arrow_r.png) no-repeat;
+									background-size:100%;
+								}
+							}
+						}
+					}
+				}
+				&._prev {
+					&:last-of-type {
+						.cmncts-casestudy-prevnext-box {
+							flex-direction:row;
+							p {
+								&:before {
+									background:url(../img/case_study/arrow_l.png) no-repeat;
+									background-size:100%;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-togetsec {
+				margin-bottom:50px;
+
+				h2 {
+					border-radius:15px;
+					font-size:_fs(26);
+					margin-bottom:30px;
+					padding:10px;
+				}
+			}
+			&-togetlist {
+				justify-content:flex-start;
+				margin-top:30px;
+	
+				li {
+					margin-right:13px;
+					margin-bottom:20px;
+					padding:15px;
+					width:234px;
+	
+					a:hover {
+						opacity:0.8;
+					}
+					&:nth-of-type(3n) {
+						margin-right:0;
+					}
+					dl {
+						margin-top:15px;
+					}
+					dt {
+						font-size:_fs(19);
+						margin-bottom:5px;
+					}
+				}
+				&-label {
+					padding:7px 15px;
+					top:25px;
+					left:5px;
+				}
+				&-icon {
+					margin-top:10px;
+				}
+			}
+			&-consult {
+				margin-bottom:60px;
+			}
+			&-search {
+				&:hover {
+					display:block;
+					opacity:0.8;
+				}
+			}
+		}
+
+		/* ===== index ===== */
+		&._index {
+			.cmncts-casestudy {
+				&-ttl {
+					font-size:_fs(34);
+					line-height:130%;
+					margin-bottom:60px;
+				}
+				&-index-list {
+					@include _flex("","");
+
+					li {
+						font-size:_fs(15);
+						margin-bottom:30px;
+						width:390px;
+
+						a:hover {
+							opacity:0.8;
+						}
+						picture {
+							margin-bottom:15px;
+							height:200px;
+
+							img {
+								height:200px;
+							}
+						}
+						h2 {
+							font-size:120%;
+							margin-bottom:10px;
+
+							span {
+								border-radius:5px;
+								padding:3px 8px;
+								vertical-align:3px;
+							}
+						}
+					}
+				}
+			}
+		} //index
+		
+	}
+}

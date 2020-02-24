@@ -1,0 +1,24 @@
+﻿https://github.com/barryvdh/laravel-snappy/issues/10
+Copy wkhtmltopdf-amd64 to '/usr/local/bin/' (in the vm of course).
+sudo chmod +x wkhtmltopdf-amd64
+
+Setup font
+https://thajegan76.wordpress.com/category/laravel/
+yum install urw-fonts libXext libXrender fontconfig libfontconfig.so.1
+
+With docker
+PORTAL
+docker-compose exec php cp /var/www/html/mado_akagane_phase2_src/vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64 /usr/local/bin
+docker-compose exec php chmod +x /usr/local/bin/wkhtmltopdf-amd64
+
+GENERAL
+docker-compose exec php cp /var/www/html/all_purpose_src/vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64 /usr/local/bin
+docker-compose exec php chmod +x /usr/local/bin/wkhtmltopdf-amd64
+
+TH site IT chưa có chạy lại docker (do chạy lâu) thì đang thiếu libssl1.0-dev
+Xử lý như sau :
+docker ps
+docker exec -it xxx sh
+apt-get remove libssl-dev
+apt-get update
+apt-get install libssl1.0-dev

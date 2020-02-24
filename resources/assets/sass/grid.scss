@@ -1,0 +1,137 @@
+$tdBorder: #dee2e6;
+
+.main{
+	padding-bottom: 0px;
+	#btnSave{
+		margin-bottom: 15px;
+		border: 1px solid rgba(0,0,0,.49);
+	    padding: 4px 25px;
+	    border-radius: 5px;
+	    background: #333;
+	    color: #fff;
+        width:150px;
+	}
+	#wrap-item{
+		box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+	    -moz-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+	    -webkit-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+	    -o-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+	    -ms-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+	}
+
+	#tItemsHeader{
+		td{
+			background-color: #f2f2f2;
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+	}
+
+	#parentdata{
+		&.scrollbar{
+			&::-webkit-scrollbar-track{
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+				border-radius: 10px;
+				background-color: #F5F5F5;
+			}
+			&::-webkit-scrollbar {
+				width: 12px;
+				background-color: #F5F5F5;
+			}
+			&::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+				background-color: #555;
+			}
+		}
+
+
+		table{
+            color: #111111;
+			input[type="button"]{
+				border: 1px solid rgba(0, 0, 0, 0.49);
+			    padding: 2px 20px;
+			    border-radius: 5px;
+			    font-size: 12px;
+			    width: initial;
+			    background: #FFFFFF;
+			    &:disabled{
+			    	background: #f2f2f2;
+			    }
+			}
+			td{
+				border: 1px solid $tdBorder;
+				padding: 5px;
+                text-align: center;
+               
+				input[type="text"]{
+					outline: none;
+					border: none;
+				}
+			}
+
+			select{
+				padding: 5px;
+			    border: 1px solid $tdBorder;
+			    width: 100%;
+			}
+		}
+	}
+
+	td{
+		font-size: 1.5rem;
+		input{
+			font-size: 1.5rem;
+		}
+	}
+}
+
+		.btnAdd{
+			border: 1px solid rgba(0, 0, 0, 0.49);
+		    border-radius: 5px;
+		    background: #333;
+		    color: #fff;
+		    margin-top: 5px;
+		    margin-left: 3px;
+		    padding: 0px 16px;
+            height: 38px;
+            font-size: 18px;
+		}
+
+#ListCaption{
+	td{
+		padding: 5px;
+	}
+}
+
+#ListUser{
+	td{
+		padding: 5px;
+	}
+}
+
+#wrap-item{
+	.sendmail{
+		width: 100px;
+	}
+}
+
+#tAssigneeColHeader{
+	td{
+		padding: 5px;
+	}
+}
+
+.datepicker{
+	text-align: center;
+}
+
+.readonly{
+	background: #f2f2f2;
+	input{
+		background: #f2f2f2;
+	}
+}
+
+
+

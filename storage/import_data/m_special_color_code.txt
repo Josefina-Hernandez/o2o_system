@@ -1,0 +1,15 @@
+Hint:_\t,_\t,
+_\t,_\t,
+m_color_id_\t,special_character_\t,replace_code
+6_\t,△_\t,BK
+5_\t,△_\t,AB
+4_\t,△_\t,SC
+2_\t,△_\t,PW
+6_\t,〇_\t,T
+5_\t,〇_\t,G
+4_\t,〇_\t,K
+2_\t,〇_\t,D
+6_\t,□_\t,BK
+5_\t,□_\t,BK
+4_\t,□_\t,VV
+2_\t,□_\t,VV

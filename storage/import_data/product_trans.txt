@@ -1,0 +1,10 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,_\t,
+product_id_\t,m_lang_id_\t,product_name_\t,product_desc_\t,del_flg
+1_\t,1_\t,WE-PLUS_\t,WE PLUS has passed rigorous tests based on ASTM,and TOSTEM in-house’s toughest standards. Available in various designs with a maximum height of 3 meters to satisfy various designers’ needs in high-rise market_\t,0
+2_\t,1_\t,WE-70_\t,WE 70 series brings legendary TOSTEM quality to everyday life. Built for mass market, while maintaining strict quality standards. WE 70 series puts TOSTEM within everyone’s reach._\t,0
+3_\t,1_\t,WE-40_\t,WE 40 series brings legendary TOSTEM quality to everyday life. Built for mass market, while maintaining strict quality standards. WE40 series puts TOSTEM within everyone’s reach._\t,0
+4_\t,1_\t,P7_\t,P7 series is a luxury residential series, using only the most premium materials and luxurious features for specialty and high-end residential properties. Suitable for low rise luxury projects._\t,0
+5_\t,1_\t,GIESTA_\t,_\t,0
+6_\t,1_\t,Exterior_\t,_\t,0
+7_\t,1_\t,Interior_\t,_\t,0

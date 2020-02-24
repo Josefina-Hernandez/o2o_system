@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* tpoint用CSS
+========================================*/
+
+@import '../import/_import';
+@import './_common';
+
+/* SPandPC */
+article.cmncts-tpoint {
+	.cmncts-tpoint {
+		&-ttl {
+			color:$col_main;
+			font-weight:bold;
+			line-height:125%;
+			text-align:center;
+		}
+		&-subttl {
+			font-weight:bold;
+			line-height:130%;
+			text-align:center;
+		}
+		&-nobori {
+			@include _flex("aiC","");
+			dl {
+				box-sizing:border-box;
+				dt {
+					font-weight:bold;
+					line-height:140%;
+				}
+			}
+			picture {
+				font-size:0;
+			}
+		}
+		&-txt {
+			line-height:150%;
+		}
+		&-note {
+			text-align:right;
+		}
+		&-about {
+			background:#f5f5f5;
+
+			a {
+				color:#004096;
+			}
+		}
+		&-mark {
+			&-txt {
+				box-sizing:border-box;
+			}
+			&-btn {
+				@include _btn;
+				justify-content:center;
+				text-align:center;
+				height:auto;
+			}
+		}
+	}
+}
+//プレミアム用
+#premium {
+	article.cmncts-tpoint {
+		.cmncts-tpoint {
+			&-mark {
+				display:none;
+			}
+		}
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	article.cmncts-tpoint {
+		.cmncts-tpoint {
+			&-ttl {
+				font-size:_vw(64);
+				margin-bottom:_vw(20);
+			}
+			&-subttl {
+				font-size:_vw(34);
+				margin-bottom:_vw(30);
+			}
+			&-img {
+				img {
+					width:100%;
+				}
+			}
+			&-nobori {
+				margin:_vw(40) 0;
+				dl {
+					border:_vw(6) solid #ddd;
+					border-radius:_vw(15);
+					padding:_vw(25);
+					width:_vw(670);
+
+					dt {
+						font-size:_vw(32);
+						margin-bottom:_vw(15);
+					}
+				}
+				picture {
+					img {
+						width:_vw(90);
+					}
+				}
+			}
+			&-txt {
+				font-size:_vw(28);
+				margin-bottom:_vw(40);
+			}
+			&-note {
+				margin-top:_vw(10);
+			}
+			&-about {
+				margin-top:_vw(40);
+				padding:_vw(30);
+
+				picture {
+					margin-bottom:_vw(30);
+					text-align:center;
+					img {
+						width:_vw(200);
+					}
+				}
+				&-txt {
+					font-size:_vw(28);
+					line-height:150%;
+
+					p {
+						margin-bottom:_vw(15);
+						&:last-of-type {
+							margin:0;
+							text-align:center;
+						}
+					}
+				}
+			}
+			&-mark {
+				margin-top:_vw(60);
+
+				&-txt {
+					border:_vw(4) solid #004096;
+					font-size:_vw(40);
+					line-height:160%;
+					padding:_vw(40);
+					text-align:center;
+
+					img {
+						vertical-align:_vw(-8);
+						width:_vw(200);
+					}
+				}
+				&-btn {
+					margin:_vw(30) auto 0;
+					width:_vw(320);
+				}
+			}
+		}
+	}
+	//プレミアム用
+	#premium {
+		article.cmncts-tpoint {
+			padding-bottom:_vw(80);
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	article.cmncts-tpoint {
+		width:820px;
+
+		.cmncts-tpoint {
+			&-ttl {
+				font-size:_fs(52);
+				margin-bottom:20px;
+			}
+			&-subttl {
+				font-size:_fs(24);
+				margin-bottom:40px;
+			}
+			&-img {
+				text-align:center;
+			}
+			&-nobori {
+				margin:30px 0;
+				dl {
+					border:5px solid #ddd;
+					border-radius:15px;
+					padding:25px;
+					width:720px;
+
+					dt {
+						font-size:_fs(24);
+						margin-bottom:15px;
+					}
+				}
+			}
+			&-txt {
+				font-size:_fs(18);
+				margin-bottom:30px;
+				text-align:center;
+			}
+			&-note {
+				margin-top:10px;
+			}
+			&-about {
+				@include _flex("aiC","");
+				margin-top:30px;
+				padding:35px;
+
+				&-txt {
+					font-size:_fs(15);
+					line-height:150%;
+					width:610px;
+
+					p {
+						margin-bottom:15px;
+						&:last-of-type {
+							margin:0;
+						}
+						a {
+							&:hover {
+								opacity:0.8;
+							}
+						}
+					}
+				}
+			}
+			&-mark {
+				@include _flex("","");
+				margin-top:40px;
+
+				&-txt {
+					border:3px solid #004096;
+					font-size:_fs(22);
+					line-height:180%;
+					padding:40px 42px;
+					width:420px;
+				}
+				&-btn {
+					font-size:85%;
+					margin:30px auto 0;
+					width:180px;
+				}
+			}
+		}
+	}
+}

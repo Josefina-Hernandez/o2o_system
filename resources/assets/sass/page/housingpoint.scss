@@ -1,0 +1,481 @@
+@charset "utf-8";
+
+/* housingpoint用CSS
+========================================*/
+
+@import '../import/_import';
+@import './_common';
+
+/* SPandPC */
+article.cmncts-housingpoint {
+	.cmncts-housingpoint {
+		&-ttl {
+			color:$col_main;
+			font-weight:bold;
+			line-height:125%;
+			text-align:center;
+		}
+		&-sec {
+			h2 {
+				font-weight:bold;
+				span {
+					color:$col_main;
+				}
+			}
+		}
+		&-txt {
+			line-height:150%;
+
+			span {
+				color:$col_main;
+			}
+		}
+		&-note {
+			padding-left:1em;
+			text-indent:-1em;
+			&._em2 {
+				padding-left:2em;
+				text-indent:-2em;
+			}
+		}
+		&-pointsec {
+			h3 {
+				background:#5cb531;
+				color:#fff;
+				font-weight:bold;
+				line-height:120%;
+				text-align:center;
+
+				span {
+					font-size:60%;
+				}
+			}
+			.cmncts-housingpoint-box {
+				dt {
+					color:$col_main;
+					font-weight:bold;
+
+					sup {
+						font-size:60%;
+					}
+					&:before {
+						content:"";
+						display:inline-block;
+					}
+				}
+			}
+			&.cmncts-housingpoint-box {
+				dl {
+					@include _flex("","");
+
+					dt {
+						sup {
+							font-size:70%;
+						}
+					}
+				}
+				ul {
+					color:#5cb531;
+					font-weight:bold;
+
+					li {
+						padding-left:1em;
+						text-indent:-1em;
+					}
+				}
+			}
+		}
+		&-infobox {
+			background:#f5f5f5;
+			position:relative;
+			text-align:center;
+			&-ttl {
+				color:$col_main;
+				font-weight:bold;
+				line-height:140%;
+			}
+			&:before {
+				background:url(../img/housingpoint/img_tori02.png) no-repeat;
+				background-size:100%;
+				content:"";
+				display:block;
+				position:absolute;
+			}
+			&:after {
+				background:url(../img/housingpoint/img_kaeru02.png) no-repeat;
+				background-size:100%;
+				content:"";
+				display:block;
+				position:absolute;
+			}
+		}
+		&-btnlist {
+			a {
+				@include _btn;
+			}
+		}
+		&-togetsec {
+			h2 {
+				background:$col_main;
+				color:#fff;
+				font-weight:bold;
+				line-height:130%;
+				text-align:center;
+			}
+		}
+		&-togetlist {
+			@include _flex("","");
+	
+			li {
+				background:#f5f5f5;
+				position:relative;
+	
+				a {
+					display:block;
+				}
+				dt {
+					color:$col_main;
+					font-weight:bold;
+				}
+			}
+			&-label {
+				background:rgba(50,50,50,0.9);
+				color:#fff;
+				position:absolute;
+			}
+		}
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	article.cmncts-housingpoint {
+		.cmncts-housingpoint {
+			&-ttl {
+				font-size:_vw(64);
+				margin-bottom:_vw(30);
+			}
+			&-sec {
+				margin-bottom:_vw(50);
+				h2 {
+					font-size:_vw(28);
+					margin-bottom:_vw(20);
+				}
+			}
+			&-box {
+				margin-bottom:_vw(25);
+			}
+			&-txt {
+				font-size:_vw(28);
+			}
+			&-linebox {
+				border:_vw(5) solid $col_main;
+				padding:_vw(25);
+
+				picture {
+					margin-bottom:_vw(15);
+				}
+			}
+			&-pointsec {
+				margin-top:_vw(30);
+				h3 {
+					border-radius:_vw(15);
+					font-size:_vw(32);
+					margin-bottom:_vw(30);
+					padding:_vw(15);
+				}
+				.cmncts-housingpoint-box {
+					margin-bottom:_vw(40);
+					dt {
+						font-size:_vw(38);
+						margin-bottom:_vw(10);
+						&:before {
+							margin-right:_vw(12);
+							vertical-align:_vw(-12);
+							height:_vw(56);
+							width:_vw(63);
+						}
+					}
+					&:nth-of-type(1) {
+						dt:before {
+							background:url(../img/housingpoint/img_tori01.png) no-repeat;
+							background-size:100%;
+						}
+					}
+					&:nth-of-type(2) {
+						dt:before {
+							background:url(../img/housingpoint/img_kaeru01.png) no-repeat;
+							background-size:100%;
+						}
+					}
+					.cmncts-housingpoint-txt {
+						margin-bottom:_vw(30);
+					}
+					.cmncts-housingpoint-note {
+						margin-top:_vw(10);
+					}
+				}
+			}
+			&-infobox {
+				border-radius:_vw(20);
+				margin-bottom:_vw(40);
+				padding:_vw(20);
+				&-ttl {
+					font-size:_vw(32);
+				}
+				&-txt {
+					font-size:_vw(28);
+				}
+				&:before {
+					left:_vw(25);
+					bottom:0;
+					height:_vw(91);
+					width:_vw(76);
+				}
+				&:after {
+					right:_vw(25);
+					bottom:0;
+					height:_vw(91);
+					width:_vw(76);
+				}
+			}
+			&-btnlist {
+				margin-bottom:_vw(80);
+				li {
+					margin-bottom:_vw(30);
+				}
+			}
+			&-togetsec {
+				margin-bottom:_vw(60);
+
+				h2 {
+					border-radius:_vw(15);
+					font-size:_vw(38);
+					margin-bottom:_vw(30);
+					padding:_vw(15) _vw(10);
+				}
+			}
+			&-togetlist {
+				margin-top:_vw(30);
+
+				li {
+					margin-bottom:_vw(30);
+					padding:_vw(20);
+					width:_vw(328);
+		
+					img {
+						width:100%;
+					}
+					dl {
+						margin-top:_vw(20);
+					}
+					dt {
+						font-size:_vw(30);
+						font-weight:bold;
+						line-height:120%;
+						margin-bottom:_vw(5);
+					}
+				}
+				&-label {
+					padding:_vw(10) _vw(20);
+					top:_vw(35);
+					left:_vw(5);
+				}
+				&-icon {
+					margin-top:_vw(20);
+				}
+			}
+			&-consult {
+				margin-bottom:_vw(60);
+	
+				img {
+					width:100%;
+				}
+			}
+			&-search {
+				img {
+					width:100%;
+				}
+			}
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	article.cmncts-housingpoint {
+		width:820px;
+
+		.cmncts-housingpoint {
+			&-ttl {
+				font-size:_fs(52);
+				margin-bottom:40px;
+			}
+			&-sec {
+				margin-bottom:50px;
+				h2 {
+					font-size:_fs(20);
+					margin-bottom:15px;
+				}
+			}
+			&-col {
+				@include _flex("","");
+				&._mb30 {
+					margin-bottom:30px;
+				}
+			}
+			&-box {
+				&._w480 {
+					width:480px;
+				}
+			}
+			&-txt {
+				font-size:_fs(18);
+			}
+			&-linebox {
+				border:3px solid $col_main;
+				padding:20px;
+
+				picture {
+					margin-bottom:10px;
+				}
+			}
+			&-pointsec {
+				margin-top:30px;
+				h3 {
+					border-radius:15px;
+					font-size:_fs(26);
+					margin-bottom:25px;
+					padding:10px 5px;
+				}
+				.cmncts-housingpoint-col {
+					margin-bottom:40px;
+				}
+				.cmncts-housingpoint-box {
+					width:380px;
+
+					dt {
+						font-size:_fs(32);
+						margin-bottom:10px;
+						&:before {
+							margin-right:10px;
+							vertical-align:-8px;
+							height:42px;
+							width:47px;
+						}
+					}
+					&:nth-of-type(1) {
+						dt:before {
+							background:url(../img/housingpoint/img_tori01.png) no-repeat;
+						}
+					}
+					&:nth-of-type(2) {
+						background:url(../img/housingpoint/line.png) repeat-y left top;
+						padding-left:30px;
+						dt:before {
+							background:url(../img/housingpoint/img_kaeru01.png) no-repeat;
+						}
+					}
+					.cmncts-housingpoint-txt {
+						margin-bottom:30px;
+					}
+					.cmncts-housingpoint-note {
+						margin-top:10px;
+					}
+				}
+				&.cmncts-housingpoint-box {
+					width:380px;
+
+					dt {
+						padding-left:1em;
+						text-indent:-1em;
+						width:215px;
+					}
+				}
+			}
+			&-infobox {
+				border-radius:20px;
+				margin-bottom:30px;
+				padding:15px;
+				&-ttl {
+					font-size:_fs(26);
+				}
+				&-txt {
+					font-size:_fs(20);
+				}
+				&:before {
+					left:80px;
+					bottom:0;
+					height:91px;
+					width:76px;
+				}
+				&:after {
+					right:80px;
+					bottom:0;
+					height:91px;
+					width:76px;
+				}
+			}
+			&-btnlist {
+				@include _flex("","jcC");
+				margin-bottom:60px;
+
+				li {
+					margin:0 10px;
+				}
+			}
+			&-togetsec {
+				margin-bottom:50px;
+
+				h2 {
+					border-radius:15px;
+					font-size:_fs(26);
+					margin-bottom:30px;
+					padding:10px;
+				}
+			}
+			&-togetlist {
+				justify-content:flex-start;
+				margin-top:30px;
+	
+				li {
+					margin-right:13px;
+					margin-bottom:20px;
+					padding:15px;
+					width:234px;
+	
+					a:hover {
+						opacity:0.8;
+					}
+					&:nth-of-type(3n) {
+						margin-right:0;
+					}
+					dl {
+						margin-top:15px;
+					}
+					dt {
+						font-size:_fs(19);
+						margin-bottom:5px;
+					}
+				}
+				&-label {
+					padding:7px 15px;
+					top:25px;
+					left:5px;
+				}
+				&-icon {
+					margin-top:10px;
+				}
+			}
+			&-consult {
+				margin-bottom:60px;
+			}
+			&-search {
+				&:hover {
+					display:block;
+					opacity:0.8;
+				}
+			}
+		}
+	}
+}

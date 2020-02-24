@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@import './import/_import';
+
+/* ===== staff ===== */
+#mainArea.staff {
+	.staffList {
+		li {
+			border-bottom:1px dotted #ccc;
+
+			&:last-of-type {
+				border-bottom:0;
+			}
+			.staffImg {
+				text-align:center;
+
+				img {
+					width:100%;
+				}
+				.title, h2 {
+					font-weight:bold;
+					line-height:150%;
+				}
+			}
+			.staffTxt {
+				background:#f7f7f7;
+				line-height:160%;
+				position:relative;
+
+				&:before {
+					content:"";
+					display:block;
+					position:absolute;
+				}
+				h3 {
+					color:$col_main;
+					font-weight:bold;
+				}
+			}
+		}
+	}
+}
+
+/* SPonly */
+@media screen and (max-width: #{nth($breakPointList, 1)}){
+	#mainArea.staff {
+		.staffList {
+			li {
+				margin-bottom:_vw(50);
+				padding-bottom:_vw(50);
+
+				.staffImg {
+					.title {
+						font-size:_vw(26);
+						margin:_vw(20) 0 _vw(5);
+					}
+					h2 {
+						font-size:_vw(32);
+					}
+				}
+				.staffTxt {
+					border-radius:_vw(20);
+					font-size:_vw(26);
+					margin-top:_vw(40);
+					padding:_vw(35) _vw(40);
+
+					&:before {
+						background:url(../img/staff_arrow.png) no-repeat;
+						background-size:100%;
+						transform:rotate(90deg);
+						left:calc(50% - #{_vw(12)});
+						top:_vw(-33);
+						height:_vw(44);
+						width:_vw(25);
+					}
+					h3 {
+						margin-top:_vw(10);
+						margin-bottom:_vw(5);
+					}
+					> p {
+						padding-left:_vw(50);
+						padding-bottom:_vw(10);
+					}
+				}
+			}
+		}
+		.contactSec {
+			margin-top:_vw(60);
+		}
+	}
+}
+
+/* PConly */
+@media print,screen and (min-width: #{nth($breakPointList, 2)}){
+	#mainArea.staff {
+		.staffList {
+			li {
+				@include _flex("","");
+				margin-bottom:40px;
+				padding-bottom:40px;
+
+				.staffImg {
+					width:340px;
+
+					.title {
+						font-size:_fs(15);
+						margin:12px 0 3px;
+					}
+					h2 {
+						font-size:_fs(20);
+					}
+				}
+				.staffTxt {
+					border-radius:20px;
+					font-size:_fs(15);
+					padding:30px 40px;
+					width:650px;
+
+					&:before {
+						background:url(../img/staff_arrow.png) no-repeat;
+						left:-20px;
+						top:80px;
+						height:36px;
+						width:20px;
+					}
+					h3 {
+						margin-top:10px;
+						margin-bottom:5px;
+					}
+					> p {
+						padding-left:30px;
+						padding-bottom:10px;
+					}
+				}
+			}
+		}
+		.contactSec {
+			margin-top:60px;
+		}
+	} //mainArea
+}

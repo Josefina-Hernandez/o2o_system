@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/*===========================
+why / case
+===========================*/
+._why{
+	.hlt-case{
+		background: #fffde5;
+		border: solid 2px #ed6e00;
+		@include _mq(pc) {
+			margin: 30px 0 0;
+			padding: 20px;
+			border-radius: 10px;
+		}
+		@include _mq(sp) {
+			margin: _vw(40) 0 0;
+			padding: _vw(30);
+			border-radius: _vw(15);
+		}
+		&__ttl{
+			display: flex;
+			align-items: center;
+			color: $col_main;
+			font-weight: bold;
+			line-height: _lh(27,39);
+			@include _mq(pc) {
+				font-size: _fs(27);
+			}
+			@include _mq(sp) {
+				font-size: _vw(40);
+			}
+			img{
+				@include _mq(pc) {
+					width: 95px;
+					margin-right: 14px;
+				}
+				@include _mq(sp) {
+					width: _vw(120);
+					margin-right: _vw(25);
+				}
+			}
+		}
+		&__box{
+			@include _mq(pc) {
+				display: flex;
+				margin: 15px 0 0;
+			}
+			@include _mq(sp) {
+				margin: _vw(30) 0 0;
+			}
+		}
+		&__img{
+			text-align: center;
+			@include _mq(pc) {
+				width: 511px;
+			}
+			@include _mq(sp) {
+				width: 100%;
+			}
+		}
+		&__txt{
+			line-height: _lh(16,30);
+			@include _mq(pc) {
+				flex: 1;
+				margin: 20px 0 0 10px;
+				font-size: _fs(16);
+			}
+			@include _mq(sp) {
+				margin: _vw(30) 0 0;
+				font-size: _vw(26);
+			}
+			&._sub{
+				line-height: _lh(14,20);
+				@include _mq(pc) {
+					margin: 10px 0 0;
+					font-size: _fs(14);
+				}
+				@include _mq(sp) {
+					font-size: _vw(22);
+				}
+			}
+		}
+	}
+}

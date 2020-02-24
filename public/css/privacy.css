@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* privacy用CSS
+========================================*/
+#mainArea.privacy > article h1 {
+	color:#ed6d00;
+	font-weight:bold;
+	line-height:120%;
+}
+
+#mainArea.privacy > article .privacyBox a {
+	color:#0096d4;
+}
+
+#mainArea.privacy > article .privacyBox h2 {
+	font-weight:bold;
+}
+
+#mainArea.privacy > article .privacyBox li {
+	padding-left:1.7em;
+	text-indent:-1.7em;
+}
+#mainArea.privacy > article .privacyBox li ul li {
+	font-size:100%;
+	padding-left:1.2em;
+	text-indent:-1.2em;
+}
+
+#mainArea.privacy > article .privacyBox section h3 {
+	background:#f5f5f5;
+	border:1px solid #ccc;
+	font-weight:bold;
+}
+
+#mainArea.privacy > article .privacyBox section .term {
+	border:1px solid #ccc;
+	text-indent:0;
+}
+#mainArea.privacy > article .privacyBox section .term dt {
+	font-weight:bold;
+}
+
+#mainArea.privacy > article .privacyBox .address {
+	border:1px solid #ccc;
+}
+#mainArea.privacy > article .privacyBox .address dt {
+	font-weight:bold;
+}
+
+/* SPonly */
+@media screen and (max-width: 767px) {
+	#mainArea.privacy > article {
+		border-top:0.875vw solid #ed6d00;
+		padding:7.5vw 2.5vw 0;
+	}
+	#mainArea.privacy > article h1 {
+		border-bottom:0.375vw solid #ed6d00;
+		font-size:6vw;
+		margin-bottom:7.5vw;
+		padding-bottom:2.5vw;
+	}
+	#mainArea.privacy > article .privacyBox {
+		padding:0 2.625vw;
+	}
+	#mainArea.privacy > article .privacyBox h2 {
+		font-size:3.75vw;
+		margin-bottom:3.75vw;
+	}
+	#mainArea.privacy > article .privacyBox section {
+		margin-top:6.25vw;
+	}
+	#mainArea.privacy > article .privacyBox section h3 {
+		border-radius:0.625vw;
+		font-size:3.5vw;
+		margin-bottom:3.75vw;
+		padding:1.875vw;
+	}
+	#mainArea.privacy > article .privacyBox section ul {
+		padding-left:1.25vw;
+	}
+	#mainArea.privacy > article .privacyBox section ul li {
+		margin-top:1.25vw;
+	}
+	#mainArea.privacy > article .privacyBox section .term {
+		margin:2.5vw 0;
+		padding:3.75vw 2.5vw;
+	}
+	#mainArea.privacy > article .privacyBox section .term dt {
+		margin-bottom:2.5vw;
+	}
+	#mainArea.privacy > article .privacyBox section .mt20 {
+		margin-top:2.5vw;
+	}
+	#mainArea.privacy > article .privacyBox .address {
+		margin:3.75vw 0;
+		padding:3.75vw 2.5vw;
+	}
+	#mainArea.privacy > article .privacyBox .address dt {
+		margin-bottom:2.5vw;
+	}
+}
+
+/* PConly */
+@media print, screen and (min-width: 768px) {
+	#mainArea.privacy > article {
+		margin-left:auto;
+		margin-right:auto;
+		width:1120px;
+	}
+	#mainArea.privacy > article h1 {
+		border-bottom:2px solid #ed6d00;
+		font-size:228.57143%;
+		margin-bottom:40px;
+		padding-bottom:15px;
+	}
+	#mainArea.privacy > article .privacyBox {
+		padding:0 31px;
+	}
+	#mainArea.privacy > article .privacyBox a:hover {
+		opacity:0.8;
+	}
+	#mainArea.privacy > article .privacyBox h2 {
+		font-size:128.57143%;
+		margin-bottom:20px;
+	}
+	#mainArea.privacy > article .privacyBox p,
+	#mainArea.privacy > article .privacyBox li {
+		font-size:107.14286%;
+		line-height:150%;
+	}
+	#mainArea.privacy > article .privacyBox section {
+		margin-top:40px;
+	}
+	#mainArea.privacy > article .privacyBox section h3 {
+		border-radius:3px;
+		font-size:121.42857%;
+		margin-bottom:20px;
+		padding:10px 15px;
+	}
+	#mainArea.privacy > article .privacyBox section ul {
+		padding-left:20px;
+	}
+	#mainArea.privacy > article .privacyBox section ul li {
+		margin-top:10px;
+	}
+	#mainArea.privacy > article .privacyBox section .term {
+		margin:15px 0;
+		padding:20px;
+	}
+	#mainArea.privacy > article .privacyBox section .term dt {
+		margin-bottom:15px;
+	}
+	#mainArea.privacy > article .privacyBox section .mt20 {
+		margin-top:20px;
+	}
+	#mainArea.privacy > article .privacyBox .address {
+		margin:20px 0;
+		padding:20px;
+	}
+	#mainArea.privacy > article .privacyBox .address dt {
+		margin-bottom:15px;
+	}
+}

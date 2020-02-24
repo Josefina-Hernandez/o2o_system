@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*===========================
+index / issue
+===========================*/
+._index{
+	.hlt-issue {
+		background: #fffde5;
+		@include _mq(pc) {
+			margin-top: 40px;
+			padding: 40px;
+		}
+		@include _mq(sp) {
+			margin-top: _vw(40);
+			padding: _vw(30);
+		}
+		&__title {
+			color: #ed6e00;
+			line-height: _lh(27,40);
+			text-align: center;
+			font-weight: bold;
+			@include _mq(pc) {
+				font-size: _fs(27);
+			}
+			@include _mq(sp) {
+				font-size: _vw(36);
+			}
+		}
+		&__btn-wrap {
+			@include _mq(pc) {
+				margin-top: 25px;
+				display: flex;
+				justify-content: space-between;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(30);
+			}
+		}
+		&__btn {
+			position: relative;
+			display: block;
+			background-color: #ed6e00;
+			color: #fff;
+			line-height: _lh(18,28);
+			text-align: center;
+			font-weight: bold;
+			box-sizing: border-box;
+			&:after{
+				content: "\f138";
+				color: #fff;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				line-height: 1;
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				@include _mq(pc) {
+					width: 17px;
+					height: 16px;
+					font-size:_fs(16,18);
+				}
+				@include _mq(sp) {
+					width: _vw(30);
+					height: _vw(30);
+					font-size:_vw(32);
+				}
+			}
+			@include _mq(pc) {
+				width: 360px;
+				padding: 20px 25px;
+				border-radius: 10px;
+				font-size: _fs(18);
+			}
+			@include _mq(sp) {
+				margin-bottom: _vw(20);
+				padding:_vw(20);
+				border-radius: _vw(10);
+				font-size: _vw(32);
+			}
+			&:hover{
+				@include _mq(pc) {
+					opacity: .8;
+				}
+			}
+		}
+		&__list {
+			@include _mq(pc) {
+				margin-top: 40px;
+			}
+			@include _mq(sp) {
+				margin-top: _vw(30);
+			}
+		}
+		&__item {
+			font-weight: bold;
+			@include _mq(pc) {
+				font-size: _fs(18);
+			}
+			@include _mq(sp) {
+				font-size: _vw(28);
+			}
+		}
+		&__text {
+			@include _mq(pc) {
+				margin-top: 30px;
+				font-size: _fs(16);
+			}
+			@include _mq(sp) {
+				margin-top: _vw(30);
+				font-size:_vw(26);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

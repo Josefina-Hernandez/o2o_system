@@ -1,0 +1,17 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/tostem/common/css/tostem.css": "/tostem/common/css/tostem.css",
+    "/tostem/front/cart/cart.css": "/tostem/front/cart/cart.css",
+    "/tostem/front/login/login.css": "/tostem/front/login/login.css",
+    "/tostem/front/quotation_system/products/product.css": "/tostem/front/quotation_system/products/product.css",
+    "/css/users.css": "/css/users.css",
+    "/tostem/admin/pmaintenance/css/pmaintenance.css": "/tostem/admin/pmaintenance/css/pmaintenance.css",
+    "/tostem/admin/pmaintenance/css/jquery-ui.css": "/tostem/admin/pmaintenance/css/jquery-ui.css",
+    "/js/users.js": "/js/users.js",
+    "/tostem/admin/pmaintenance/js/calendar.js": "/tostem/admin/pmaintenance/js/calendar.js",
+    "/tostem/admin/pmaintenance/js/jquery-ui.js": "/tostem/admin/pmaintenance/js/jquery-ui.js",
+    "/tostem/admin/pmaintenance/js/pmaintenance.js": "/tostem/admin/pmaintenance/js/pmaintenance.js",
+    "/tostem/common/js/tostem.js": "/tostem/common/js/tostem.js",
+    "/tostem/front/cart/cart.js": "/tostem/front/cart/cart.js"
+}
