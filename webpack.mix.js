@@ -20,7 +20,7 @@ mix/*.js('resources/assets/js/app.js', 'public/js/')
 
     //quotation
     .sass('resources/assets/tostem/front/quotation_system/quotation.scss', 'public/tostem/front/quotation_system')
-    .js('resources/assets/tostem/front/quotation_system/quotation.js', 'public/tostem/front/quotation_system/') //Add add popup status New/Reform hainp 20200922
+    .js('resources/assets/tostem/front/quotation_system/quotation.js', 'public/tostem/front/quotation_system/').vue() //Add add popup status New/Reform hainp 20200922
      
     //product
     .js('resources/assets/tostem/front/quotation_system/products/product.js', 'public/tostem/front/quotation_system/products')

@@ -10,7 +10,6 @@
     "/tostem/admin/pmaintenance/js/calendar.js": "/tostem/admin/pmaintenance/js/calendar.js",
     "/tostem/admin/quotationresult/js/quotationresult.js": "/tostem/admin/quotationresult/js/quotationresult.js",
     "/tostem/admin/accessanalysis/js/accessanalysis.js": "/tostem/admin/accessanalysis/js/accessanalysis.js",
-    "/css/users.css": "/css/users.css",
     "/tostem/front/quotation_system/products/product.css": "/tostem/front/quotation_system/products/product.css",
     "/tostem/front/quotation_system/quotation.css": "/tostem/front/quotation_system/quotation.css",
     "/tostem/front/login/login.css": "/tostem/front/login/login.css",
@@ -18,5 +17,6 @@
     "/tostem/admin/accessanalysis/css/accessanalysis.css": "/tostem/admin/accessanalysis/css/accessanalysis.css",
     "/tostem/admin/quotationresult/css/quotationresult.css": "/tostem/admin/quotationresult/css/quotationresult.css",
     "/tostem/admin/pmaintenance/css/jquery-ui.css": "/tostem/admin/pmaintenance/css/jquery-ui.css",
-    "/tostem/admin/pmaintenance/css/pmaintenance.css": "/tostem/admin/pmaintenance/css/pmaintenance.css"
+    "/tostem/admin/pmaintenance/css/pmaintenance.css": "/tostem/admin/pmaintenance/css/pmaintenance.css",
+    "/css/users.css": "/css/users.css"
 }

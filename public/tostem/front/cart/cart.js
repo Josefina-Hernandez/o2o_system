@@ -907,6 +907,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./resources/assets/sass/users.scss":
+/*!******************************************!*\
+  !*** ./resources/assets/sass/users.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/assets/tostem/admin/pmaintenance/scss/pmaintenance.scss":
 /*!***************************************************************************!*\
   !*** ./resources/assets/tostem/admin/pmaintenance/scss/pmaintenance.scss ***!
@@ -1002,19 +1015,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************************************************!*\
   !*** ./resources/assets/tostem/front/quotation_system/products/product.scss ***!
   \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/assets/sass/users.scss":
-/*!******************************************!*\
-  !*** ./resources/assets/sass/users.scss ***!
-  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1899,7 +1899,6 @@ try {
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/tostem/front/cart/cart": 0,
-/******/ 			"css/users": 0,
 /******/ 			"tostem/front/quotation_system/products/product": 0,
 /******/ 			"tostem/front/quotation_system/quotation": 0,
 /******/ 			"tostem/front/login/login": 0,
@@ -1907,7 +1906,8 @@ try {
 /******/ 			"tostem/admin/accessanalysis/css/accessanalysis": 0,
 /******/ 			"tostem/admin/quotationresult/css/quotationresult": 0,
 /******/ 			"tostem/admin/pmaintenance/css/jquery-ui": 0,
-/******/ 			"tostem/admin/pmaintenance/css/pmaintenance": 0
+/******/ 			"tostem/admin/pmaintenance/css/pmaintenance": 0,
+/******/ 			"css/users": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1957,16 +1957,16 @@ try {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/front/cart/cart.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/front/cart/cart.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/front/login/login.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/front/quotation_system/quotation.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/front/quotation_system/products/product.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/sass/users.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/admin/pmaintenance/scss/pmaintenance.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/admin/pmaintenance/scss/jquery-ui.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/admin/quotationresult/scss/quotationresult.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/users","tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance"], () => (__webpack_require__("./resources/assets/tostem/admin/accessanalysis/scss/accessanalysis.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/front/cart/cart.js")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/front/cart/cart.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/front/login/login.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/front/quotation_system/quotation.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/front/quotation_system/products/product.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/sass/users.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/admin/pmaintenance/scss/pmaintenance.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/admin/pmaintenance/scss/jquery-ui.scss")))
+/******/ 	__webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/admin/quotationresult/scss/quotationresult.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["tostem/front/quotation_system/products/product","tostem/front/quotation_system/quotation","tostem/front/login/login","tostem/front/cart/cart","tostem/admin/accessanalysis/css/accessanalysis","tostem/admin/quotationresult/css/quotationresult","tostem/admin/pmaintenance/css/jquery-ui","tostem/admin/pmaintenance/css/pmaintenance","css/users"], () => (__webpack_require__("./resources/assets/tostem/admin/accessanalysis/scss/accessanalysis.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
