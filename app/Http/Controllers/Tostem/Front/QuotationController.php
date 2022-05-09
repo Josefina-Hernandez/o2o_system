@@ -21,8 +21,14 @@ class QuotationController extends Controller {
 
     public function index() {
 	    $data = [];
-        $data['categories'] = collect(DB::Select($this->sql_Select_Ctg, ['lang_code' => $this->lang_code]));
-        //dd($data['categories']);
+	    $sql = $this->sql_Select_Ctg;
+	    if(\Auth::check() && \Auth::user()->isEmployee()){
+    		$viewer_flg = "(3,1)";
+    	} else {
+    		$viewer_flg = "(3)";
+    	}
+    	$sql = str_replace('(:viewer_flg)', $viewer_flg, $sql);
+        $data['categories'] = collect(DB::Select($sql, ['lang_code' => $this->lang_code]));
     	return view('tostem.front.quotation_system.index', $data);
     }
 

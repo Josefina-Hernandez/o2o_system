@@ -48,11 +48,11 @@ class Handler extends ExceptionHandler
         // リダイレクト先のルートを決定する
         if (starts_with($currentRoute, 'admin.shop')) {
             // ショップ管理画面
-            $toRoute = 'admin.shop.login';
+            $toRoute = 'admin.login';
 
         } elseif (starts_with($currentRoute, 'admin.lixil')) {
             // LIXIL管理画面
-            $toRoute = 'admin.lixil.login';
+            $toRoute = 'admin.login';
 
         } else {
             // 管理画面以外であるならフロントトップ
@@ -91,11 +91,11 @@ class Handler extends ExceptionHandler
         // リダイレクト先のルートを決定する
         if (starts_with($currentRoute, 'admin.shop')) {
             // ショップ管理画面
-            $toRoute = 'admin.shop.login';
+            $toRoute = 'admin.login';
 
         } elseif (starts_with($currentRoute, 'admin.lixil')) {
             // LIXIL管理画面
-            $toRoute = 'admin.lixil.login';
+            $toRoute = 'admin.login';
 
         } elseif (starts_with($currentRoute, 'tostem.front.quotation_system')) {
         	$toRoute = 'tostem.front.login';
@@ -122,6 +122,8 @@ class Handler extends ExceptionHandler
     {
         parent::report($exception);
     }
+    
+
 
     /**
      * Render an exception into an HTTP response.
@@ -132,7 +134,78 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        
+    	if ($request->ajax()) {
+    		// If request is an ajax request, then check to see if token matches token provider in
+		    // the header. This way, we can use CSRF protection in ajax requests also.
+    		$token = $request->ajax() ? $request->header('X-CSRF-Token') : $request->input('_token');
+    		if($request->session()->token() != $token) {
+    			return response()->json([
+    				'msg' => __('validation.tokenexpired')
+    			], 401);
+    		}
+    	}
+
+        if ($request->ajax()){
+             
+                $currentRoute = $request->route()->getName();
+              
+                if(starts_with($currentRoute, 'admin.lixil')){
+                   
+                       if (!Auth::check())
+                        {
+                             $return['status'] = 'auth';
+                             $return['msg'] = 'Your session has expired.';
+                             $return['key'] = 0;
+                             return response()->json($return);
+                        }else{
+                             if(!Auth::user()->isAdmin()){
+                                  $return['status'] = 'auth';
+                                  $return['msg'] ="Your session has expired.";
+                                  $return['key'] = 0;
+                             return response()->json($return);
+                             }
+                             else
+                             {
+                                  $return['status'] = 'auth';
+                                  $return['msg'] ="There is an error in your file. For more detail, please contact admin.";
+                                  $return['key'] = 1;
+                                  return response()->json($return); 
+                             }
+                        }
+                     
+               }
+        }
+
         if ($this->isHttpException($exception)) {
+
+             if ($request->ajax()){
+                $currentRoute = $request->route()->getName();
+                if(starts_with($currentRoute, 'admin.lixil.price-maintenance')){
+                       if (!Auth::check())
+                        {
+                                   $return['status'] = 'auth';
+                                   $return['msg'] = 'Your session has expired.';
+                                   $return['key'] = 0;
+                                   return response()->json($return);
+                        }else{
+                             if(!Auth::user()->isAdmin()){
+                                   $return['status'] = 'auth';
+                                   $return['msg'] ="Your session has expired.";
+                                   $return['key'] = 1;
+                                   return response()->json($return);    
+                             }else{
+                                  $return['status'] = 'auth';
+                                  $return['msg'] ="There is an error in your file. For more detail, please contact admin.";
+                                  $return['key'] = 1;
+                                  return response()->json($return); 
+                             }
+                        }
+                   
+               }
+           }
+
+
             if ($exception->getStatusCode() === 403) {
                 return response()->view('mado.admin.error.403', [
                     'exception' => $exception,

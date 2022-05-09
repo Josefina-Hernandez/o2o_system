@@ -8,21 +8,25 @@
             <div class="modal-body" width="90%">
 
                 <input  type="hidden"   id="targetId" />
+                <input  type="hidden"   id="type_user_update" />
                 <table style="width: 100%;">
-                    <tr>
+                     
+                    <tr id = 'confim_p'>
                     	<td class="title">Current password </td>
                     	<td><div class="form-group"><input autocomplete="off"  id="oldpassword" type="password" class="form-control" /></div></td>
                     </tr>
-                    <tr>
+                    
+                    <tr id = 'user_id'>
                     	<td class="title">User ID </td>
                     	<td><div class="form-group"><input disabled  id="targetuserid" type="text" class="form-control" /></div></td>
                     </tr>
 
-                    <tr>
+                    <tr id = 'pass_new'>
                     	<td class="title">New password </td>
                     	<td><div class="form-group"><input  autocomplete="off"  id="newpassword" type="password" class="form-control" /></div></td>
                     </tr>
-                    <tr>
+                    
+                    <tr id = 'pass_newconfim'>
                     	<td class="title">Confirm password</td>
                     	<td><div class="form-group"><input  autocomplete="off"   id="confirmpassword" type="password" class="form-control" /></div></td>
                     </tr>

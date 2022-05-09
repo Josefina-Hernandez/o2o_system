@@ -96,7 +96,7 @@ var fileUpload = {
             let files = event.target.files || e.dataTransfer.files;
             this.createImage(files[0]);
         },
-        
+
         createImage(file) {
             let reader = new FileReader();
             reader.onload = (event) => {
@@ -342,7 +342,7 @@ if (document.getElementById('gmapArea')) {
                         },
                         zoom: parseInt(position.zoom)
                     });
-    
+
                     // マーカーの作成
                     let shopData = Object.values(JSON.parse(this.$data.shopData));
                     for (let shop of shopData) {
@@ -356,12 +356,12 @@ if (document.getElementById('gmapArea')) {
                                 url: '/img/marker.png'
                             }
                         });
-    
+
                         // 吹き出し情報の作成
                         let info =  new google.maps.InfoWindow({
                             content: '<div class="fukidashi"><a href="' + shop.url + '"/>' + shop.name + '</a></div>'
                         });
-    
+
                         // マーカーをクリックすると吹き出し情報が表示されるように紐付け
                         marker.addListener('click', function () {
                             info.open(this.map, marker);
@@ -376,7 +376,7 @@ if (document.getElementById('gmapArea')) {
                 scriptElement.setAttribute('src', url);
                 scriptElement.setAttribute('async', '');
                 scriptElement.setAttribute('defer', '');
-    
+
                 // scriptタグをDOMに追加し、ライブラリを読み込む
                 document.head.appendChild(scriptElement);
             },
@@ -410,7 +410,7 @@ if (document.getElementById('tinymce-article')) {
                     editor.getBody().style.fontSize = '14px';
                 });
             },
-        
+
             content_css: '../../../../../common/css/reset.css,../../../../../common/css/common.css,../../../../../common/css/colorbox.css,../../../../../css/shop.css',
             doctype: '<!DOCTYPE html>',
             remove_linebreaks: false,
@@ -421,3 +421,4 @@ if (document.getElementById('tinymce-article')) {
         });
     }
 }
+

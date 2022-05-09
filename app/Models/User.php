@@ -48,6 +48,9 @@ class User extends Authenticatable
             config('const.db.users.COMPANY'),
             config('const.db.users.STATUS'),
             config('const.db.users.ADMIN'),
+            config('const.db.users.DEPARTMENT_CODE'),
+            config('const.db.users.CREATE_USER'),
+            config('const.db.users.M_MAILADDRESS_ID'),
         ];
 
         $this->hidden = [

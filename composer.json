@@ -10,6 +10,7 @@
         "barryvdh/laravel-debugbar": "^3.2",
         "barryvdh/laravel-snappy": "^0.4.4",
         "box/spout": "^2.7",
+        "daltcore/lara-pdf-merger": "^2.0",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "~3.3",
         "h4cc/wkhtmltoimage-amd64": "0.12.x",

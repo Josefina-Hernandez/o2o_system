@@ -55,8 +55,49 @@
 		.wrap{
 			.list-category {
 				left: 9.8rem;
-				top: 14rem;
+				top: 7rem;
 			}
 		}
 	}
 }
+
+// Add Start add popup status New/Reform hainp 20200925
+@mixin theme-modal($th: false) {
+	.modal-new-or-reform .vue-dialog {
+		height: 150px!important;
+		.dialog-content {
+			display: flex;
+			height: 75px!important;
+			align-items: center;
+			.dialog-c-text {
+				flex: 1;
+				text-align: center;
+				@include text-modal($th);
+			}
+		}
+		.vue-dialog-buttons {
+			.vue-dialog-button {
+				height: 75px!important;
+				@include text-modal($th);
+			}
+		}
+	}
+}
+
+@mixin text-modal($th: false) {
+	@if $th {
+		font-size: 25px!important;
+		font-weight: bold;
+		color: black;
+	} @else {
+		font-size: 20px!important;
+	}
+}
+
+.language-en {
+	@include theme-modal($th: false);
+}
+.language-th {
+	@include theme-modal($th: true);
+}
+// Add End add popup status New/Reform hainp 20200925

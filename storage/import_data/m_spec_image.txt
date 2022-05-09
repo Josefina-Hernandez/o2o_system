@@ -1,11 +1,16 @@
-Yellow background: Column will be inserted to the database_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,
-_\t,insect_screen_\t,door_closer_\t,Rail_\t,_\t,panel_\t,window door large_\t,for floor no floor_\t,lock_\t,single/double_\t,swing_\t,sill_\t,glass/aliminium_\t,LR_\t,one/two/free side_\t,FIX/CORNER_\t,Normal
-No transom
-With transom
-With mullion_\t,Outside
-Inside_\t,stacks_\t,Glass & Louver_\t,frame_\t,Pitch_\t,anchor_\t,angle_\t,Mullion Type_\t,With terrace
-Without terrace_\t,Edge
-Hinge_\t,Transom Type_\t,A
-B_\t,Top
-bottom
-product_id_\t,option1_\t,option2_\t,spec1_\t,spec2_\t,spec3_\t,spec4_\t,spec5_\t,spec6_\t,spec7_\t,spec8_\t,spec9_\t,spec10_\t,spec11_\t,spec12_\t,spec13_\t,spec14_\t,spec15_\t,spec16_\t,spec17_\t,spec18_\t,spec19_\t,spec20_\t,spec21_\t,spec22_\t,spec23_\t,spec24_\t,spec25_\t,spec26_\t,spec27
+Yellow background: Column will be inserted to the database_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+product_id_\t,img_path_\t,img_name_\t,spec51_\t,option4_\t,option5_\t,spec57_\t,spec53
+5_\t,Special_\t,aw-product-collection-b2b-49_08_inswing.jpg_\t,51.1_\t,_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-49_09_outswing.jpg_\t,51.2_\t,_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-49_07_inswingnonsill.jpg_\t,51.3_\t,_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-level-handle-L.jpg_\t,_\t,o4.1_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-level-handle-K.jpg_\t,_\t,o4.2_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-digital-lock-handle.jpg_\t,_\t,o4.3_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-bar-handle-A.jpg_\t,_\t,o4.4_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-bar-handle-F.jpg_\t,_\t,o4.5_\t,_\t,_\t,
+5_\t,Special_\t,aw-product-collection-b2b-without-glass.jpg_\t,_\t,_\t,_\t,57.1_\t,
+5_\t,Special_\t,aw-product-collection-b2b-with-glass.jpg_\t,_\t,_\t,_\t,57.2_\t,
+5_\t,Special_\t,single-leaf.png_\t,_\t,_\t,_\t,_\t,53.1
+5_\t,Special_\t,with-sidetlight.png_\t,_\t,_\t,_\t,_\t,53.2
+5_\t,Special_\t,double-leaf.png_\t,_\t,_\t,_\t,_\t,53.3

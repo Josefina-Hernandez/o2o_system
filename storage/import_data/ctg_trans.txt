@@ -1,10 +1,10 @@
 Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
 _\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
 ctg_id_\t,m_lang_id_\t,ctg_name_\t,del_flg
-1_\t,1_\t,WINDOW and DOOR_\t,0
-2_\t,1_\t,Exterior_\t,0
-3_\t,1_\t,Tostem DOOR_\t,0
-4_\t,1_\t,Interior_\t,0
+1_\t,1_\t,Window series_\t,0
+2_\t,1_\t,Exterior series_\t,0
+3_\t,1_\t,GIESTA (Entrance door)_\t,0
+4_\t,1_\t,Interior series_\t,0
 5_\t,1_\t,High rise_\t,0
 6_\t,1_\t,Low rise_\t,0
 7_\t,1_\t,Sliding Window_\t,0
@@ -35,3 +35,56 @@ ctg_id_\t,m_lang_id_\t,ctg_name_\t,del_flg
 33_\t,1_\t,Movement_\t,0
 34_\t,1_\t,Insect screen_\t,0
 35_\t,1_\t,Door closer_\t,0
+36_\t,1_\t,_\t,0
+37_\t,1_\t,Handle type_\t,0
+38_\t,1_\t,Cylinder_\t,0
+39_\t,1_\t,Door guard_\t,0
+40_\t,1_\t,Closer_\t,0
+41_\t,1_\t,Bar_\t,0
+42_\t,1_\t,Main Panel_\t,0
+43_\t,1_\t,Side Panel_\t,0
+44_\t,1_\t,Sub-panel_\t,0
+45_\t,1_\t,Frame_\t,0
+46_\t,1_\t,Type_\t,0
+47_\t,1_\t,Frame Type_\t,0
+48_\t,1_\t,Movement_\t,0
+49_\t,1_\t,Handle Type_\t,0
+50_\t,1_\t,Main panel_\t,0
+51_\t,1_\t,Mullion_\t,0
+52_\t,1_\t,Transom_\t,0
+53_\t,1_\t,Louver_\t,0
+54_\t,1_\t,Angle_\t,0
+55_\t,1_\t,Type_\t,0
+56_\t,1_\t,Number of panel_\t,0
+57_\t,1_\t,Transom quantity_\t,0
+58_\t,1_\t,Connect with mullion_\t,0
+59_\t,1_\t,Pitch_\t,0
+60_\t,1_\t,Setting Method_\t,0
+61_\t,1_\t,Door Scope_\t,0
+62_\t,1_\t,Mullion type_\t,0
+63_\t,1_\t,Connect with terrace door_\t,0
+64_\t,1_\t,Mullion position_\t,0
+65_\t,1_\t,Mullion position_\t,0
+66_\t,1_\t,Transom position_\t,0
+67_\t,1_\t,Panel type_\t,0
+68_\t,1_\t,Middle frame_\t,0
+69_\t,1_\t,Connected Transom type_\t,0
+70_\t,1_\t,Connected Mullion type_\t,0
+71_\t,1_\t,Connect with transom_\t,0
+72_\t,1_\t,Jamb frame_\t,0
+73_\t,1_\t,Hanging door_\t,0
+74_\t,1_\t,Roller option_\t,0
+75_\t,1_\t,Handle type_\t,0
+76_\t,1_\t,Swing gate lock type_\t,0
+77_\t,1_\t,Insect Screen_\t,0
+78_\t,1_\t,Handle_\t,0
+79_\t,1_\t,Flat sill attachment_\t,0
+80_\t,1_\t,Balancer_\t,0
+81_\t,1_\t,Style_\t,0
+82_\t,1_\t,Pattern_\t,0
+83_\t,1_\t,Type_\t,0
+84_\t,1_\t,Vertical Tilt & Slide_\t,0
+85_\t,1_\t,Limit Arm_\t,0
+86_\t,1_\t,Chain Length_\t,0
+87_\t,1_\t,Gap Cover_\t,0
+88_\t,1_\t,Frame Depth_\t,0

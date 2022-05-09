@@ -11,11 +11,13 @@ class CreateVProductModelReferTable extends Seeder
      */
     public function run()
     {
+    	$table = 'v_product_model_refer';
     	$sql = "
-    		CREATE TABLE v_product_model_refer
+    		CREATE OR REPLACE TABLE v_product_model_refer
 			(
 				SELECT DISTINCT 
-					sc.product_id
+					sc.m_selling_code_id
+					, sc.product_id
 					, ms.m_model_id
 				FROM m_model_spec AS ms
 				INNER JOIN m_selling_code AS sc
@@ -33,11 +35,22 @@ class CreateVProductModelReferTable extends Seeder
 							AND ( ms.spec10 IS NULL OR sc.spec10 = ms.spec10 )
 							AND ( ms.spec11 IS NULL OR sc.spec11 = ms.spec11 )
 							AND ( ms.spec12 IS NULL OR sc.spec12 = ms.spec12 )
+							AND ( ms.spec32 IS NULL OR sc.spec32 = ms.spec32 ) -- Add BP_O2OQ-6 MinhVnit 20200625 
+							AND ( ms.spec33 IS NULL OR sc.spec33 = ms.spec33 ) -- Add BP_O2OQ-6 MinhVnit 20200625 
+							AND ( ms.spec37 IS NULL OR sc.spec37 = ms.spec37 ) -- Add BP_O2OQ-9 MinhVnit 20200901
+							AND ( ms.spec56 IS NULL OR sc.spec56 = ms.spec56 )
+							AND ( ms.spec14 IS NULL OR sc.spec14 = ms.spec14 ) -- Add BP_O2OQ-27 MinhVnit 20210819
+							AND ( ms.spec39 IS NULL OR sc.spec39 = ms.spec39 ) -- Add BP_O2OQ-27 MinhVnit 20210819
 							AND sc.del_flg = 0
 				WHERE ms.del_flg = 0
-				ORDER BY sc.product_id, ms.m_model_id
+				ORDER BY sc.m_selling_code_id, sc.product_id, ms.m_model_id
 			)
     	";
-        DB::statement($sql);
+    	try {
+    		DB::statement($sql);  
+    		echo "OK!" . PHP_EOL;
+        } catch (\Exception $e) {
+        	echo "Seeder table: $table fail, please check log file!" . PHP_EOL;
+        }
     }
 }

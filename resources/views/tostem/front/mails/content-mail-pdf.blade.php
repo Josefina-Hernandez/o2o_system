@@ -1,1 +1,1 @@
-content mail
+{!!__('mail.content_mail')!!}

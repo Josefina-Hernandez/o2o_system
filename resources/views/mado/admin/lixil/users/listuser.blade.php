@@ -53,32 +53,45 @@
                 </td>
                 
                  @endif
+                 
                 <td class="@if(Auth::user()->admin !=1 || Auth::user()->id == $row->id) col-userid @endif">
-                @if(Auth::user()->id != $row->id)
-                 <select  class="inputdata"  name="company"  @if(Auth::user()->admin !=1) disabled @endif  >
+                @if(Auth::user()->admin ==1)    
+                    @if(Auth::user()->id != $row->id)
+                     <select  class="inputdata"  name="groupname"  @if(Auth::user()->admin !=1) disabled @endif  >
+                          @foreach($Companies as $cp)
+                            <option value="{{$cp->groupname}}" @if($row->groupname == $cp->groupname) selected @endif >{{ $cp->groupname}}</option>
+                          @endforeach
+                      </select>
+                    @endif
+                
+                @else
+                   <select  class="inputdata"  name="groupname"  @if(Auth::user()->admin !=1) disabled @endif  >
                       @foreach($Companies as $cp)
-                        <option value="{{$cp->groupname}}" @if($row->company == $cp->groupname) selected @endif >{{ $cp->groupname}}</option>
+                        <option value="{{$cp->groupname}}" @if($row->groupname == $cp->groupname) selected @endif >{{ $cp->groupname}}</option>
                       @endforeach
                   </select>
                 @endif
                 </td>
+                
                 
                 @if(Auth::user()->admin ==1)
                 <td class="">
                      <input  class="inputdata" name="status" type="checkbox"  @if ($row->status) checked="checked"  @endif value="{{$row->status}}">
                 </td>
                 @else
+                
                 <td class="col-userid">
                      <input  class="inputdata" name="status" type="checkbox" disabled  @if ($row->status) checked="checked"  @endif value="{{$row->status}}" >
                 </td>
+                
                  @endif
-                <td class="@if($Role != 1) col-userid @endif">
-                @if($Role == 1)
+                 
+                 
+                <td class="@if(Auth::user()->admin != 1) col-userid @endif">
                     <select  class="inputdata"  name="role"  @if(Auth::user()->admin !=1) disabled @endif  >
                         <option value="1" @if ($row->admin == 1) selected @endif >Admin</option>
                         <option value="0" @if ($row->admin == 0) selected @endif >User</option>
                     </select>
-                @endif
                 </td>
 
                 <td class="@if(Auth::user()->admin !=1  || Auth::user()->id == $row->id) col-userid @endif">
@@ -88,7 +101,7 @@
                 </td>
                 
                 <td>
-                     <a href="#" class="btnChangePass" data-id="{{$row->id}}" user-id="{{$row->login_id}}">Change password</a>
+                     <a href="#" class="btnChangePass" type_user = @if($row->admin ==1) {{1}} @else {{0}}  @endif data-id="{{$row->id}}" user-id="{{$row->login_id}}">Change password</a>
                 </td>
             </tr>
 

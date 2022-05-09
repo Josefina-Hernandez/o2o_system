@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Lib\ImportDataDb;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,6 +13,11 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // LIXILユーザ
+        $import = new ImportDataDb();
+        if ($import->truncate_db('users')) {
+            echo "users TRUNCATE OK!" .PHP_EOL;
+        }
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('users')->insert([
             'shop_id' => 1,
             'shop_class_id' => 1,
@@ -47,9 +53,11 @@ class UsersTableSeeder extends Seeder
                 'shop_class_id' => 4,
                 'login_id' => 'employee',
                 'password' => bcrypt('employee'),
-                 'name' => 'employee',
-                   'status' => 1,
+                'name' => 'employee',
+                'status' => 1,
+                'm_mailaddress_id' => 1,
             ]);
         }
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

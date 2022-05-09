@@ -72,5 +72,7 @@ class Kernel extends HttpKernel
 
 		'front.employee' => \App\Http\Middleware\Tostem\Front\RedirectIfAuthenticated::class,
         'front.auth' => \App\Http\Middleware\Tostem\Front\FrontAuthentication::class,
+        'front.tokenexpired' => \App\Http\Middleware\Tostem\Front\CheckTokenExpired::class,
+        'front.check_session_new_or_reform' => \App\Http\Middleware\Tostem\Front\CheckSessionNewOrReform::class, //Add add popup status New/Reform hainp 20200922
     ];
 }

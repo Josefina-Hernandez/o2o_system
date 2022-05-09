@@ -37,12 +37,13 @@
     <div class="headerInr">
         <p class="logo">
             @if ( \Schema::hasColumn('shops', 'shop_type') === false ) {{--portal--}}
-            <a href="{{ route('admin.shop', ['shop_id' => Auth::user()->shop->id]) }}"><img src="{{ asset('img/header_logo.png') }}" alt="LIXIL administrator" width="183" height="31"></a>
+            <a  class='rendect-page'  data-href="{{ route('admin.shop', ['shop_id' => Auth::user()->shop->id]) }}"><img src="{{ asset('img/header_logo.png') }}" alt="LIXIL administrator" width="183" height="31"></a>
             @else {{--general--}}
-            <a href="{{ route('admin.shop', ['shop_id' => Auth::user()->shop->id]) }}"><img src="{{ asset('estimate/img/icon/h_logo.png') }}" alt="LIXIL administrator" width="124" height="67"></a>
+            <a  class='rendect-page'  data-href="{{ route('admin.shop', ['shop_id' => Auth::user()->shop->id]) }}"><img src="{{ asset('estimate/img/icon/h_logo.png') }}" alt="LIXIL administrator" width="124" height="67"></a>
             @endif
         </p>
-        <p class="name">{{ Auth::user()->shop->{config('const.db.shops.NAME')} }}</p>
+        <!-- <p class="name">{{ Auth::user()->shop->{config('const.db.shops.NAME')} }}</p> -->
+        <p class="name red">Management</p>
         <p class="logout"><a href="{{ route('admin.shop.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></p>
 
         {!! Form::open([
@@ -53,6 +54,11 @@
         {!! Form::close() !!}
     </div>
 </header>
+<div class="loader">
+        	<div class="spinner-border" role="status" id="Saving">
+        		<span class="sr-only">Saving...</span>
+        	</div>
+ </div>
 <!-- /header/ -->
 @endsection
 
@@ -66,4 +72,12 @@
 
 @section('script')
 <script src="{{asset('js/app.js')}}" ></script>
+
+<script>
+     
+     var _link_check_auth_login = '{{ route(".checkuserlogin") }}';
+     
+</script>
+<script src="{{asset('tostem/common/js/tostem_admin.js')}}" ></script>
+
 @endsection

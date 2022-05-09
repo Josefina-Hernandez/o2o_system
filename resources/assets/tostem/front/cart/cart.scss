@@ -5,98 +5,151 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 */
 
 /* Global settings */
-$color-border: #333;
-$color-label: #333;
-$text-color: #333;
-$font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+$color-border: #4b4b4c;
+$color-label: #4b4b4c;
+$text-color: #090909;
+$font-default: 'Conv_Helvetica_Light';
+$font-bold: 'Conv_Helvetica_Bold';
 
+a.disabled {
+	opacity: 0.5 !important;
+	cursor: not-allowed !important;
+	:hover {
+		opacity: 0.5 !important;
+	}
+}
+#cart-content {
+	overflow-x: auto;
+	.column-labels, .product, .totals {
+		min-width: 1138px;
+	}
+}
 
 /* Global "table" column settings */
-.product-no, .product-image, .product-price, .product-quantity, .product-removal, .product-line-price, .product-color,
-.product-details, .product-size, .product-series {
+.product-no, .product-reference-no, .product-image, .product-price, .product-quantity, .product-removal, .product-line-price, .product-color, //Edit BP_O2OQ-7 hainp 20200701
+.product-details, .product-size, .product-series, .product-order_no {
 	padding-right: 3px;
 	padding-left: 3px;
 	text-align: center;
+	word-break: break-word; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-no {
 	float: left;
-	width: 3%;
+	// width: 2%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 3%; //Add BP_O2OQ-7 hainp 20200701
 }
+
+/* Add Start BP_O2OQ-7 hainp 20200701 */
+.product-reference-no {
+	float: left;
+	width: 10%;
+}
+/* Add End BP_O2OQ-7 hainp 20200701 */
 
 .product-image {
 	float: left;
-	width: 15%;
+	// width: 13%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 9%; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-series {
 	float: left;
-	width: 14%;
+	// width: 16%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 12%; //Add BP_O2OQ-7 hainp 20200701
 }
-
+.product-order_no {
+	float: left;
+	// width: 12%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 11%; //Add BP_O2OQ-7 hainp 20200701
+}
 .product-size {
 	float: left;
-	width: 13%;
+	// width: 12%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 9%; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-color {
 	float: left;
-	width: 6%;
+	// width: 5%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 9%; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-details {
 	float: left;
-	width: 15%;
+	// width: 14%; //Remove BP_O2OQ-7 hainp 20200701
+	width: 12%; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-price {
 	float: left;
-	width: 10%;
+	width: 8%;
 }
 
 .product-quantity {
 	float: left;
-	width: 7%;
+	// width: 7%;
+	width: 6%; //Add BP_O2OQ-7 hainp 20200701
 }
 
 .product-removal {
 	float: left;
-	width: 5%;
+	width: 3%;
 }
 
 .product-line-price {
 	float: left;
-	width: 12%;
+	width: 8%;
+
 }
 
-.cart-header {
-	display: flex;
+.product-series, .product-order_no, .product-size, .product-color, .product-details {
+	text-align: left;
+}
 
+label.product-line-price {
+	text-align: right !important;
+	padding-right: 39px;
+
+}
+label.product-price {
+	text-align: right !important;
+	padding-right: 15px;
+
+}
+
+.product-price, .product-line-price {
+	text-align: right;
+	padding-right: 7px;
+}
+.cart-header {
+	//display: flex;
+	padding-bottom: 62px;
 	.title-pate{
+		float: left;
 		h1 {
 			font-size: 1.7rem;
-			color: #333;
-			margin-top: 1.5rem;
-			margin-bottom: 3rem;
+			color: #090909;
+			/*margin-top: 1.5rem;
+			margin-bottom: 3rem;*/
 		}
 	}
 	.search-quotation {
-		flex: 1;
+		//flex: 1;
+		float: right;
+		margin-bottom: 18px;
 		div {
-			float: right;
-			display: inline-block;
-			border-bottom: 2px solid #000;
-			input {
-				margin-top: 1.2rem;
-				border: none;
-				&:focus {
-					border: none;
-					outline: none;
-				}
-			}
-		}
 
+			// float: right; //Remove BP_O2OQ-4 hainp 20200605
+			border-bottom: 2px solid #000;
+			margin-top: 1.2rem;
+
+		}
+		//Add Start BP_O2OQ-4 hainp 20200605
+		.created-by-username {
+			margin-top: unset;
+		}
+		//Add End BP_O2OQ-4 hainp 20200605
 	}
 
 }
@@ -137,10 +190,11 @@ $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 }*/
 
 h1 {
-	font-weight: 100;
+	font-family: $font-bold;
 }
 
 label {
+	font-family: $font-bold;
 	color: $color-label;
 }
 
@@ -173,16 +227,18 @@ label {
 /* Product entries */
 .product {
 	font-size: 1.4rem;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid $color-border;
+	padding-bottom: 2rem;
+
+
 	color: $text-color;
 
 	.product-image {
 		text-align: center;
 
 		img {
-			width: 10rem;
+			width: auto;
+			max-width: 100%;
+			max-height: 10rem;
 		}
 	}
 
@@ -204,6 +260,16 @@ label {
 			text-align-last: center;
 		}
 	}
+
+	/* Add Start BP_O2OQ-7 hainp 20200701 */
+	.product-reference-no {
+		select {
+			padding: 3px 6px;
+			text-align: center;
+			text-align-last: center;
+		}
+	}
+	/* Add End BP_O2OQ-7 hainp 20200701 */
 
 	.remove-product {
 		border: 0;
@@ -228,7 +294,37 @@ label {
 		}
 	}
 }
+.product-end{
+          border-bottom: 1px solid $color-border;
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+          .product-end-line-price{
+                   float: right;
+                    width: 100%;
+                    text-align: right;
+                    position: relative;
+          }
+          .sub-price {
+                    font-family: $font-bold;
+                    font-size: 1.5rem;
+                    &:after {
+                         font-family: $font-default;
+                         content: ' THB';
+                         font-size: 1rem;
+                         font-weight: 400;
+                    }
+               }
 
+          .description {
+               position: absolute;
+               right: 0;
+               font-size: 1rem;
+               bottom: -1rem;
+               font-weight: 400;
+
+          }
+
+}
 
 /* Totals section */
 .totals {
@@ -258,10 +354,6 @@ label {
 
 	.send-mail {
 		padding-left: 4rem;
-
-		a {
-			font-size: 3rem;
-		}
 	}
 
 	.download-pdf {
@@ -285,7 +377,7 @@ label {
 		clear: both;
 		width: 100%;
 		margin-bottom: 1rem;
-
+		display: contents;
 		label {
 			float: left;
 			clear: both;
@@ -297,23 +389,26 @@ label {
 			float: right;
 			width: 21%;
 			text-align: right;
-			padding-right: 3.7rem;
+			/*padding-right: 3.7rem;*/
 			position: relative;
 
 			.price {
+				font-family: $font-bold;
 				font-size: 2.5rem;
-
 				&:after {
-					content: 'THB';
+					font-family: $font-default;
+					content: ' THB';
 					font-size: 1.5rem;
+					font-weight: 400;
 				}
 			}
 
 			.description {
-				font-size: 1rem;
+				font-size: 1.1rem;
 				position: absolute;
-				right: 3.7rem;
-				bottom: -0.8rem;
+				right: 0;
+				bottom: -1rem;
+				font-weight: 400;
 				width: 175px;
 			}
 		}
@@ -331,7 +426,7 @@ label {
 
 
 /* Make adjustments for tablet */
-@media screen and (max-width: 650px) {
+/*@media screen and (max-width: 650px) {
 
 	.shopping-cart {
 		margin: 0;
@@ -386,19 +481,42 @@ label {
 		width: 7rem;
 	}
 
-}
+}*/
 
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {*/
 	.cart {
 		.product {
 			display: flex;
 			align-items: center;
+			/*align-items: stretch;*/
+			> div {
+
+				> div {
+					flex: auto;
+				}
+			}
+			.product-series, .product-order_no, .product-price, .product-line-price {
+				> div {
+					&:first-child {
+						//min-height: 45px;
+						//display: flex;
+						//align-items: center;
+					}
+				}
+			}
+			.product-price, .product-line-price {
+				> div {
+					//width: 100%;
+					//float: right;
+				}
+			}
 		}
 
 		&.pdf-view {
 			.product {
-				.product-no, .product-quantity, .product-price, .product-line-price, .product-removal, .product-image,
-				.product-series, .product-size, .product-color, .product-details {
+				.product-no, .product-reference-no, .product-quantity, .product-price, .product-line-price, //Edit BP_O2OQ-7 hainp 20200701
+				.product-removal, .product-image, .product-series, .product-size,
+				.product-color, .product-details, .product-order_no {
 					position: relative;
 				}
 
@@ -407,9 +525,10 @@ label {
 		}
 	}
 
-}
+/*}*/
 
 /* Make more adjustments for phone */
+/*
 @media screen and (max-width: 350px) {
 
 	.product-removal {
@@ -439,6 +558,7 @@ label {
 		}
 	}
 }
+*/
 
 /*.shiftx-enter-active  {
 	animation: shift-in 0.5s;
@@ -520,3 +640,25 @@ label {
 		transform: none !important;
 	}
 }*/
+
+
+.image-description {
+	position: absolute;
+	span {
+		font-size: 13px;
+		line-height: 15px;
+		display: inline-block;
+	}
+}
+
+.item-row {
+	position: relative;
+}
+
+/* Add Start BP_O2OQ-25 hainp 20210625 */
+.error {
+	background-color: #fce4e4;
+	border: 1px solid #cc0033;
+	outline: none;
+}
+/* Add End BP_O2OQ-25 hainp 20210625 */

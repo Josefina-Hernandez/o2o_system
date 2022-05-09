@@ -1,6 +1,20 @@
 <div class="container selection-content">
-        <h2 class="t-center" style="margin-top: 50px;font-size: xx-large;">User management</h2>
+        <h2 class="t-center" style="margin-top: 50px;font-size: xx-large;">Price Maintenance</h2>
         
+        <div class="select-option">
+             <div class="cntr">
+  
+               <label for="product" class="radio">
+                 <input type="radio" name="select-option" value="0" id="product" class="hidden"/>
+                 <span class="label"></span>Product
+               </label>
+
+               <label for="option" class="radio">
+                    <input type="radio" name="select-option"  value="1" id="option" class="hidden"/>
+                 <span class="label"></span>Option
+               </label>
+             </div>
+        </div>
         
         <div class="import-file">
              
@@ -57,6 +71,6 @@
         <div class="p-paginate">
           
         </div>
-          <center class="mt-5"><a href="{{ route('admin.lixil') }}" class="btn-back">Back</a></center>
+          <center class="mt-5"><a data-href="{{ route('admin.lixil') }}" class="rendect-page btn-back">Back</a></center>
 
     </div>

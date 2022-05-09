@@ -13,11 +13,15 @@ class ExcelModelService
      
      protected $_object;
      
-     protected $_filltable;
-
      protected $_datatable;
      
-   
+     protected $_headerExcel = [];
+     
+     protected $_column_key = NULL;
+     
+     
+     
+     private     $_where = [];
      
      
      
@@ -25,26 +29,33 @@ class ExcelModelService
      {
          
            $this->_object = $object;
-           $this->setFillTableM();
-       
      }
      
      
-     public function setFillTableM($param = []){
-           if(count($param) == 0){
-               $this->_filltable = $this->_object->getFillable();
-           }else{
-               $this->_filltable = $param;
-           }
+     public function setWhere($whereArray){
+              $this->_where = $whereArray;
      }
      
-     public function getFillTableM(){
-           return $this->_filltable;   
+     public function getWhere(){
+          return $this->_where;
      }
-
-
      
-
+     
+     public function setHeaderExcel($arrHeader){
+              $this->_headerExcel = $arrHeader;
+     }
+     
+     public function getHeaderExcel(){
+          return $this->_headerExcel;
+     }
+     
+     public function setAutoIncrease($column_key_name){
+              $this->_column_key = $column_key_name;
+     }
+     
+     public function getAutoIncrease(){
+          return $this->_column_key;
+     }
      
 
 }

@@ -15,13 +15,13 @@
     <thead>            
         <tr>
             <th >No.</th>            
-            <th>User ID</th>
-            <th>Name</th>
+            <th>User ID *</th>
+            <th>Name *</th>
             <th>Email</th>
             <th>Telephone</th>
-            <th>Department</th>
+            <th>Department *</th>
             <th>Enable</th>
-            <th>Role</th>         
+            <th>Role *</th>         
             <th>Delete</th>
             <th>Change password</th>
         </tr>

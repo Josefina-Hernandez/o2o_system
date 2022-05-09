@@ -61,6 +61,12 @@ class LoginController extends Controller
     }
     protected function authenticated(Request $request, $user)
     {
+
+    	//Clear cart when login admin
+    	app('App\Http\Controllers\Tostem\Front\CartController')->clearCart();
+    	//Generate new token
+    	$request->session()->regenerateToken();
+
         if ( $user->isAdmin() ) {
             return redirect()->route('admin.lixil');
         }
@@ -69,7 +75,7 @@ class LoginController extends Controller
     }
     /**
      * Get the login username to be used by the controller.
-     * 
+     *
      * プロバイダのモデルでどのカラムを認証に使うかを指定する
      *
      * @return string
@@ -87,7 +93,7 @@ class LoginController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
-       
+
         $_paramLogin = $this->credentials($request);
         $_paramLogin[config('const.db.users.STATUS')] = 1;
         return $this->guard()->attempt(

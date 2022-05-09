@@ -13,9 +13,12 @@ spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
 1.10_\t,1_\t,Sliding gate_\t,0
 1.11_\t,1_\t,Swing gate_\t,0
 1.12_\t,1_\t,Terrace door_\t,0
-1.13_\t,1_\t,Ventilation door_\t,0
+1.13_\t,1_\t,Airflow door_\t,0
 1.14_\t,1_\t,Mullion_\t,0
 1.15_\t,1_\t,Transom_\t,0
+1.17_\t,1_\t,Carport_\t,0
+1.18_\t,1_\t,Vertical Tilt&SlideWindow_\t,0
+1.19_\t,1_\t,Out-swing door_\t,0
 2.1_\t,1_\t,2 Panel_\t,0
 2.2_\t,1_\t,3 panel_\t,0
 2.3_\t,1_\t,4 Panel_\t,0
@@ -26,19 +29,21 @@ spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
 3.1_\t,1_\t,Door_\t,0
 3.2_\t,1_\t,Door large_\t,0
 3.3_\t,1_\t,Entrance Door_\t,0
-3.4_\t,1_\t,HKK Door_\t,0
-3.5_\t,1_\t,HKK Window_\t,0
+3.4_\t,1_\t,SFS Door_\t,0
+3.5_\t,1_\t,SFS Window_\t,0
 3.6_\t,1_\t,Large_\t,0
 3.7_\t,1_\t,Normal_\t,0
 3.8_\t,1_\t,Window_\t,0
-4.1_\t,1_\t,For floor_\t,0
-4.2_\t,1_\t,No floor_\t,0
-4.3_\t,1_\t,Partition door_\t,0
+3.9_\t,1_\t,Partition door_\t,0
+4.1_\t,1_\t,For 1st floor_\t,0
+4.2_\t,1_\t,2nd floor and above_\t,0
 5.1_\t,1_\t,Multi lock_\t,0
 5.2_\t,1_\t,Multi lock large_\t,0
 5.3_\t,1_\t,Single lock_\t,0
+5.4_\t,1_\t,Double lock_\t,0
 6.1_\t,1_\t,Double_\t,0
 6.2_\t,1_\t,Single_\t,0
+6.3_\t,1_\t,1 Mullion_\t,0
 7.1_\t,1_\t,In-swing_\t,0
 7.2_\t,1_\t,Out-swing_\t,0
 8.1_\t,1_\t,Flat sill_\t,0
@@ -53,27 +58,21 @@ spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
 10.2_\t,1_\t,L_\t,0
 10.3_\t,1_\t,R_\t,0
 10.4_\t,1_\t,LR_\t,0
-11.1_\t,1_\t,Free side_\t,0
-11.2_\t,1_\t,One side L_\t,0
-11.3_\t,1_\t,One side R_\t,0
-11.4_\t,1_\t,Two side_\t,0
-11.5_\t,1_\t,Two side L_\t,0
-11.6_\t,1_\t,Two side R_\t,0
+11.1_\t,1_\t,Both way_\t,0
+11.2_\t,1_\t,One way L_\t,0
+11.3_\t,1_\t,One way R_\t,0
+11.4_\t,1_\t,Center_\t,0
+11.5_\t,1_\t,Center L_\t,0
+11.6_\t,1_\t,Center R_\t,0
 12.1_\t,1_\t,Corner FIX_\t,0
 12.2_\t,1_\t,FIX_\t,0
-13.1_\t,1_\t,1 mullion_\t,0
-13.2_\t,1_\t,2 mullion_\t,0
-13.3_\t,1_\t,3 mullion_\t,0
-13.4_\t,1_\t,No mullion_\t,0
-13.5_\t,1_\t,No transom_\t,0
-13.6_\t,1_\t,With transom_\t,0
-13.7_\t,1_\t,Without transom_\t,0
-13.8_\t,1_\t,With mullion_\t,0
-13.9_\t,1_\t,Normal_\t,0
+13.1_\t,1_\t,With mullion_\t,0
+13.2_\t,1_\t,Without mullion_\t,0
 14.1_\t,1_\t,Inside_\t,0
 14.2_\t,1_\t,Outside_\t,0
 15.1_\t,1_\t,2 stacks_\t,0
 15.2_\t,1_\t,3 stacks_\t,0
+15.3_\t,1_\t,1 stack_\t,0
 16.1_\t,1_\t,Glass_\t,0
 16.2_\t,1_\t,Glass & Louver_\t,0
 16.3_\t,1_\t,Louver_\t,0
@@ -87,6 +86,9 @@ spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
 18.3_\t,1_\t,140mm_\t,0
 18.4_\t,1_\t,60mm_\t,0
 18.5_\t,1_\t,80mm_\t,0
+18.6_\t,1_\t,72mm_\t,0
+18.7_\t,1_\t,88mm_\t,0
+18.8_\t,1_\t,101mm_\t,0
 19.1_\t,1_\t,anchor base_\t,0
 19.2_\t,1_\t,side setting wall_\t,0
 20.1_\t,1_\t,180°_\t,0
@@ -110,3 +112,126 @@ o1.1_\t,1_\t,With screen_\t,0
 o1.2_\t,1_\t,Without screen_\t,0
 o2.1_\t,1_\t,With closer_\t,0
 o2.2_\t,1_\t,Without closer_\t,0
+27.1_\t,1_\t,Close the gap_\t,0
+27.2_\t,1_\t,Gate pole_\t,0
+27.3_\t,1_\t,Panel_\t,0
+27.4_\t,1_\t,Panel A_\t,0
+27.5_\t,1_\t,Panel B_\t,0
+27.6_\t,1_\t,Panel B_L_\t,0
+27.7_\t,1_\t,Panel B_R_\t,0
+27.8_\t,1_\t,Pole_\t,0
+27.9_\t,1_\t,Pole(Corner)_\t,0
+27.10_\t,1_\t,Door stop_\t,0
+28.1_\t,1_\t,2 panels_\t,0
+28.2_\t,1_\t,3 panels_\t,0
+28.3_\t,1_\t,4 panels_\t,0
+28.4_\t,1_\t,1 panel_\t,0
+28.5_\t,1_\t,With mullion_\t,0
+o3.1_\t,1_\t,Rail 2500 mm_\t,0
+o3.2_\t,1_\t,Rail 3000 mm_\t,0
+o3.3_\t,1_\t,Rail 3500 mm_\t,0
+o3.4_\t,1_\t,Rail 4000 mm_\t,0
+o3.5_\t,1_\t,Joint rail set_\t,0
+o3.6_\t,1_\t,Guide stop parts set_\t,0
+o3.7_\t,1_\t,Parts set_\t,0
+o3.8_\t,1_\t,Catch part_\t,0
+o3.9_\t,1_\t,Gate lock set_\t,0
+o3.10_\t,1_\t,Gate hinges_\t,0
+o3.11_\t,1_\t,Drop bar_\t,0
+o3.12_\t,1_\t,End cap_\t,0
+o3.13_\t,1_\t,Corner joint _\t,0
+o3.14_\t,1_\t,Setting wall_\t,0
+o3.15_\t,1_\t,Lock Set (DUMMY lock)_\t,0
+o4.1_\t,1_\t,Lever_L_\t,0
+o4.2_\t,1_\t,Lever_K_\t,0
+o4.3_\t,1_\t,Digital_\t,0
+o4.4_\t,1_\t,Bar_A_\t,0
+o4.5_\t,1_\t,Bar_F_\t,0
+51.1_\t,1_\t,In-swing with sill_\t,0
+51.2_\t,1_\t,Out-swing_\t,0
+51.3_\t,1_\t,In-swing without sill_\t,0
+52.1_\t,1_\t,Frame_\t,0
+52.2_\t,1_\t,With door scope_\t,0
+52.3_\t,1_\t,Without door scope_\t,0
+52.4_\t,1_\t,Side panel_\t,0
+52.5_\t,1_\t,Sub-panel_\t,0
+52.6_\t,1_\t,Panel_\t,0
+53.1_\t,1_\t,Single_\t,0
+53.2_\t,1_\t,Sidelight_\t,0
+53.3_\t,1_\t,Double_\t,0
+54.1_\t,1_\t,L_\t,0
+54.2_\t,1_\t,R_\t,0
+55.1_\t,1_\t,Lever_\t,0
+55.2_\t,1_\t,Digital_\t,0
+55.3_\t,1_\t,Bar_\t,0
+56.1_\t,1_\t,P01_\t,0
+56.2_\t,1_\t,P02_\t,0
+56.3_\t,1_\t,P03_\t,0
+56.4_\t,1_\t,D01_\t,0
+56.5_\t,1_\t,D02_\t,0
+56.6_\t,1_\t,D03_\t,0
+56.7_\t,1_\t,G01_\t,0
+56.8_\t,1_\t,G02_\t,0
+56.9_\t,1_\t,G03_\t,0
+56.10_\t,1_\t,G04_\t,0
+56.11_\t,1_\t,A01_\t,0
+57.1_\t,1_\t,Without glass_\t,0
+57.2_\t,1_\t,With glass_\t,0
+29.1_\t,1_\t,Center_\t,0
+29.2_\t,1_\t,L_\t,0
+29.3_\t,1_\t,R_\t,0
+29.4_\t,1_\t,LR_\t,0
+30.1_\t,1_\t,Mullion C_\t,0
+30.2_\t,1_\t,Mullion D_\t,0
+30.3_\t,1_\t,Mullion A_\t,0
+30.4_\t,1_\t,Mullion CorD_\t,0
+31.1_\t,1_\t,With transom_\t,0
+31.2_\t,1_\t,Without transom_\t,0
+32.1_\t,1_\t,On-wall_\t,0
+32.2_\t,1_\t,In-wall_\t,0
+33.1_\t,1_\t,1 track 1 panel_\t,0
+33.2_\t,1_\t,1 track 2 panels_\t,0
+33.3_\t,1_\t,2 tracks 2 panels_\t,0
+33.4_\t,1_\t,3 tracks 3 panels_\t,0
+33.5_\t,1_\t,2 tracks 4 panels_\t,0
+33.6_\t,1_\t,3 tracks 6 panels_\t,0
+34.1_\t,1_\t,With jamb_\t,0
+34.2_\t,1_\t,Without jamb_\t,0
+34.3_\t,1_\t,Slide-Fix_\t,0
+34.4_\t,1_\t,Fix-Slide_\t,0
+35.1_\t,1_\t,Standard roller_\t,0
+35.2_\t,1_\t,Soft close roller (Close only)_\t,0
+35.3_\t,1_\t,Soft close roller (Close and Open)_\t,0
+36.1_\t,1_\t,Without lock_\t,0
+36.2_\t,1_\t,With lock without key_\t,0
+36.3_\t,1_\t,With lock with Key_\t,0
+37.1_\t,1_\t,Sickle type_\t,0
+37.2_\t,1_\t,Latch type_\t,0
+o5.1_\t,1_\t,Handle L_\t,0
+o5.2_\t,1_\t,Handle R_\t,0
+o6.1_\t,1_\t,Standard net_\t,0
+o6.2_\t,1_\t,Slim wire net_\t,0
+o6.3_\t,1_\t,Without_\t,0
+o7.1_\t,1_\t,With_\t,0
+o7.2_\t,1_\t,Without_\t,0
+o8.1_\t,1_\t,With balancer_\t,0
+38.1_\t,1_\t,SG/LG_\t,0
+39.1_\t,1_\t,Camlatch_\t,0
+39.2_\t,1_\t,Operator_\t,0
+39.3_\t,1_\t,Slit window_\t,0
+40.1_\t,1_\t,Type A_\t,0
+40.2_\t,1_\t,Type B_\t,0
+40.3_\t,1_\t,Type C_\t,0
+o9.1_\t,1_\t,Limit arm_\t,0
+o9.2_\t,1_\t,Without_\t,0
+o10.1_\t,1_\t,1.25m_\t,0
+o10.2_\t,1_\t,2.75m_\t,0
+o11.1_\t,1_\t,Gap Cover_\t,0
+41.1_\t,1_\t,100mm_\t,0
+41.2_\t,1_\t,120mm_\t,0
+41.3_\t,1_\t,140mm_\t,0
+41.4_\t,1_\t,60mm_\t,0
+41.5_\t,1_\t,80mm_\t,0
+41.6_\t,1_\t,72mm_\t,0
+41.7_\t,1_\t,88mm_\t,0
+41.8_\t,1_\t,101mm_\t,0

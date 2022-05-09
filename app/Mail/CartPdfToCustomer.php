@@ -5,25 +5,25 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use phpDocumentor\Reflection\Project;
+use App\Http\Controllers\Tostem\Front\CartController;
 
 class CartPdfToCustomer extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $pdf;
-    protected $shop;
+    public $path_pdf;
 
+    public $name_pdf;
     /**
      * Create a new message instance.
-     * @param $pdf
-     * @param $shop Project
+     * @param $path_pdf string path_url file pdf;
+     * @param $name_pdf String
      * @return void
      */
-    public function __construct($pdf)
+    public function __construct($path_pdf, $name_pdf)
     {
-        $this->pdf = $pdf;
+        $this->path_pdf = $path_pdf;
+        $this->name_pdf = $name_pdf;
     }
 
     /**
@@ -34,16 +34,19 @@ class CartPdfToCustomer extends Mailable
     public function build()
     {
         $email = env('MAIL_FROM_ADDRESS');
-       /* if($this->shop->email != "" && filter_var($this->shop->email, FILTER_VALIDATE_EMAIL)) {
-            $email = $this->shop->{config('const.db.shops.EMAIL')};
-        }*/
+        $sender = __('mail.sender');
+        $subject = __('mail.subjec_mail');
         return $this
             ->from(
                 $email,
-                'TOSTEM')
-            ->subject('subject mail tostem')
+                $sender)
+            ->subject($subject)
             ->view('tostem.front.mails.content-mail-pdf')
-            ->attachData($this->pdf->output(), 'filename.pdf')
+            ->attach($this->path_pdf, [
+                'as' => $this->name_pdf.'.pdf',
+                'mime' => 'application/pdf',
+            ])
             ;
+
     }
 }

@@ -23,6 +23,8 @@ return [
             'CREATE_USER' => 'create_user',
             'DEL_FLG' => 'del_flg',
             'EMAIL_VERIFIED_AT' => 'email_verified_at',
+            'DEPARTMENT_CODE' => 'department_code',
+			'M_MAILADDRESS_ID'=>'m_mailaddress_id',
         ],
 
         // ショップ情報テーブル
@@ -1551,4 +1553,12 @@ return [
         "config" . DIRECTORY_SEPARATOR . 
         "page_config.ini",
     ],
+
+    // Add Start BP_O2OQ-4 hainp 20200608
+    'front' => [
+        'cart' => [
+            'PRODUCT_ID_GIESTA' => 5
+        ],
+    ]
+    // End Start BP_O2OQ-4 hainp 20200608
 ];

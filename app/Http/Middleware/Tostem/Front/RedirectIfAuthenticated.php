@@ -16,8 +16,8 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-    	if (Auth::guard($guard)->check()) {
-            return redirect()->route('tostem.front.index');
+    	if (Auth::guard($guard)->check() && \Auth::user()->isEmployee()) {
+            return redirect()->route('tostem.front.quotation_system');
         }
 
         return $next($request);

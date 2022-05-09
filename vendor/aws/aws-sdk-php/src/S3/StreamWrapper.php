@@ -147,11 +147,11 @@ class StreamWrapper
             return $this->triggerError($errors);
         }
 
-        return $this->boolCall(function() use ($path) {
+        return $this->boolCall(function() {
             switch ($this->mode) {
-                case 'r': return $this->openReadStream($path);
-                case 'a': return $this->openAppendStream($path);
-                default: return $this->openWriteStream($path);
+                case 'r': return $this->openReadStream();
+                case 'a': return $this->openAppendStream();
+                default: return $this->openWriteStream();
             }
         });
     }
@@ -454,7 +454,7 @@ class StreamWrapper
      */
     public function dir_rewinddir()
     {
-        $this->boolCall(function() {
+        return $this->boolCall(function() {
             $this->objectIterator = null;
             $this->dir_opendir($this->openedPath, null);
             return true;
@@ -953,6 +953,6 @@ class StreamWrapper
     {
         $size = $this->body->getSize();
 
-        return $size !== null ? $size : $this->size;
+        return !empty($size) ? $size : $this->size;
     }
 }

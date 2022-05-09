@@ -24,11 +24,27 @@ class HelpersFront
 
     public static function breadcrumbs () {
         $quotation = new QuotationController();
-        $categories = collect(\DB::Select($quotation->sql_Select_Ctg, ['lang_code' => $quotation->lang_code]));
+
+        if(\Auth::check() && \Auth::user()->isEmployee()){
+    		$viewer_flg = "(3,1)";
+    	} else {
+    		$viewer_flg = "(3)";
+    	}
+
+        $sql = $quotation->sql_Select_Ctg;
+        $sql = str_replace('(:viewer_flg)', $viewer_flg, $sql);
+        $categories = collect(\DB::Select($sql, ['lang_code' => $quotation->lang_code]));
 
         $html = '';
         foreach ($categories as $category) {
-            $html .= "<li class=''><a href=".route('tostem.front.quotation_system.product', $category->slug_name)." data-id='$category->ctg_id'>$category->ctg_name</a></li>";
+            $html .= '
+            	<li class="">
+            		<a
+            			href="'. route("tostem.front.quotation_system.product.index", $category->slug_name) .'"
+            			data-id="' . $category->ctg_id .'"
+            			>'. $category->ctg_name .'
+            		</a>
+            	</li>';
         }
         return $html;
     }

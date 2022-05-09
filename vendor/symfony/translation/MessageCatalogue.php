@@ -156,7 +156,9 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
         if (!isset($this->messages[$domain])) {
             $this->messages[$domain] = $messages;
         } else {
-            $this->messages[$domain] = array_replace($this->messages[$domain], $messages);
+            foreach ($messages as $id => $message) {
+                $this->messages[$domain][$id] = $message;
+            }
         }
     }
 
@@ -261,6 +263,8 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
                 return $this->metadata[$domain][$key];
             }
         }
+
+        return null;
     }
 
     /**

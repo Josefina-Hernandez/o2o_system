@@ -19,7 +19,7 @@ class CreateMSellingSpecTable extends Migration
             $table->integer(config('const_db_tostem.db.m_selling_spec.column.SORT_ORDER'))->nullable();
             $table->string(config('const_db_tostem.db.m_selling_spec.column.IMG_PATH'))->nullable();
             $table->string(config('const_db_tostem.db.m_selling_spec.column.IMG_NAME'))->nullable();
-            $table->integer(config('const_db_tostem.db.m_selling_spec.column.DISPLAY_FLG'));
+            
             $table->primary(config('const_db_tostem.db.m_selling_spec.column.SPEC_CODE'));
 
             $table->tinyInteger(config('const_db_tostem.db.common_columns.column.DEL_FLG'))->default('0');

@@ -1,7 +1,7 @@
 Hint:_\t,_\t,_\t,
 _\t,_\t,_\t,
 m_color_id_\t,color_code_price_\t,sort_order_\t,del_flg
-1_\t,N_\t,1_\t,0
+1_\t,P_\t,1_\t,0
 2_\t,D_\t,2_\t,0
 3_\t,W_\t,3_\t,0
 4_\t,K_\t,4_\t,0
@@ -11,5 +11,14 @@ m_color_id_\t,color_code_price_\t,sort_order_\t,del_flg
 8_\t,C_\t,8_\t,0
 9_\t,F_\t,9_\t,0
 10_\t,J_\t,10_\t,0
-11_\t,Waiting_confirm_\t,11_\t,0
-12_\t,H_\t,12_\t,0
+11_\t,D_\t,11_\t,0
+12_\t,L_\t,12_\t,0
+13_\t,_\t,13_\t,0
+14_\t,_\t,14_\t,0
+15_\t,_\t,15_\t,0
+16_\t,_\t,16_\t,1
+17_\t,_\t,17_\t,0
+18_\t,_\t,18_\t,0
+19_\t,_\t,19_\t,0
+20_\t,_\t,20_\t,0
+21_\t,_\t,21_\t,1

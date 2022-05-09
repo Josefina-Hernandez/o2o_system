@@ -117,5 +117,6 @@ return [
     */
 
     'attributes' => [],
+    'tokenexpired' => 'Your session has expired.'
 
 ];

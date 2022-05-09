@@ -1,9 +1,12 @@
 <?php
 namespace App\Facades;
 
+use App\Http\Controllers\Tostem\Front\CartController;
 use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Barryvdh\Snappy\Facades\SnappyPdf;
+use LynX39\LaraPdfMerger\Facades\PdfMerger;
 
 /**
  * Class Cart
@@ -40,8 +43,23 @@ class Cart
      */
     public $sort_cart = 'sort_cart';
 
+    /**
+     * language of user uses
+     * @var
+     */
+    protected $lang;
 
+    /**
+     * key get html cart to create pdf
+     * @var
+     */
     protected $key_html_cart;
+
+    /**
+     * path file pdf generate
+     * @var
+     */
+    public $path_pdf;
 
     /**
      * our object constructor
@@ -55,6 +73,8 @@ class Cart
         $this->sessionKey =  $session_key;
         $this->sessionKeyCartItems = $this->sessionKey . '_cart_items';
         $this->key_html_cart = $key_html_cart;
+        $this->lang = str_replace('_', '-', app()->getLocale());
+        $this->path_pdf = storage_path('tmp/myfile.pdf');
     }
 
     /**
@@ -109,7 +129,8 @@ class Cart
 
         // validate data
         $item = $this->validate($item);
-        $id = $item['id'];
+        $id = Str::random(16);
+        $item['id'] = $id;
         // get the cart
         $cart = $this->getContent();
 
@@ -118,6 +139,7 @@ class Cart
             $this->update($id, $item);
         } else {
             $item[$this->sort_cart] = count($cart) + 1;
+            $item['quantity'] = 1;
             $this->addRow($id, $item);
         }
 
@@ -198,7 +220,15 @@ class Cart
         $cart = $this->getContent();
 
         $sum = $cart->sum(function ($item) {
-            return (int)$item['price'] * (int)$item['quantity'];
+            $amount = 0;
+            foreach ($item[$this->lang]['data_options_selected'] as $option) {
+                $amount += $option['amount'] * (int)$item['quantity'];
+            }
+            foreach ($item[$this->lang]['celling_code_option'] as $selling_op) {
+                $amount += $selling_op['amount'] * (int)$item['quantity'];
+            }
+
+            return round($amount, 2);
         });
 
         return $sum;
@@ -297,11 +327,120 @@ class Cart
 
     public function create_pdf_cart () {
         app('debugbar')->disable();
-        $pdf = \PDF::loadView('tostem.front.cart.index', ['pdf'=> 1, 'html_cart' => $this->session->get($this->key_html_cart)])
+        $temp_file = storage_path('tmp/tmp.pdf');
+        if (file_exists($temp_file)) {
+            unlink($temp_file);
+        }
+        $file_name = Str::random(30);
+        $path_pdf = storage_path('tmp/'.$file_name.'.pdf');
+        if (file_exists($this->path_pdf)) {
+            unlink($this->path_pdf);
+        }
+        $CartController = new CartController();
+        $pdf = SnappyPdf::loadView('tostem.front.cart.index',
+            [
+                'pdf'=> 1
+                , 'html_cart' => $this->session->get($this->key_html_cart)
+                , 'input_value' => $CartController->generate_file_name('')
+            ])
             ->setOption('viewport-size', '1366x1024')
             ->setOption('enable-javascript', false)
-            ->setOption('orientation', 'Landscape');
-        return $pdf;
+            ->setOption('orientation', 'Landscape')
+        ->save($temp_file, true);
+        $pdfMerger = PDFMerger::init(); //Initialize the merger
+        $pdfMerger->addPDF($temp_file, 'all');
+        $pdfMerger->addPDF(public_path('tostem/pdf/Warranty sample.pdf'), 'all');
+        $pdfMerger->addPDF(public_path('tostem/pdf/TOSTEM show room introduction(sample).pdf'), 'all');
+        $pdfMerger->merge();
+        $pdfMerger->save($path_pdf);
+        chmod($path_pdf, 0755);
+        chmod($temp_file, 0755);
+
+        // Delete file generate
+        if (file_exists($temp_file)) {
+            unlink($temp_file);
+        }
+        return $path_pdf;
     }
 
+    /**
+     * get amount item the cart
+     *
+     */
+    public function get_quantity_cart () {
+
+        return count($this->get_cart_lang());
+    }
+
+    public function get_cart_lang () {
+        $items = [];
+        $this->getContent()->each(function($item) use (&$items)
+        {
+            if (isset($item[$this->lang])) {
+                $item_lang = $item[$this->lang];
+
+                $tmp['id'] = $item['id'];
+                // Item
+                $tmp['featured_img'] = $item['featured_img'];
+
+                //Series
+                if ($item['ctg_id'] == 2) {
+                    $tmp['series_display'] = $item_lang['spec1_name'] . " ". $item_lang['model']['model_name_display'] ;
+                } else{
+                    $tmp['series_display'] = $item_lang['product_name'] . " ". $item_lang['model']['model_name_display'];
+                }
+
+                //Size
+                $tmp['height_selected'] = $item['height_selected'];
+                $tmp['width_selected'] = $item['width_selected'];
+                $unit = ' mm';
+                $tmp['size'] = [];
+                if ($item['width_selected'] != ''){
+                    $tmp['size'][] = "Width: ". $item['width_selected'].$unit;
+                }
+                if ($item['height_selected'] != ''){
+                    $tmp['size'][] = "Height: ". $item['height_selected'].$unit;
+                }
+                //Color
+                $tmp['color_name'] = $item_lang['color_name'];
+
+                //Description
+                $tmp['description'] = $item_lang['description'];
+
+                //Quantity
+                $tmp['quantity'] = $item['quantity'];
+
+                $tmp['options_display'] = [];
+                foreach ($item_lang['data_options_selected'] as $option) {
+
+                    $tmp_option = [];
+                    //series
+                    $tmp_option['series_name'] = $option['series_name'];
+                    //Order no
+                    $tmp_option['order_no'] = $option['order_no'];
+                    //Unit Price
+                    $tmp_option['unit_price'] = $option['amount'];
+
+                    $tmp['options_display'][] = $tmp_option;
+                }
+                foreach ($item_lang['celling_code_option'] as $selling_op) {
+                    //dd($item);
+                    $tmp_option = [];
+                    //series
+                    $tmp_option['series_name'] = $selling_op['series_name'];
+                    //Order no
+                    //dd($selling_op);
+                    $tmp_option['order_no'] = $selling_op['order_no'] ;
+                    //Unit Price
+                    $tmp_option['unit_price'] = $selling_op['amount'];
+
+                    $tmp['options_display'][] = $tmp_option;
+                }
+                $items[] = $tmp;
+
+            }
+
+        });
+        return $items;
+    }
 }

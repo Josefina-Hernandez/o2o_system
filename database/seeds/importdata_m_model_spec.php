@@ -26,10 +26,14 @@ class importdata_m_model_spec extends Seeder
             $data_insert = $import->generate_columndb_value($datas['datas'], $column_db);
            
             foreach ($data_insert as $k => $data) {
-            	foreach ($column_db as $value) {
-	            	if ($data[$value] == '') {
-	                    $data_insert[$k][$value] = NULL;
-	                }
+            	if($data['del_flg'] == '')
+                    {
+                        $data_insert[$k]['del_flg'] = 0;
+                    }
+                foreach ($column_db as $value) {
+                    if ($value != 'del_flg' && $data[$value] == '') {
+                        $data_insert[$k][$value] = NULL;
+                    }  
             	}
             }
             DB::statement('SET FOREIGN_KEY_CHECKS = 0');

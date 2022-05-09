@@ -13,3 +13,12 @@ m_color_id_\t,m_lang_id_\t,color_name_\t,del_flg
 10_\t,1_\t,Teak_\t,0
 11_\t,1_\t,Polish Silver_\t,0
 12_\t,1_\t,Silky White_\t,0
+13_\t,1_\t,No Color_\t,0
+14_\t,1_\t,A.Brown_\t,0
+15_\t,1_\t,B.Silver_\t,0
+16_\t,1_\t,Black_\t,0
+17_\t,1_\t,S.Black_\t,0
+18_\t,1_\t,S.Gold_\t,0
+19_\t,1_\t,S.Grey_\t,0
+20_\t,1_\t,S.White_\t,0
+21_\t,1_\t,Silver_\t,0

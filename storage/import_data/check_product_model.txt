@@ -2,66 +2,121 @@ Hint:_\t,_\t,_\t,_\t,
 _\t,_\t,_\t,_\t,
 product_id_\t,m_lang_id_\t,m_model_id_\t,model_name_\t,del_flg
 1_\t,1_\t,1_\t,Section_\t,1
-1_\t,1_\t,2_\t,Sliding window (2Panels on 2Tracks)_\t,0
-1_\t,1_\t,4_\t,Sliding window (3Panels on 3Tracks)_\t,0
-1_\t,1_\t,5_\t,Sliding window (4Panels on 2Tracks)_\t,0
-1_\t,1_\t,6_\t,Sliding door (2Panels on 2Tracks)_\t,0
-1_\t,1_\t,8_\t,Sliding door (3Panels on 3Tracks)_\t,0
-1_\t,1_\t,9_\t,Sliding door (4Panels on 2Tracks)_\t,0
+1_\t,1_\t,2_\t,Sliding window (2 panels on 2 tracks)_\t,0
+1_\t,1_\t,4_\t,Sliding window (3 panels on 3 tracks)_\t,0
+1_\t,1_\t,5_\t,Sliding window (4 panels on 2 tracks)_\t,0
+1_\t,1_\t,6_\t,Sliding door (2 panels on 2 tracks)_\t,0
+1_\t,1_\t,8_\t,Sliding door (3 panels on 3 tracks)_\t,0
+1_\t,1_\t,9_\t,Sliding door (4 panels on 2 tracks)_\t,0
 1_\t,1_\t,13_\t,Casement window (Single lock)_\t,0
-1_\t,1_\t,14_\t,Casement window (Double lock)_\t,0
+1_\t,1_\t,14_\t,Casement window (Multi lock)_\t,0
 1_\t,1_\t,16_\t,Awning window (Single lock)_\t,0
-1_\t,1_\t,17_\t,Awning window (Double lock)_\t,0
-1_\t,1_\t,18_\t,FIX window_\t,0
-1_\t,1_\t,19_\t,Corner Fixed window_\t,0
+1_\t,1_\t,17_\t,Awning window (Multi lock)_\t,0
+1_\t,1_\t,18_\t,Fixed window_\t,0
+1_\t,1_\t,19_\t,Corner fixed window_\t,0
 1_\t,1_\t,20_\t,In-swing door (Single)_\t,1
 1_\t,1_\t,21_\t,In-swing door (Double)_\t,0
 1_\t,1_\t,22_\t,Out-swing door (Single)_\t,0
 1_\t,1_\t,23_\t,Out-swing door (Double)_\t,0
 2_\t,1_\t,1_\t,Section_\t,1
-2_\t,1_\t,2_\t,Sliding window (2Panels on 2Tracks)_\t,0
-2_\t,1_\t,5_\t,Sliding window (4Panels on 2Tracks)_\t,0
-2_\t,1_\t,6_\t,Sliding door (2Panels on 2Tracks)_\t,0
-2_\t,1_\t,7_\t,Sliding door (3Panels on 2Tracks) SFS_\t,0
-2_\t,1_\t,8_\t,Sliding door (3Panels on 3Tracks)_\t,0
-2_\t,1_\t,9_\t,Sliding door (4Panels on 2Tracks)_\t,0
-2_\t,1_\t,10_\t,Sliding door (6Panels on 2Tracks)_\t,0
-2_\t,1_\t,11_\t,Entrance sliding door (2Panels on 2Tracks)_\t,0
-2_\t,1_\t,12_\t,Entrance sliding door (4Panels on 2Tracks)_\t,0
+2_\t,1_\t,2_\t,Sliding window (2 panels on 2 tracks)_\t,0
+2_\t,1_\t,5_\t,Sliding window (4 panels on 2 tracks)_\t,0
+2_\t,1_\t,6_\t,Sliding door (2 panels on 2 tracks)_\t,0
+2_\t,1_\t,7_\t,Sliding door (3 panels on 2 tracks) SFS_\t,0
+2_\t,1_\t,8_\t,Sliding door (3 panels on 3 tracks)_\t,0
+2_\t,1_\t,9_\t,Sliding door (4 panels on 2 tracks)_\t,0
+2_\t,1_\t,10_\t,Sliding door (6 panels on 3 tracks)_\t,0
+2_\t,1_\t,11_\t,Entrance sliding door (2 panels on 2 tracks)_\t,0
+2_\t,1_\t,12_\t,Entrance sliding door (4 panels on 2 tracks)_\t,0
+2_\t,1_\t,58_\t,Casement window (Single lock)_\t,0
 2_\t,1_\t,13_\t,Casement window (Single lock)_\t,0
 2_\t,1_\t,15_\t,Double casement window_\t,0
 2_\t,1_\t,16_\t,Awning window (Single lock)_\t,0
-2_\t,1_\t,18_\t,FIX window_\t,0
-2_\t,1_\t,19_\t,Corner Fixed window_\t,0
+2_\t,1_\t,18_\t,Fixed window_\t,0
+2_\t,1_\t,19_\t,Corner fixed window_\t,0
 2_\t,1_\t,20_\t,In-swing door (Single)_\t,0
 2_\t,1_\t,21_\t,In-swing door (Double)_\t,0
 2_\t,1_\t,22_\t,Out-swing door (Single)_\t,0
 2_\t,1_\t,23_\t,Out-swing door (Double)_\t,0
-2_\t,1_\t,24_\t,Ventilation door_\t,0
-2_\t,1_\t,25_\t,Folding door (4Panels)_\t,0
-2_\t,1_\t,26_\t,Folding door (6Panels)_\t,0
-2_\t,1_\t,27_\t,Folding door (8Panels)_\t,0
-2_\t,1_\t,28_\t,Folding door (12Panels)_\t,0
-2_\t,1_\t,29_\t,Folding door (16Panels)_\t,0
+2_\t,1_\t,24_\t,Airflow door_\t,0
+2_\t,1_\t,25_\t,Folding door (4 panels)_\t,0
+2_\t,1_\t,26_\t,Folding door (6 panels)_\t,0
+2_\t,1_\t,27_\t,Folding door (8 panels)_\t,0
+2_\t,1_\t,28_\t,Folding door (12 panels)_\t,0
+2_\t,1_\t,29_\t,Folding door (16 panels)_\t,0
 3_\t,1_\t,1_\t,Section_\t,1
 3_\t,1_\t,2_\t,Single Sliding Window_\t,0
 3_\t,1_\t,5_\t,Center Sliding Window_\t,0
 3_\t,1_\t,13_\t,Casement window (Single lock)_\t,0
 3_\t,1_\t,16_\t,Awning window (Single lock)_\t,0
-3_\t,1_\t,18_\t,FIX window_\t,0
+3_\t,1_\t,18_\t,Fixed window_\t,0
 4_\t,1_\t,1_\t,Section_\t,1
-4_\t,1_\t,2_\t,Sliding window (2Panels on 2Tracks)_\t,0
-4_\t,1_\t,3_\t,Sliding window (3Panels on 2Tracks) SFS_\t,0
-4_\t,1_\t,5_\t,Sliding window (4Panels on 2Tracks)_\t,0
-4_\t,1_\t,9_\t,Sliding door (4Panels on 2Tracks)_\t,0
-4_\t,1_\t,11_\t,Entrance sliding door (2Panels on 2Tracks)_\t,0
-4_\t,1_\t,12_\t,Entrance sliding door (4Panels on 2Tracks)_\t,0
+4_\t,1_\t,2_\t,Sliding window (2 panels on 2 tracks)_\t,0
+4_\t,1_\t,3_\t,Sliding window (3 panels on 2 tracks) SFS_\t,0
+4_\t,1_\t,5_\t,Sliding window (4 panels on 2 tracks)_\t,0
+4_\t,1_\t,9_\t,Sliding door (4 panels on 2 tracks)_\t,0
+4_\t,1_\t,11_\t,Entrance sliding door (2 panels on 2 tracks)_\t,0
+4_\t,1_\t,12_\t,Entrance sliding door (4 panels on 2 tracks)_\t,0
 4_\t,1_\t,13_\t,Casement window (Single lock)_\t,0
 4_\t,1_\t,15_\t,Double casement window_\t,0
 4_\t,1_\t,16_\t,Awning window (Single lock)_\t,0
-4_\t,1_\t,18_\t,FIX window_\t,0
-4_\t,1_\t,19_\t,Corner Fixed window_\t,0
+4_\t,1_\t,18_\t,Fixed window_\t,0
+4_\t,1_\t,19_\t,Corner fixed window_\t,0
 4_\t,1_\t,20_\t,In-swing door (Single)_\t,0
 4_\t,1_\t,21_\t,In-swing door (Double)_\t,0
 4_\t,1_\t,22_\t,Out-swing door (Single)_\t,0
 4_\t,1_\t,23_\t,Out-swing door (Double)_\t,0
+6_\t,1_\t,30_\t,Single sliding gate_\t,0
+6_\t,1_\t,31_\t,Double sliding gate_\t,0
+6_\t,1_\t,32_\t,Folding gate(4 panels)_\t,0
+6_\t,1_\t,33_\t,Folding gate(6 panels)_\t,0
+6_\t,1_\t,34_\t,Swing gate(Single)_\t,0
+6_\t,1_\t,35_\t,Swing gate(double)_\t,0
+6_\t,1_\t,36_\t,Fence_\t,0
+8_\t,1_\t,47_\t,Single type_\t,0
+8_\t,1_\t,48_\t,Double type_\t,0
+7_\t,1_\t,50_\t,Partition door (2 panels on 2 tracks)_\t,0
+7_\t,1_\t,51_\t,Partition door (3 panels on 3 tracks)_\t,0
+7_\t,1_\t,52_\t,Partition door (4 panels on 2 tracks)_\t,0
+7_\t,1_\t,53_\t,Partition door (6 panels on 3 tracks)_\t,0
+5_\t,1_\t,37_\t,P01_\t,0
+5_\t,1_\t,38_\t,P02_\t,0
+5_\t,1_\t,39_\t,P03_\t,0
+5_\t,1_\t,40_\t,D01_\t,0
+5_\t,1_\t,41_\t,D02_\t,0
+5_\t,1_\t,42_\t,D03_\t,0
+5_\t,1_\t,43_\t,G01_\t,0
+5_\t,1_\t,44_\t,G02_\t,0
+5_\t,1_\t,45_\t,G03_\t,0
+5_\t,1_\t,46_\t,G04_\t,0
+5_\t,1_\t,65_\t,A01_\t,0
+1_\t,1_\t,54_\t,Mullion_\t,0
+2_\t,1_\t,54_\t,Mullion_\t,0
+4_\t,1_\t,54_\t,Mullion_\t,0
+1_\t,1_\t,55_\t,Transom_\t,0
+2_\t,1_\t,55_\t,Transom_\t,0
+4_\t,1_\t,55_\t,Transom_\t,0
+2_\t,1_\t,56_\t,Aluminum Louver_\t,0
+2_\t,1_\t,57_\t,Glass Louver_\t,0
+9_\t,1_\t,59_\t,On-wall (1 panel on 1 track)_\t,0
+9_\t,1_\t,60_\t,On-wall (2 panels on 1 track)_\t,0
+9_\t,1_\t,61_\t,In-wall (1 panel on 1 track)_\t,0
+9_\t,1_\t,62_\t,In-wall (2 panels on 2 tracks)_\t,0
+6_\t,1_\t,63_\t,New Swing gate(Single)_\t,0
+6_\t,1_\t,64_\t,New Swing gate(Double)_\t,0
+10_\t,1_\t,2_\t,Sliding window (2 panels on 2 tracks)_\t,0
+10_\t,1_\t,6_\t,Sliding door (2 panels on 2 tracks)_\t,0
+10_\t,1_\t,8_\t,Sliding door (3 panels on 3 tracks)_\t,0
+10_\t,1_\t,5_\t,Sliding window (4 panels on 2 tracks)_\t,0
+10_\t,1_\t,9_\t,Sliding door (4 panels on 2 tracks)_\t,0
+10_\t,1_\t,10_\t,Sliding door (6 panels on 3 tracks)_\t,0
+10_\t,1_\t,22_\t,Out-swing door (Single)_\t,0
+10_\t,1_\t,23_\t,Out-swing door (Double)_\t,0
+10_\t,1_\t,54_\t,Mullion_\t,0
+10_\t,1_\t,55_\t,Transom_\t,0
+10_\t,1_\t,66_\t,Casement (Camlatch)_\t,0
+10_\t,1_\t,67_\t,Casement (Operator)_\t,0
+10_\t,1_\t,68_\t,Awning (Camlatch)_\t,0
+10_\t,1_\t,69_\t,Awning (Operator)_\t,0
+10_\t,1_\t,70_\t,Awning (Slit)_\t,0
+10_\t,1_\t,71_\t,Vertical Tilt & Slide Window_\t,0

@@ -29,6 +29,9 @@ class ProductSellingCodePrice extends Model
      */
      protected $table;
      
+     protected $primaryKey ;
+     
+     
      protected $fillable_tmp;
      
      protected $_key_data;
@@ -40,6 +43,9 @@ class ProductSellingCodePrice extends Model
      
      public function __construct(array $attributes = [])
     {
+          
+         $this->primaryKey = config('const_db_tostem.db.product_selling_code_price.column.ID');
+          
          $this->table = config('const_db_tostem.db.product_selling_code_price.nametable');
           
          $this->fillable = [
@@ -50,7 +56,11 @@ class ProductSellingCodePrice extends Model
                     config('const_db_tostem.db.product_selling_code_price.column.AMOUNT'),
                     config('const_db_tostem.db.product_selling_code_price.column.WIDTHORG'),
                     config('const_db_tostem.db.product_selling_code_price.column.HEIGHTORG'),
-                    
+                     /* add new 2020/05/20 */
+                    config('const_db_tostem.db.product_selling_code_price.column.MATERIAL'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_TYPE'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_THICKNESS'),  
+                     /* end add new 2020/05/20 */
              ];
          
           $this->fillable_tmp = [
@@ -59,7 +69,12 @@ class ProductSellingCodePrice extends Model
                     config('const_db_tostem.db.product_selling_code_price.column.HEIGHT'),
                     config('const_db_tostem.db.product_selling_code_price.column.SPECIAL'),
                     config('const_db_tostem.db.product_selling_code_price.column.AMOUNT'),
-             ];
+                      /* add new 2020/05/20 */
+                    config('const_db_tostem.db.product_selling_code_price.column.MATERIAL'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_TYPE'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_THICKNESS'),  
+                     /* end add new 2020/05/20 */
+              ];
          $this->_key_data = [
                     config('const_db_tostem.db.product_selling_code_price.column.DESIGN'),
                     config('const_db_tostem.db.product_selling_code_price.column.WIDTH'),
@@ -77,14 +92,35 @@ class ProductSellingCodePrice extends Model
                     config('const_db_tostem.db.product_selling_code_price.column.HEIGHT'),
                     config('const_db_tostem.db.product_selling_code_price.column.SPECIAL'),
                     config('const_db_tostem.db.product_selling_code_price.column.AMOUNT'),
+                      /* add new 2020/05/20 */
+                    config('const_db_tostem.db.product_selling_code_price.column.MATERIAL'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_TYPE'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_THICKNESS'),  
+                     /* end add new 2020/05/20 */
                     NULL
                     ,'Result'
+         ];
+         $this->_col_log_error = [
+                    config('const_db_tostem.db.product_selling_code_price.column.DESIGN'),
+                    config('const_db_tostem.db.product_selling_code_price.column.WIDTH'),
+                    config('const_db_tostem.db.product_selling_code_price.column.HEIGHT'),
+                    config('const_db_tostem.db.product_selling_code_price.column.SPECIAL'),
+                    config('const_db_tostem.db.product_selling_code_price.column.AMOUNT'),
+                      /* add new 2020/05/20 */
+                    config('const_db_tostem.db.product_selling_code_price.column.MATERIAL'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_TYPE'),
+                    config('const_db_tostem.db.product_selling_code_price.column.GLASS_THICKNESS'),  
+                     /* end add new 2020/05/20 */
+                    NULL
+                    ,'error'
          ];
          
 
         parent::__construct($attributes);
     }
-    
+    public function getColumnLog(){
+         return $this->_col_log_error;
+    }
     public function getColumnExport(){
          return $this->_col_export;
     }

@@ -21,15 +21,25 @@ class importdata_m_selling_code extends Seeder
             echo "$table TRUNCATE OK!" .PHP_EOL;
         }
         if (file_exists($txt_file) === true) {
-            $datas = $import->extract_data_from_txt($txt_file, 2, 2);
+            $datas = $import->extract_data_from_txt($txt_file, 2, 3);
             $column_db = array_map('trim', $datas['columns']);
-            $data_insert = $import->generate_columndb_value($datas['datas'], $column_db);
-            foreach ($data_insert as $k => $data) {
+            $list_data = $import->generate_columndb_value($datas['datas'], $column_db);
+            foreach ($list_data as $k => $data) {
+                $flg = 0;
             	foreach ($column_db as $value) {
 	            	if ($data[$value] == '') {
-	                    $data_insert[$k][$value] = NULL;
+                        $flg += 1; 
+	                    $list_data[$k][$value] = NULL;
 	                }
             	}
+                if($flg == count($column_db))
+                {
+                    break;
+                }
+                else
+                {
+                    $data_insert[] = $list_data[$k];
+                }
             }
             DB::statement('SET FOREIGN_KEY_CHECKS = 0');
             if ($import->insert_db($table, $data_insert) === true) {

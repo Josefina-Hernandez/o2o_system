@@ -19,10 +19,10 @@ Movable Typeのログインアカウントは、この管理画面のログイ�
     </section>
  -->
     <ul class="navList">
-            <li><a href="{{ route('admin.lixil.users.users') }}" >Account</a></li>
-            <li><a href="{{ route('admin.lixil.price-maintenance.index') }}">Price <br>Maintenance</a></li>
-            <li><a href="{{ route('admin.lixil.employee') }}">Quotation <br>Result</a></li>
-	 <li><a href="{{ route('admin.lixil.shop') }}">Access <br>analysis</a></li>
+            <li><a class='rendect-page' data-href="{{ route('admin.lixil.users.users') }}" >Account</a></li>
+            <li><a class='rendect-page' data-href="{{ route('admin.lixil.price-maintenance.index') }}">Price <br>Maintenance</a></li>
+            <li><a class='rendect-page' data-href="{{ route('admin.lixil.quotation-result.index') }}">Quotation <br>Result</a></li>
+	 		<li><a class='rendect-page' data-href="{{ route('admin.lixil.access-analysis.index') }}">Access <br>analysis</a></li>
     </ul>
 </main>
 @endsection

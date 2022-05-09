@@ -5,22 +5,55 @@
 @endsection
 
 @section('content')
-	<div class="page" id="page">
+	<div class="breadcrumb">
+		<a href="{{ route('tostem.front.quotation_system') }}">{{ __('screen-select.quotation') }}</a> / <a href="{{ route('tostem.front.quotation_system.product', $ctg->slug_name) }}"><b>{{ $ctg->ctg_name }}</b></a>
+	</div>
+	<div class="page {{ $ctg->slug_name }}" id="page">
     	<div class="container">
-
-    		<div class="row">
+    		<div class="row product_model">
     			<template id="list-product">
     				<div class="col-xs-12 col-sm-2">
-	    				<div class="product-list">
-	    					<div class="product" v-for="(product, index) in products" :key="product.product_id">
-								<button
-									:class="[{'black' : product.product_id === product_id}, 'c-btn large']"
-									:data-product-id="product.product_id"
-									@click="selectProduct(product.product_id, product.product_name)">
-									@{{ product.product_name }}
-								</button>
-							</div>
-	    				</div>
+    					<template id="product-process-2" v-if="ctg_id == 2">
+    						<div class="product-list">
+		    					<div class="product" v-for="(product, index) in products" :key="product.product_id">
+									<button
+										:class="[{'black' : product.spec1 === spec1}, 'c-btn large']"
+										:data-product-id="product.product_id"
+										@click="selectProductProcess2(product.product_id, product.product_name, product.spec1, product.spec_name)">
+										@{{ product.spec_name }}
+									</button>
+                                    <template id="submenu-2" 
+                                        v-if="typeof sub_menus[product.product_id+''+product.spec1] != 'undefined'"
+                                    >
+                                        <a class="product_link tooltip-wrapper tooltip-left" style="margin:0" :href="sub_menus[product.product_id+''+product.spec1].link_url" target="_blank">
+                                            <div class="tooltip">
+                                                <div class="tooltip-body">@{{ sub_menus[product.product_id+''+product.spec1].description }}</div>
+                                            </div>
+                                        </a>
+                                    </template>
+								</div>
+		    				</div>
+    					</template>
+    					<template id="product-process-1" v-else>
+    						<div class="product-list">
+		    					<div class="product" v-for="(product, index) in products" :key="product.product_id">
+                                    <template id="submenu-1" v-if="typeof sub_menus[product.product_id] != 'undefined'">
+                                        <a class="product_link tooltip-wrapper tooltip-left" style="margin:0" :href="sub_menus[product.product_id].link_url" target="_blank">
+                                            <div class="tooltip">
+                                                <div class="tooltip-body">@{{ sub_menus[product.product_id].description }}</div>
+                                            </div>
+                                        </a>
+                                    </template>
+									<button
+										:class="[{'black' : product.product_id == product_id}, 'c-btn large']"
+										:disabled="product.readonly_flg == 1"
+										:data-product-id="product.product_id"
+										@click="selectProduct(product.product_id, product.product_name)">
+										@{{ product.product_name }}
+									</button>
+                                </div>
+		    				</div>
+    					</template>
 	    			</div>
     			</template>
 
@@ -30,10 +63,12 @@
 							<slick class="app-carousel" ref="carousel" :options="slickOptions">
 								<div class="model-item" v-for="model in models">
 									<a
-										@click="selectModels(model.m_model_id)"
+										@click="selectModels(model.m_model_id, model.m_color_id_default)"
 										:data-model-id="model.m_model_id"
 										:class="{ active : model_id == model.m_model_id }"
-										><img :src="'/tostem/img/data/' + model.img_path + '/' + model.img_name" class="img-responsive">
+										>
+										<div><img :src="'/tostem/img/data/' + model.img_path + '/' + model.img_name" class="img-responsive"></div>
+										<span class="model-name">@{{ model.model_name_display }}</span>
 									</a>
 								</div>
 							</slick>
@@ -42,163 +77,101 @@
 				</template>
     		</div>
 
-    		<template v-if="model_id">
-    			<div class="row">
+			<div class="row select-area" v-show="Object.keys(data_options).length > 0">
+    			<div class="col-xs-12">
+    				<hr id="line">
+    			</div>
 
-	    			<div class="col-xs-12">
-	    				<hr>
-	    			</div>
+    			<div class="col-xs-12">
+    				<div class="d-flex">
+	    				<div class="item">
+	    					<div id="featured-img" v-show="featured_img">
+			    				<div class="wrap">
+			    					<div class="img-center {{ $ctg->ctg_id == 3 ? 'giesta' : '' }}">
+										<img :src="getImageResultPath" class="img-responsive" style="display: inline-block;">
+										@if($ctg->ctg_id == 3)
+											<span class="giesta-img-description">{!! __('screen-select.giesta_img_description') !!}</span>
+                                            <span :class="[{ 'show' : model_id == 65 }, 'geista_img_des_a01']">{!! __('screen-select.geista_img_des_a01') !!}</span>
+										@endif
+			    					</div>
 
-	    			<div class="col-xs-12 col-sm-6" id="featured-img" v-if="color_id">
-	    				<img src="https://www.tostemthailand.com/wp-content/uploads/2018/01/9_Window4_Natural_Black.png" class="img-responsive">
-	    			</div>
-
-	    			<div class="col-xs-12 col-sm-6 pull-right">
-
-	    				<div class="option-group" v-if="product_name" data-group-name="product_name">
-	    					<button class="btn c-btn large black">@{{ product_name }}</button>
+			    				</div>
+			    			</div>
 	    				</div>
 
-	    				<template id="list-spec">
-	    					<div class="option-group inline" v-for="(value, propertyName, index) in specs" :data-group-name="propertyName">
-	    						<template v-if="value.data.length == 1">
-	    							<button
-			    						v-for="item in value.data"
-			    						@click="selectSpec(propertyName, item)"
-			    						:class="[{'black' : Object.keys(spec_selected).includes(propertyName) && spec_selected[propertyName] == item}, 'btn c-btn large']"
-			    						:data-spec-id="item"
-			    						:data-spec-code="propertyName"
-			    						>@{{ list_spec_trans[item] }}
-			    					</button>
-	    						</template>
+	    				<div class="item">
+	    					<div class="col-right">
 
-	    						<template v-else-if="value.data.length == 2">
-	    							<button class="btn c-btn large black">Label of spec</button>
-	    							<ul class="option">
-	    								<li
-				    						v-for="item in value.data"
-				    						@click="selectSpec(propertyName, item)"
-				    						:data-spec-id="item"
-				    						:data-spec-code="propertyName"
-				    						>
-				    						<button :class="[{'black' : Object.keys(spec_selected).includes(propertyName) && spec_selected[propertyName] == item}, 'btn c-btn']">@{{ list_spec_trans[item] }}</button>
-				    					</li>
-	    							</ul>
-	    						</template>
+	    						@if($ctg->ctg_id == 3)
+	    							@include('tostem.front.quotation_system.products.template-parts.giesta')
+	    						@else
+	    							@include('tostem.front.quotation_system.products.template-parts.normal')
+	    						@endif
 
-	    						<template v-else>
-	    							<button class="btn c-btn large black">Label of spec</button>
-		    						<ul class="option">
-		    							<li>
-		    								<select @change="selectSpecOnchange($event)" :data-spec-code="propertyName">
-			    								<option value="">Choose</option>
-			    								<option
-			    									v-for="item in value.data"
-						    						@click="selectSpec(propertyName, item)"
-						    						:class="[{'black' : value.data.length == 1}, 'btn c-btn large']"
-						    						:value="item"
-						    						>@{{ list_spec_trans[item] }}
-						    					</option>
-			    							</select>
-		    							</li>
-		    						</ul>
-	    						</template>
 		    				</div>
-	    				</template>
-
-	    				<template id="list-color" v-if="colors">
-	    					<div class="option-group">
-		    					<button class="btn c-btn large black">Color <span v-if="color_name">- @{{ color_name }}</span></button>
-		    					<ul class="option">
-		    						<li v-for="color in colors" :key="color.m_color_id">
-		    							<a @click="selectColor(color.m_color_id, color.color_name)">
-		    								<img class="color-img" :src="'/tostem/img/data/Color/' + color.img_name">
-		    							</a>
-		    						</li>
-		    					</ul>
-		    				</div>
-	    				</template>
-
-	    				<template id="list-size">
-
-	    				</template>
-
-	    				<template id="list-option" v-if="Object.keys(spec_selected).length > 0">
-	    					<div class="option-group inline" v-for="(value, propertyName, index) in options" :data-group-name="propertyName">
-	    						<template v-if="value.data.length == 1">
-	    							<button
-			    						v-for="item in value.data"
-			    						@click="selectSpecOption(propertyName, item)"
-			    						:class="[{'black' : Object.keys(option_selected).includes(propertyName) && option_selected[propertyName] == item}, 'btn c-btn large']"
-			    						:data-spec-id="item"
-			    						:data-spec-code="propertyName"
-			    						>@{{ list_spec_trans[item] }}
-			    					</button>
-	    						</template>
-
-	    						<template v-else-if="value.data.length == 2">
-	    							<button class="btn c-btn large black">Label of spec</button>
-	    							<ul class="option">
-	    								<li
-				    						v-for="item in value.data"
-				    						@click="selectSpecOption(propertyName, item)"
-				    						:class="[{'black' : Object.keys(option_selected).includes(propertyName) && option_selected[propertyName] == item}, 'btn c-btn']"
-				    						:data-spec-id="item"
-				    						:data-spec-code="propertyName"
-				    						>
-				    						<button class="btn c-btn">@{{ list_spec_trans[item] }}</button>
-				    					</li>
-	    							</ul>
-	    						</template>
-
-	    						<template v-else>
-	    							<button class="btn c-btn large black">Label of spec</button>
-		    						<ul class="option">
-		    							<li>
-		    								<select @change="selectSpecOptionOnchange($event)">
-			    								<option value="">Choose</option>
-			    								<option
-			    									v-for="item in value.data"
-						    						:class="[{'black' : value.data.length == 1}, 'btn c-btn large']"
-						    						:data-spec-code="propertyName"
-						    						:value="item"
-						    						>@{{ list_spec_trans[item] }}
-						    					</option>
-			    							</select>
-		    							</li>
-		    						</ul>
-	    						</template>
-		    				</div>
-	    				</template>
+		    			</div>
 	    			</div>
-	    		</div>
-    		</template>
+    			</div>
+
+    		</div>
 
     	</div>
 
-    	<template id="cart" v-if="add_to_cart">
-    		<hr>
-	    	<div class="container">
+    	<template id="cart">
+    		<hr :class="{ hr_geista_img_des_a01 : model_id == 65 }">
+	    	<div class="container" style="min-height: 4.2rem">
 	    		<div class="row" id="result-selected">
 	    			<div class="col-xs-12 col-sm-6 pull-right">
-	    				<div class="d-flex">
-	    					<div class="item">
-	    						<span class="price">12,450</span><span class="unit">THB</span>
-	    					</div>
-	    					<div class="item">
-	    						<button class="btn btn-default c-btn large" id="add-to-cart">Add to cart</button>
-	    					</div>
-	    				</div>
+	    				<span v-show="show_total_price" class="total-price">
+	    					<span class="price">@{{ totalPrice }}</span><span class="unit"> {{ __('screen-cart.THB') }}</span>{{-- Edit BP_O2OQ-7 hainp 20200727 --}}
+	    				</span>
+	    				<button class="btn btn-default c-btn large" id="add-to-cart" :disabled="checkDisabledAddToCart" v-on:click="add__cart" >{{ __('screen-select.add_to_cart') }}</button>
 	    			</div>
 	    		</div>
 	    	</div>
     	</template>
+
+    	<v-dialog :click-to-close="false"></v-dialog>
     </div>
 @endsection
 @section('script')
     @parent
+
     <script>
-    	var slug_name = '{{ $ctg_slug }}';
+    	var slug_name = '{{ $ctg->slug_name }}',
+    		ctg_id = '{{ $ctg->ctg_id }}',
+    		lang = '{{str_replace('_', '-', app()->getLocale())}}',
+    		app = null,
+    		lang_text = {
+    			'model_not_found': '{{ __('screen-select.model_not_found') }}',
+			    'option_not_found': '{{ __('screen-select.option_not_found') }}',
+			    'number_validate_msg': '{{ __('screen-select.number_validate_msg') }}',
+			    'left_pict_msg': '{{ __('screen-select.left_pict_msg') }}',
+			    'cancel': '{{ __('screen-select.cancel') }}',
+			    'ok': '{{ __('screen-select.ok') }}',
+			    'side_panel': '{{ __('screen-select.side_panel') }}',
+			    'added_to_cart': '{{ __('screen-select.added_to_cart') }}',
+			    'session_expired': '{{ __('messages.session_expired') }}'
+    		}
+
+            $('.tooltip-wrapper').on('touchstart',function(e) {
+              $('.tooltip-wrapper').not(this).removeClass('hover');
+              $(this).toggleClass('hover');
+            });
+
+        $(function(){
+            var product_model_left = $(".product_model").offset().left;
+            if ($(window).width() > 1025 && product_model_left < 160) {
+                $(".product_model").css("margin-left", 160 - product_model_left + 'px');
+                $(".product_model").css("margin-right", 160 - product_model_left + 'px');
+            }
+        });
     </script>
-    <script src="{{asset('tostem/front/quotation_system/products/product.js')}}"></script>
+
+    @if($ctg->ctg_id == 3)
+		<script src="{{asset('tostem/front/quotation_system/products/product_giesta.js')}}"></script>
+	@else
+		<script src="{{asset('tostem/front/quotation_system/products/product.js')}}"></script>
+	@endif
+
 @endsection

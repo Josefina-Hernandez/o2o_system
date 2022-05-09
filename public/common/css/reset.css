@@ -42,7 +42,7 @@ strong {
 /* font reset */
 
 body {
-	font-family:sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size:14px;
 	font-size:small\9; /*IE8用*/
 	line-height:150%;

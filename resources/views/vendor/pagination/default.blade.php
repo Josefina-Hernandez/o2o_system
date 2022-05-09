@@ -1,12 +1,12 @@
 @if ($paginator->hasPages())
     <nav class="pagenav">
-        <p>{{ $paginator->total() }}件（{{ $paginator->perPage() * ($paginator->currentPage() - 1) + 1 }}～{{ $paginator->total() <= $paginator->perPage() * $paginator->currentPage() ? $paginator->total() : $paginator->perPage() * $paginator->currentPage() }}件を表示）</p>
+         <p>{{ $paginator->perPage() * ($paginator->currentPage() - 1) + 1 }}~{{ $paginator->total() <= $paginator->perPage() * $paginator->currentPage() ? $paginator->total() : $paginator->perPage() * $paginator->currentPage() }} of   {{ $paginator->total() }}</p>
         <ul class="pagination">
             {{-- Previous Page Link --}}
             @if ($paginator->onFirstPage())
                 <li class="disabled"><span>≪</span></li>
             @else
-                <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">≪</a></li>
+                <li><a class='prev-page' rel="prev">≪</a></li>
             @endif
 
             {{-- Pagination Elements --}}
@@ -22,7 +22,7 @@
                         @if ($page == $paginator->currentPage())
                             <li class="active"><span>{{ $page }}</span></li>
                         @else
-                            <li><a href="{{ $url }}">{{ $page }}</a></li>
+                            <li><a class='select-page' data-page="{{ $page }}">{{ $page }}</a></li>
                         @endif
                     @endforeach
                 @endif
@@ -30,7 +30,7 @@
 
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
-                <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">≫</a></li>
+                <li><a class='next-page' rel="next">≫</a></li>
             @else
                 <li class="disabled"><span>≫</span></li>
             @endif

@@ -18,6 +18,7 @@ class CreateMSpecGroupTable extends Migration
             $table->integer(config('const_db_tostem.db.m_spec_group.column.CTG_SPEC_ID'))->unsigned()->nullable();
             $table->integer(config('const_db_tostem.db.m_spec_group.column.SORT_ORDER'))->nullable();
             $table->string(config('const_db_tostem.db.m_spec_group.column.ALIAS_NAME'))->nullable();
+            $table->integer(config('const_db_tostem.db.m_spec_group.column.DISPLAY_FLG'));
             
             $table->tinyInteger(config('const_db_tostem.db.common_columns.column.DEL_FLG'))->default('0');
             $table->integer(config('const_db_tostem.db.common_columns.column.ADD_USER_ID'))->nullable();

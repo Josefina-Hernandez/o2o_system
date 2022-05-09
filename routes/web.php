@@ -662,3 +662,15 @@ Route::prefix('page')->name('page')->namespace('Mado\Page')->group(function () {
     Route::get('/{path1}/{end_name}', ['as' => 'two_depth', 'uses' => 'PageAutoLoadController@two_depth']);
 
 });
+
+Route::get('/checkdata-selling-code', ['as' => '.checkdata', 'uses' => 'CheckDataController@index']);
+Route::get('/koiprice', ['as' => '.test', 'uses' => 'TesttController@index']);
+Route::get('/koipricedownloaddata', ['as' => '.test', 'uses' => 'TesttController@download']);
+Route::get('/test-import', ['as' => '.testimport', 'uses' => 'TesttController@index']);
+
+Route::namespace('Tostem\Admin')->group(function () {
+     
+     Route::get('/koigentabledataupdategiesta', ['as' => '.koigentabledataupdategiesta', 'uses' => 'CommonController@genTableContentUpdataGiesta']);
+     Route::get('/koiupdatedatapricegiesta', ['as' => '.koiupdatedatapricegiesta', 'uses' => 'CommonController@updateDataGiesta']);
+     
+});

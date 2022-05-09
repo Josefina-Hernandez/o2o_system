@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/quotation_system';
 
     /**
      * Create a new controller instance.
@@ -46,7 +46,7 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        return route('tostem.front.index');
+        return route('tostem.front.quotation_system');
     }
 
     /**
@@ -59,9 +59,11 @@ class LoginController extends Controller
     {
         $this->guard()->logout();
 
-        $request->session()->invalidate();
+        // $request->session()->invalidate(); //Remove delete session cart thay cho delete all session hainp 20200925
+        app('App\Http\Controllers\Tostem\Front\CartController')->clearCart(); //Add delete session cart thay cho delete all session hainp 20200925
+        $request->session()->regenerateToken();
 
-        return redirect()->route('tostem.front.login');
+        return redirect()->route('tostem.front.index');
     }
 
     public function username()
@@ -80,6 +82,7 @@ class LoginController extends Controller
         }
         return $check_login;
     }
+
     /*protected function guard()
     {
     	return Auth::guard('guard-name');

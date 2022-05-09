@@ -1,98 +1,8 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./resources/assets/tostem/admin/pmaintenance/js/pmaintenance.js":
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
 /*!***********************************************************************!*\
   !*** ./resources/assets/tostem/admin/pmaintenance/js/pmaintenance.js ***!
   \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
 $(function () {
   bs_input_file(".input-file");
   update_table_height();
@@ -111,14 +21,18 @@ $(document).on("click", ".search-date", function () {
   var $_time_strart = $('.start-date').val();
   var $_time_end = $('.end-date').val();
 
-  if ($_time_strart == '') {
-    alert('Please Select Time Start!');
-    return false;
+  if ($_time_strart != '') {
+    if (!isValidDate($_time_strart)) {
+      alert("Invalid input time.");
+      return false;
+    }
   }
 
-  if ($_time_end == '') {
-    alert('Please Select Time End!');
-    return false;
+  if ($_time_end != '') {
+    if (!isValidDate($_time_end)) {
+      alert("Invalid input time.");
+      return false;
+    }
   }
 
   var formData = new FormData();
@@ -138,21 +52,59 @@ $(document).on("click", ".search-date", function () {
       $(".loader").hide();
     },
     success: function success(data) {
+      if (data.status == 'auth') {
+        alert(data.msg);
+
+        if (data.key == 0) {
+          window.location.reload();
+        }
+
+        $(".loader").hide();
+        return false;
+      }
+
       $('#list-content').empty();
       $('#list-content').html(data.html);
+    },
+    error: function error(jqXHR, exception) {
+      if (jqXHR.status == '401') {
+        var msg = 'Your session has expired.';
+        alert(msg);
+        location.reload();
+        return false;
+      }
+
+      var msg = 'Import error! system error';
+      alert(msg);
     }
   });
 });
 $(document).off("click", "#import-fle");
 $(document).on("click", "#import-fle", function () {
+  if (!$("#product").is(":checked") && !$("#option").is(":checked")) {
+    alert('Please select Product or Option type !');
+    return false;
+  }
+
   var formData = new FormData();
   var files = $('#file-import')[0].files[0];
 
   if (files == undefined) {
-    alert('Please input file!');
+    alert('Please choose a file !');
     return false;
   }
 
+  var _type = '';
+
+  if ($("#product").is(":checked")) {
+    _type = $("#product").val();
+  }
+
+  if ($("#option").is(":checked")) {
+    _type = $("#option").val();
+  }
+
+  formData.append('type', _type);
   formData.append('file', files);
   formData.append("_token", config._token);
   $(".loader").show();
@@ -187,17 +139,36 @@ $(document).on("click", "#import-fle", function () {
         }
       }
 
+      if (data.status == 'auth') {
+        alert(data.msg);
+
+        if (data.key == 0) {
+          window.location.reload();
+        }
+
+        $(".loader").hide();
+        return false;
+      }
+
       if (data.status == 'err_column') {
         alert('There is an error with template of importing file. Template format is incorrect');
         return false;
       }
 
       if (data.status == 'err_data') {
-        alert('Required cell value: ' + data.pos_null);
-        return false;
+        alert('Data import has error, please check downloaded log file');
+        var param = "?path_file=" + data.path_file;
+        window.location.href = config.routes._downloadlog + param;
       }
     },
     error: function error(jqXHR, exception) {
+      if (jqXHR.status == '401') {
+        var msg = 'Your session has expired.';
+        alert(msg);
+        location.reload();
+        return false;
+      }
+
       upload_status();
       load_view_all_data();
       update_table_height();
@@ -235,8 +206,26 @@ $(document).on("click", "#download-file-import", function () {
         var msg = 'File not exist!';
         alert(msg);
       }
+
+      if (data.status == 'auth') {
+        alert(data.msg);
+
+        if (data.key == 0) {
+          window.location.reload();
+        }
+
+        $(".loader").hide();
+        return false;
+      }
     },
     error: function error(jqXHR, exception) {
+      if (jqXHR.status == '401') {
+        var msg = 'Your session has expired.';
+        alert(msg);
+        location.reload();
+        return false;
+      }
+
       var msg = 'Download error!';
       alert(msg);
     }
@@ -271,8 +260,26 @@ $(document).on("click", "#download-filelog-import", function () {
         var msg = 'File not exist!';
         alert(msg);
       }
+
+      if (data.status == 'auth') {
+        alert(data.msg);
+
+        if (data.key == 0) {
+          window.location.reload();
+        }
+
+        $(".loader").hide();
+        return false;
+      }
     },
     error: function error(jqXHR, exception) {
+      if (jqXHR.status == '401') {
+        var msg = 'Your session has expired.';
+        alert(msg);
+        location.reload();
+        return false;
+      }
+
       var msg = 'Download error!';
       alert(msg);
     }
@@ -306,7 +313,7 @@ function bs_input_file($element) {
 
 function update_table_height() {
   var box = $("#parentdata");
-  var window_h_margin = 345;
+  var window_h_margin = 356;
   var window_h = $('#content-body').height();
   var set_h = window_h - window_h_margin;
   box.height(set_h);
@@ -348,20 +355,13 @@ function load_view_all_data() {
 function _reset_file_input() {
   $('#file-import').val('');
   $('#fileInput').val('');
+  $('input[name="select-option"]').prop('checked', false);
 }
 
-/***/ }),
-
-/***/ 3:
-/*!*****************************************************************************!*\
-  !*** multi ./resources/assets/tostem/admin/pmaintenance/js/pmaintenance.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! C:\Users\Public\docker\src\tostem_src\resources\assets\tostem\admin\pmaintenance\js\pmaintenance.js */"./resources/assets/tostem/admin/pmaintenance/js/pmaintenance.js");
-
-
-/***/ })
-
-/******/ });
+function isValidDate(dateString) {
+  var regEx = /^\d{4}\/\d{2}\/\d{2}$/;
+  return dateString.match(regEx) != null;
+}
+/******/ })()
+;
+//# sourceMappingURL=pmaintenance.js.map

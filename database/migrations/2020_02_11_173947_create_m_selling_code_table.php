@@ -14,6 +14,7 @@ class CreateMSellingCodeTable extends Migration
     public function up()
     {
         Schema::create(config('const_db_tostem.db.m_selling_code.nametable'), function (Blueprint $table) {
+            $table->increments('m_selling_code_id');
             $table->string(config('const_db_tostem.db.m_selling_code.column.SELLING_CODE'),100);
             for($i = 1; $i<=50; $i++)
             {
@@ -22,7 +23,6 @@ class CreateMSellingCodeTable extends Migration
 
             }
             $table->integer(config('const_db_tostem.db.m_selling_code.column.PRODUCT_ID'))->unsigned()->nullable();
-            $table->string(config('const_db_tostem.db.m_selling_code.column.SELLING_CODE_TYPE'))->nullable();
             for($i = 1; $i<=100; $i++)
             {
                 $name = 'spec'.$i;

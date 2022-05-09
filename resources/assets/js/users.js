@@ -27,7 +27,7 @@ $(document).ready(function () {
         var tr = $(this).parent().parent();
         if (id != 0)
         {
-            var result = confirm("re you sure to delete?");
+            var result = confirm("Are you sure to delete?");
             if (result) {
                 //Logic to delete the item
                 $.ajax({
@@ -45,12 +45,28 @@ $(document).ready(function () {
                         if (data == 0)
                         {
                             tr.remove();
-                        } else
+                            alert("Deleted Successfully");
+                        } 
+                        else if(data.status == 'auth'){
+                             alert(data.msg);
+                             if(data.key == 0){
+                                window.location.reload();
+                             }
+                             $(".loader").hide();
+                             return false;
+                        } 
+                        else
                         {
                             alert("This user cannot be deleted");
                         }
 
-                    }
+                    },
+                     error: function (jqXHR, exception) {
+                         if(jqXHR.status == '401'){
+                               alert("Your session has expired.");
+                               location.reload();
+                         }
+                     }
                 });
             }
         } else
@@ -66,7 +82,8 @@ $(document).ready(function () {
         
         var data_id = $(this).attr('data-id');
         var _user_id = $(this).attr('user-id');
-        showModal(data_id, _user_id);
+        var type_user = $(this).attr('type_user');
+        showModal(data_id, _user_id,type_user);
         
     });
     
@@ -78,6 +95,7 @@ $(document).ready(function () {
             user: []
         };
         var arrUserId = [];
+        var arrUserEmail = []; 
         // var table = $('#tUsers');
         var bErr = false;
         $('#tUsers > tbody  > tr').each(function (i, row) {
@@ -85,27 +103,51 @@ $(document).ready(function () {
             var noid = $row.attr('id');
             var arr = noid.split("_");
             var id = arr[1];
-            var userid = $row.find('input[name="userid"]').val();
+            var userid = $row.find('input[name="userid"]').val().trim();
+            var email = $row.find('input[name="email"]').val().trim();
+            
             if (userid != "")
             {
+                 
                 if (arrUserId.indexOf(userid) != -1)
                 {
                     alert("User ID " + userid + " is dupllicated");
                     bErr = true;
                     return false;
                 }
+                if(userid != 'lixil' &&  userid != 'employee' ){
+                           if(email == "" ){
+
+                                   /*alert("Email of  user id :  " + userid + " is required");
+                                   bErr = true;
+                                   return false;*/
+
+                            }else{
+                                   if (arrUserEmail.indexOf(email) != -1)
+                                   {
+
+                                      alert("Email " + email + " is dupllicated");
+                                      bErr = true;
+                                      return false;
+
+                                   }
+                              }
+                }
+
                 arrUserId.push(userid);
+                arrUserEmail.push(email);
+                
                 if (arrListID.indexOf(id) != -1 || id == 0)
                 {
 
                     var status = $row.find('input[name="status"]').prop('checked');
-                    var email = $row.find('input[name="email"]').val();
+                    
                     var role = $row.find('select[name="role"]>option:selected').val();
                     var name = $row.find('input[name="name"]').val();
                     var phonenumber = $row.find('input[name="phonenumber"]').val();
-                    var company = $row.find('select[name="company"]>option:selected').val(); // $row.find('input[name="company"]').val();
-                      if(company==undefined)
-                        company="";
+                    var groupname = $row.find('select[name="groupname"]>option:selected').val(); // $row.find('input[name="company"]').val();
+                      if(groupname==undefined)
+                        groupname="";
                     var arrEmail = email.split(",");
                     for (var i = 0; i < arrEmail.length; i++)
                     {
@@ -122,7 +164,7 @@ $(document).ready(function () {
                         "email": email,
                         "name": name,
                         "phonenumber": phonenumber,
-                        "company": company,
+                        "groupname": groupname,
                         "status": status,
                         "role": role
                     });
@@ -149,32 +191,29 @@ $(document).ready(function () {
                     {
                         alert("User ID is duplicated.");
                         return false;
-                    } else
+                    } else if(data.status == 'auth')
+                     {
+                             alert(data.msg);
+                             if(data.key == 0){
+                                window.location.reload();
+                             }
+                             $(".loader").hide();
+                             return false;
+                     } 
+                    else
                     {
                         $("#ListUser").html(data);
                         alert("Saved successfully");
                        initEvent();
                     }
+                   
                 },
-                error: function (jqXHR, exception) {
-                    var msg = 'An error has occurred. Contact your system administrator.';
-    //                if (jqXHR.status === 0) {
-    //                    msg = 'Not connect.\n Verify Network.';
-    //                } else if (jqXHR.status == 404) {
-    //                    msg = 'Requested page not found. [404]';
-    //                } else if (jqXHR.status == 500) {
-    //                    msg = 'Internal Server Error [500].';
-    //                } else if (exception === 'parsererror') {
-    //                    msg = 'Requested JSON parse failed.';
-    //                } else if (exception === 'timeout') {
-    //                    msg = 'Time out error.';
-    //                } else if (exception === 'abort') {
-    //                    msg = 'Ajax request aborted.';
-    //                } else {
-    //                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
-    //                }
-                    alert(msg);
-                }
+                 error: function (jqXHR, exception) {
+                         if(jqXHR.status == '401'){
+                               alert("Your session has expired.");
+                               location.reload();
+                         }
+                   }
             });
         }
         return false;
@@ -186,10 +225,17 @@ $(document).ready(function () {
         changePass();
     });
     
+    
+    
+    $(document).on("change paste", ".inputdata.user_id_login", function () {    
+               $(this).val($(this).val().trim());
+    });
+
+    
 });
 function update_table_height() {
         var box = $("#parentdata");
-        var window_h_margin = 290;
+        var window_h_margin = 432;
         var window_h = $(window).height();
         var set_h = window_h - window_h_margin;
         box.height(set_h);
@@ -206,7 +252,7 @@ function initEvent()
     });
 }
 
-function showModal(id, userid)
+function showModal(id, userid,type_user)
 {
     $("#targetId").val(id);
     $("#targetuserid").val(userid);
@@ -214,6 +260,23 @@ function showModal(id, userid)
     $("#newpassword").val("");
     $("#confirmpassword").val("");
     $('#ChangePassDialog').modal('show');
+    
+    if(config._auth == 1){
+         
+          if(type_user == 0){
+               
+               $('#confim_p').hide();
+               $('#ChangePassDialog #type_user_update').val('0');
+               
+          }else{
+               $('#confim_p').show();
+               $('#ChangePassDialog #type_user_update').val('1');
+          }
+          
+    }else{
+         $('#confim_p').show();
+         $('#ChangePassDialog #type_user_update').val('1');
+    }
 }
 function hideModal()
 {
@@ -225,14 +288,38 @@ function changePass()
     var password = $("#oldpassword").val();
     var newpassword = $("#newpassword").val();
     var confirmpassword = $("#confirmpassword").val();
-    if (password == "" || newpassword == "" || confirmpassword == "")
-    {
-        alert("Please enter your password.");
-        return false;
-    }
+    var type_user = $('#ChangePassDialog #type_user_update').val;
+    
+     if(config._auth == 1){
+          
+                    if(type_user == 0){
+                         
+                           if (password == "" || newpassword == "" || confirmpassword == "")
+                               {
+                                   alert("Please enter your password.");
+                                   return false;
+                               }
+                               
+                    }else{
+                         
+                          if (newpassword == "" || confirmpassword == "")
+                               {
+                                   alert("Please enter your password.");
+                                   return false;
+                               }
+                    }
+     }else{
+            if (password == "" || newpassword == "" || confirmpassword == "")
+             {
+                    alert("Please enter your password.");
+                    return false;
+               }
+     }
+   
+    
     if (newpassword != confirmpassword)
     {
-        alert('Confirm Password" is incorrect.');
+        alert('"Confirm Password" is incorrect.');
         return false;
     }
     $.ajax({
@@ -251,15 +338,36 @@ function changePass()
 
             if (data == 0)
             {
+                alert("Saved successfully");
                 hideModal();
-            } else
+            }
+            else if(data.status == 'auth'){
+                    alert(data.msg);
+                    if(data.key == 0){
+                       window.location.reload();
+                    }
+                    $(".loader").hide();
+                    return false;
+            }
+            else
             {
                 alert("Cannot update password. Contact your Administrator for assistance.");
             }
 
+        },
+        error: function (jqXHR, exception) {
+             if(jqXHR.status == '401'){
+                   alert("Your session has expired.");
+                   location.reload();
+             }
         }
+        
     });
 }
+
+
+
+
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());

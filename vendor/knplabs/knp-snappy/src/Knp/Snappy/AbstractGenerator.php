@@ -3,6 +3,7 @@
 namespace Knp\Snappy;
 
 use Knp\Snappy\Exception as Exceptions;
+use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Symfony\Component\Process\Process;
@@ -14,7 +15,7 @@ use Symfony\Component\Process\Process;
  * @author  Matthieu Bontemps <matthieu.bontemps@knplabs.com>
  * @author  Antoine Hérault <antoine.herault@knplabs.com>
  */
-abstract class AbstractGenerator implements GeneratorInterface
+abstract class AbstractGenerator implements GeneratorInterface, LoggerAwareInterface
 {
     private $binary;
     private $options = [];
@@ -176,7 +177,7 @@ abstract class AbstractGenerator implements GeneratorInterface
             list($status, $stdout, $stderr) = $this->executeCommand($command);
             $this->checkProcessStatus($status, $stdout, $stderr, $command);
             $this->checkOutput($output, $command);
-        } catch (\Exception $e) { // @TODO: should be replaced by \Throwable when support for php5.6 is dropped
+        } catch (\Exception $e) {
             $this->logger->error(sprintf('An error happened while generating "%s".', $output), [
                 'command' => $command,
                 'status'  => isset($status) ? $status : null,
@@ -349,7 +350,8 @@ abstract class AbstractGenerator implements GeneratorInterface
         if (!$this->fileExists($output)) {
             throw new \RuntimeException(sprintf(
                 'The file \'%s\' was not created (command: %s).',
-                $output, $command
+                $output,
+                $command
             ));
         }
 
@@ -357,7 +359,8 @@ abstract class AbstractGenerator implements GeneratorInterface
         if (0 === $this->filesize($output)) {
             throw new \RuntimeException(sprintf(
                 'The file \'%s\' was created but is empty (command: %s).',
-                $output, $command
+                $output,
+                $command
             ));
         }
     }
@@ -380,7 +383,10 @@ abstract class AbstractGenerator implements GeneratorInterface
                 . 'stderr: "%s"' . "\n"
                 . 'stdout: "%s"' . "\n"
                 . 'command: %s.',
-                $status, $stderr, $stdout, $command
+                $status,
+                $stderr,
+                $stdout,
+                $command
             ), $status);
         }
     }
@@ -554,7 +560,8 @@ abstract class AbstractGenerator implements GeneratorInterface
             if (!$this->isFile($filename)) {
                 throw new \InvalidArgumentException(sprintf(
                     'The output file \'%s\' already exists and it is a %s.',
-                    $filename, $this->isDir($filename) ? 'directory' : 'link'
+                    $filename,
+                    $this->isDir($filename) ? 'directory' : 'link'
                 ));
             } elseif (false === $overwrite) {
                 throw new Exceptions\FileAlreadyExistsException(sprintf(
@@ -685,5 +692,16 @@ abstract class AbstractGenerator implements GeneratorInterface
     protected function mkdir($pathname)
     {
         return mkdir($pathname, 0777, true);
+    }
+
+    /**
+     * Reset all options to their initial values.
+     *
+     * @return void
+     */
+    public function resetOptions()
+    {
+        $this->options = [];
+        $this->configure();
     }
 }

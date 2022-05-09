@@ -9,8 +9,8 @@
     <h1 class="mainTtl"></h1>
 
     <ul class="navList">
-            <li><a href="{{ route('admin.shop.users.usershop',[Auth::user()->shop->id]) }}" >Account</a></li>
-            <li><a href="#">Quotation <br>Result</a></li>
+            <li><a class='rendect-page'  data-href="{{ route('admin.shop.users.usershop',[Auth::user()->shop->id]) }}" >Account</a></li>
+            <li><a class='rendect-page'  data-href="{{ route('admin.shop.quotation-result.index',[Auth::user()->shop->id]) }}">Quotation <br>Result</a></li>
     </ul>
 </main>
 @endsection

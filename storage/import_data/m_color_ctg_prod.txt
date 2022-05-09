@@ -1,20 +1,35 @@
 Hint:_\t,_\t,_\t,_\t,
 _\t,_\t,_\t,_\t,
 m_color_id_\t,ctg_prod_id_\t,img_path_\t,img_name_\t,del_flg
-1_\t,1_\t,_\t,_\t,0
-2_\t,1_\t,Color_\t,Natural Silver.jpg_\t,0
-3_\t,1_\t,Color_\t,Ivory White.jpg_\t,0
-4_\t,1_\t,Color_\t,Shine Grey.jpg_\t,0
-5_\t,1_\t,Color_\t,Autumn brown.jpg_\t,0
-6_\t,1_\t,_\t,_\t,0
-2_\t,2_\t,Color_\t,Silver.jpg_\t,0
-4_\t,2_\t,Color_\t,Grey.jpg_\t,0
-5_\t,2_\t,Color_\t,Autumn.jpg_\t,0
-6_\t,2_\t,Color_\t,Black.jpg_\t,0
-5_\t,3_\t,_\t,_\t,
-7_\t,3_\t,_\t,_\t,
-8_\t,3_\t,_\t,_\t,
-9_\t,3_\t,_\t,_\t,
-10_\t,3_\t,_\t,_\t,
-11_\t,3_\t,_\t,_\t,
-12_\t,3_\t,_\t,_\t,
+1_\t,1_\t,Color_\t,Natural white.png_\t,0
+2_\t,1_\t,Color_\t,Natural Silver.png_\t,0
+3_\t,1_\t,Color_\t,Ivory White.png_\t,0
+4_\t,1_\t,Color_\t,Shine Grey.png_\t,0
+5_\t,1_\t,Color_\t,Autumn Brown.png_\t,0
+6_\t,1_\t,Color_\t,Natural Black.png_\t,0
+2_\t,2_\t,Color_\t,Natural Silver.png_\t,0
+4_\t,2_\t,Color_\t,Shine Grey.png_\t,0
+5_\t,2_\t,Color_\t,Autumn Brown.png_\t,0
+6_\t,2_\t,Color_\t,Natural Black.png_\t,0
+5_\t,3_\t,Color_\t,GIESTA_Autumn Brown.png_\t,0
+7_\t,3_\t,Color_\t,GIESTA_Turin Pine.png_\t,0
+8_\t,3_\t,Color_\t,GIESTA_Crea Mocha.png_\t,0
+9_\t,3_\t,Color_\t,GIESTA_Crea Rusk.png_\t,0
+10_\t,3_\t,Color_\t,GIESTA_Teak.png_\t,0
+11_\t,3_\t,Color_\t,GIESTA_Polish Silver.png_\t,0
+12_\t,3_\t,Color_\t,GIESTA_Silky White.png_\t,0
+1_\t,4_\t,Color_\t,Natural white.png_\t,0
+2_\t,4_\t,Color_\t,Natural Silver.png_\t,0
+3_\t,4_\t,Color_\t,Ivory White.png_\t,0
+4_\t,4_\t,Color_\t,Shine Grey.png_\t,0
+5_\t,4_\t,Color_\t,Autumn Brown.png_\t,0
+6_\t,4_\t,Color_\t,Natural Black.png_\t,0
+13_\t,2_\t,Color_\t,No Color.png_\t,0
+14_\t,37_\t,Color_\t,A.Brown.png_\t,1
+15_\t,37_\t,Color_\t,B.Silver.png_\t,0
+16_\t,37_\t,Color_\t,Black.png_\t,1
+17_\t,37_\t,Color_\t,S.Black.png_\t,0
+18_\t,37_\t,Color_\t,S.Gold.png_\t,0
+19_\t,37_\t,Color_\t,S.Grey.png_\t,1
+20_\t,37_\t,Color_\t,S.White.png_\t,1
+21_\t,37_\t,Color_\t,Silver.png_\t,1

@@ -6,7 +6,7 @@
     width: 100%;
 
     @media(min-width: 768px) {
-	    height: calc(100vh - 21.7rem);
+	    height: calc(100vh - 24.7rem);
     }
 }
 
@@ -19,19 +19,34 @@
 }
 
 .btn-quotation {
-	border: 1px solid #ddd;
-    background: #BFBFBF;
-    color: #000;
+    background: linear-gradient(-50deg, #c6c0c0 0%, #b8b8b8 50%, #cdcdcd 51%, #abacb0 70%, #8e8f8f 100%);
+    color: #fff;
+    position: relative;
+    box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
+     -moz-box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    
     width: 100%;
     font-size: 2.8rem;
     padding: 2.8rem 1.5rem;
     border: none;
-    border-radius: 0;
+ 
     display: inline-flex;
     align-items: center;
     justify-content: center;
     &:hover{
-    	color: #000;
+    	color: #fff;
+           opacity: .8;
+    }
+    &:active{
+         position:relative;  
+         top:1px;
+    }
+    &:focus{
+         color: #fff;
     }
 }
 
@@ -48,11 +63,29 @@
 }
 
 .loginBtn {
-	background: #bfbfbf;
+          background: linear-gradient(-50deg, #c6c0c0 0%, #b8b8b8 50%, #cdcdcd 51%, #abacb0 70%, #8e8f8f 100%);
+          color: #fff;
+          position: relative;
+          box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
+          -webkit-box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
+           -moz-box-shadow: 5px 5px 0px 0px rgba(97,97,97,0.17);
 	min-width: 9rem;
-	color: #000;
 	border: none;
 	padding: 0.5rem;
+           text-decoration: none;
+           border-radius: 5px;
+           &:hover{
+    	color: #fff;
+           opacity: .8;
+          }
+          &:active{
+               position:relative;  
+               top:1px;
+          }
+          &:focus{
+               color: #fff;
+               outline: none;
+          }
 }
 
 .errors{

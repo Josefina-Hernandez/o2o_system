@@ -1,266 +1,391 @@
-Hint:_\t,_\t,_\t,_\t,
-_\t,_\t,_\t,_\t,
-m_color_id_\t,m_model_id_\t,img_path_\t,img_name_\t,del_flg
-7_\t,40_\t,_\t,_\t,0
-8_\t,40_\t,_\t,_\t,0
-9_\t,40_\t,_\t,_\t,0
-10_\t,40_\t,_\t,_\t,0
-7_\t,41_\t,_\t,_\t,0
-8_\t,41_\t,_\t,_\t,0
-9_\t,41_\t,_\t,_\t,0
-10_\t,41_\t,_\t,_\t,0
-7_\t,42_\t,_\t,_\t,0
-8_\t,42_\t,_\t,_\t,0
-9_\t,42_\t,_\t,_\t,0
-10_\t,42_\t,_\t,_\t,0
-7_\t,43_\t,_\t,_\t,0
-8_\t,43_\t,_\t,_\t,0
-9_\t,43_\t,_\t,_\t,0
-10_\t,43_\t,_\t,_\t,0
-5_\t,43_\t,_\t,_\t,0
-11_\t,43_\t,_\t,_\t,0
-12_\t,43_\t,_\t,_\t,0
-7_\t,44_\t,_\t,_\t,0
-8_\t,44_\t,_\t,_\t,0
-9_\t,44_\t,_\t,_\t,0
-10_\t,44_\t,_\t,_\t,0
-5_\t,44_\t,_\t,_\t,0
-11_\t,44_\t,_\t,_\t,0
-12_\t,44_\t,_\t,_\t,0
-7_\t,45_\t,_\t,_\t,0
-8_\t,45_\t,_\t,_\t,0
-9_\t,45_\t,_\t,_\t,0
-10_\t,45_\t,_\t,_\t,0
-5_\t,45_\t,_\t,_\t,0
-11_\t,45_\t,_\t,_\t,0
-12_\t,45_\t,_\t,_\t,0
-7_\t,46_\t,_\t,_\t,0
-8_\t,46_\t,_\t,_\t,0
-9_\t,46_\t,_\t,_\t,0
-10_\t,46_\t,_\t,_\t,0
-5_\t,46_\t,_\t,_\t,0
-11_\t,46_\t,_\t,_\t,0
-12_\t,46_\t,_\t,_\t,0
-7_\t,37_\t,_\t,_\t,0
-8_\t,37_\t,_\t,_\t,0
-9_\t,37_\t,_\t,_\t,0
-10_\t,37_\t,_\t,_\t,0
-5_\t,37_\t,_\t,_\t,0
-11_\t,37_\t,_\t,_\t,0
-12_\t,37_\t,_\t,_\t,0
-7_\t,38_\t,_\t,_\t,0
-8_\t,38_\t,_\t,_\t,0
-9_\t,38_\t,_\t,_\t,0
-10_\t,38_\t,_\t,_\t,0
-5_\t,38_\t,_\t,_\t,0
-11_\t,38_\t,_\t,_\t,0
-12_\t,38_\t,_\t,_\t,0
-7_\t,39_\t,_\t,_\t,0
-8_\t,39_\t,_\t,_\t,0
-9_\t,39_\t,_\t,_\t,0
-10_\t,39_\t,_\t,_\t,0
-5_\t,39_\t,_\t,_\t,0
-11_\t,39_\t,_\t,_\t,0
-12_\t,39_\t,_\t,_\t,0
-1_\t,1_\t,_\t,_\t,0
-2_\t,1_\t,_\t,_\t,0
-3_\t,1_\t,_\t,_\t,0
-4_\t,1_\t,_\t,_\t,0
-5_\t,1_\t,_\t,_\t,0
-6_\t,1_\t,_\t,_\t,0
-1_\t,2_\t,_\t,_\t,0
-2_\t,2_\t,_\t,_\t,0
-3_\t,2_\t,_\t,_\t,0
-4_\t,2_\t,_\t,_\t,0
-5_\t,2_\t,_\t,_\t,0
-6_\t,2_\t,_\t,_\t,0
-1_\t,3_\t,_\t,_\t,0
-2_\t,3_\t,_\t,_\t,0
-3_\t,3_\t,_\t,_\t,0
-4_\t,3_\t,_\t,_\t,0
-5_\t,3_\t,_\t,_\t,0
-6_\t,3_\t,_\t,_\t,0
-1_\t,4_\t,_\t,_\t,0
-2_\t,4_\t,_\t,_\t,0
-3_\t,4_\t,_\t,_\t,0
-4_\t,4_\t,_\t,_\t,0
-5_\t,4_\t,_\t,_\t,0
-6_\t,4_\t,_\t,_\t,0
-1_\t,5_\t,_\t,_\t,0
-2_\t,5_\t,_\t,_\t,0
-3_\t,5_\t,_\t,_\t,0
-4_\t,5_\t,_\t,_\t,0
-5_\t,5_\t,_\t,_\t,0
-6_\t,5_\t,_\t,_\t,0
-1_\t,6_\t,_\t,_\t,0
-2_\t,6_\t,_\t,_\t,0
-3_\t,6_\t,_\t,_\t,0
-4_\t,6_\t,_\t,_\t,0
-5_\t,6_\t,_\t,_\t,0
-6_\t,6_\t,_\t,_\t,0
-1_\t,7_\t,_\t,_\t,0
-2_\t,7_\t,_\t,_\t,0
-3_\t,7_\t,_\t,_\t,0
-4_\t,7_\t,_\t,_\t,0
-5_\t,7_\t,_\t,_\t,0
-6_\t,7_\t,_\t,_\t,0
-1_\t,8_\t,_\t,_\t,0
-2_\t,8_\t,_\t,_\t,0
-3_\t,8_\t,_\t,_\t,0
-4_\t,8_\t,_\t,_\t,0
-5_\t,8_\t,_\t,_\t,0
-6_\t,8_\t,_\t,_\t,0
-1_\t,9_\t,_\t,_\t,0
-2_\t,9_\t,_\t,_\t,0
-3_\t,9_\t,_\t,_\t,0
-4_\t,9_\t,_\t,_\t,0
-5_\t,9_\t,_\t,_\t,0
-6_\t,9_\t,_\t,_\t,0
-1_\t,10_\t,_\t,_\t,0
-2_\t,10_\t,_\t,_\t,0
-3_\t,10_\t,_\t,_\t,0
-4_\t,10_\t,_\t,_\t,0
-5_\t,10_\t,_\t,_\t,0
-6_\t,10_\t,_\t,_\t,0
-1_\t,11_\t,_\t,_\t,0
-2_\t,11_\t,_\t,_\t,0
-3_\t,11_\t,_\t,_\t,0
-4_\t,11_\t,_\t,_\t,0
-5_\t,11_\t,_\t,_\t,0
-6_\t,11_\t,_\t,_\t,0
-1_\t,12_\t,_\t,_\t,0
-2_\t,12_\t,_\t,_\t,0
-3_\t,12_\t,_\t,_\t,0
-4_\t,12_\t,_\t,_\t,0
-5_\t,12_\t,_\t,_\t,0
-6_\t,12_\t,_\t,_\t,0
-1_\t,13_\t,_\t,_\t,0
-2_\t,13_\t,_\t,_\t,0
-3_\t,13_\t,_\t,_\t,0
-4_\t,13_\t,_\t,_\t,0
-5_\t,13_\t,_\t,_\t,0
-6_\t,13_\t,_\t,_\t,0
-1_\t,14_\t,_\t,_\t,0
-2_\t,14_\t,_\t,_\t,0
-3_\t,14_\t,_\t,_\t,0
-4_\t,14_\t,_\t,_\t,0
-5_\t,14_\t,_\t,_\t,0
-6_\t,14_\t,_\t,_\t,0
-1_\t,15_\t,_\t,_\t,0
-2_\t,15_\t,_\t,_\t,0
-3_\t,15_\t,_\t,_\t,0
-4_\t,15_\t,_\t,_\t,0
-5_\t,15_\t,_\t,_\t,0
-6_\t,15_\t,_\t,_\t,0
-1_\t,16_\t,_\t,_\t,0
-2_\t,16_\t,_\t,_\t,0
-3_\t,16_\t,_\t,_\t,0
-4_\t,16_\t,_\t,_\t,0
-5_\t,16_\t,_\t,_\t,0
-6_\t,16_\t,_\t,_\t,0
-1_\t,17_\t,_\t,_\t,0
-2_\t,17_\t,_\t,_\t,0
-3_\t,17_\t,_\t,_\t,0
-4_\t,17_\t,_\t,_\t,0
-5_\t,17_\t,_\t,_\t,0
-6_\t,17_\t,_\t,_\t,0
-1_\t,18_\t,_\t,_\t,0
-2_\t,18_\t,_\t,_\t,0
-3_\t,18_\t,_\t,_\t,0
-4_\t,18_\t,_\t,_\t,0
-5_\t,18_\t,_\t,_\t,0
-6_\t,18_\t,_\t,_\t,0
-1_\t,19_\t,_\t,_\t,0
-2_\t,19_\t,_\t,_\t,0
-3_\t,19_\t,_\t,_\t,0
-4_\t,19_\t,_\t,_\t,0
-5_\t,19_\t,_\t,_\t,0
-6_\t,19_\t,_\t,_\t,0
-1_\t,20_\t,_\t,_\t,0
-2_\t,20_\t,_\t,_\t,0
-3_\t,20_\t,_\t,_\t,0
-4_\t,20_\t,_\t,_\t,0
-5_\t,20_\t,_\t,_\t,0
-6_\t,20_\t,_\t,_\t,0
-1_\t,21_\t,_\t,_\t,0
-2_\t,21_\t,_\t,_\t,0
-3_\t,21_\t,_\t,_\t,0
-4_\t,21_\t,_\t,_\t,0
-5_\t,21_\t,_\t,_\t,0
-6_\t,21_\t,_\t,_\t,0
-1_\t,22_\t,_\t,_\t,0
-2_\t,22_\t,_\t,_\t,0
-3_\t,22_\t,_\t,_\t,0
-4_\t,22_\t,_\t,_\t,0
-5_\t,22_\t,_\t,_\t,0
-6_\t,22_\t,_\t,_\t,0
-1_\t,23_\t,_\t,_\t,0
-2_\t,23_\t,_\t,_\t,0
-3_\t,23_\t,_\t,_\t,0
-4_\t,23_\t,_\t,_\t,0
-5_\t,23_\t,_\t,_\t,0
-6_\t,23_\t,_\t,_\t,0
-1_\t,24_\t,_\t,_\t,0
-2_\t,24_\t,_\t,_\t,0
-3_\t,24_\t,_\t,_\t,0
-4_\t,24_\t,_\t,_\t,0
-5_\t,24_\t,_\t,_\t,0
-6_\t,24_\t,_\t,_\t,0
-1_\t,25_\t,_\t,_\t,0
-2_\t,25_\t,_\t,_\t,0
-3_\t,25_\t,_\t,_\t,0
-4_\t,25_\t,_\t,_\t,0
-5_\t,25_\t,_\t,_\t,0
-6_\t,25_\t,_\t,_\t,0
-1_\t,26_\t,_\t,_\t,0
-2_\t,26_\t,_\t,_\t,0
-3_\t,26_\t,_\t,_\t,0
-4_\t,26_\t,_\t,_\t,0
-5_\t,26_\t,_\t,_\t,0
-6_\t,26_\t,_\t,_\t,0
-1_\t,27_\t,_\t,_\t,0
-2_\t,27_\t,_\t,_\t,0
-3_\t,27_\t,_\t,_\t,0
-4_\t,27_\t,_\t,_\t,0
-5_\t,27_\t,_\t,_\t,0
-6_\t,27_\t,_\t,_\t,0
-1_\t,28_\t,_\t,_\t,0
-2_\t,28_\t,_\t,_\t,0
-3_\t,28_\t,_\t,_\t,0
-4_\t,28_\t,_\t,_\t,0
-5_\t,28_\t,_\t,_\t,0
-6_\t,28_\t,_\t,_\t,0
-1_\t,29_\t,_\t,_\t,0
-2_\t,29_\t,_\t,_\t,0
-3_\t,29_\t,_\t,_\t,0
-4_\t,29_\t,_\t,_\t,0
-5_\t,29_\t,_\t,_\t,0
-6_\t,29_\t,_\t,_\t,0
-2_\t,30_\t,_\t,_\t,0
-4_\t,30_\t,_\t,_\t,0
-5_\t,30_\t,_\t,_\t,0
-6_\t,30_\t,_\t,_\t,0
-2_\t,31_\t,_\t,_\t,0
-4_\t,31_\t,_\t,_\t,0
-5_\t,31_\t,_\t,_\t,0
-6_\t,31_\t,_\t,_\t,0
-2_\t,32_\t,_\t,_\t,0
-4_\t,32_\t,_\t,_\t,0
-5_\t,32_\t,_\t,_\t,0
-6_\t,32_\t,_\t,_\t,0
-2_\t,33_\t,_\t,_\t,0
-4_\t,33_\t,_\t,_\t,0
-5_\t,33_\t,_\t,_\t,0
-6_\t,33_\t,_\t,_\t,0
-2_\t,34_\t,_\t,_\t,0
-4_\t,34_\t,_\t,_\t,0
-5_\t,34_\t,_\t,_\t,0
-6_\t,34_\t,_\t,_\t,0
-2_\t,35_\t,_\t,_\t,0
-4_\t,35_\t,_\t,_\t,0
-5_\t,35_\t,_\t,_\t,0
-6_\t,35_\t,_\t,_\t,0
-2_\t,36_\t,_\t,_\t,0
-4_\t,36_\t,_\t,_\t,0
-5_\t,36_\t,_\t,_\t,0
-6_\t,36_\t,_\t,_\t,0
+Hint:_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+m_color_id_\t,m_model_id_\t,img_default_flg_\t,img_path_\t,img_name_\t,del_flg
+7_\t,40_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D01_Turin Pine.png_\t,0
+8_\t,40_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D01_Crea Mocha.png_\t,0
+9_\t,40_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_D01_Crea Rusk.png_\t,0
+10_\t,40_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D01_Teak.png_\t,0
+7_\t,41_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D02_Turin Pine.png_\t,0
+8_\t,41_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D02_Crea Mocha.png_\t,0
+9_\t,41_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_D02_Crea Rusk.png_\t,0
+10_\t,41_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D02_Teak.png_\t,0
+7_\t,42_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D03_Turin Pine.png_\t,0
+8_\t,42_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D03_Crea Mocha.png_\t,0
+9_\t,42_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_D03_Crea Rusk.png_\t,0
+10_\t,42_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_D03_Teak.png_\t,0
+7_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Turin Pine.png_\t,0
+8_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Crea Mocha.png_\t,0
+9_\t,43_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Crea Rusk.png_\t,0
+10_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Teak.png_\t,0
+5_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Autumn Brown.png_\t,1
+11_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Polish Silver.png_\t,1
+12_\t,43_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G01_Silky White.png_\t,1
+7_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Turin Pine.png_\t,0
+8_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Crea Mocha.png_\t,0
+9_\t,44_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Crea Rusk.png_\t,0
+10_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Teak.png_\t,0
+5_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Autumn Brown.png_\t,0
+11_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Polish Silver.png_\t,0
+12_\t,44_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G02_Silky White.png_\t,0
+7_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Turin Pine.png_\t,0
+8_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Crea Mocha.png_\t,0
+9_\t,45_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Crea Rusk.png_\t,0
+10_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Teak.png_\t,0
+5_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Autumn Brown.png_\t,0
+11_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Polish Silver.png_\t,0
+12_\t,45_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G03_Silky White.png_\t,0
+7_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Turin Pine.png_\t,0
+8_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Crea Mocha.png_\t,0
+9_\t,46_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Crea Rusk.png_\t,0
+10_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Teak.png_\t,0
+5_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Autumn Brown.png_\t,0
+11_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Polish Silver.png_\t,0
+12_\t,46_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_G04_Silky White.png_\t,0
+7_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Turin Pine.png_\t,1
+8_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Crea Mocha.png_\t,0
+9_\t,65_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Crea Rusk.png_\t,0
+10_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Teak.png_\t,1
+5_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Autumn Brown.png_\t,1
+11_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Polish Silver.png_\t,1
+12_\t,65_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_A01_Silky White.png_\t,1
+7_\t,37_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Turin Pine.png_\t,0
+8_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Crea Mocha.png_\t,0
+9_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Crea Rusk.png_\t,0
+10_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Teak.png_\t,0
+5_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Autumn Brown.png_\t,0
+11_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Polish Silver.png_\t,0
+12_\t,37_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P01_Silky White.png_\t,0
+7_\t,38_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Turin Pine.png_\t,0
+8_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Crea Mocha.png_\t,0
+9_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Crea Rusk.png_\t,0
+10_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Teak.png_\t,0
+5_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Autumn Brown.png_\t,0
+11_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Polish Silver.png_\t,0
+12_\t,38_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P02_Silky White.png_\t,0
+7_\t,39_\t,1_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Turin Pine.png_\t,0
+8_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Crea Mocha.png_\t,0
+9_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Crea Rusk.png_\t,0
+10_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Teak.png_\t,0
+5_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Autumn Brown.png_\t,0
+11_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Polish Silver.png_\t,0
+12_\t,39_\t,0_\t,GIESTA (Entrance door)_\t,GIESTA_P03_Silky White.png_\t,0
+1_\t,1_\t,0_\t,Window series_\t,Section_Natural white.png_\t,0
+2_\t,1_\t,0_\t,Window series_\t,Section_Natural Silver.png_\t,0
+3_\t,1_\t,0_\t,Window series_\t,Section_Ivory White.png_\t,0
+4_\t,1_\t,1_\t,Window series_\t,Section_Shine Grey.png_\t,0
+5_\t,1_\t,0_\t,Window series_\t,Section_Autumn Brown.png_\t,0
+6_\t,1_\t,0_\t,Window series_\t,Section_Natural Black.png_\t,0
+1_\t,2_\t,0_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,2_\t,0_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,2_\t,0_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,2_\t,1_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,2_\t,0_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,2_\t,0_\t,Window series_\t,Sliding window (2 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,3_\t,0_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Natural white.png_\t,0
+2_\t,3_\t,0_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Natural Silver.png_\t,0
+3_\t,3_\t,0_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Ivory White.png_\t,0
+4_\t,3_\t,1_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Shine Grey.png_\t,0
+5_\t,3_\t,0_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Autumn Brown.png_\t,0
+6_\t,3_\t,0_\t,Window series_\t,Sliding window (3 panels on 2 tracks) SFS_Natural Black.png_\t,0
+1_\t,4_\t,0_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Natural white.png_\t,0
+2_\t,4_\t,0_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Natural Silver.png_\t,0
+3_\t,4_\t,0_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Ivory White.png_\t,0
+4_\t,4_\t,1_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Shine Grey.png_\t,0
+5_\t,4_\t,0_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Autumn Brown.png_\t,0
+6_\t,4_\t,0_\t,Window series_\t,Sliding window (3 panels on 3 tracks)_Natural Black.png_\t,0
+1_\t,5_\t,0_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,5_\t,0_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,5_\t,0_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,5_\t,1_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,5_\t,0_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,5_\t,0_\t,Window series_\t,Sliding window (4 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,6_\t,0_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,6_\t,0_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,6_\t,0_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,6_\t,1_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,6_\t,0_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,6_\t,0_\t,Window series_\t,Sliding door (2 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,7_\t,0_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Natural white.png_\t,0
+2_\t,7_\t,0_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Natural Silver.png_\t,0
+3_\t,7_\t,0_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Ivory White.png_\t,0
+4_\t,7_\t,1_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Shine Grey.png_\t,0
+5_\t,7_\t,0_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Autumn Brown.png_\t,0
+6_\t,7_\t,0_\t,Window series_\t,Sliding door (3 panels on 2 tracks) SFS_Natural Black.png_\t,0
+1_\t,8_\t,0_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Natural white.png_\t,0
+2_\t,8_\t,0_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Natural Silver.png_\t,0
+3_\t,8_\t,0_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Ivory White.png_\t,0
+4_\t,8_\t,1_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Shine Grey.png_\t,0
+5_\t,8_\t,0_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Autumn Brown.png_\t,0
+6_\t,8_\t,0_\t,Window series_\t,Sliding door (3 panels on 3 tracks)_Natural Black.png_\t,0
+1_\t,9_\t,0_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,9_\t,0_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,9_\t,0_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,9_\t,1_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,9_\t,0_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,9_\t,0_\t,Window series_\t,Sliding door (4 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,10_\t,0_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Natural white.png_\t,0
+2_\t,10_\t,0_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Natural Silver.png_\t,0
+3_\t,10_\t,0_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Ivory White.png_\t,0
+4_\t,10_\t,1_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Shine Grey.png_\t,0
+5_\t,10_\t,0_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Autumn Brown.png_\t,0
+6_\t,10_\t,0_\t,Window series_\t,Sliding door (6 panels on 3 tracks)_Natural Black.png_\t,0
+1_\t,11_\t,0_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,11_\t,0_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,11_\t,0_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,11_\t,1_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,11_\t,0_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,11_\t,0_\t,Window series_\t,Entrance sliding door (2 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,12_\t,0_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,12_\t,0_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,12_\t,0_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,12_\t,1_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,12_\t,0_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,12_\t,0_\t,Window series_\t,Entrance sliding door (4 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,13_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural white.png_\t,0
+2_\t,13_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural Silver.png_\t,0
+3_\t,13_\t,0_\t,Window series_\t,Casement window (Single lock)_Ivory White.png_\t,0
+4_\t,13_\t,1_\t,Window series_\t,Casement window (Single lock)_Shine Grey.png_\t,0
+5_\t,13_\t,0_\t,Window series_\t,Casement window (Single lock)_Autumn Brown.png_\t,0
+6_\t,13_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural Black.png_\t,0
+1_\t,14_\t,0_\t,Window series_\t,Casement window (Multi lock)_Natural white.png_\t,0
+2_\t,14_\t,0_\t,Window series_\t,Casement window (Multi lock)_Natural Silver.png_\t,0
+3_\t,14_\t,0_\t,Window series_\t,Casement window (Multi lock)_Ivory White.png_\t,0
+4_\t,14_\t,1_\t,Window series_\t,Casement window (Multi lock)_Shine Grey.png_\t,0
+5_\t,14_\t,0_\t,Window series_\t,Casement window (Multi lock)_Autumn Brown.png_\t,0
+6_\t,14_\t,0_\t,Window series_\t,Casement window (Multi lock)_Natural Black.png_\t,0
+1_\t,15_\t,0_\t,Window series_\t,Double casement window_Natural white.png_\t,0
+2_\t,15_\t,0_\t,Window series_\t,Double casement window_Natural Silver.png_\t,0
+3_\t,15_\t,0_\t,Window series_\t,Double casement window_Ivory White.png_\t,0
+4_\t,15_\t,1_\t,Window series_\t,Double casement window_Shine Grey.png_\t,0
+5_\t,15_\t,0_\t,Window series_\t,Double casement window_Autumn Brown.png_\t,0
+6_\t,15_\t,0_\t,Window series_\t,Double casement window_Natural Black.png_\t,0
+1_\t,16_\t,0_\t,Window series_\t,Awning window (Single lock)_Natural white.png_\t,0
+2_\t,16_\t,0_\t,Window series_\t,Awning window (Single lock)_Natural Silver.png_\t,0
+3_\t,16_\t,0_\t,Window series_\t,Awning window (Single lock)_Ivory White.png_\t,0
+4_\t,16_\t,1_\t,Window series_\t,Awning window (Single lock)_Shine Grey.png_\t,0
+5_\t,16_\t,0_\t,Window series_\t,Awning window (Single lock)_Autumn Brown.png_\t,0
+6_\t,16_\t,0_\t,Window series_\t,Awning window (Single lock)_Natural Black.png_\t,0
+1_\t,17_\t,0_\t,Window series_\t,Awning window (Multi lock)_Natural white.png_\t,0
+2_\t,17_\t,0_\t,Window series_\t,Awning window (Multi lock)_Natural Silver.png_\t,0
+3_\t,17_\t,0_\t,Window series_\t,Awning window (Multi lock)_Ivory White.png_\t,0
+4_\t,17_\t,1_\t,Window series_\t,Awning window (Multi lock)_Shine Grey.png_\t,0
+5_\t,17_\t,0_\t,Window series_\t,Awning window (Multi lock)_Autumn Brown.png_\t,0
+6_\t,17_\t,0_\t,Window series_\t,Awning window (Multi lock)_Natural Black.png_\t,0
+1_\t,18_\t,0_\t,Window series_\t,Fixed window_Natural white.png_\t,0
+2_\t,18_\t,0_\t,Window series_\t,Fixed window_Natural Silver.png_\t,0
+3_\t,18_\t,0_\t,Window series_\t,Fixed window_Ivory White.png_\t,0
+4_\t,18_\t,1_\t,Window series_\t,Fixed window_Shine Grey.png_\t,0
+5_\t,18_\t,0_\t,Window series_\t,Fixed window_Autumn Brown.png_\t,0
+6_\t,18_\t,0_\t,Window series_\t,Fixed window_Natural Black.png_\t,0
+1_\t,19_\t,0_\t,Window series_\t,Corner fixed window_Natural white.png_\t,0
+2_\t,19_\t,0_\t,Window series_\t,Corner fixed window_Natural Silver.png_\t,0
+3_\t,19_\t,0_\t,Window series_\t,Corner fixed window_Ivory White.png_\t,0
+4_\t,19_\t,1_\t,Window series_\t,Corner fixed window_Shine Grey.png_\t,0
+5_\t,19_\t,0_\t,Window series_\t,Corner fixed window_Autumn Brown.png_\t,0
+6_\t,19_\t,0_\t,Window series_\t,Corner fixed window_Natural Black.png_\t,0
+1_\t,20_\t,0_\t,Window series_\t,In-swing door (Single)_Natural white.png_\t,0
+2_\t,20_\t,0_\t,Window series_\t,In-swing door (Single)_Natural Silver.png_\t,0
+3_\t,20_\t,0_\t,Window series_\t,In-swing door (Single)_Ivory White.png_\t,0
+4_\t,20_\t,1_\t,Window series_\t,In-swing door (Single)_Shine Grey.png_\t,0
+5_\t,20_\t,0_\t,Window series_\t,In-swing door (Single)_Autumn Brown.png_\t,0
+6_\t,20_\t,0_\t,Window series_\t,In-swing door (Single)_Natural Black.png_\t,0
+1_\t,21_\t,0_\t,Window series_\t,In-swing door (Double)_Natural white.png_\t,0
+2_\t,21_\t,0_\t,Window series_\t,In-swing door (Double)_Natural Silver.png_\t,0
+3_\t,21_\t,0_\t,Window series_\t,In-swing door (Double)_Ivory White.png_\t,0
+4_\t,21_\t,1_\t,Window series_\t,In-swing door (Double)_Shine Grey.png_\t,0
+5_\t,21_\t,0_\t,Window series_\t,In-swing door (Double)_Autumn Brown.png_\t,0
+6_\t,21_\t,0_\t,Window series_\t,In-swing door (Double)_Natural Black.png_\t,0
+1_\t,22_\t,0_\t,Window series_\t,Out-swing door (Single)_Natural white.png_\t,0
+2_\t,22_\t,0_\t,Window series_\t,Out-swing door (Single)_Natural Silver.png_\t,0
+3_\t,22_\t,0_\t,Window series_\t,Out-swing door (Single)_Ivory White.png_\t,0
+4_\t,22_\t,1_\t,Window series_\t,Out-swing door (Single)_Shine Grey.png_\t,0
+5_\t,22_\t,0_\t,Window series_\t,Out-swing door (Single)_Autumn Brown.png_\t,0
+6_\t,22_\t,0_\t,Window series_\t,Out-swing door (Single)_Natural Black.png_\t,0
+1_\t,23_\t,0_\t,Window series_\t,Out-swing door (Double)_Natural white.png_\t,0
+2_\t,23_\t,0_\t,Window series_\t,Out-swing door (Double)_Natural Silver.png_\t,0
+3_\t,23_\t,0_\t,Window series_\t,Out-swing door (Double)_Ivory White.png_\t,0
+4_\t,23_\t,1_\t,Window series_\t,Out-swing door (Double)_Shine Grey.png_\t,0
+5_\t,23_\t,0_\t,Window series_\t,Out-swing door (Double)_Autumn Brown.png_\t,0
+6_\t,23_\t,0_\t,Window series_\t,Out-swing door (Double)_Natural Black.png_\t,0
+1_\t,24_\t,0_\t,Window series_\t,Airflow door_Natural white.png_\t,0
+2_\t,24_\t,0_\t,Window series_\t,Airflow door_Natural Silver.png_\t,0
+3_\t,24_\t,0_\t,Window series_\t,Airflow door_Ivory White.png_\t,0
+4_\t,24_\t,1_\t,Window series_\t,Airflow door_Shine Grey.png_\t,0
+5_\t,24_\t,0_\t,Window series_\t,Airflow door_Autumn Brown.png_\t,0
+6_\t,24_\t,0_\t,Window series_\t,Airflow door_Natural Black.png_\t,0
+1_\t,25_\t,0_\t,Window series_\t,Folding door (4 panels)_Natural white.png_\t,0
+2_\t,25_\t,0_\t,Window series_\t,Folding door (4 panels)_Natural Silver.png_\t,0
+3_\t,25_\t,0_\t,Window series_\t,Folding door (4 panels)_Ivory White.png_\t,0
+4_\t,25_\t,1_\t,Window series_\t,Folding door (4 panels)_Shine Grey.png_\t,0
+5_\t,25_\t,0_\t,Window series_\t,Folding door (4 panels)_Autumn Brown.png_\t,0
+6_\t,25_\t,0_\t,Window series_\t,Folding door (4 panels)_Natural Black.png_\t,0
+1_\t,26_\t,0_\t,Window series_\t,Folding door (6 panels)_Natural white.png_\t,0
+2_\t,26_\t,0_\t,Window series_\t,Folding door (6 panels)_Natural Silver.png_\t,0
+3_\t,26_\t,0_\t,Window series_\t,Folding door (6 panels)_Ivory White.png_\t,0
+4_\t,26_\t,1_\t,Window series_\t,Folding door (6 panels)_Shine Grey.png_\t,0
+5_\t,26_\t,0_\t,Window series_\t,Folding door (6 panels)_Autumn Brown.png_\t,0
+6_\t,26_\t,0_\t,Window series_\t,Folding door (6 panels)_Natural Black.png_\t,0
+1_\t,27_\t,0_\t,Window series_\t,Folding door (8 panels)_Natural white.png_\t,0
+2_\t,27_\t,0_\t,Window series_\t,Folding door (8 panels)_Natural Silver.png_\t,0
+3_\t,27_\t,0_\t,Window series_\t,Folding door (8 panels)_Ivory White.png_\t,0
+4_\t,27_\t,1_\t,Window series_\t,Folding door (8 panels)_Shine Grey.png_\t,0
+5_\t,27_\t,0_\t,Window series_\t,Folding door (8 panels)_Autumn Brown.png_\t,0
+6_\t,27_\t,0_\t,Window series_\t,Folding door (8 panels)_Natural Black.png_\t,0
+1_\t,28_\t,0_\t,Window series_\t,Folding door_12.PNG_\t,0
+2_\t,28_\t,0_\t,Window series_\t,Folding door_12.PNG_\t,0
+3_\t,28_\t,0_\t,Window series_\t,Folding door_12.PNG_\t,0
+4_\t,28_\t,1_\t,Window series_\t,Folding door_12.PNG_\t,0
+5_\t,28_\t,0_\t,Window series_\t,Folding door_12.PNG_\t,0
+6_\t,28_\t,0_\t,Window series_\t,Folding door_12.PNG_\t,0
+1_\t,29_\t,0_\t,Window series_\t,Folding door_16.PNG_\t,0
+2_\t,29_\t,0_\t,Window series_\t,Folding door_16.PNG_\t,0
+3_\t,29_\t,0_\t,Window series_\t,Folding door_16.PNG_\t,0
+4_\t,29_\t,1_\t,Window series_\t,Folding door_16.PNG_\t,0
+5_\t,29_\t,0_\t,Window series_\t,Folding door_16.PNG_\t,0
+6_\t,29_\t,0_\t,Window series_\t,Folding door_16.PNG_\t,0
+2_\t,30_\t,0_\t,Exterior series_\t,Single sliding gate_Natural Silver.png_\t,0
+4_\t,30_\t,0_\t,Exterior series_\t,Single sliding gate_Shine Grey.png_\t,0
+5_\t,30_\t,0_\t,Exterior series_\t,Single sliding gate_Autumn Brown.png_\t,0
+6_\t,30_\t,1_\t,Exterior series_\t,Single sliding gate_Natural Black.png_\t,0
+2_\t,31_\t,0_\t,Exterior series_\t,Double sliding gate_Natural Silver.png_\t,0
+4_\t,31_\t,0_\t,Exterior series_\t,Double sliding gate_Shine Grey.png_\t,0
+5_\t,31_\t,0_\t,Exterior series_\t,Double sliding gate_Autumn Brown.png_\t,0
+6_\t,31_\t,1_\t,Exterior series_\t,Double sliding gate_Natural Black.png_\t,0
+2_\t,32_\t,0_\t,Exterior series_\t,Folding gate(4 panels)_Natural Silver.png_\t,0
+4_\t,32_\t,0_\t,Exterior series_\t,Folding gate(4 panels)_Shine Grey.png_\t,0
+5_\t,32_\t,0_\t,Exterior series_\t,Folding gate(4 panels)_Autumn Brown.png_\t,0
+6_\t,32_\t,1_\t,Exterior series_\t,Folding gate(4 panels)_Natural Black.png_\t,0
+2_\t,33_\t,0_\t,Exterior series_\t,Folding gate(6 panels)_Natural Silver.png_\t,0
+4_\t,33_\t,0_\t,Exterior series_\t,Folding gate(6 panels)_Shine Grey.png_\t,0
+5_\t,33_\t,0_\t,Exterior series_\t,Folding gate(6 panels)_Autumn Brown.png_\t,0
+6_\t,33_\t,1_\t,Exterior series_\t,Folding gate(6 panels)_Natural Black.png_\t,0
+2_\t,34_\t,0_\t,Exterior series_\t,Swing gate(Single)_Natural Silver.png_\t,0
+4_\t,34_\t,0_\t,Exterior series_\t,Swing gate(Single)_Shine Grey.png_\t,0
+5_\t,34_\t,0_\t,Exterior series_\t,Swing gate(Single)_Autumn Brown.png_\t,0
+6_\t,34_\t,1_\t,Exterior series_\t,Swing gate(Single)_Natural Black.png_\t,0
+2_\t,35_\t,0_\t,Exterior series_\t,Swing gate(double)_Natural Silver.png_\t,0
+4_\t,35_\t,0_\t,Exterior series_\t,Swing gate(double)_Shine Grey.png_\t,0
+5_\t,35_\t,0_\t,Exterior series_\t,Swing gate(double)_Autumn Brown.png_\t,0
+6_\t,35_\t,1_\t,Exterior series_\t,Swing gate(double)_Natural Black.png_\t,0
+2_\t,36_\t,0_\t,Exterior series_\t,Fence_Natural Silver.png_\t,0
+4_\t,36_\t,0_\t,Exterior series_\t,Fence_Shine Grey.png_\t,0
+5_\t,36_\t,0_\t,Exterior series_\t,Fence_Autumn Brown.png_\t,0
+6_\t,36_\t,1_\t,Exterior series_\t,Fence_Natural Black.png_\t,0
+1_\t,50_\t,0_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,50_\t,0_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,50_\t,0_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,50_\t,1_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,50_\t,0_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,50_\t,0_\t,Interior series_\t,Partition_Partition door (2 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,51_\t,0_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Natural white.png_\t,0
+2_\t,51_\t,0_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Natural Silver.png_\t,0
+3_\t,51_\t,0_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Ivory White.png_\t,0
+4_\t,51_\t,1_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Shine Grey.png_\t,0
+5_\t,51_\t,0_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Autumn Brown.png_\t,0
+6_\t,51_\t,0_\t,Interior series_\t,Partition_Partition door (3 panels on 3 tracks)_Natural Black.png_\t,0
+1_\t,52_\t,0_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,52_\t,0_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,52_\t,0_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,52_\t,1_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,52_\t,0_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,52_\t,0_\t,Interior series_\t,Partition_Partition door (4 panels on 2 tracks)_Natural Black.png_\t,0
+1_\t,53_\t,0_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Natural white.png_\t,0
+2_\t,53_\t,0_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Natural Silver.png_\t,0
+3_\t,53_\t,0_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Ivory White.png_\t,0
+4_\t,53_\t,1_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Shine Grey.png_\t,0
+5_\t,53_\t,0_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Autumn Brown.png_\t,0
+6_\t,53_\t,0_\t,Interior series_\t,Partition_Partition door (6 panels on 3 tracks)_Natural Black.png_\t,0
+2_\t,47_\t,1_\t,Exterior series_\t,CARPORT_Single type_Natural Silver.png_\t,0
+2_\t,48_\t,1_\t,Exterior series_\t,CARPORT_Double type_Natural Silver.png_\t,0
+1_\t,54_\t,1_\t,Special_\t,Mullion.png_\t,0
+2_\t,54_\t,0_\t,Special_\t,Mullion.png_\t,0
+3_\t,54_\t,0_\t,Special_\t,Mullion.png_\t,0
+4_\t,54_\t,0_\t,Special_\t,Mullion.png_\t,0
+5_\t,54_\t,0_\t,Special_\t,Mullion.png_\t,0
+6_\t,54_\t,0_\t,Special_\t,Mullion.png_\t,0
+1_\t,55_\t,1_\t,Special_\t,Transom.png_\t,0
+2_\t,55_\t,0_\t,Special_\t,Transom.png_\t,0
+3_\t,55_\t,0_\t,Special_\t,Transom.png_\t,0
+4_\t,55_\t,0_\t,Special_\t,Transom.png_\t,0
+5_\t,55_\t,0_\t,Special_\t,Transom.png_\t,0
+6_\t,55_\t,0_\t,Special_\t,Transom.png_\t,0
+1_\t,56_\t,0_\t,Window series_\t,Aluminum Louver_Natural white.png_\t,0
+2_\t,56_\t,0_\t,Window series_\t,Aluminum Louver_Natural Silver.png_\t,0
+3_\t,56_\t,0_\t,Window series_\t,Aluminum Louver_Ivory White.png_\t,0
+4_\t,56_\t,1_\t,Window series_\t,Aluminum Louver_Shine Grey.png_\t,0
+5_\t,56_\t,0_\t,Window series_\t,Aluminum Louver_Autumn Brown.png_\t,0
+6_\t,56_\t,0_\t,Window series_\t,Aluminum Louver_Natural Black.png_\t,0
+1_\t,57_\t,0_\t,Window series_\t,Glass Louver_Natural white.png_\t,0
+2_\t,57_\t,0_\t,Window series_\t,Glass Louver_Natural Silver.png_\t,0
+3_\t,57_\t,0_\t,Window series_\t,Glass Louver_Ivory White.png_\t,0
+4_\t,57_\t,1_\t,Window series_\t,Glass Louver_Shine Grey.png_\t,0
+5_\t,57_\t,0_\t,Window series_\t,Glass Louver_Autumn Brown.png_\t,0
+6_\t,57_\t,0_\t,Window series_\t,Glass Louver_Natural Black.png_\t,0
+1_\t,58_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural white.png_\t,0
+2_\t,58_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural Silver.png_\t,0
+3_\t,58_\t,0_\t,Window series_\t,Casement window (Single lock)_Ivory White.png_\t,0
+4_\t,58_\t,1_\t,Window series_\t,Casement window (Single lock)_Shine Grey.png_\t,0
+5_\t,58_\t,0_\t,Window series_\t,Casement window (Single lock)_Autumn Brown.png_\t,0
+6_\t,58_\t,0_\t,Window series_\t,Casement window (Single lock)_Natural Black.png_\t,0
+1_\t,59_\t,0_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Natural white.png_\t,0
+2_\t,59_\t,0_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Natural Silver.png_\t,0
+3_\t,59_\t,0_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Ivory White.png_\t,0
+4_\t,59_\t,1_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Shine Grey.png_\t,0
+5_\t,59_\t,0_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Autumn Brown.png_\t,0
+6_\t,59_\t,0_\t,Interior series_\t,Hanging door_On-wall (1 panel on 1 track)_Natural Black.png_\t,0
+1_\t,60_\t,0_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Natural white.png_\t,0
+2_\t,60_\t,0_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Natural Silver.png_\t,0
+3_\t,60_\t,0_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Ivory White.png_\t,0
+4_\t,60_\t,1_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Shine Grey.png_\t,0
+5_\t,60_\t,0_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Autumn Brown.png_\t,0
+6_\t,60_\t,0_\t,Interior series_\t,Hanging door_On-wall (2 panels on 1 track)_Natural Black.png_\t,0
+1_\t,61_\t,0_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Natural white.png_\t,0
+2_\t,61_\t,0_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Natural Silver.png_\t,0
+3_\t,61_\t,0_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Ivory White.png_\t,0
+4_\t,61_\t,1_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Shine Grey.png_\t,0
+5_\t,61_\t,0_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Autumn Brown.png_\t,0
+6_\t,61_\t,0_\t,Interior series_\t,Hanging door_In-wall (1 panel on 1 track)_Natural Black.png_\t,0
+1_\t,62_\t,0_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Natural white.png_\t,0
+2_\t,62_\t,0_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Natural Silver.png_\t,0
+3_\t,62_\t,0_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Ivory White.png_\t,0
+4_\t,62_\t,1_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Shine Grey.png_\t,0
+5_\t,62_\t,0_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Autumn Brown.png_\t,0
+6_\t,62_\t,0_\t,Interior series_\t,Hanging door_In-wall (2 panels on 2 tracks)_Natural Black.png_\t,0
+2_\t,63_\t,0_\t,Exterior series_\t,New Swing gate(Single)_Natural Silver.png_\t,0
+4_\t,63_\t,0_\t,Exterior series_\t,New Swing gate(Single)_Shine Grey.png_\t,0
+5_\t,63_\t,0_\t,Exterior series_\t,New Swing gate(Single)_Autumn Brown.png_\t,0
+6_\t,63_\t,1_\t,Exterior series_\t,New Swing gate(Single)_Natural Black.png_\t,0
+2_\t,64_\t,0_\t,Exterior series_\t,New Swing gate(Double)_Natural Silver.png_\t,0
+4_\t,64_\t,0_\t,Exterior series_\t,New Swing gate(Double)_Shine Grey.png_\t,0
+5_\t,64_\t,0_\t,Exterior series_\t,New Swing gate(Double)_Autumn Brown.png_\t,0
+6_\t,64_\t,1_\t,Exterior series_\t,New Swing gate(Double)_Natural Black.png_\t,0
+1_\t,66_\t,0_\t,Window series_\t,Casement (Camlatch)_Natural white.png_\t,0
+2_\t,66_\t,0_\t,Window series_\t,Casement (Camlatch)_Natural Silver.png_\t,0
+4_\t,66_\t,0_\t,Window series_\t,Casement (Camlatch)_Shine Grey.png_\t,0
+5_\t,66_\t,0_\t,Window series_\t,Casement (Camlatch)_Autumn Brown.png_\t,0
+6_\t,66_\t,1_\t,Window series_\t,Casement (Camlatch)_Natural Black.png_\t,0
+1_\t,67_\t,0_\t,Window series_\t,Casement (Operator)_Natural white.png_\t,0
+2_\t,67_\t,0_\t,Window series_\t,Casement (Operator)_Natural Silver.png_\t,0
+4_\t,67_\t,0_\t,Window series_\t,Casement (Operator)_Shine Grey.png_\t,0
+5_\t,67_\t,0_\t,Window series_\t,Casement (Operator)_Autumn Brown.png_\t,0
+6_\t,67_\t,1_\t,Window series_\t,Casement (Operator)_Natural Black.png_\t,0
+1_\t,68_\t,0_\t,Window series_\t,Awning (Camlatch)_Natural white.png_\t,0
+2_\t,68_\t,0_\t,Window series_\t,Awning (Camlatch)_Natural Silver.png_\t,0
+4_\t,68_\t,0_\t,Window series_\t,Awning (Camlatch)_Shine Grey.png_\t,0
+5_\t,68_\t,0_\t,Window series_\t,Awning (Camlatch)_Autumn Brown.png_\t,0
+6_\t,68_\t,1_\t,Window series_\t,Awning (Camlatch)_Natural Black.png_\t,0
+1_\t,69_\t,0_\t,Window series_\t,Awning (Operator)_Natural white.png_\t,0
+2_\t,69_\t,0_\t,Window series_\t,Awning (Operator)_Natural Silver.png_\t,0
+4_\t,69_\t,0_\t,Window series_\t,Awning (Operator)_Shine Grey.png_\t,0
+5_\t,69_\t,0_\t,Window series_\t,Awning (Operator)_Autumn Brown.png_\t,0
+6_\t,69_\t,1_\t,Window series_\t,Awning (Operator)_Natural Black.png_\t,0
+1_\t,70_\t,0_\t,Window series_\t,Awning (Slit)_Natural white.png_\t,0
+2_\t,70_\t,0_\t,Window series_\t,Awning (Slit)_Natural Silver.png_\t,0
+4_\t,70_\t,0_\t,Window series_\t,Awning (Slit)_Shine Grey.png_\t,0
+5_\t,70_\t,0_\t,Window series_\t,Awning (Slit)_Autumn Brown.png_\t,0
+6_\t,70_\t,1_\t,Window series_\t,Awning (Slit)_Natural Black.png_\t,0
+1_\t,71_\t,0_\t,Window series_\t,Vertical Tilt & Slide Window_Natural white.png_\t,0
+2_\t,71_\t,0_\t,Window series_\t,Vertical Tilt & Slide Window_Natural Silver.png_\t,0
+4_\t,71_\t,0_\t,Window series_\t,Vertical Tilt & Slide Window_Shine Grey.png_\t,0
+5_\t,71_\t,0_\t,Window series_\t,Vertical Tilt & Slide Window_Autumn Brown.png_\t,0
+6_\t,71_\t,1_\t,Window series_\t,Vertical Tilt & Slide Window_Natural Black.png_\t,0
