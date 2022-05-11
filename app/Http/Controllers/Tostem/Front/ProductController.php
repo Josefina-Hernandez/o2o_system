@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Tostem\Front;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\Controller;
 use App\Services\CartService;
 use App\Traits\Tostem\Front\DataSession;
@@ -179,27 +180,56 @@ class ProductController extends Controller
     	$ctg_id = $this->getCtgId($slug_name);
     	$strRole = $this->getRoleString();
     	$model_id = $request->input('m_model_id');
+	    $color_id = intval($request->input('color_id'));
     	$param = [
 			'lang_code' => $this->lang,
 			'ctg_id' => $ctg_id,
 			'product_id' => $request->input('product_id'),
 			'm_model_id' => $model_id
 		];
-
+		$dataOption = array();
+		$cacheKey = 'ctg' . $ctg_id . ':p' . $param['product_id'] . ':m' . $model_id . ':' . $this->lang;
     	if($ctg_id == 3) { //Giesta
+			$cachedCount = -1;
+			$dataOption = json_decode(Redis::get($cacheKey), false);
+			if (is_array($dataOption) && count($dataOption) > 0) {
+				$cachedCount = "redis" . count($dataOption);
+			} else {
+				if(count(DB::select("SHOW TABLES LIKE 'v_option_giesta_refer'")) > 0) {
+					$sqlOption = config('sql_building.select.OPTIONS_GIESTA_DATA');
+					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);
+					$cachedCount = "db" . count($dataOption);	
+				}
+				if(count($dataOption) == 0) {
+					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_MAIN_PANEL_GIESTA')), $param);
+				}
+				Redis::set($cacheKey, json_encode($dataOption), 'EX', 3600);
+			}
 
-    		if(count(DB::select("SHOW TABLES LIKE 'v_option_giesta_refer'")) > 0){
-	    		$sqlOption = config('sql_building.select.OPTIONS_GIESTA_DATA');
-	    		$data['option'] = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);
-	    		if(count($data['option']) == 0) {
-	    			$data['option'] = DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_MAIN_PANEL_GIESTA')), $param);
-	    		}
-
-	    	} else {
-	    		$sqlOption = config('sql_building.select.SELECT_MAIN_PANEL_GIESTA');
-	    		$data['option'] = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);
-	    	}
-
+			$filteredData = [];
+			$defaultColorID = intval($request->input('default_color_id'));
+			if ($color_id > 0) {
+				$defaultColorID = $color_id;
+			}
+			$optionColor = array();
+			foreach($dataOption as $record) {
+				$cid = $record->m_color_id;
+				if ($defaultColorID <= 0) {
+					$defaultColorID = $cid;
+				}
+				if ($defaultColorID == $cid) {
+					array_push($filteredData, $record);
+				}
+				if (!isset($optionColor[$cid])) {	
+					$optionColor[$cid] = $record;
+				}
+			}
+			$data['option'] = $filteredData;
+			$data['cached_count'] = $cachedCount;
+			if ($color_id == 0) {
+				$data['option_color'] = $optionColor;
+			}
+    		
 	    	$data['option_handle_giesta']= DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_OPTION_HANDLE_GIESTA')),[
 	    		'lang_code' => $this->lang,
 				'ctg_id' => $ctg_id,
@@ -237,6 +267,7 @@ class ProductController extends Controller
 
 
     	} else {
+			$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_MAIN_PANEL_GIESTA')), $param);
 
     		if(count(DB::select("SHOW TABLES LIKE 'v_option_refer'")) > 0){
 	    		$sqlOption = config('sql_building.select.OPTIONS_DATA');
@@ -244,7 +275,6 @@ class ProductController extends Controller
 	    		if(count($data['option']) == 0) {
 	    			$data['option'] = DB::Select(str_replace('(:viewer_flg)', $strRole, $this->sql_get_options), $param);
 	    		}
-
 	    	} else {
 	    		$sqlOption = $this->sql_get_options;
 	    		$data['option'] = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);

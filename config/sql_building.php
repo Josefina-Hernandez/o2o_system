@@ -220,12 +220,6 @@ return [
 					AND v.ctg_id = :ctg_id
 					AND v.product_id = :product_id
 					AND v.m_model_id = :m_model_id
-					-- PRODUCT
-					AND v.p_viewer_flg IN (:viewer_flg) -- 3,1: TH login employee | 3: TH ko login employee
-					-- MODEL
-					AND v.m_viewer_flg IN (:viewer_flg) -- 3,1: TH login employee | 3: TH ko login employee
-					AND v.hidden_storage_flg = 1
-			ORDER BY v.selling_code ASC
     	",
 
     	'OPTIONS' => "

@@ -725,10 +725,18 @@ app = new Vue({
         	let  data = await this.queryOptions()
         	if(data.option.length > 0) {
         		this.data_options = data.option
+                let firstOption = this.data_options[0] 
+                if (data.hasOwnProperty("option_color")) {
+                    this.colors = data["option_color"]
+                }
+                if (this.colors.hasOwnProperty(firstOption.m_color_id)) {
+                    this.colors[firstOption.m_color_id]["data_options"] = data.option
+                }
         		this.data_query.option_handle_giesta   = data.option_handle_giesta
 		    	this.mItemDisplay = data.m_item_display
 		    	this.spec_image = data.spec_image
 				this.max_decimal = data.max_decimal //Add BP_O2OQ-7 hainp 20200714
+                
 	    		await this.fetchAllData()
 	            this.scrollToAddToCart()
         	} else {
@@ -909,6 +917,8 @@ app = new Vue({
         	_loading.css('display', 'block')
     		return axios.post(_base_app + '/' + lang + '/quotation_system/'+slug_name+'/product/get_options', {
                 product_id: this.product_id,
+                color_id: this.color_id ?? 0,
+                default_color_id: this.m_color_id_default ?? 0,
                 m_model_id: this.model_id
             }).then(response => {
 	            _loading.css('display', 'none');
@@ -1107,9 +1117,6 @@ app = new Vue({
 
 			this.specs.disable      = objTmp.specs
 			this.handler_type       = objTmp.options
-            if (this.data_options.option_color) {
-			    this.colors             = this.data_options.option_color;
-            }
 			this.colors_handle.data = objTmp.colors_handle
 			this.spec51_img         = objTmp.spec51
 
@@ -1285,6 +1292,7 @@ app = new Vue({
 			if(_.keys(this.spec_selected).includes('spec55') == false) {
 				this.handler_type = objTmp.options
 			}
+             
 			this.colors_handle.data = objTmp.colors_handle
 			this.colors_handle.id = null
 			this.validateShow()
@@ -1303,8 +1311,14 @@ app = new Vue({
 	    			colors_handle: {},
 	    			spec51: {}
     			},
+                selectedColor = this.colors[this.color_id], 
 	    		argKeyMItemDisplay = _.keys(this.itemDisplay)
-
+                
+            if (selectedColor && selectedColor.hasOwnProperty("data_options")) {
+                this.data_options = this.colors[this.color_id]["data_options"]
+            } else {
+                await this.getOptions(this.color_id)
+            }
     		_.forEach(_.filter(this.data_options, {m_color_id: this.color_id}), (rowValue, rowIndex) => {
 
     			_.forIn(rowValue, (value, colName) => {
