@@ -200,7 +200,7 @@ class ProductController extends Controller
 					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);
 					$cachedCount = "db" . count($dataOption);	
 				}
-				if(count($dataOption) == 0) {
+				if(is_null($dataOption) || count($dataOption) == 0) {
 					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_MAIN_PANEL_GIESTA')), $param);
 				}
 				Redis::set($cacheKey, json_encode($dataOption), 'EX', 3600);
