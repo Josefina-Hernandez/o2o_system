@@ -131,6 +131,8 @@ class DataOptionReferCommand extends Command
 						option9, -- Add BP_O2OQ-29 MinhVnit 20211029
 						option10, -- Add BP_O2OQ-29 MinhVnit 20211029
 						option11, -- Add BP_O2OQ-29 MinhVnit 20211029
+						option12, -- Added by Anlu AKT 20240209
+						option13, -- Added by Anlu AKT 20240221
 						spec1,
 						spec2,
 						spec3,

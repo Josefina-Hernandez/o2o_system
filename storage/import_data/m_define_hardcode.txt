@@ -1,0 +1,104 @@
+Hint_\t,Yellow row will be inseted to the database_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,VB remove others_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+def_name_\t,column_name_\t,def_value_\t,def_value1_\t,def_value2_\t,def_value3_\t,def_value4_\t,def_value5_\t,del_flg
+louver_setting_\t,m_model_id_\t,56_\t,400_\t,800_\t,Single_\t,_\t,_\t,0
+louver_setting_\t,m_model_id_\t,56_\t,801_\t,1600_\t,Double_\t,_\t,_\t,0
+louver_setting_\t,m_model_id_\t,56_\t,1601_\t,2400_\t,Triple_\t,_\t,_\t,0
+louver_setting_\t,m_model_id_\t,57_\t,400_\t,800_\t,Single_\t,_\t,_\t,0
+louver_setting_\t,m_model_id_\t,57_\t,801_\t,1600_\t,Double_\t,_\t,_\t,0
+louver_setting_\t,m_model_id_\t,57_\t,1601_\t,2400_\t,Triple_\t,_\t,_\t,0
+corner_fixed_stack_\t,spec15_\t,15.1_\t,2_\t,_\t,_\t,_\t,_\t,0
+corner_fixed_stack_\t,spec15_\t,15.2_\t,3_\t,_\t,_\t,_\t,_\t,0
+fence_setting_\t,m_model_id_\t,36_\t,_\t,_\t,_\t,_\t,_\t,0
+fence_setting_\t,spec27_\t,27.3_\t,PANEL_\t,_\t,_\t,_\t,_\t,0
+fence_setting_\t,spec27_\t,27.8_\t,POLE_\t,_\t,_\t,_\t,_\t,0
+fence_setting_\t,spec27_\t,27.9_\t,POLE_\t,_\t,_\t,_\t,_\t,0
+gate_setting_\t,m_model_id_\t,30_\t,_\t,_\t,_\t,_\t,_\t,0
+gate_setting_\t,m_model_id_\t,31_\t,_\t,_\t,_\t,_\t,_\t,0
+gate_setting_\t,m_model_id_\t,34_\t,_\t,_\t,_\t,_\t,_\t,0
+gate_setting_\t,m_model_id_\t,35_\t,_\t,_\t,_\t,_\t,_\t,0
+gate_setting_\t,spec27_\t,27.2_\t,GATE POLE_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,ctg_id_\t,2_\t,_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,spec27_\t,27.3_\t,PANEL_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,spec27_\t,27.4_\t,PANEL A_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,spec27_\t,27.5_\t,PANEL B_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,spec27_\t,27.6_\t,PANEL B_L_\t,_\t,_\t,_\t,_\t,0
+panel_setting_display_w_h_\t,spec27_\t,27.7_\t,PANEL B_R_\t,_\t,_\t,_\t,_\t,0
+setting_model_left_picture_is_r_\t,m_model_id_\t,13_\t,_\t,_\t,_\t,_\t,_\t,1
+setting_model_left_picture_is_r_\t,m_model_id_\t,14_\t,_\t,_\t,_\t,_\t,_\t,1
+config_stack_number_display_\t,m_model_id_\t,21_\t,o2.1_\t,2_\t,4_\t,In-swing door (Double)_\t,All_\t,0
+config_stack_number_display_\t,m_model_id_\t,23_\t,o2.1_\t,2_\t,4_\t,Out-swing door (Double)_\t,All_\t,0
+config_stack_number_display_\t,m_model_id_\t,35_\t,27.3_\t,2_\t,_\t,Swing gate(double)_\t,Panel_\t,0
+config_stack_number_display_\t,m_model_id_\t,33_\t,_\t,2_\t,_\t,Folding gate(6 panels)_\t,All_\t,0
+config_stack_number_display_\t,m_model_id_\t,32_\t,27.4_\t,2_\t,_\t,Folding gate(4 panels)_\t,Panel_A_\t,0
+config_folding_door_image_manual_\t,m_model_id_\t,25_\t,_\t,_\t,_\t,_\t,_\t,0
+config_folding_door_image_manual_\t,m_model_id_\t,26_\t,_\t,_\t,_\t,_\t,_\t,0
+config_folding_door_image_manual_\t,m_model_id_\t,27_\t,_\t,_\t,_\t,_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,GEF_\t,1_\t,1_\t,PANEL >= 1 THEN PANEL + 1_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,X8MBC09BK_\t,1_\t,1_\t,PANEL >= 1 THEN PANEL + 1_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,X8MBC09AB_\t,1_\t,1_\t,PANEL >= 1 THEN PANEL + 1_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,X8MBC09SC_\t,1_\t,1_\t,PANEL >= 1 THEN PANEL + 1_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,X8MBC09PW_\t,1_\t,1_\t,PANEL >= 1 THEN PANEL + 1_\t,_\t,0
+config_fence_quantity_\t,m_model_id_\t,36_\t,GEM_\t,2_\t,-1_\t,PANEL >= 2 THEN PANEL -1_\t,_\t,0
+config_giesta_digital_hidden_cylinder_\t,spec55_\t,55.2_\t,_\t,_\t,_\t,_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,13_\t,1_\t,spec10_\t,WE-PLUS_\t,Casement single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,14_\t,1_\t,spec10_\t,WE-PLUS_\t,Casement multi_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,20_\t,1_\t,spec10_\t,WE-PLUS_\t,In-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,21_\t,1_\t,spec10_\t,WE-PLUS_\t,In-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,22_\t,1_\t,spec10_\t,WE-PLUS_\t,Out-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,23_\t,1_\t,spec10_\t,WE-PLUS_\t,Out-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,58_\t,2_\t,spec10_\t,WE-70_\t,Casement single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,20_\t,2_\t,spec10_\t,WE-70_\t,In-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,21_\t,2_\t,spec10_\t,WE-70_\t,In-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,22_\t,2_\t,spec10_\t,WE-70_\t,Out-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,23_\t,2_\t,spec10_\t,WE-70_\t,Out-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,24_\t,2_\t,spec10_\t,WE-70_\t,Ventilation door_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,58_\t,4_\t,spec10_\t,P7_\t,Casement single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,20_\t,4_\t,spec10_\t,P7_\t,In-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,21_\t,4_\t,spec10_\t,P7_\t,In-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,22_\t,4_\t,spec10_\t,P7_\t,Out-swing single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,23_\t,4_\t,spec10_\t,P7_\t,Out-swing double_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,2_\t,3_\t,spec10_\t,WE-40_\t,Single sliding window_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,30_\t,6_\t,spec10_\t,Exterior_\t,Sliding gate single_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,31_\t,6_\t,spec10_\t,Exterior_\t,Sliding gate double_\t,_\t,0
+config_do_not_display_detail_cart_\t,product_id_\t,6_\t,_\t,_\t,Exterior_\t,_\t,_\t,0
+config_do_not_display_detail_cart_\t,product_id_\t,9_\t,_\t,_\t,Hanging door_\t,_\t,_\t,0
+config_do_not_display_detail_cart_\t,product_id_\t,5_\t,_\t,_\t,GIESTA_\t,_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,30_\t,6_\t,Sliding pitch.jpg_\t,Sliding gate_\t,Single sliding gate_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,31_\t,6_\t,Sliding pitch.jpg_\t,Sliding gate_\t,Double sliding gate_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,34_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Swing gate_\t,Swing gate(Single)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,35_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Swing gate_\t,Swing gate(double)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,63_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Swing gate_\t,New Swing gate(Single)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,64_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Swing gate_\t,New Swing gate(double)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,32_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Folding gate_\t,Folding gate(4 panels)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,33_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Folding gate_\t,Folding gate(6 panels)_\t,_\t,0
+config_display_pitch_list_\t,m_model_id_\t,36_\t,6_\t,Folding, Swing, fence pitch.jpg_\t,Fence_\t,Fence_\t,_\t,0
+config_always_display_spec_item_\t,spec_code_\t,spec36_\t,_\t,_\t,Handle type_\t,_\t,_\t,0
+config_rule_compare_item_spec_\t,product_id_\t,6_\t,_\t,_\t,_\t,_\t,_\t,0
+config_rule_compare_item_spec_\t,product_id_\t,8_\t,_\t,_\t,_\t,_\t,_\t,0
+config_rule_compare_item_spec_\t,product_id_\t,9_\t,_\t,_\t,Hanging door_\t,_\t,_\t,0
+config_display_jamb_frame_list_\t,m_model_id_\t,62_\t,9_\t,Hanging door-Model.jpg_\t,Hanging door_\t,In-wall (2 panels on 2 tracks)_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,60_\t,33.2_\t,35.1_\t,2_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,60_\t,33.2_\t,35.2_\t,2_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,60_\t,33.2_\t,35.3_\t,2_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,62_\t,33.3_\t,35.1_\t,2_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,62_\t,33.3_\t,35.2_\t,2_\t,_\t,0
+config_clone_option_at_product_\t,product_id_\t,9_\t,62_\t,33.3_\t,35.3_\t,2_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,2_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,5_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,6_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,8_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,9_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,10_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,18_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,19_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,22_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,23_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,54_\t,3_\t,_\t,_\t,_\t,0
+color_exclude_setting_\t,product_id_\t,10_\t,55_\t,3_\t,_\t,_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,66_\t,10_\t,spec10_\t,Atis_\t,Casement (Camlatch)_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,67_\t,10_\t,spec10_\t,Atis_\t,Casement (Operator)_\t,_\t,0
+config_picture_show_r_movement_\t,m_model_id_\t,70_\t,10_\t,spec10_\t,Atis_\t,Awning (Slit)_\t,_\t,0
+config_add_option_gapcover_\t,m_model_id_\t,67_\t,10_\t,option11_\t,Atis_\t,Casement (Operator)_\t,_\t,0
+config_add_option_gapcover_\t,m_model_id_\t,69_\t,10_\t,option11_\t,Atis_\t,Awning (Operator)_\t,_\t,0
+config_add_option_gapcover_\t,m_model_id_\t,70_\t,10_\t,option11_\t,Atis_\t,Awning (Slit)_\t,_\t,0

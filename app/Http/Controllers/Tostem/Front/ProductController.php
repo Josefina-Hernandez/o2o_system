@@ -148,7 +148,8 @@ class ProductController extends Controller
             'spec1' => $request->input('spec1'),
         ];
 
-        if($ctg_id == 2) {
+        header("X-spec1:v-".$param_sql['spec1']);
+        if($ctg_id == 2 and $param_sql['spec1'] && $param_sql['spec1']!="null") {
         	//Exterior
         	$sql = $this->sql_get_models_2;
         } elseif($ctg_id == 3) {
@@ -182,19 +183,17 @@ class ProductController extends Controller
     	$model_id = $request->input('m_model_id');
 	    $color_id = intval($request->input('color_id'));
     	$param = [
-			'lang_code' => $this->lang,
+			'lang_code' => 'en',
 			'ctg_id' => $ctg_id,
 			'product_id' => $request->input('product_id'),
 			'm_model_id' => $model_id
 		];
 		$dataOption = array();
-		$cacheKey = 'ctg' . $ctg_id . ':p' . $param['product_id'] . ':m' . $model_id . ':' . $this->lang;
+		$cacheKey = 'ctg' . $ctg_id . ':p' . $param['product_id'] . ':m' . $model_id;
     	if($ctg_id == 3) { //Giesta
 			$cachedCount = -1;
 			$dataOption = json_decode(Redis::get($cacheKey), false);
-			if (is_array($dataOption) && count($dataOption) > 0) {
-				$cachedCount = "redis" . count($dataOption);
-			} else {
+			
 				if(count(DB::select("SHOW TABLES LIKE 'v_option_giesta_refer'")) > 0) {
 					$sqlOption = config('sql_building.select.OPTIONS_GIESTA_DATA');
 					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, $sqlOption), $param);
@@ -204,7 +203,6 @@ class ProductController extends Controller
 					$dataOption = DB::Select(str_replace('(:viewer_flg)', $strRole, config('sql_building.select.SELECT_MAIN_PANEL_GIESTA')), $param);
 				}
 				Redis::set($cacheKey, json_encode($dataOption), 'EX', 3600);
-			}
 
 			$filteredData = [];
 			$defaultColorID = intval($request->input('default_color_id'));
@@ -456,6 +454,12 @@ class ProductController extends Controller
     	$width          = $request->input('width');
     	$height         = $request->input('height');
 
+		//安路于2023年11月8日更新
+		if ($width == '740') {
+			$width = '800';
+		}
+		//安路于2023年11月8日更新（END）
+
     	foreach($specs as $spec => $spec_value) {
     		//$spec_where .= " AND ( op.$spec IS NULL OR op.$spec = '$spec_value' )";
     		$spec_where .= " AND ( sc.$spec = '$spec_value' )";
@@ -573,6 +577,20 @@ class ProductController extends Controller
 					".$option_where."
 					".$spec_where."
 				)
+				OR
+				-- By Anlu AKT 20240209
+				(
+					op.option_ctg_spec_id = 89
+					".$option_where."
+					".$spec_where."
+				)
+				OR
+				-- By Anlu AKT 20240212
+				(
+					op.option_ctg_spec_id = 90
+					".$option_where."
+					".$spec_where."
+				)
 			)
     	";
 
@@ -582,7 +600,7 @@ class ProductController extends Controller
     		'lang_code' => $this->lang,
     		'product_id' => $request->input('product_id'),
     		'm_color_id' => $request->input('m_color_id'),
-    		'width' => $request->input('width'),
+    		'width' => $width, //$request->input('width'),  //安路于2023年11月8日更新
     		'height' => $request->input('height'),
     		'm_model_id' => $request->input('m_model_id')
     	]));
@@ -602,6 +620,14 @@ class ProductController extends Controller
 
     public function getGiestaSubPanel($request) {
     	$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));
+
+		//------2023年10月10日增加内容
+		//$height = $request->input('height');	
+		//if ($height == "2548" || $height == "2564" || $height == "2575"){
+		//	$height	= "2600";
+		//}
+		//------2023年10月10日增加内容---END
+
     	$param = [
 			'lang_code'     => $this->lang,
 			'spec51'        => $argSpecs['spec51'],
@@ -698,13 +724,22 @@ class ProductController extends Controller
 
     public function getGiestaFrame($request) {
     	$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));
+		$height = $request->input('height');
+		//if ($height == "2548" || $height == "2564" || $height == "2575"){
+		//	$height	= "2600";
+		//}
+
+		//------------暂时注释掉，2023年4月26日
+		//if ($height == "3039" || $height == "3050" || $height == "3023"){
+		//	$height	= "3100";
+		//}
     	$param = [
 			'lang_code'     => $this->lang,
 			'spec51'        => $argSpecs['spec51'],
 			'spec52'        => null, //Không lọc theo spec này
 			'spec53'        => $argSpecs['spec53'],
 			'spec54'        => $argSpecs['spec54'],
-			'spec55'        => $argSpecs['spec55'],
+			'spec55'        => null, // $argSpecs['spec55'],
 			'spec56'        => null, //không lọc theo spec này
 			'spec57'        => $argSpecs['spec57'],
 			'ctg_id'        => $request->input('ctg_id'),
@@ -712,11 +747,13 @@ class ProductController extends Controller
 			'm_model_id'    => $request->input('m_model_id'),
 			'main_color_id' => $request->input('m_color_id'),
 			'width'         => $request->input('width'),
-			'height'        => $request->input('height')
+			'height'        => $height
     	];
 		#$logs=str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_FRAME_GIESTA'));
 		#dd($logs);
-    	return DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_FRAME_GIESTA')), $param);
+    	$res = DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_FRAME_GIESTA')), $param);
+        if ($res) return array_slice($res,0,1);
+        return [];
     }
 
     /**
@@ -764,6 +801,24 @@ class ProductController extends Controller
 			'width'         => $request->input('width'),
 			'height'        => $request->input('height')
     	]);
+        if (empty($return) && $argSpecs['spec55'] == "55.3") {
+            $return = DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_SIDE_PANEL_GIESTA')),[
+			'lang_code'     => $this->lang,
+			'spec51'        => $argSpecs['spec51'],
+			'spec52'        => null, //Không lọc theo spec này
+			'spec53'        => $argSpecs['spec53'],
+			'spec54'        => $argSpecs['spec54'],
+			'spec55'        => "55.2",
+			'spec56'        => $argSpecs['spec56'],
+			'spec57'        => $argSpecs['spec57'],
+			'ctg_id'        => $request->input('ctg_id'),
+			'product_id'    => $request->input('product_id'),
+			'm_model_id'    => $request->input('m_model_id'),
+			'main_color_id' => $request->input('m_color_id'),
+			'width'         => $request->input('width'),
+			'height'        => $request->input('height')
+    	]);
+        }
 
     	return response($return);
     }

@@ -1,0 +1,24 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
+m_color_id_\t,m_lang_id_\t,color_name_\t,del_flg
+1_\t,2_\t,Natural white_\t,0
+2_\t,2_\t,Natural Silver_\t,0
+3_\t,2_\t,Ivory White_\t,0
+4_\t,2_\t,Shine Grey_\t,0
+5_\t,2_\t,Autumn Brown_\t,0
+6_\t,2_\t,Natural Black_\t,0
+7_\t,2_\t,Turin Pine_\t,0
+8_\t,2_\t,Crea Mocha_\t,0
+9_\t,2_\t,Crea Rusk_\t,0
+10_\t,2_\t,Teak_\t,0
+11_\t,2_\t,Polish Silver_\t,0
+12_\t,2_\t,Silky White_\t,0
+13_\t,2_\t,No Color_\t,0
+14_\t,2_\t,A.Brown_\t,0
+15_\t,2_\t,B.Silver_\t,0
+16_\t,2_\t,Black_\t,0
+17_\t,2_\t,S.Black_\t,0
+18_\t,2_\t,S.Gold_\t,0
+19_\t,2_\t,S.Grey_\t,0
+20_\t,2_\t,S.White_\t,0
+21_\t,2_\t,Silver_\t,0

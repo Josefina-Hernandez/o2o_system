@@ -1,0 +1,9 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,
+selling_code_\t,product_id_\t,ctg_part_id_\t,option4_\t,spec51_\t,spec53_\t,spec55
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!
+WG430_process_\t,5_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!_\t,#REF!

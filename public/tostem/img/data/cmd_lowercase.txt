@@ -1,0 +1,1 @@
+for /f "Tokens=*" %f in ('cmd /c "echo %cd%& dir /l/b/ad/s"') do (for /f "Tokens=*" %g in ('dir /l/b/a-d "%f"') do (rename "%f"\"%g" "%g"))

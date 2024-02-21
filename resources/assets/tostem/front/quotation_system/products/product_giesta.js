@@ -130,7 +130,7 @@ app = new Vue({
             list_spec: [],//list spec and option in  data_option
             list_spec_trans: [],//list spec and option name
             list_spec_order: [],
-            spec_code_order: {},
+            spec_code_order: {spec51: "51", spec52: "55", spec53: "53", spec54: "54", spec55: "56"},
             spec_exclude: [],
             group_label: [],//list label of group option and spec
             spec_selected: {},// list spec user selected
@@ -325,13 +325,15 @@ app = new Vue({
     },
     methods: {
         reInitSlider() {
-            // Helpful if you have to deal with v-for to update dynamic lists
-            let currIndex = 0;
-            // currIndex = this.$refs.carousel.currentSlide()
 	        this.$refs.carousel.destroy()
 	        this.$nextTick(() => {
 		        this.$refs.carousel.create()
-		        // this.$refs.carousel.goTo(currIndex, true)
+				_.forEach(this.models, (rowValue, rowIndex) => {
+					if (rowValue.m_model_id == this.model_id) {
+						this.$refs.carousel.goTo(rowIndex, true);
+                        this.selectModels(this.model_id, rowValue.m_color_id_default);
+					}
+				})
 	        })
         },
 
@@ -402,12 +404,15 @@ app = new Vue({
 	        		}
 
 	        		this.total_price = 0
-		        	this.data_options_result = _.filter(this.data_options, this.buildQuery())
+		        	this.data_options_result = _.filter(this.data_options, this.buildQuery(['spec57']))
+                    if (this.data_options_result.length) {
+                        this.data_options_result = this.data_options_result.slice(0,1)  
+                    }
 		        	_.each(this.data_options_result, (row) => {
-			    		if(row.amount != null) {
-			    			this.total_price += parseFloat(row.amount)
-			    		}
-			    	})
+                        if(row.amount != null) {
+                            this.total_price = parseFloat(row.amount)
+                        }
+                    })
 
 		        	this.total_price += celling_code_option_amount
 		        }).catch(error => {
@@ -457,6 +462,12 @@ app = new Vue({
         initProduct () {
             this.models = []
             this.model_id = null
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			if (urlParams.has('mid')) {
+				this.model_id = urlParams.get('mid');
+			}
+			
             this.m_color_id_default = null
 
             this.initModel()
@@ -521,14 +532,14 @@ app = new Vue({
         buildQuery (exclude = []) {
 
 	    	let all_value_selected = {},
-	    		keySelected = _.without(['spec', 'option', 'color', 'width', 'height'], ...exclude, ...this.spec_exclude)
+	    		keySelected = _.without(['spec', 'option', 'color', 'width', 'height'], ...this.spec_exclude)
 
 	    	_.forIn(keySelected, (value) => {
 	    		switch (value) {
 	    			case 'spec':
 	    				if(_.keys(this.spec_selected).length > 0) {
 			        		_.each(this.spec_selected, (value, key) => {
-			        			if(key != 'spec57') {
+			        			if(key != 'spec55' && exclude.indexOf(key)<0) {
 			        				all_value_selected[key] = value
 			        			}
 			        		})
@@ -569,6 +580,17 @@ app = new Vue({
 
         	return all_value_selected
         },
+
+		sortHandleType (objHandleType) {
+			let arrHandlerType = []
+			_.forEach(objHandleType, (value, key) => {
+				arrHandlerType.push(value)
+			})
+			arrHandlerType.sort(function(a, b){return a.name < b.name ? -1 : 1})
+			return {
+				option4: arrHandlerType
+			}
+		},
 
         /**
          * Sort spec item và spec value
@@ -678,7 +700,6 @@ app = new Vue({
         	await this.querySpecTrans(this.list_spec).then(response => {
             	this.list_spec_trans = response.data.list_spec_trans
 				this.list_spec_order = response.data.list_spec
-				this.spec_code_order = response.data.spec_code_order
             	this.spec_exclude = response.data.spec_exclude
             	if(typeof(response.data.group_label) != 'undefined') {
             		this.group_label = response.data.group_label
@@ -809,12 +830,8 @@ app = new Vue({
 		    				return
 		    			}
 
-						if(objHandleType.hasOwnProperty('option4') === false) {
-							objHandleType['option4'] = {}
-						}
-
-						if(!_.keys(objHandleType['option4']).includes(rowValue.option4)) {
-							objHandleType['option4'][rowValue.option4] = {
+						if(!_.keys(objHandleType).includes(rowValue.option4)) {
+							objHandleType[rowValue.option4] = {
 								name: rowValue.option4_display,
 								spec55: rowValue.spec55,
 								option4: rowValue.option4
@@ -822,7 +839,8 @@ app = new Vue({
 						}
 		    		})
 			    }
-			    this.handler_type  = objHandleType
+			    
+				this.handler_type = this.sortHandleType(objHandleType)
 			    this.colors_handle.data = objColors
 				_loading.css('display', 'none');
 			}).catch(error => {
@@ -962,13 +980,13 @@ app = new Vue({
     			objFind= {},
     			objTmp = {
     				specs: {},
-	    			options: {},
 	    			widths: [],
 	    			heights: [],
 	    			colors_handle: {},
 	    			mItemDisplay: {},
 	    			spec51: {}
     			},
+				objHandleType = {},
     			argKeyMItemDisplay = []
 
 
@@ -1036,12 +1054,8 @@ app = new Vue({
     				return
     			}
 
-				if(objTmp.options.hasOwnProperty('option4') === false) {
-					objTmp.options['option4'] = {}
-				}
-
-				if(!_.keys(objTmp.options['option4']).includes(rowValue.option4)) {
-					objTmp.options['option4'][rowValue.option4] = {
+				if(!_.keys(objHandleType).includes(rowValue.option4)) {
+					objHandleType[rowValue.option4] = {
 						name: rowValue.option4_display,
 						spec55: rowValue.spec55,
 						option4: rowValue.option4
@@ -1116,7 +1130,7 @@ app = new Vue({
 			}
 
 			this.specs.disable      = objTmp.specs
-			this.handler_type       = objTmp.options
+			this.handler_type       = this.sortHandleType(objHandleType)
 			this.colors_handle.data = objTmp.colors_handle
 			this.spec51_img         = objTmp.spec51
 
@@ -1134,12 +1148,11 @@ app = new Vue({
         		dataHandle         = [],
     			argKeySpecSelected = _.keys(this.spec_selected),
     			argKeyMItemDisplay = _.keys(this.itemDisplay),
+				objHandleType	   = [],
         		objTmp             = {
         			specs  : {},
-        			options: {},
         			width  : [],
         			height : [],
-        			options: {},
         			colors_handle: {}
         		}
 
@@ -1202,7 +1215,7 @@ app = new Vue({
     			}
     		})
 
-    		// console.log(data_filter_option_handle)
+    		console.log(data_filter_option_handle)
 
     		_.forEach(data_filter_option_handle, (rowValue, rowIndex) => {
 
@@ -1210,12 +1223,8 @@ app = new Vue({
     				return
     			}
 
-				if(objTmp.options.hasOwnProperty('option4') === false) {
-					objTmp.options['option4'] = {}
-				}
-
-				if(!_.keys(objTmp.options['option4']).includes(rowValue.option4)) {
-					objTmp.options['option4'][rowValue.option4] = {
+				if(!_.keys(objHandleType).includes(rowValue.option4)) {
+					objHandleType[rowValue.option4] = {
 						name: rowValue.option4_display,
 						spec55: rowValue.spec55,
 						option4: rowValue.option4
@@ -1290,7 +1299,7 @@ app = new Vue({
 			this.size.height = null
 			this.specs.disable = objTmp.specs
 			if(_.keys(this.spec_selected).includes('spec55') == false) {
-				this.handler_type = objTmp.options
+				this.handler_type = this.sortHandleType(objHandleType)
 			}
              
 			this.colors_handle.data = objTmp.colors_handle
@@ -1301,10 +1310,9 @@ app = new Vue({
 
         async fetchDataSelectedColor () {
         	let
-    			objFind= {},
+    			objHandleType= {},
     			objTmp = {
     				specs: {},
-	    			options: {},
 	    			widths: [],
 	    			heights: [],
 	    			mItemDisplay: {},
@@ -1369,12 +1377,8 @@ app = new Vue({
     				return
     			}
 
-				if(objTmp.options.hasOwnProperty('option4') === false) {
-					objTmp.options['option4'] = {}
-				}
-
-				if(!_.keys(objTmp.options['option4']).includes(rowValue.option4)) {
-					objTmp.options['option4'][rowValue.option4] = {
+				if(!_.keys(objHandleType).includes(rowValue.option4)) {
+					objHandleType[rowValue.option4] = {
 						name: rowValue.option4_display,
 						spec55: rowValue.spec55,
 						option4: rowValue.option4
@@ -1445,7 +1449,7 @@ app = new Vue({
 			}
 
 			this.specs.disable      = objTmp.specs
-			this.handler_type       = objTmp.options
+			this.handler_type       = this.sortHandleType(objHandleType)
 			this.colors_handle.data = objTmp.colors_handle
 			this.spec51_img         = objTmp.spec51
 
@@ -1471,6 +1475,11 @@ app = new Vue({
             this.m_color_id_default = m_color_id_default
             this.initModel()
             this.getOptions()
+            history.pushState(
+                {},
+                null,
+                location.pathname + "?mid=" + this.model_id
+            )
         },
 
         async selectColor (key) {
@@ -1521,7 +1530,7 @@ app = new Vue({
         	//Reset select data
         	this.size.height = null
 
-    		_.forEach(_.filter(this.data_options, this.buildQuery()), rowValue => {
+    		_.forEach(_.filter(this.data_options, this.buildQuery(['spec57'])), rowValue => {
         		if(rowValue.height != null) {
         			argDataHeight.push(rowValue.height)
         		}
@@ -1538,9 +1547,6 @@ app = new Vue({
         async selectSpec (specCode, specValue, option4) {
             //console.log(specCode)
             //console.log(specValue)
-            if(specCode == 'spec51' && this.model_id == 65) {
-                return;
-            }
 
         	let
         		argKeySpecSelected = _.keys(this.spec_selected),
@@ -1581,7 +1587,7 @@ app = new Vue({
         	if(specCode == 'spec55') {
         		this.handle_active = option4
         		//filter lại color handle
-        	}
+        	} 
 
 			this.fetchDataSelected()
 			//Xoá spec57 đi

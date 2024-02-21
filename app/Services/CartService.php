@@ -772,7 +772,7 @@ class CartService
             WHERE m_quotation_id = $m_quotation_id
         ";
 
-        \DB::delete($sql);
+        // \DB::delete($sql);
     }
 
     private function Set_Value_ButtonClick(){

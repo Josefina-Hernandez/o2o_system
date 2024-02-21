@@ -1,0 +1,90 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
+ctg_id_\t,m_lang_id_\t,ctg_name_\t,del_flg
+1_\t,2_\t,ประตูหน้าต่าง_\t,0
+2_\t,2_\t,ผลิตภัณฑ์นอกตัวบ้าน_\t,0
+3_\t,2_\t,GIESTA (ประตูหน้าบ้าน)_\t,0
+4_\t,2_\t,บานภายใน_\t,0
+5_\t,2_\t,High rise_\t,0
+6_\t,2_\t,Low rise_\t,0
+7_\t,2_\t,Sliding Window_\t,0
+8_\t,2_\t,Sliding Door_\t,0
+9_\t,2_\t,Entrance_\t,0
+10_\t,2_\t,Casement_\t,0
+11_\t,2_\t,Awning_\t,0
+12_\t,2_\t,FIX_\t,0
+13_\t,2_\t,Corner Fix_\t,0
+14_\t,2_\t,Terrace door_\t,0
+15_\t,2_\t,Folding door_\t,0
+16_\t,2_\t,Sliding gate_\t,0
+17_\t,2_\t,Folding gate_\t,0
+18_\t,2_\t,Swing gate_\t,0
+19_\t,2_\t,Fence_\t,0
+20_\t,2_\t,Tostem DOOR_\t,0
+21_\t,2_\t,DOOR_\t,0
+22_\t,2_\t,WINDOW_\t,0
+23_\t,2_\t,Carport_\t,0
+25_\t,2_\t,Partition_\t,0
+26_\t,2_\t,Hanging door_\t,0
+27_\t,2_\t,On-wall_\t,0
+28_\t,2_\t,In-wall_\t,0
+29_\t,2_\t,Door_\t,0
+30_\t,2_\t,Series_\t,0
+31_\t,2_\t,ธรณี_\t,0
+32_\t,2_\t,Panel_\t,0
+33_\t,2_\t,ด้านเปิด_\t,0
+34_\t,2_\t,มุ้งลวด_\t,0
+35_\t,2_\t,โช้คประตู_\t,0
+36_\t,2_\t,_\t,0
+37_\t,2_\t,มือจับ_\t,0
+38_\t,2_\t,Cylinder_\t,0
+39_\t,2_\t,Door guard_\t,0
+40_\t,2_\t,Closer_\t,0
+41_\t,2_\t,Bar_\t,0
+42_\t,2_\t,Main Panel_\t,0
+43_\t,2_\t,บานลูก_\t,0
+44_\t,2_\t,บานรอง_\t,0
+45_\t,2_\t,วงกบ_\t,0
+46_\t,2_\t,รูปแบบประตู_\t,0
+47_\t,2_\t,รูปแบบวงกบ_\t,0
+48_\t,2_\t,ด้านเปิด_\t,0
+49_\t,2_\t,มือจับ_\t,0
+50_\t,2_\t,Main panel_\t,0
+51_\t,2_\t,Mullion_\t,0
+52_\t,2_\t,Transom_\t,0
+53_\t,2_\t,บานเกล็ด_\t,0
+54_\t,2_\t,องศา_\t,0
+55_\t,2_\t,รูปแบบ_\t,0
+56_\t,2_\t,จำนวนประตูหน้าต่าง_\t,0
+57_\t,2_\t,จำนวนแกนต่อแนวนอน_\t,0
+58_\t,2_\t,ต่อบานด้วยแกนต่อแนวตั้ง_\t,0
+59_\t,2_\t,ระยะห่างซี่รั้ว_\t,0
+60_\t,2_\t,วิธีติดตั้ง_\t,0
+61_\t,2_\t,ช่องตาแมว_\t,0
+62_\t,2_\t,รูปแบบแกนต่อแนวตั้ง_\t,0
+63_\t,2_\t,ต่อบานด้วยประตูระเบียง_\t,0
+64_\t,2_\t,ตำแหน่งแกนต่อแนวตั้ง_\t,0
+65_\t,2_\t,ตำแหน่งแกนต่อแนวตั้ง_\t,0
+66_\t,2_\t,ตำแหน่งแกนต่อแนวนอน_\t,0
+67_\t,2_\t,รูปแบบบาน_\t,0
+68_\t,2_\t,บานกลาง_\t,0
+69_\t,2_\t,แบบต่อบานด้วยแกนต่อแนวนอน_\t,0
+70_\t,2_\t,แบบต่อบานด้วยแกนต่อแนวตั้ง_\t,0
+71_\t,2_\t,ต่อบานด้วยแกนต่อแนวนอน_\t,0
+72_\t,2_\t,เสาข้างบาน_\t,0
+73_\t,2_\t,Hanging door_\t,0
+74_\t,2_\t,ล้อประคองบาน_\t,0
+75_\t,2_\t,รูปแบบมือจับ_\t,0
+76_\t,2_\t,Swing gate lock type_\t,0
+77_\t,2_\t,Insect Screen_\t,0
+78_\t,2_\t,Handle_\t,0
+79_\t,2_\t,Flat sill attachment_\t,0
+80_\t,2_\t,Balancer_\t,0
+81_\t,2_\t,Style_\t,0
+82_\t,2_\t,Pattern_\t,0
+83_\t,2_\t,Type_\t,0
+84_\t,2_\t,Vertical Tilt & Slide_\t,0
+85_\t,2_\t,Limit Arm_\t,0
+86_\t,2_\t,ความยาวโซ่ _\t,0
+87_\t,2_\t,Gap Cover_\t,0
+88_\t,2_\t,Frame Depth_\t,0

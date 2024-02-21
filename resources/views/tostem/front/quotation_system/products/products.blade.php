@@ -91,7 +91,6 @@
 										<img :src="getImageResultPath" class="img-responsive" style="display: inline-block;">
 										@if($ctg->ctg_id == 3)
 											<span class="giesta-img-description">{!! __('screen-select.giesta_img_description') !!}</span>
-                                            <span :class="[{ 'show' : model_id == 65 }, 'geista_img_des_a01']">{!! __('screen-select.geista_img_des_a01') !!}</span>
 										@endif
 			    					</div>
 
@@ -118,7 +117,6 @@
     	</div>
 
     	<template id="cart">
-    		<hr :class="{ hr_geista_img_des_a01 : model_id == 65 }">
 	    	<div class="container" style="min-height: 4.2rem">
 	    		<div class="row" id="result-selected">
 	    			<div class="col-xs-12 col-sm-6 pull-right">

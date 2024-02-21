@@ -1,0 +1,236 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,
+spec_code_\t,m_lang_id_\t,spec_name_\t,del_flg
+1.1_\t,2_\t,Awning_\t,0
+1.2_\t,2_\t,Car port_\t,0
+1.3_\t,2_\t,Casement_\t,0
+1.4_\t,2_\t,Fence_\t,0
+1.5_\t,2_\t,FIX_\t,0
+1.6_\t,2_\t,Folding door_\t,0
+1.7_\t,2_\t,Folding gate_\t,0
+1.8_\t,2_\t,Louver_\t,0
+1.9_\t,2_\t,Sliding_\t,0
+1.10_\t,2_\t,Sliding gate_\t,0
+1.11_\t,2_\t,Swing gate_\t,0
+1.12_\t,2_\t,Terrace door_\t,0
+1.13_\t,2_\t,Airflow door_\t,0
+1.14_\t,2_\t,Mullion_\t,0
+1.15_\t,2_\t,Transom_\t,0
+1.17_\t,2_\t,Carport_\t,0
+1.18_\t,2_\t,Vertical Tilt&SlideWindow_\t,0
+1.19_\t,2_\t,Out-swing door_\t,0
+2.1_\t,2_\t,2 Panel_\t,0
+2.2_\t,2_\t,3 panel_\t,0
+2.3_\t,2_\t,4 Panel_\t,0
+2.4_\t,2_\t,6 panel_\t,0
+2.5_\t,2_\t,8 panel_\t,0
+2.6_\t,2_\t,12 panel_\t,0
+2.7_\t,2_\t,16 panel_\t,0
+3.1_\t,2_\t,Door_\t,0
+3.2_\t,2_\t,Door large_\t,0
+3.3_\t,2_\t,Entrance Door_\t,0
+3.4_\t,2_\t,SFS Door_\t,0
+3.5_\t,2_\t,SFS Window_\t,0
+3.6_\t,2_\t,Large_\t,0
+3.7_\t,2_\t,Normal_\t,0
+3.8_\t,2_\t,Window_\t,0
+3.9_\t,2_\t,Partition door_\t,0
+4.1_\t,2_\t,For 1st floor_\t,0
+4.2_\t,2_\t,2nd floor and above_\t,0
+5.1_\t,2_\t,Multi lock_\t,0
+5.2_\t,2_\t,Multi lock large_\t,0
+5.3_\t,2_\t,Single lock_\t,0
+5.4_\t,2_\t,Double lock_\t,0
+6.1_\t,2_\t,Double_\t,0
+6.2_\t,2_\t,Single_\t,0
+6.3_\t,2_\t,1 Mullion_\t,0
+7.1_\t,2_\t,In-swing_\t,0
+7.2_\t,2_\t,Out-swing_\t,0
+8.1_\t,2_\t,Flat sill_\t,0
+8.2_\t,2_\t,ไม่มีธรณี_\t,0
+8.3_\t,2_\t,Normal_\t,0
+8.4_\t,2_\t,มีธรณี_\t,0
+8.5_\t,2_\t,Without si_\t,0
+8.6_\t,2_\t,ไม่มีธรณี_\t,0
+9.1_\t,2_\t,Aluminum_\t,0
+9.2_\t,2_\t,Glass_\t,0
+10.1_\t,2_\t,Center_\t,0
+10.2_\t,2_\t,L_\t,0
+10.3_\t,2_\t,R_\t,0
+10.4_\t,2_\t,LR_\t,0
+11.1_\t,2_\t,Free side_\t,0
+11.2_\t,2_\t,One side L_\t,0
+11.3_\t,2_\t,One side R_\t,0
+11.4_\t,2_\t,Two side_\t,0
+11.5_\t,2_\t,Two side L_\t,0
+11.6_\t,2_\t,Two side R_\t,0
+12.1_\t,2_\t,Corner FIX_\t,0
+12.2_\t,2_\t,FIX_\t,0
+13.1_\t,2_\t,With mullion_\t,0
+13.2_\t,2_\t,Without mullion_\t,0
+14.1_\t,2_\t,Inside_\t,0
+14.2_\t,2_\t,Outside_\t,0
+15.1_\t,2_\t,2 stacks_\t,0
+15.2_\t,2_\t,3 stacks_\t,0
+15.3_\t,2_\t,1 stack_\t,0
+16.1_\t,2_\t,Glass_\t,0
+16.2_\t,2_\t,Glass & Louver_\t,0
+16.3_\t,2_\t,Louver_\t,0
+16.4_\t,2_\t,LOW_\t,0
+16.5_\t,2_\t,MID_\t,0
+16.6_\t,2_\t,UP_\t,0
+17.1_\t,2_\t,With middle frame_\t,0
+17.2_\t,2_\t,Without middle frame_\t,0
+18.1_\t,2_\t,100mm_\t,0
+18.2_\t,2_\t,120mm_\t,0
+18.3_\t,2_\t,140mm_\t,0
+18.4_\t,2_\t,60mm_\t,0
+18.5_\t,2_\t,80mm_\t,0
+18.6_\t,2_\t,72mm_\t,0
+18.7_\t,2_\t,88mm_\t,0
+18.8_\t,2_\t,101mm_\t,0
+19.1_\t,2_\t,ยึดที่ฐาน_\t,0
+19.2_\t,2_\t,ยึดที่กำแพง_\t,0
+20.1_\t,2_\t,180°_\t,0
+20.2_\t,2_\t,90°_\t,0
+21.1_\t,2_\t,Mullion C_\t,0
+21.2_\t,2_\t,Mullion D_\t,0
+21.3_\t,2_\t,Mullion A_\t,0
+21.4_\t,2_\t,Mullion CorD_\t,0
+22.1_\t,2_\t,Without terrace_\t,0
+22.2_\t,2_\t,With terrace_\t,0
+23.1_\t,2_\t,Edge_\t,0
+23.2_\t,2_\t,Hinge_\t,0
+24.3_\t,2_\t,Transom A_\t,0
+24.4_\t,2_\t,Transom B_\t,0
+25.1_\t,2_\t,B_\t,0
+25.2_\t,2_\t,A_\t,0
+26.1_\t,2_\t,Top_\t,0
+26.2_\t,2_\t,Bottom_\t,0
+26.3_\t,2_\t,Top & bottom_\t,0
+o1.1_\t,2_\t,มีมุ้งลวด_\t,0
+o1.2_\t,2_\t,ไม่มีมุ้งลวด_\t,0
+o2.1_\t,2_\t,มีโช้คประตู_\t,0
+o2.2_\t,2_\t,ไม่มีโช้คประตู_\t,0
+27.1_\t,2_\t,Close the gap_\t,0
+27.2_\t,2_\t,Gate pole_\t,0
+27.3_\t,2_\t,Panel_\t,0
+27.4_\t,2_\t,Panel A_\t,0
+27.5_\t,2_\t,Panel B_\t,0
+27.6_\t,2_\t,Panel B_L_\t,0
+27.7_\t,2_\t,Panel B_R_\t,0
+27.8_\t,2_\t,Pole_\t,0
+27.9_\t,2_\t,Pole(Corner)_\t,0
+28.1_\t,2_\t,2 panels_\t,0
+28.2_\t,2_\t,3 panels_\t,0
+28.3_\t,2_\t,4 panels_\t,0
+28.4_\t,2_\t,1 panel_\t,0
+28.5_\t,2_\t,With mullion_\t,0
+o3.1_\t,2_\t,Rail 2500 mm_\t,0
+o3.2_\t,2_\t,Rail 3000 mm_\t,0
+o3.3_\t,2_\t,Rail 3500 mm_\t,0
+o3.4_\t,2_\t,Rail 4000 mm_\t,0
+o3.5_\t,2_\t,Joint rail set_\t,0
+o3.6_\t,2_\t,Guide stop parts set_\t,0
+o3.7_\t,2_\t,Parts set_\t,0
+o3.8_\t,2_\t,Catch part_\t,0
+o3.9_\t,2_\t,Gate lock set_\t,0
+o3.10_\t,2_\t,Gate hinges_\t,0
+o3.11_\t,2_\t,Drop bar_\t,0
+o3.12_\t,2_\t,End cap_\t,0
+o3.13_\t,2_\t,Corner joint _\t,0
+o3.14_\t,2_\t,Setting wall_\t,0
+o3.15_\t,2_\t,Lock Set (DUMMY lock)_\t,0
+o4.1_\t,2_\t,Lever_L_\t,0
+o4.2_\t,2_\t,Lever_K_\t,0
+o4.3_\t,2_\t,Digital_\t,0
+o4.4_\t,2_\t,Bar_A_\t,0
+o4.5_\t,2_\t,Bar_F_\t,0
+51.1_\t,2_\t,แบบเปิดเข้า มีธรณี_\t,0
+51.2_\t,2_\t,แบบเปิดออก_\t,0
+51.3_\t,2_\t,แบบเปิดเข้า ไม่มีธรณี_\t,0
+52.1_\t,2_\t,วงกบ_\t,0
+52.2_\t,2_\t,แบบมีตาแมว_\t,0
+52.3_\t,2_\t,แบบไม่มีตาแมว_\t,0
+52.4_\t,2_\t,บานลูก_\t,0
+52.5_\t,2_\t,บานรอง_\t,0
+52.6_\t,2_\t,ตัวบาน_\t,0
+53.1_\t,2_\t,บานเดี่ยว_\t,0
+53.2_\t,2_\t,แบบมีช่องแสงด้านข้าง_\t,0
+53.3_\t,2_\t,บานคู่_\t,0
+54.1_\t,2_\t,L_\t,0
+54.2_\t,2_\t,R_\t,0
+55.1_\t,2_\t,Lever_\t,0
+55.2_\t,2_\t,Digital_\t,0
+55.3_\t,2_\t,Bar_\t,0
+56.1_\t,2_\t,P01_\t,0
+56.2_\t,2_\t,P02_\t,0
+56.3_\t,2_\t,P03_\t,0
+56.4_\t,2_\t,D01_\t,0
+56.5_\t,2_\t,D02_\t,0
+56.6_\t,2_\t,D03_\t,0
+56.7_\t,2_\t,G01_\t,0
+56.8_\t,2_\t,G02_\t,0
+56.9_\t,2_\t,G03_\t,0
+56.10_\t,2_\t,G04_\t,0
+56.11_\t,2_\t,A01_\t,0
+57.1_\t,2_\t,ไม่มีช่องแสง_\t,0
+57.2_\t,2_\t,มีช่องแสง_\t,0
+29.1_\t,2_\t,Center_\t,0
+29.2_\t,2_\t,L_\t,0
+29.3_\t,2_\t,R_\t,0
+29.4_\t,2_\t,LR_\t,0
+30.1_\t,2_\t,Mullion C_\t,0
+30.2_\t,2_\t,Mullion D_\t,0
+30.3_\t,2_\t,Mullion A_\t,0
+30.4_\t,2_\t,Mullion CorD_\t,0
+31.1_\t,2_\t,มีแกนต่อแนวนอน_\t,0
+31.2_\t,2_\t,ไม่มีแกนต่อแนวนอน_\t,0
+32.1_\t,2_\t,แบบรางซ่อนในผนัง_\t,0
+32.2_\t,2_\t,แบบรางบนผนัง_\t,0
+33.1_\t,2_\t,1 ราง 1 บาน_\t,0
+33.2_\t,2_\t,1 ราง 2 บาน_\t,0
+33.3_\t,2_\t,2 ราง 2 บาน_\t,0
+33.4_\t,2_\t,3 ราง 3 บาน_\t,0
+33.5_\t,2_\t,2 ราง 4 บาน_\t,0
+33.6_\t,2_\t,3 ราง 6 บาน_\t,0
+34.1_\t,2_\t,มีเสาข้างบาน_\t,0
+34.2_\t,2_\t,ไม่มีเสาข้างบาน_\t,0
+34.3_\t,2_\t,Slide-Fix_\t,0
+34.4_\t,2_\t,Fix-Slide_\t,0
+35.1_\t,2_\t,แบบมาตรฐาน_\t,0
+35.2_\t,2_\t,แบบปิดนุ่มนวล (ปิดเท่านั้น)  _\t,0
+35.3_\t,2_\t,แบบปิดนุ่มนวล (ปิดและเปิด)_\t,0
+36.1_\t,2_\t,มือจับเท่านั้น_\t,0
+36.2_\t,2_\t,มือจับพร้อมตัวล็อค_\t,0
+36.3_\t,2_\t,มือจับพร้อมตัวล็อคและกุญแจ_\t,0
+37.1_\t,2_\t,Sickle type_\t,0
+37.2_\t,2_\t,Latch type_\t,0
+o5.1_\t,2_\t,Handle L_\t,0
+o5.2_\t,2_\t,Handle R_\t,0
+o6.1_\t,2_\t,Standard net_\t,0
+o6.2_\t,2_\t,Slim wire net_\t,0
+o6.3_\t,2_\t,Without_\t,0
+o7.1_\t,2_\t,With_\t,0
+o7.2_\t,2_\t,Without_\t,0
+o8.1_\t,2_\t,With balancer_\t,0
+38.1_\t,2_\t,SG/LG_\t,0
+39.1_\t,2_\t,Camlatch_\t,0
+39.2_\t,2_\t,Operator_\t,0
+39.3_\t,2_\t,Slit window_\t,0
+40.1_\t,2_\t,Type A_\t,0
+40.2_\t,2_\t,Type B_\t,0
+40.3_\t,2_\t,Type C_\t,0
+o9.1_\t,2_\t,Limit arm_\t,0
+o9.2_\t,2_\t,Without_\t,0
+o10.1_\t,2_\t,1.25m_\t,0
+o10.2_\t,2_\t,2.75m_\t,0
+o11.1_\t,2_\t,Gap Cover_\t,0
+41.1_\t,2_\t,100mm_\t,0
+41.2_\t,2_\t,120mm_\t,0
+41.3_\t,2_\t,140mm_\t,0
+41.4_\t,2_\t,60mm_\t,0
+41.5_\t,2_\t,80mm_\t,0
+41.6_\t,2_\t,72mm_\t,0
+41.7_\t,2_\t,88mm_\t,0
+41.8_\t,2_\t,101mm_\t,0

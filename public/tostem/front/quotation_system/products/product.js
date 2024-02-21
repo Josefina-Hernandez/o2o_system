@@ -15592,17 +15592,34 @@ app = new Vue({
     'image-description': cImageDescription
   },
   data: function data() {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var pid = null;
+    var mid = null;
+    var pc = 0;
+
+    if (urlParams.has('pid')) {
+      pid = urlParams.get('pid');
+      pc += 1;
+    }
+
+    if (urlParams.has('mid')) {
+      mid = urlParams.get('mid');
+      pc += 1;
+    }
+
     return {
       ctg_id: ctg_id,
       slug_name: slug_name,
       lang: lang,
       products: [],
-      product_id: null,
+      product_id: pid,
       product_name: null,
       spec1: null,
       spec1_name: null,
       models: [],
-      model_id: null,
+      model_id: mid,
+      param_cnt: pc,
       m_color_id_default: null,
       featured_img: null,
       colors: {},
@@ -15828,7 +15845,13 @@ app = new Vue({
       this.$nextTick(function () {
         _this2.$refs.carousel.create();
 
-        _this2.$refs.carousel.goTo(currIndex, true);
+        _.forEach(_this2.models, function (rowValue, rowIndex) {
+          if (rowValue.m_model_id == _this2.model_id) {
+            _this2.$refs.carousel.goTo(rowIndex, true);
+
+            _this2.selectModels(_this2.model_id, rowValue.m_color_id_default);
+          }
+        });
       });
     },
     log: function log(_log) {
@@ -16085,7 +16108,6 @@ app = new Vue({
     },
     initProduct: function initProduct() {
       this.models = [];
-      this.model_id = null;
       this.m_color_id_default = null;
       this.initModel();
     },
@@ -16271,6 +16293,19 @@ app = new Vue({
           var product = response.data[0];
 
           _this9.selectProduct(product.product_id, product.product_name);
+        } else if (_this9.product_id != null) {
+          var selectedProducts = _this9.products.filter(function (x) {
+            return x.product_id == _this9.product_id;
+          });
+
+          if (selectedProducts.length > 0) {
+            var _product = selectedProducts[0]; //if(this.ctg_id != $exterior_ctg) {
+
+            _this9.selectProduct(_product.product_id, _product.product_name);
+
+            _this9.getModels(_this9.product_id); //}
+
+          }
         }
 
         _loading.css('display', 'none');
@@ -16390,6 +16425,16 @@ app = new Vue({
 
         if (response.data.length > 0) {
           _this16.models = response.data;
+
+          var target = _this16.models.filter(function (x) {
+            return x.m_model_id == _this16.model_id;
+          });
+
+          if (_this16.ctg_id == $exterior_ctg && target.length > 0) {
+            _this16.models = _this16.models.filter(function (x) {
+              return x.spec1 == target[0].spec1;
+            });
+          }
 
           _this16.reInitSlider();
         } else {
@@ -17229,6 +17274,8 @@ app = new Vue({
       this.getOptions();
       this.configDisplayPitchList();
       this.getConfigCloneOptionAtProduct(); //Add edit BP_O2OQ-14 - Hunglm - 021220
+
+      history.pushState({}, null, location.pathname + "?mid=" + this.model_id + "&pid=" + this.product_id);
     },
     configDisplayPitchList: function configDisplayPitchList() {
       var _this30 = this;
@@ -17766,6 +17813,20 @@ app = new Vue({
      */
     tokenMismatch: function tokenMismatch() {
       _loading.css('display', 'none');
+
+      if (this.param_cnt >= 2) {
+        try {
+          axios.post(_urlBaseLang + '/check-session-new-or-reform/generate', {
+            status: 0
+          })["catch"](function (error) {
+            console.log(error);
+          });
+        } catch (error) {
+          console.log(Object.keys(error), error.message);
+        }
+
+        return 1;
+      }
 
       this.$modal.show('dialog', {
         text: lang_text.session_expired,

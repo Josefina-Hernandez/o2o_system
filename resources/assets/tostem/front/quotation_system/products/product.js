@@ -83,19 +83,33 @@ app = new Vue({
     	'image-description': cImageDescription
     },
     data() {
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		let pid = null;
+		let mid = null;
+		let pc = 0;
+		if (urlParams.has('pid')) {
+			pid = urlParams.get('pid');
+			pc += 1;
+		}
+		if (urlParams.has('mid')) {
+			mid = urlParams.get('mid');
+			pc += 1;
+		}
         return {
         	ctg_id : ctg_id,
             slug_name : slug_name,
 			lang: lang,
             products : [],
-            product_id: null,
+            product_id: pid,
             product_name : null,
 
             spec1: null,
             spec1_name: null,
 
             models : [],
-            model_id: null,
+            model_id: mid,
+			param_cnt: pc,
             m_color_id_default: null,
 
             featured_img: null,
@@ -319,7 +333,12 @@ app = new Vue({
 	        this.$refs.carousel.destroy()
 	        this.$nextTick(() => {
 		        this.$refs.carousel.create()
-		        this.$refs.carousel.goTo(currIndex, true)
+		        _.forEach(this.models, (rowValue, rowIndex) => {
+					if (rowValue.m_model_id == this.model_id) {
+						this.$refs.carousel.goTo(rowIndex, true);
+                        this.selectModels(this.model_id, rowValue.m_color_id_default);
+					}
+				})
 	        })
         },
 
@@ -528,7 +547,6 @@ app = new Vue({
 
         initProduct () {
             this.models = []
-            this.model_id = null
             this.m_color_id_default = null
 
             this.initModel()
@@ -708,7 +726,16 @@ app = new Vue({
 				    if(response.data.length == 1) {
 				    	let product = response.data[0]
 				    	this.selectProduct(product.product_id, product.product_name)
-				    }
+				    } else if (this.product_id != null) {
+						let selectedProducts = this.products.filter(x => x.product_id == this.product_id)
+						if (selectedProducts.length > 0) {
+							let product = selectedProducts[0]
+                            //if(this.ctg_id != $exterior_ctg) {
+							this.selectProduct(product.product_id, product.product_name)
+							this.getModels(this.product_id);
+                            //}
+						}
+					}
 					_loading.css('display', 'none');
 				}).catch(error => {
 					if (error.response.status == 401) {
@@ -801,6 +828,10 @@ app = new Vue({
             	_loading.css('display', 'none');
             	if(response.data.length > 0) {
             		this.models = response.data
+                    let target = this.models.filter(x => x.m_model_id == this.model_id)
+                    if (this.ctg_id == $exterior_ctg && target.length>0) {
+                        this.models = this.models.filter(x => x.spec1 == target[0].spec1)
+                    }
 	                this.reInitSlider()
             	} else {
             		this.$modal.show('dialog', {
@@ -1558,6 +1589,11 @@ app = new Vue({
             this.getOptions()
             this.configDisplayPitchList()
             this.getConfigCloneOptionAtProduct()//Add edit BP_O2OQ-14 - Hunglm - 021220
+			history.pushState(
+                {},
+                null,
+                location.pathname + "?mid=" + this.model_id + "&pid=" + this.product_id
+            )
         },
 
         configDisplayPitchList () {
@@ -2090,6 +2126,18 @@ app = new Vue({
          */
         tokenMismatch () {
         	_loading.css('display', 'none')
+			if (this.param_cnt >= 2) {
+				try {
+					axios.post(_urlBaseLang + '/check-session-new-or-reform/generate', {
+						status: 0
+					}).catch(error => {
+						console.log(error);
+					});
+				} catch (error) {
+					console.log(Object.keys(error), error.message);
+				}
+				return 1;
+			}
         	this.$modal.show('dialog', {
 				text: lang_text.session_expired,
 				buttons: [

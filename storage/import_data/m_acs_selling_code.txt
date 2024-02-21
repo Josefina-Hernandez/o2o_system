@@ -1,0 +1,57 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+selling_code_\t,option_group_name_\t,O Handle type_\t,O Bar Type_\t,P L/R_\t,P _\t,_\t,Color_\t,_\t,Description
+SMY5ZZ0L11_\t,Handle_\t,Lever_L_\t,_\t,L_\t,_\t,In-swing with sill_\t,B.Silver _\t,Lever_L_L_B.Silver _\t,Handle Lever-L B.silver L
+SMY5ZZ0L12_\t,Handle_\t,Lever_L_\t,_\t,R_\t,_\t,In-swing with sill_\t,B.Silver _\t,Lever_L_R_B.Silver _\t,Handle Lever-L B.silver R
+SMY5ZZ0L31_\t,Handle_\t,Lever_L_\t,_\t,L_\t,_\t,In-swing with sill_\t,S.Black _\t,Lever_L_L_S.Black _\t,Handle Lever-L S.black L
+SMY5ZZ0L32_\t,Handle_\t,Lever_L_\t,_\t,R_\t,_\t,In-swing with sill_\t,S.Black _\t,Lever_L_R_S.Black _\t,Handle Lever-L S.black R
+SMY5ZZ0K21_\t,Handle_\t,Lever_K_\t,_\t,L_\t,_\t,In-swing with sill_\t,S.Gold _\t,Lever_K_L_S.Gold _\t,Handle Lever-K S.gold L
+SMY5ZZ0K22_\t,Handle_\t,Lever_K_\t,_\t,R_\t,_\t,In-swing with sill_\t,S.Gold _\t,Lever_K_R_S.Gold _\t,Handle Lever-K S.gold R
+SMY5ZZ0K31_\t,Handle_\t,Lever_K_\t,_\t,L_\t,_\t,In-swing with sill_\t,S.Black _\t,Lever_K_L_S.Black _\t,Handle Lever-K S.black L
+SMY5ZZ0K32_\t,Handle_\t,Lever_K_\t,_\t,R_\t,_\t,In-swing with sill_\t,S.Black _\t,Lever_K_R_S.Black _\t,Handle Lever-K S.black R
+SMY5ZZ0G13_\t,Handle_\t,Digital_\t,_\t,L_\t,_\t,In-swing with sill_\t,B.Silver _\t,Digital_L_B.Silver _\t,Handle Digital Silver 
+SMY5ZZ0G33_\t,Handle_\t,Digital_\t,_\t,L_\t,_\t,In-swing with sill_\t,S.Black _\t,Digital_L_S.Black _\t,Handle Digital Black 
+SMY5ZZ0G13_\t,Handle_\t,Digital_\t,_\t,R_\t,_\t,In-swing with sill_\t,B.Silver _\t,Digital_R_B.Silver _\t,Handle Digital Silver 
+SMY5ZZ0G33_\t,Handle_\t,Digital_\t,_\t,R_\t,_\t,In-swing with sill_\t,S.Black _\t,Digital_R_S.Black _\t,Handle Digital Black 
+SMY7ZZ0001_\t,Cylinder_\t,_\t,_\t,_\t,_\t,In-swing with sill_\t,B.Silver _\t,Cylinder_B.Silver _\t,Cylinder B.silver 
+SMY7ZZ0002_\t,Cylinder_\t,_\t,_\t,_\t,_\t,In-swing with sill_\t,S.Gold _\t,Cylinder_S.Gold _\t,Cylinder S.gold 
+SMY7ZZ0003_\t,Cylinder_\t,_\t,_\t,_\t,_\t,In-swing with sill_\t,S.Black _\t,Cylinder_S.Black _\t,Cylinder S.black 
+SMZ8ZZ0001_\t,Door guard_\t,_\t,_\t,_\t,Single_\t,In-swing with sill_\t,B.Silver _\t,Door guard_Single_B.Silver _\t,Door guard Silver 
+SMZ9ZZ0001_\t,Closer_\t,_\t,_\t,_\t,_\t,In-swing with sill_\t,S.Grey_\t,Closer_S.Grey_\t,Door closer S.grey
+SMZ9ZZ0002_\t,Closer_\t,_\t,_\t,_\t,_\t,In-swing with sill_\t,A.Brown_\t,Closer_A.Brown_\t,Door closer A.Brown 
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+SAP_\t,_\t,_\t,_\t,_\t,_\t,_\t,Color_\t,_\t,Description
+SMY5ZZ0A13_\t,Bar_\t,_\t,Bar_A_\t,_\t,_\t,Out-swing_\t,B.Silver _\t,Bar_A_B.Silver _\t,Handle Bar-A B.silver 
+SMY5ZZ0A33_\t,Bar_\t,_\t,Bar_A_\t,_\t,_\t,Out-swing_\t,S.Black _\t,Bar_A_S.Black _\t,Handle Bar-A S.black 
+SMY5ZZ0F13_\t,Bar_\t,_\t,Bar_F_\t,_\t,_\t,Out-swing_\t,B.Silver _\t,Bar_F_B.Silver _\t,Handle Bar-F B.silver 
+SMY5ZZ0F33_\t,Bar_\t,_\t,Bar_F_\t,_\t,_\t,Out-swing_\t,S.Black _\t,Bar_F_S.Black _\t,Handle Bar-F S.black 
+SMY6ZZ0A13_\t,Bar_\t,_\t,Bar_A_\t,_\t,Double_\t,Out-swing_\t,B.Silver _\t,Bar_A_B.Silver _\t,Handle Bar-A B.silver 
+SMY6ZZ0A33_\t,Bar_\t,_\t,Bar_A_\t,_\t,Double_\t,Out-swing_\t,S.Black _\t,Bar_A_S.Black _\t,Handle Bar-A S.black 
+SMY6ZZ0F13_\t,Bar_\t,_\t,Bar_F_\t,_\t,Double_\t,Out-swing_\t,B.Silver _\t,Bar_F_B.Silver _\t,Handle Bar-F B.silver 
+SMY6ZZ0F33_\t,Bar_\t,_\t,Bar_F_\t,_\t,Double_\t,Out-swing_\t,S.Black _\t,Bar_F_S.Black _\t,Handle Bar-F S.black 
+SMY5ZZ0L11_\t,Handle_\t,Lever_L_\t,_\t,L_\t,_\t,Out-swing_\t,B.Silver _\t,Lever_L_L_B.Silver _\t,Handle Lever-L B.silver L
+SMY5ZZ0L12_\t,Handle_\t,Lever_L_\t,_\t,R_\t,_\t,Out-swing_\t,B.Silver _\t,Lever_L_R_B.Silver _\t,Handle Lever-L B.silver R
+SMY5ZZ0L31_\t,Handle_\t,Lever_L_\t,_\t,L_\t,_\t,Out-swing_\t,S.Black _\t,Lever_L_L_S.Black _\t,Handle Lever-L S.black L
+SMY5ZZ0L32_\t,Handle_\t,Lever_L_\t,_\t,R_\t,_\t,Out-swing_\t,S.Black _\t,Lever_L_R_S.Black _\t,Handle Lever-L S.black R
+SMY5ZZ0K21_\t,Handle_\t,Lever_K_\t,_\t,L_\t,_\t,Out-swing_\t,S.Gold _\t,Lever_K_L_S.Gold _\t,Handle Lever-K S.gold L
+SMY5ZZ0K22_\t,Handle_\t,Lever_K_\t,_\t,R_\t,_\t,Out-swing_\t,S.Gold _\t,Lever_K_R_S.Gold _\t,Handle Lever-K S.gold R
+SMY5ZZ0K31_\t,Handle_\t,Lever_K_\t,_\t,L_\t,_\t,Out-swing_\t,S.Black _\t,Lever_K_L_S.Black _\t,Handle Lever-K S.black L
+SMY5ZZ0K32_\t,Handle_\t,Lever_K_\t,_\t,R_\t,_\t,Out-swing_\t,S.Black _\t,Lever_K_R_S.Black _\t,Handle Lever-K S.black R
+SMY5ZZ0G13_\t,Handle_\t,Digital_\t,_\t,_\t,_\t,Out-swing_\t,B.Silver _\t,Digital_B.Silver _\t,Handle Digital Silver 
+SMY5ZZ0G33_\t,Handle_\t,Digital_\t,_\t,_\t,_\t,Out-swing_\t,S.Black _\t,Digital_S.Black _\t,Handle Digital Black 
+SMY7ZZ0001_\t,Cylinder_\t,_\t,_\t,_\t,_\t,Out-swing_\t,B.Silver _\t,Cylinder_B.Silver _\t,Cylinder B.silver 
+SMY7ZZ0002_\t,Cylinder_\t,_\t,_\t,_\t,_\t,Out-swing_\t,S.Gold _\t,Cylinder_S.Gold _\t,Cylinder S.gold 
+SMY7ZZ0003_\t,Cylinder_\t,_\t,_\t,_\t,_\t,Out-swing_\t,S.Black _\t,Cylinder_S.Black _\t,Cylinder S.black 
+SMY8ZZ0001_\t,Door guard_\t,_\t,_\t,_\t,Single_\t,Out-swing_\t,B.Silver _\t,Door guard_B.Silver _\t,Door guard B.silver 
+SMY8ZZ0002_\t,Door guard_\t,_\t,_\t,_\t,Single_\t,Out-swing_\t,S.Gold _\t,Door guard_S.Gold _\t,Door guard S.gold 
+SMY8ZZ0003_\t,Door guard_\t,_\t,_\t,_\t,Single_\t,Out-swing_\t,S.Black _\t,Door guard_S.Black _\t,Door guard S.black 
+SMY8ZZ1001_\t,Door guard_\t,_\t,_\t,_\t,Sidelight_\t,Out-swing_\t,B.Silver _\t,Door guard_B.Silver _\t,Door guard B.silver 
+SMY8ZZ1001_\t,Door guard_\t,_\t,_\t,_\t,Double_\t,Out-swing_\t,B.Silver _\t,Door guard_B.Silver _\t,Door guard B.silver 
+SMY8ZZ1002_\t,Door guard_\t,_\t,_\t,_\t,Sidelight_\t,Out-swing_\t,S.Gold _\t,Door guard_S.Gold _\t,Door guard S.gold 
+SMY8ZZ1002_\t,Door guard_\t,_\t,_\t,_\t,Double_\t,Out-swing_\t,S.Gold _\t,Door guard_S.Gold _\t,Door guard S.gold 
+SMY8ZZ1003_\t,Door guard_\t,_\t,_\t,_\t,Sidelight_\t,Out-swing_\t,S.Black _\t,Door guard_S.Black _\t,Door guard S.black 
+SMY8ZZ1003_\t,Door guard_\t,_\t,_\t,_\t,Double_\t,Out-swing_\t,S.Black _\t,Door guard_S.Black _\t,Door guard S.black 
+SMY9ZZ0001_\t,Closer_\t,_\t,_\t,_\t,_\t,Out-swing_\t,S.Grey_\t,Closer_S.Grey_\t,Door closer S.grey 
+SMY9ZZ0002_\t,Closer_\t,_\t,_\t,_\t,_\t,Out-swing_\t,A.Brown_\t,Closer_A.Brown_\t,Door closer A.brown 
+SMY9ZZ0003_\t,Closer_\t,_\t,_\t,_\t,_\t,Out-swing_\t,S.White_\t,Closer_S.White_\t,Door closer S.white 

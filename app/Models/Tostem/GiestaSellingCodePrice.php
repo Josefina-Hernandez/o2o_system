@@ -145,7 +145,13 @@ class GiestaSellingCodePrice extends Model
                               if(!is_null($v->d_except)){
                                   $_query .= '  AND spec56  != '.$v->d_except.' ';
                               }
-                              
+                              //Updated on 25/12/2023 ----------START
+                              if($v->material == 'A'){
+                                   $_query .= '  AND (special  <=> "G" OR special <=> "D" OR special <=> "L") '.' ';
+                               } else {
+                                   $_query .= '  AND (special  <=> "B" OR special <=> "C" OR special <=> "F" OR special <=> "J") '.' ';
+                               }
+                               //Updated on 25/12/2023 ----------END
                          }
 
                          if($v->d_size == 'Width'){

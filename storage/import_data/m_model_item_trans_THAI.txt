@@ -1,0 +1,82 @@
+Hint:_\t,Yellow background: Column will be inserted to the database_\t,
+_\t,Red text: Don't input this column, it is using the formular to get data_\t,
+m_model_item_id_\t,m_lang_id_\t,item_display_name
+1_\t,2_\t,Sliding window
+2_\t,2_\t,2 panels on 2 tracks
+3_\t,2_\t,Sliding window
+4_\t,2_\t,3 panels on 2 tracks
+5_\t,2_\t,SFS
+6_\t,2_\t,3 panels on 3 tracks
+7_\t,2_\t,4 panels on 2 tracks
+8_\t,2_\t,Sliding door
+9_\t,2_\t,6 panels on 3 tracks
+10_\t,2_\t,Entrance sliding door
+11_\t,2_\t,Casement window
+12_\t,2_\t,Single lock
+13_\t,2_\t,Multi lock
+14_\t,2_\t,Double casement window
+15_\t,2_\t,Awning window
+16_\t,2_\t,Fix window
+17_\t,2_\t,Corner Fixed window
+18_\t,2_\t,In-swing door
+19_\t,2_\t,Single
+20_\t,2_\t,Double
+21_\t,2_\t,Out-swing door
+22_\t,2_\t,Airflow door
+23_\t,2_\t,Folding door
+24_\t,2_\t,4 panels
+25_\t,2_\t,6 panels
+26_\t,2_\t,8 panels
+27_\t,2_\t,12 panels
+28_\t,2_\t,16 panels
+29_\t,2_\t,Partition door
+30_\t,2_\t,On-wall hanging door
+31_\t,2_\t,1 panel on 1 track
+32_\t,2_\t,2 panels on 1 track
+33_\t,2_\t,In-wall hanging door
+34_\t,2_\t,2 panels on 2 tracks
+35_\t,2_\t,Hanging door
+36_\t,2_\t,Single sliding gate
+37_\t,2_\t,Double sliding gate
+38_\t,2_\t,Folding gate 4 panels
+39_\t,2_\t,Folding gate 6 panels
+40_\t,2_\t,Single swing gate
+41_\t,2_\t,Double swing gate
+42_\t,2_\t,Fence
+43_\t,2_\t,Single type
+44_\t,2_\t,Double type
+45_\t,2_\t,Mullion
+46_\t,2_\t,Transom
+47_\t,2_\t,P01
+48_\t,2_\t,P02
+49_\t,2_\t,P03
+50_\t,2_\t,D01
+51_\t,2_\t,D02
+52_\t,2_\t,D03
+53_\t,2_\t,G01
+54_\t,2_\t,G02
+55_\t,2_\t,G03
+56_\t,2_\t,G04
+57_\t,2_\t,Louver
+58_\t,2_\t,Aluminum
+59_\t,2_\t,Glass
+60_\t,2_\t,Single lock
+61_\t,2_\t,แบบรางซ่อนในผนัง
+62_\t,2_\t,แบบรางบนผนัง
+63_\t,2_\t,1 ราง 1 บาน
+64_\t,2_\t,1 ราง 2 บาน
+65_\t,2_\t,2 ราง 2 บาน
+66_\t,2_\t,New single swing gate
+67_\t,2_\t,New double swing gate
+68_\t,2_\t,A01
+69_\t,2_\t,Casement
+70_\t,2_\t,Camlatch
+71_\t,2_\t,Operator
+72_\t,2_\t,Awning
+73_\t,2_\t,Slit
+74_\t,2_\t,Vertical Tilt & Slide Window
+75_\t,2_\t,Fix
+76_\t,2_\t,No mullion
+77_\t,2_\t,With 1 mullion
+78_\t,2_\t,Outward Corner FIX
+79_\t,2_\t,Inward Corner FIX

@@ -1,0 +1,18 @@
+for /f "Tokens=*" %f in ('cmd /c "echo %cd%& dir /l/b/ad/s"') do (for /f "Tokens=*" %g in ('dir /l/b/a "%f"') do (rename "%f"\"%g" "%g"))
+
+Attrib C:\Users\Administrator\Docker\source_mmen\tostem_src\public\tostem\img\data\Mullion\*.* /s >> File_Directory_List.txt
+
+https://phukiensmarttl.com/wp-content/uploads/hinh-phu-kien/
+
+
+
+SELECT folder, GROUP_CONCAT(url order by url SEPARATOR',') as url
+from 
+(
+
+select distinct folder, CONCAT("https://phukiensmarttl.com/wp-content/uploads/hinh-phu-kien/",folder,"/",image) as url from tin
+) T
+group by folder
+
+
+=INDEX(Sheet1!$B:$B,MATCH(LOWER([@[Mã hàng]]),Sheet1!$A:$A,0))

@@ -1,0 +1,20 @@
+[ Cookie] : XSRF-TOKEN=eyJpdiI6IjcxVDFPVFUzeExIcjBrdk9UMW1jNkE9PSIsInZhbHVlIjoiNDFZQXVXMXB0SjdzV1FwT25sRG5EbzBLRThnMUpKV3FUcFJVSU9JQmlINUx4UzBwNTZUNjdROEU3TVJSTnFCYSIsIm1hYyI6IjlkMDg0OTY4YjBkODY2NGU1OWNjNzgyNDM0ZmM1YjdkMjRhNWVmNDc3ZTc1MWI2ZTUyMDJlMGRhMzQzMWEzYmUifQ%3D%3D; laravel_session=eyJpdiI6IkFCdHV6d3V2OHFQMkxmWEExVCs1T3c9PSIsInZhbHVlIjoiaVlaSTAwZTJXdkhCN2E3UXVDSFExQit4TmtFaTdVb1orOXpYUkYyMkJhN3pHb0lGZXZhK3VrQm5JN0taQkdyZiIsIm1hYyI6ImFlNGQ5NzM4NTViYWZhZTc2ZmI2NmM3NzU3Y2Q2YWI0ZWE2MTA4NDE5NzQ5M2QyNGM1MmFlNzEwZWNkZThiNTgifQ%3D%3D
+[ Accept-Language] : en-US,en;q=0.9,vi;q=0.8
+[ Accept-Encoding] : gzip, deflate, br
+[ Referer] : https://13.228.197.140/admin/lixil/price-maintenance
+[ Sec-Fetch-Dest] : empty
+[ Sec-Fetch-Mode] : cors
+[ Sec-Fetch-Site] : same-origin
+[ Origin] : https://13.228.197.140
+[ Sec-Ch-Ua-Platform] : "Windows"
+[ X-Requested-With] : XMLHttpRequest
+[ Accept] : */*
+[ User-Agent] : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36
+[ Sec-Ch-Ua-Mobile] : ?0
+[ X-Csrf-Token] : ZCb36eIP6G4d3EvpBE5tQjCy0UjRmyAfmN7SEsBo
+[ Sec-Ch-Ua] : "Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"
+[ Connection] : keep-alive
+[ Host] : 13.228.197.140
+[ Content-Length] : 9394620
+[ Content-Type] : multipart/form-data; boundary=----WebKitFormBoundaryR2V0cz88IvU5wImi
+IP User Client : 58.187.175.152

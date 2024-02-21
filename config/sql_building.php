@@ -164,7 +164,7 @@ return [
 				, c.ctg_id
 				, p.product_id
 				, m.m_model_id
-				, '1,3' AS viewer_flg
+				, '3' AS viewer_flg
 			FROM m_lang AS l
 			INNER JOIN product_trans AS pt
 				ON pt.del_flg = 0
@@ -285,6 +285,8 @@ return [
 					, sc.option9 -- Add BP_O2OQ-29 MinhVnit 20211029
 					, sc.option10 -- Add BP_O2OQ-29 MinhVnit 20211029
 					, sc.option11 -- Add BP_O2OQ-29 MinhVnit 20211029
+					, sc.option12 -- Added by Anlu AKT 20240209
+					, sc.option13 -- Added by Anlu AKT 20240221
 					, sc.spec1
 					, sc.spec2
 					, COALESCE(spec3_mapping.spec3, sc.spec3) AS spec3 -- Xủ lý trường hợp spec3 quyết định sau khi chọn height
@@ -395,6 +397,7 @@ return [
 					ON
 						sc.m_selling_code_id = v.m_selling_code_id
 						AND sc.product_id = v.product_id
+						AND sc.del_flg = 0    -- Updated  by An Lu AKT on Feb 6th, 2024
 				LEFT JOIN tb_op_color -- Add BP_O2OQ-29 MinhVnit 20211002
 					ON
 						sc.product_id = tb_op_color.product_id
@@ -833,6 +836,9 @@ return [
                 , p.product_id
                 , CASE
 					WHEN p.product_id = 10 THEN CONCAT(clm.img_path,'/atis')
+                    WHEN p.product_id = 1 THEN CONCAT(clm.img_path,'/we_plus')
+                    WHEN p.product_id = 2 THEN CONCAT(clm.img_path,'/we_70')
+                    WHEN p.product_id = 3 THEN CONCAT(clm.img_path,'/we_40')
 					ELSE clm.img_path
 				END AS img_path
                 , LOWER(clm.img_name) AS img_name
@@ -841,6 +847,7 @@ return [
                 , pt.product_name
                 , ct.ctg_name AS ctg_product
                 , m.sort_order
+                , sc.spec1
             FROM m_lang AS l
             INNER JOIN ctg_trans AS ct
                 ON
@@ -873,6 +880,10 @@ return [
                 ON
                     m.m_model_id = mt.m_model_id
                     AND m.del_flg = 0
+            INNER JOIN m_selling_code AS sc
+				ON
+					sc.m_selling_code_id = v.m_selling_code_id
+					AND sc.product_id = v.product_id
             LEFT JOIN m_model_trans AS mt1
 				ON
 					mt1.product_id = p.product_id
@@ -1009,6 +1020,7 @@ return [
 					-- AND ( op.spec36 IS NULL OR sc.spec36 = op.spec36 ) -- Add BP_O2OQ-6 MinhVnit 20200710 Thêm cho đủ tụ vì trong table option chưa có thêm
 					AND ( op.spec37 IS NULL OR sc.spec37 = op.spec37 ) -- Add BP_O2OQ-9 MinhVnit 20200901
 					AND ( op.spec39 IS NULL OR sc.spec39 = op.spec39 ) -- Add BP_O2OQ-27 MinhVnit 20210907
+					AND ( op.spec42 IS NULL OR sc.spec42 = op.spec42 ) -- Added by Anlu 20240213
 					AND sc.del_flg = 0
 			LEFT JOIN option_selling_code_price AS op_price
 				ON

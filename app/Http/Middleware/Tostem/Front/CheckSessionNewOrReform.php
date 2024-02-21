@@ -41,7 +41,7 @@ class CheckSessionNewOrReform
                 }
             }
     	} else {
-            if (!in_array($url_path, $url_path_except) && !in_array((string) $ss_new_or_reform, $vali_new_or_reform)) {
+            if (!in_array($url_path, $url_path_except) && !in_array((string) $ss_new_or_reform, $vali_new_or_reform) && count($_GET)==0) {
                 return redirect()->route('tostem.front.index');
             }
         }

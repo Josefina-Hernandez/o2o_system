@@ -77,7 +77,7 @@
 				</div>
 			</template>
 			<template v-else-if="specCode == 'spec51'">
-				<div :class="['option-group', {'d-none' : objSpec.data.length == 1 && model_id != 65}]" :data-group-name="specCode">
+				<div :class="['option-group']" :data-group-name="specCode">
 					<div>
 						<button class="btn c-btn large black c-label">
 							<span>@{{ getSpecLabel(specCode) }}</span>
@@ -156,7 +156,7 @@
 	<div id="list-spec-disable">
 		<div
 			v-for="(objSpec, specCode, index) in specs.disable"
-			:class="['option-group', {'d-none' : objSpec.data.length == 1 && specCode != 'spec51' && model_id != 65}]"
+			:class="['option-group', {'d-none' : objSpec.data.length == 1 && specCode != 'spec51'}]"
 			:data-group-name="specCode">
 			<template v-if="specCode == 'spec55'">
 				<div>

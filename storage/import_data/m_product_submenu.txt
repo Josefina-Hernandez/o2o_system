@@ -1,0 +1,27 @@
+Hint:_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,_\t,_\t,
+product_id_\t,spec_code_\t,m_lang_id_\t,link_text_\t,link_url_\t,description_\t,sort_order_\t,del_flg
+1_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/tall-buildings/we-plus_\t,Link to product information_\t,1_\t,0
+2_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/low-rise-building/we-70_\t,Link to product information_\t,1_\t,0
+3_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/low-rise-building/we-40_\t,Link to product information_\t,1_\t,0
+4_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/low-rise-building/p7_\t,Link to product information_\t,1_\t,0
+5_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/giesta/giesta-out-swing_\t,Link to product information_\t,1_\t,0
+6_\t,1.10_\t,1_\t,_\t,https://tostemthailand.com/en/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7-106_\t,Link to product information_\t,1_\t,0
+6_\t,1.11_\t,1_\t,_\t,https://tostemthailand.com/en/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_\t,Link to product information_\t,1_\t,0
+6_\t,1.7_\t,1_\t,_\t,https://tostemthailand.com/en/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%9A_\t,Link to product information_\t,1_\t,0
+6_\t,1.4_\t,1_\t,_\t,https://tostemthailand.com/en/product/%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7-110_\t,Link to product information_\t,1_\t,0
+7_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/interior-set/interior-series-6_\t,Link to product information_\t,1_\t,0
+9_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/interior-set/interior-series-6_\t,Link to product information_\t,1_\t,0
+10_\t,_\t,1_\t,_\t,https://tostemthailand.com/en/product-brand/low-rise-building/atis-15_\t,Link to product information_\t,1_\t,0
+1_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/tall-buildings/we-plus_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+2_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/low-rise-building/we-70_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+3_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/low-rise-building/we-40_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+4_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/low-rise-building/p7_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+5_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/giesta/giesta-out-swing_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+6_\t,1.10_\t,2_\t,_\t,https://tostemthailand.com/th/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7-106_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+6_\t,1.11_\t,2_\t,_\t,https://tostemthailand.com/th/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+6_\t,1.7_\t,2_\t,_\t,https://tostemthailand.com/th/product/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9A%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%9A_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+6_\t,1.4_\t,2_\t,_\t,https://tostemthailand.com/th/product/%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%A7-110_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+7_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/interior-set/interior-series-6_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+9_\t,_\t,2_\t,_\t,https://tostemthailand.com/th/product-brand/interior-set/interior-series-6_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0
+10_\t,_\t,2_\t,_\t,https://tostemthailand.com/en/product-brand/low-rise-building/atis-15_\t,ดูข้อมูลผลิตภัณฑ์_\t,1_\t,0

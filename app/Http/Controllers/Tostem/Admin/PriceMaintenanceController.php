@@ -155,7 +155,7 @@ Class PriceMaintenanceController extends Controller
                    
                           if(!file_exists($file_txt_tmp)){
                                   $return['status'] = 'NG';
-                                  $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator. ';
+                                  $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator.1 ';
                                   File::delete($path_lock);
                                   if(File::exists(base_path('storage/upload_tostem/pricemaintenance/tmp')) == true ) {
                                        File::deleteDirectory(base_path('storage/upload_tostem/pricemaintenance/tmp'));
@@ -299,7 +299,7 @@ Class PriceMaintenanceController extends Controller
                         $html = view('tostem.admin.pmaintenance.module-content.module-listhistory', compact('_all_historys'))->render();
                         $return['html'] = $html;
                         $return['status'] = 'NG';
-                        $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator. ';
+                        $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator.2 ';
                         File::delete($path_lock);
                         return $return;
                 }
@@ -313,7 +313,7 @@ Class PriceMaintenanceController extends Controller
                     $html = view('tostem.admin.pmaintenance.module-content.module-listhistory', compact('_all_historys'))->render();
                     $return['html'] = $html;
                     $return['status'] = 'NG';
-                    $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator. ';
+                    $return['msg'] = 'System error, can not convert xlsx file to txt file. Contact your system administrator.3 ';
                     File::delete($path_lock);
                     return $return;
            }

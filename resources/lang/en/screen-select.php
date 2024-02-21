@@ -1,0 +1,30 @@
+<?php
+
+return [
+
+    'size'                    			   => 'Size',
+    'width'                   			   => 'Width',
+    'height'                  			   => 'Height',
+    'color'                   			   => 'Color',
+    'choose'                  			   => 'Choose',
+    'length'                  			   => 'Length',
+    'accessories'             			   => 'Accessories',
+    'side_panel'              			   => 'Side Panel',
+    'add_to_cart'             			   => 'Add to cart',
+    'added_to_cart'           			   => 'Added to cart',
+    'quotation'               			   => 'QUOTATION',
+    'spec10_description_rule' 			   => '*The left picture is R',
+    'model_not_found'         			   => 'Model not found',
+    'option_not_found'        			   => 'Option not found',
+    'number_validate_msg'     			   => 'The last two digits cannot be set',
+    'ok'                      			   => 'OK',
+    'cancel'                  			   => 'Cancel',
+    'left_pict_msg'           			   => '*The left picture is R',
+    'color_handle'            			   => 'Handle color',
+    'giesta_img_description'  			   => '*This picture shows single leaf <br>You can check color and design only.',
+    'geista_img_des_a01'                   => 'Height and position of airflow window vary with height of door.',
+    'config_picture_show_r_movement_msg'   => 'The left picture shows R movement.',
+    'pitch_list_description'               => '*Below image is the example of 100 mm pitch.',
+    'flat_sill_attachment_msg'             => '※ To flat bottom rail',
+    'limit_arm_msg'                        => '※ To limit panel opening',
+];

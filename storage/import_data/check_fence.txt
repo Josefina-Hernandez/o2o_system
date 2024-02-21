@@ -1,0 +1,17 @@
+Usage_\t,Parts set_\t,anchor base_\t,_\t,Parts set_\t,X8MBC09△
+Usage_\t,Parts set_\t,anchor base_\t,_\t,_\t,X8MBC10△
+Usage_\t,Parts set_\t,anchor base_\t,_\t,_\t,X8MBC11△
+Usage_\t,Parts set_\t,anchor base_\t,_\t,_\t,X8MBE09△
+Usage_\t,End cap_\t,anchor base_\t,_\t,_\t,
+Usage_\t,End cap_\t,anchor base_\t,_\t,_\t,
+Usage_\t,End cap_\t,anchor base_\t,_\t,_\t,
+Usage_\t,End cap_\t,anchor base_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+_\t,_\t,_\t,_\t,_\t,
+Usage_\t,Setting wall_\t,side setting wall_\t,_\t,_\t,
+Usage_\t,Setting wall_\t,side setting wall_\t,_\t,_\t,
+Usage_\t,Setting wall_\t,side setting wall_\t,_\t,_\t,
+Usage_\t,Setting wall_\t,side setting wall_\t,_\t,_\t,

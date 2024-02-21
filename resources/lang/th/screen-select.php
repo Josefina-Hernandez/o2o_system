@@ -1,0 +1,30 @@
+<?php
+
+return [
+
+    'size'                                 => 'ขนาด',
+    'width'                                => 'กว้าง',
+    'height'                               => 'สูง',
+    'color'                                => 'สี',
+    'choose'                               => 'เลือก',
+    'length'                               => 'ความยาว',
+    'accessories'                          => 'อุปกรณ์เสริม',
+    'side_panel'                           => 'บานลูก',
+    'add_to_cart'                          => 'เพิ่มลงตะกร้า',
+    'added_to_cart'                        => 'เพิ่มลงตะกร้าแล้ว',
+    'quotation'                            => 'ใบเสนอราคา',
+    'spec10_description_rule'              => '*รูปทางซ้ายคือแบบเปิดด้านขวา ',
+    'model_not_found'                      => 'ไม่พบรุ่นนี้',
+    'option_not_found'                     => 'ไม่พบอุปกรณ์เสริม',
+    'number_validate_msg'                  => 'เลขสองตัวสุดท้ายไม่ถูกต้อง',
+    'ok'                                   => 'ตกลง',
+    'cancel'                               => 'ยกเลิก',
+    'left_pict_msg'                        => '*รูปทางซ้ายคือแบบเปิดด้านขวา',
+    'color_handle'                         => 'สีมือจับ',
+    'giesta_img_description'               => '*ในรูปภาพคือแบบบานเดี่ยว <br>สำหรับเปรียบเทียบสีและรูปแบบบานเท่านั้น',
+    'geista_img_des_a01'                   => 'ความสูงและตำแหน่งของหน้าต่าง Airflow ขึ้นอยู่กับความสูงของประตู',
+    'config_picture_show_r_movement_msg'   => 'รูปภาพด้านซ้ายแสดงแบบเปิดด้านขวา',
+    'pitch_list_description'               => "*รูปภาพด้านล่างคือตัวอย่างของระยะซี่รั้ว 100 มม.",
+    'flat_sill_attachment_msg'             => '※ To flat bottom rail',
+    'limit_arm_msg'                        => '※ To limit panel opening',
+];
