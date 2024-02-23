@@ -1685,7 +1685,7 @@ app = new Vue({
         	objOptions = this.sortOption(objOptions)
     		this.options = objOptions
     		this.selectOptionOnly1Value(objOptions)
-        	this.validateShow()
+        	this.validateShow()	
         },
 
         selectWidthOnChange (event) {
@@ -1753,6 +1753,7 @@ app = new Vue({
     		this.selectOptionOnly1Value(objOptions)
 
         	this.validateShow()
+
         },
 
         selectOptionOnly1Value (objOptions) {
@@ -1854,6 +1855,27 @@ app = new Vue({
             if (this.checkDisabledOption) {
                 return;
             }
+			
+			//Add by An Lu AKT on 22/2/2024			
+			if (
+				!this.isAtis() &&
+				specCode == 'option6'
+			) {
+				if (specValue != 'o6.3') {
+					if (!this.isSlidingDoor()) {
+						this.$set(this.options, 'option13', ['o13.1', 'o13.2']);
+					} else {
+						this.options['option13'] = ['o13.2'];
+						this.option_selected['option13'] = 'o13.2';
+						//this.$set(this.option_selected, 'option13', 'o13.2');
+					}
+
+				} else {
+					_.unset(this.option_selected, 'option13');
+					_.unset(this.options, 'option13');					    
+				}
+			}
+
 
             //Add task BP_O2OQ-29 Antran 20211101
             if (
@@ -1883,7 +1905,29 @@ app = new Vue({
         	let specValue = event.target.value,
         		specCode  = event.target.getAttribute('data-spec-code')
 
-            //Add task BP_O2OQ-29 Antran 20211101
+			//Add by An Lu AKT on 22/2/2024	
+			if (
+				!this.isAtis() &&
+				specCode == 'option6'
+			) {
+				if (specValue != 'o6.3') {
+					if (specValue != 'o6.3') {
+						if (!this.isSlidingDoor()) {
+							this.$set(this.options, 'option13', ['o13.1', 'o13.2']);
+						} else {
+							this.options['option13'] = ['o13.2'];
+							this.option_selected['option13'] = 'o13.2';
+							//this.$set(this.option_selected, 'option13', 'o13.2');
+						}
+	
+					} else {
+						_.unset(this.option_selected, 'option13');
+						_.unset(this.options, 'option13');					    
+					}					    
+				}
+			}
+
+			//Add task BP_O2OQ-29 Antran 20211101
             if (
                 this.isAtis() &&
                 specCode == 'option6' &&
@@ -1895,11 +1939,13 @@ app = new Vue({
                     //unset gap cover:gap cover
                     _.unset(this.option_selected, 'option11');
                     _.unset(this.options, 'option11');
+
                 } else {
                     //set gap cover:gap cover
                     this.$set(this.option_selected, 'option11', 'o11.1');
                     this.$set(this.options, 'option11', ['o11.1']);
-                }
+
+                }			
             }
             //End task BP_O2OQ-29 Antran 20211101
 
@@ -2164,6 +2210,15 @@ app = new Vue({
             return check_color;
         }, 
 
+		//Added by An Lu AKT on 23/2/2024
+		isSlidingDoor () {
+            if (this.model_id >= 6 && this.model_id <= 12) {
+                return true;
+            }
+
+            return false;
+        },
+
         isAtis () {
             if (this.product_id == 10) {
                 return true;
@@ -2197,7 +2252,7 @@ app = new Vue({
         checkShowOptionButton (value, optionCode) {
             //Show 3 button with Atis: Insect Screen, option6
             if (
-                this.isAtis() &&
+                //this.isAtis() &&   // Canceled by An Lu AKT on 23/2/2024
                 optionCode == 'option6' &&
                 value.length == 3
             ) {

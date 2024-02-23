@@ -10,3 +10,4 @@ npm-debug.log
 yarn-error.log
 .env
 /vendor
+/storage/upload_tostem/pricemaintenance

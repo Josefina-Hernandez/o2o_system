@@ -17544,6 +17544,22 @@ app = new Vue({
     selectSpecOption: function selectSpecOption(specCode, specValue) {
       if (this.checkDisabledOption) {
         return;
+      } //Add by An Lu AKT on 22/2/2024			
+
+
+      if (!this.isAtis() && specCode == 'option6') {
+        if (specValue != 'o6.3') {
+          if (!this.isSlidingDoor()) {
+            this.$set(this.options, 'option13', ['o13.1', 'o13.2']);
+          } else {
+            this.options['option13'] = ['o13.2'];
+            this.option_selected['option13'] = 'o13.2'; //this.$set(this.option_selected, 'option13', 'o13.2');
+          }
+        } else {
+          _.unset(this.option_selected, 'option13');
+
+          _.unset(this.options, 'option13');
+        }
       } //Add task BP_O2OQ-29 Antran 20211101
 
 
@@ -17568,7 +17584,25 @@ app = new Vue({
     },
     selectSpecOptionOnchange: function selectSpecOptionOnchange(event) {
       var specValue = event.target.value,
-          specCode = event.target.getAttribute('data-spec-code'); //Add task BP_O2OQ-29 Antran 20211101
+          specCode = event.target.getAttribute('data-spec-code'); //Add by An Lu AKT on 22/2/2024	
+
+      if (!this.isAtis() && specCode == 'option6') {
+        if (specValue != 'o6.3') {
+          if (specValue != 'o6.3') {
+            if (!this.isSlidingDoor()) {
+              this.$set(this.options, 'option13', ['o13.1', 'o13.2']);
+            } else {
+              this.options['option13'] = ['o13.2'];
+              this.option_selected['option13'] = 'o13.2'; //this.$set(this.option_selected, 'option13', 'o13.2');
+            }
+          } else {
+            _.unset(this.option_selected, 'option13');
+
+            _.unset(this.options, 'option13');
+          }
+        }
+      } //Add task BP_O2OQ-29 Antran 20211101
+
 
       if (this.isAtis() && specCode == 'option6' && this.check_add_gapcover == true) {
         //o6: Insect Screen
@@ -17852,6 +17886,14 @@ app = new Vue({
 
       return check_color;
     },
+    //Added by An Lu AKT on 23/2/2024
+    isSlidingDoor: function isSlidingDoor() {
+      if (this.model_id >= 6 && this.model_id <= 12) {
+        return true;
+      }
+
+      return false;
+    },
     isAtis: function isAtis() {
       if (this.product_id == 10) {
         return true;
@@ -17879,7 +17921,8 @@ app = new Vue({
     },
     checkShowOptionButton: function checkShowOptionButton(value, optionCode) {
       //Show 3 button with Atis: Insect Screen, option6
-      if (this.isAtis() && optionCode == 'option6' && value.length == 3) {
+      if ( //this.isAtis() &&   // Canceled by An Lu AKT on 23/2/2024
+      optionCode == 'option6' && value.length == 3) {
         return true;
       }
 
