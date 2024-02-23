@@ -17547,7 +17547,7 @@ app = new Vue({
       } //Add by An Lu AKT on 22/2/2024			
 
 
-      if (!this.isAtis() && specCode == 'option6') {
+      if (!this.isAtis() && specCode == 'option6' && !this.isAwningCasement()) {
         if (specValue != 'o6.3') {
           if (!this.isSlidingDoor()) {
             this.$set(this.options, 'option13', ['o13.1', 'o13.2']);
@@ -17586,7 +17586,7 @@ app = new Vue({
       var specValue = event.target.value,
           specCode = event.target.getAttribute('data-spec-code'); //Add by An Lu AKT on 22/2/2024	
 
-      if (!this.isAtis() && specCode == 'option6') {
+      if (!this.isAtis() && specCode == 'option6' && !this.isAwningCasement()) {
         if (specValue != 'o6.3') {
           if (specValue != 'o6.3') {
             if (!this.isSlidingDoor()) {
@@ -17885,6 +17885,14 @@ app = new Vue({
       });
 
       return check_color;
+    },
+    //Added by An Lu AKT on 23/2/2024
+    isAwningCasement: function isAwningCasement() {
+      if (this.model_id >= 13 && this.model_id <= 17 || this.model_id == 58) {
+        return true;
+      }
+
+      return false;
     },
     //Added by An Lu AKT on 23/2/2024
     isSlidingDoor: function isSlidingDoor() {
