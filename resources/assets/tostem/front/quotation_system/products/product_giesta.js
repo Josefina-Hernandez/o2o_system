@@ -1215,7 +1215,7 @@ app = new Vue({
     			}
     		})
 
-    		console.log(data_filter_option_handle)
+    		//console.log(data_filter_option_handle)   //Canceled by An Lu AKT on 18/3/2024
 
     		_.forEach(data_filter_option_handle, (rowValue, rowIndex) => {
 
@@ -1571,6 +1571,7 @@ app = new Vue({
         					this.featured_img_spec51 = null
         				} else if(_specCode == 'spec55') {
 							this.handle_active = null
+							console.log('!!!!!!!!!!!!!!!!')
 						}
         			}
 
@@ -1594,7 +1595,8 @@ app = new Vue({
         	this.$delete(this.specs.select, 'spec57')
 			this.$delete(this.spec_selected, 'spec57')
 			this.getSidePanel(specCode, specValue)
-        	if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {
+        	//if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {  // ----Updated by An Lu AKT on 18/3/2024 --- Deleted
+			if(specCode != 'spec55') {            // ----Updated by An Lu AKT on 18/3/2024 --- Added (For fixing Handle Type missing bug)
 	        	this.getHandleType()
         	}
 
@@ -1658,7 +1660,8 @@ app = new Vue({
         	this.$delete(this.specs.select, 'spec57')
 			this.$delete(this.spec_selected, 'spec57')
         	this.getSidePanel(specCode, specValue)
-        	if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {
+        	//if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {  // ----Updated by An Lu AKT on 18/3/2024 --- Deleted
+			if(specCode != 'spec55') {	   // ----Updated by An Lu AKT on 18/3/2024 --- Added (For fixing Handle Type missing bug)
 	        	this.getHandleType()
         	}
 

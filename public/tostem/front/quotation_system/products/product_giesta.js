@@ -16128,9 +16128,8 @@ app = new Vue({
                       data_filter_option_handle.push(value);
                     }
                   }
-                });
+                }); //console.log(data_filter_option_handle)   //Canceled by An Lu AKT on 18/3/2024
 
-                console.log(data_filter_option_handle);
 
                 _.forEach(data_filter_option_handle, function (rowValue, rowIndex) {
                   if (rowValue.option4 == null) {
@@ -16220,7 +16219,7 @@ app = new Vue({
                 _this22.validateShow(); // console.timeEnd('fetchDataSelected')
 
 
-              case 19:
+              case 18:
               case "end":
                 return _context7.stop();
             }
@@ -16513,6 +16512,7 @@ app = new Vue({
                         _this25.featured_img_spec51 = null;
                       } else if (_specCode == 'spec55') {
                         _this25.handle_active = null;
+                        console.log('!!!!!!!!!!!!!!!!');
                       }
                     }
 
@@ -16537,9 +16537,11 @@ app = new Vue({
 
                 _this25.$delete(_this25.spec_selected, 'spec57');
 
-                _this25.getSidePanel(specCode, specValue);
+                _this25.getSidePanel(specCode, specValue); //if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {  // ----Updated by An Lu AKT on 18/3/2024 --- Deleted
 
-                if (!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {
+
+                if (specCode != 'spec55') {
+                  // ----Updated by An Lu AKT on 18/3/2024 --- Added (For fixing Handle Type missing bug)
                   _this25.getHandleType();
                 }
 
@@ -16618,9 +16620,11 @@ app = new Vue({
 
                 _this26.$delete(_this26.spec_selected, 'spec57');
 
-                _this26.getSidePanel(specCode, specValue);
+                _this26.getSidePanel(specCode, specValue); //if(!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {  // ----Updated by An Lu AKT on 18/3/2024 --- Deleted
 
-                if (!argKeySpecSelected.includes('spec55') && specCode != 'spec55') {
+
+                if (specCode != 'spec55') {
+                  // ----Updated by An Lu AKT on 18/3/2024 --- Added (For fixing Handle Type missing bug)
                   _this26.getHandleType();
                 } //TODO: khi chọn spec55 chưa set handle_active(do select nên ko cần set active)
 
