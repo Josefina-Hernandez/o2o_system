@@ -1571,7 +1571,6 @@ app = new Vue({
         					this.featured_img_spec51 = null
         				} else if(_specCode == 'spec55') {
 							this.handle_active = null
-							console.log('!!!!!!!!!!!!!!!!')
 						}
         			}
 
