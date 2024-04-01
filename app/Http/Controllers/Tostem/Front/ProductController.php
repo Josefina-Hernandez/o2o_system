@@ -190,7 +190,6 @@ class ProductController extends Controller
 		];
 		$dataOption = array();
 		$cacheKey = 'ctg' . $ctg_id . ':p' . $param['product_id'] . ':m' . $model_id;
-		echo $ctg_id;
     	if($ctg_id == 3) { //Giesta
 			$cachedCount = -1;
 			$dataOption = json_decode(Redis::get($cacheKey), false);
@@ -740,6 +739,7 @@ class ProductController extends Controller
 			'spec52'        => null, //Không lọc theo spec này
 			'spec53'        => $argSpecs['spec53'],
 			'spec54'        => $argSpecs['spec54'],
+			//'spec55'        => null,
 			'spec55'        => $argSpecs['spec55'],  //Updated by An Lu AKT on 29/3/2024, from => null,
 			'spec56'        => null, //không lọc theo spec này
 			'spec57'        => $argSpecs['spec57'],
