@@ -322,10 +322,8 @@
 			:data-group-name="optionCode"
 			:class="['option-group', {
 				'd-none' : value.length == 1 && 'option5' != optionCode
-			}]"
-			v-show="optionCode !== 'option13'"    
+			}]"  
 		>
-		<!--↑　added by An Lu AKT on 15/3/2024, for hiding screen type option row temporarily---------v-show contents-->
 
 			<template v-if="value.length == 1 && 'option5' == optionCode">
 				<div>
@@ -370,18 +368,11 @@
 						@click="selectSpecOption(optionCode, item)"
 						:data-spec-id="item"
 					>   
-					    <!--Updated by An Lu AKT on 15/3/2024, for hiding insect screen option button temporarily---------START-->
-						<button v-if="(product_id == 1 || product_id == 2) && (item == 'o6.1' || item == 'o6.2')"
-							:class="[{'black' : Object.keys(option_selected).includes(optionCode) && option_selected[optionCode] == item}, 'btn c-btn']"
-							:disabled="true"
-							>@{{ list_spec_trans[item] }}
-						</button>
-						<button v-else
+						<button
 							:class="[{'black' : Object.keys(option_selected).includes(optionCode) && option_selected[optionCode] == item}, 'btn c-btn']"
 							:disabled="checkDisabledOption"
 							>@{{ list_spec_trans[item] }}
 						</button>
-						<!--Updated by An Lu AKT on 15/3/2024, for hiding insect screen option button temporarily---------END-->
 					</li>
 					<span v-if="optionCode == 'option7' && product_id == 10"
 						class="show_msg_flat_sill"
