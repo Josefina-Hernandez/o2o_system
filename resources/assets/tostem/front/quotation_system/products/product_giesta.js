@@ -539,7 +539,9 @@ app = new Vue({
 	    			case 'spec':
 	    				if(_.keys(this.spec_selected).length > 0) {
 			        		_.each(this.spec_selected, (value, key) => {
-			        			if(key != 'spec55' && exclude.indexOf(key)<0) {
+			        			//if(key != 'spec55' && exclude.indexOf(key)<0) {
+								//Updated by An Lu AKT on 2/4/2024 for fixing the bug that spec55 is not read and wrong selling code is picked for GIESTA G01 
+								if(exclude.indexOf(key)<0) {
 			        				all_value_selected[key] = value
 			        			}
 			        		})

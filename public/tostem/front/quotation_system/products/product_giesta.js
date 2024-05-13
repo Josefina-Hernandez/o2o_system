@@ -15340,7 +15340,8 @@ app = new Vue({
           case 'spec':
             if (_.keys(_this5.spec_selected).length > 0) {
               _.each(_this5.spec_selected, function (value, key) {
-                if (key != 'spec55' && exclude.indexOf(key) < 0) {
+                //if(key != 'spec55' && exclude.indexOf(key)<0) {
+                if (exclude.indexOf(key) < 0) {
                   all_value_selected[key] = value;
                 }
               });
