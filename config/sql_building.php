@@ -256,6 +256,9 @@ return [
 					, pt.product_name
 					, CASE
 						WHEN p.product_id = 10 THEN CONCAT(clm.img_path,'/atis')
+						WHEN p.product_id = 1 THEN CONCAT(clm.img_path,'/we_plus') -- Added by An Lu on 2024/06/14
+						WHEN p.product_id = 2 THEN CONCAT(clm.img_path,'/we_70') -- Added by An Lu on 2024/06/14
+						WHEN p.product_id = 3 THEN CONCAT(clm.img_path,'/we_40') -- Added by An Lu on 2024/06/14
 						ELSE clm.img_path
 					END AS img_path_result
 					, LOWER(clm.img_name) AS img_name_result
