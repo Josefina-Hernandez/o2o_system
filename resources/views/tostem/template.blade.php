@@ -8,6 +8,18 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}" >
     <link rel="stylesheet" href="{{asset('tostem/common/css/tostem.css')}}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GJJXFF3HK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3GJJXFF3HK');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
     @yield('head')
 </head>
 <body class="@yield('class-body') language-{{app()->getLocale()}}" @yield('attr-body')> {{-- Add edit - BP_O2OQ-11 - HUNGLM - 20200924 --}}
