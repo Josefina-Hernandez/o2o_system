@@ -284,6 +284,14 @@ Class PriceMaintenanceController extends Controller
                          Artisan::call('command:create-data-options-refer');
 
                          HisImportProductSellingCodePrice::UpdateStatus($id,9);
+                         
+                         //Added by An Lu AKT on 2024/07/01 -- Start
+                         DB::statement('UPDATE product_selling_code_price SET height = 1640 WHERE design = "DDG" AND height_org = "1700"');
+                         DB::statement('UPDATE v_product_price_refer SET height = 1640 WHERE design = "DDG" AND height_org = "1700"');
+                         DB::statement('UPDATE v_option_refer SET height = 1640 WHERE selling_code = "DDG" AND height = 1700');
+                         DB::statement('UPDATE option_selling_code_price SET height = 1640 WHERE (design = "DYP" OR design = "DYQ") AND height_org = "1700"');
+                          //Added by An Lu AKT on 2024/07/01 -- End
+
                          $return['status'] = 'OK';
                          $_all_historys = HisImportProductSellingCodePrice::Getalldata();
                          $html = view('tostem.admin.pmaintenance.module-content.module-listhistory', compact('_all_historys'))->render();
