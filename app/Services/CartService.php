@@ -498,6 +498,10 @@ class CartService
                 	$results = array_merge($results, $item_lang['hidden_option']['option_door_guard']);
                 	$results = array_merge($results, $item_lang['hidden_option']['option_closer']);
 
+                    $results = array_merge($results, $item_lang['hidden_option']['keys_set']);  //Added by An Lu AKT on 20240915
+                    $results = array_merge($results, $item_lang['hidden_option']['special_proc'] ?? []);  //Added by An Lu AKT on 20240915
+                    $results = array_merge($results, $item_lang['hidden_option']['cylinder_s_type'] ?? []);  //Added by An Lu AKT on 20240915
+
                 } else {
                 	$results = array_merge($item_lang['data_options_selected'], $item_lang['celling_code_option']);
 	                if (isset($item_lang['hidden_option']) &&  is_array($item_lang['hidden_option'])) {
@@ -722,6 +726,10 @@ class CartService
 	            	$results = array_merge($results, $item_lang['hidden_option']['option_cylinder']);
 	            	$results = array_merge($results, $item_lang['hidden_option']['option_door_guard']);
 	            	$results = array_merge($results, $item_lang['hidden_option']['option_closer']);
+
+	            	$results = array_merge($results, $item_lang['hidden_option']['keys_set']);   //Added by An Lu AKT on 20240915
+	            	$results = array_merge($results, $item_lang['hidden_option']['special_proc'] ?? []);    //Added by An Lu AKT on 20240915
+	            	$results = array_merge($results, $item_lang['hidden_option']['cylinder_s_type'] ?? []);   //Added by An Lu AKT on 20240915
 
 	            } else {
 	            	$results = $item_lang['celling_code_option'];

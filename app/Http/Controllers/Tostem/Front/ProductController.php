@@ -613,10 +613,79 @@ class ProductController extends Controller
     	$data['option_cylinder']   = $this->getGiestaOptionCylinder($request);
     	$data['option_closer']     = $this->getGiestaOptionCloser($request);
     	$data['option_door_guard'] = $this->getGiestaOptionDoorGuard($request);
+		
 		//echo var_dump($data);
+
+		//检查spec51的值是否为51.2
+		$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs')); //从specs中提取数据
+		if (isset($argSpecs['spec51']) && $argSpecs['spec51'] == "51.2") {
+			// 如果spec51的值为51.2，执行新增的三个方法
+			$data['keys_set']       = $this->getGiestaOptionKeysSet($request);
+			$data['special_proc']   = $this->getGiestaOptionSpecialProc($request);
+			$data['cylinder_s_type'] = $this->getGiestaOptionCylinderSType($request);
+
+			//$data['keys_set']       = "KKK";
+			//$data['special_proc']   = "PPP";
+			//$data['cylinder_s_type'] = "QQQQ";
+		}
+
     	return response($data);
 		
     }
+
+	public function getGiestaOptionCylinderSType($request) {
+		$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));
+		$param = [
+			'lang_code'     => $this->lang,
+			'spec51'        =>$argSpecs['spec51'],
+			'spec52'        =>$argSpecs['spec52'],
+			'spec53'        =>$argSpecs['spec53'],
+			'spec54'        =>$argSpecs['spec54'],
+			'spec55'        =>$argSpecs['spec55'],
+			'spec56'        =>$argSpecs['spec56'],
+			// 'spec57'        => $argSpecs['spec57'],
+			'ctg_id'        => $request->input('ctg_id'),
+			'product_id'    => $request->input('product_id'),
+			'handle_color_id' => $request->input('handle_color_id'),
+		];
+		return DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_OPTION_CYLINDER_S_TYPE_GIESTA')), $param);
+	}
+
+	public function getGiestaOptionSpecialProc($request) {
+		$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));
+		$param = [
+			'lang_code'     => $this->lang,
+			'spec51'        =>$argSpecs['spec51'],
+			'spec52'        =>$argSpecs['spec52'],
+			'spec53'        =>$argSpecs['spec53'],
+			'spec54'        =>$argSpecs['spec54'],
+			'spec55'        =>$argSpecs['spec55'],
+			'spec56'        =>$argSpecs['spec56'],
+			// 'spec57'        => $argSpecs['spec57'],
+			'ctg_id'        => $request->input('ctg_id'),
+			'product_id'    => $request->input('product_id'),
+			'handle_color_id' => $request->input('handle_color_id'),
+		];
+		return DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_OPTION_SPECIAL_PROC_GIESTA')), $param);
+	}
+
+	public function getGiestaOptionKeysSet($request) {
+		$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));
+		$param = [
+			'lang_code'     => $this->lang,
+			'spec51'        =>$argSpecs['spec51'],
+			'spec52'        =>$argSpecs['spec52'],
+			'spec53'        =>$argSpecs['spec53'],
+			'spec54'        =>$argSpecs['spec54'],
+			'spec55'        =>$argSpecs['spec55'],
+			'spec56'        =>$argSpecs['spec56'],
+			// 'spec57'        => $argSpecs['spec57'],
+			'ctg_id'        => $request->input('ctg_id'),
+			'product_id'    => $request->input('product_id'),
+			'handle_color_id' => $request->input('handle_color_id'),
+		];
+		return DB::Select(str_replace('(:viewer_flg)', $this->getRoleString(), config('sql_building.select.SELECT_OPTION_KEYS_SET_GIESTA')), $param);
+	}
 
     public function getGiestaSubPanel($request) {
     	$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs'));

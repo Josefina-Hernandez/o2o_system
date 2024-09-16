@@ -113,6 +113,11 @@ select{
 
 	&.giesta {
 		height: calc(100% - 40px);
+		display: block;
+		margin-top: 50px;
+		@media (max-width: 768px) {
+			margin-top: 0;
+		}
 	}
 }
 

@@ -1935,6 +1935,243 @@ return [
 			ORDER BY option_handle.selling_code ASC
 		",
 
+		"SELECT_OPTION_CYLINDER_S_TYPE_GIESTA" => "
+			-- SELECT_OPTION_CYLINDER_S_TYPE_GIESTA
+			SELECT DISTINCT
+				option_cylinder_s_type.selling_code
+				, option_cylinder_s_type.description AS series_name
+				, option_cylinder_s_type.selling_code AS order_no
+				, p.product_id
+				, pt.product_name
+				, option_cylinder_s_type.m_color_id
+				, colortr.color_name
+				, color.color_code_price
+				, op_price.amount
+			FROM m_lang AS l
+			INNER JOIN ctg_trans AS ct
+				ON
+					l.m_lang_id = ct.m_lang_id
+					AND ct.del_flg = 0
+			INNER JOIN ctg AS c
+				ON
+					c.ctg_id = ct.ctg_id
+					AND c.del_flg = 0
+					AND c.ctg_type = 'prod'
+			INNER JOIN product_trans AS pt
+				ON
+					l.m_lang_id = pt.m_lang_id
+					AND pt.del_flg = 0
+			INNER JOIN product AS p
+				ON
+					p.product_id = pt.product_id
+					AND p.ctg_prod_id = c.ctg_id
+					AND p.del_flg = 0
+			INNER JOIN m_color_trans AS colortr
+				ON
+					colortr.m_lang_id = l.m_lang_id
+					AND colortr.del_flg = 0
+			INNER JOIN m_color AS color
+				ON
+					color.m_color_id = colortr.m_color_id
+					AND color.del_flg = 0
+			INNER JOIN m_option_selling_code_giesta AS option_cylinder_s_type
+				ON
+					option_cylinder_s_type.del_flg = 0
+					AND option_cylinder_s_type.option_ctg_spec_id = 93 -- Special Processing
+					-- AND option_cylinder_s_type.m_color_id = color.m_color_id
+					AND (
+							option_cylinder_s_type.m_color_id IS NULL -- TH Color trống là option Cylinder có ở toàn bộ color
+							OR option_cylinder_s_type.m_color_id = color.m_color_id
+						)
+					AND option_cylinder_s_type.product_id = p.product_id
+			INNER JOIN m_selling_code_giesta AS sc
+				ON
+					(option_cylinder_s_type.product_id IS NULL OR sc.product_id = option_cylinder_s_type.product_id )
+					AND ( option_cylinder_s_type.spec51 IS NULL OR sc.spec51 = option_cylinder_s_type.spec51 )
+					AND ( option_cylinder_s_type.spec52 IS NULL OR sc.spec52 = option_cylinder_s_type.spec52 )
+					AND ( option_cylinder_s_type.spec53 IS NULL OR sc.spec53 = option_cylinder_s_type.spec53 )
+					AND ( option_cylinder_s_type.spec54 IS NULL OR sc.spec54 = option_cylinder_s_type.spec54 )
+					AND ( option_cylinder_s_type.spec55 IS NULL OR sc.spec55 = option_cylinder_s_type.spec55 )
+					AND ( option_cylinder_s_type.spec56 IS NULL OR sc.spec56 = option_cylinder_s_type.spec56 )
+					AND ( option_cylinder_s_type.spec57 IS NULL OR sc.spec57 = option_cylinder_s_type.spec57 )
+					AND sc.del_flg = 0
+			INNER JOIN option_selling_code_price AS op_price
+				ON
+					op_price.design = option_cylinder_s_type.selling_code
+			WHERE
+				l.del_flg = 0
+				AND l.lang_code = COALESCE(:lang_code, 'en')
+				AND c.ctg_id = :ctg_id
+				AND p.product_id = :product_id
+				AND color.m_color_id = :handle_color_id
+				AND  COALESCE(sc.spec51, '') = COALESCE(:spec51, sc.spec51, '')
+				AND  COALESCE(sc.spec52, '') = COALESCE(:spec52, sc.spec52, '')
+				AND  COALESCE(sc.spec53, '') = COALESCE(:spec53, sc.spec53, '')
+				AND  COALESCE(sc.spec54, '') = COALESCE(:spec54, sc.spec54, '')
+				AND  COALESCE(sc.spec55, '') = COALESCE(:spec55, sc.spec55, '')
+				AND  COALESCE(sc.spec56, '') = COALESCE(:spec56, sc.spec56, '')
+				-- Do đi theo main nên không cần where theo spec57
+			ORDER BY option_cylinder_s_type.selling_code ASC
+		",
+
+		"SELECT_OPTION_SPECIAL_PROC_GIESTA" => "
+			-- SELECT_OPTION_SPECIAL_PROC_GIESTA
+			SELECT DISTINCT
+				option_special_proc.selling_code
+				, option_special_proc.description AS series_name
+				, option_special_proc.selling_code AS order_no
+				, p.product_id
+				, pt.product_name
+				, option_special_proc.m_color_id
+				, colortr.color_name
+				, color.color_code_price
+				, op_price.amount
+			FROM m_lang AS l
+			INNER JOIN ctg_trans AS ct
+				ON
+					l.m_lang_id = ct.m_lang_id
+					AND ct.del_flg = 0
+			INNER JOIN ctg AS c
+				ON
+					c.ctg_id = ct.ctg_id
+					AND c.del_flg = 0
+					AND c.ctg_type = 'prod'
+			INNER JOIN product_trans AS pt
+				ON
+					l.m_lang_id = pt.m_lang_id
+					AND pt.del_flg = 0
+			INNER JOIN product AS p
+				ON
+					p.product_id = pt.product_id
+					AND p.ctg_prod_id = c.ctg_id
+					AND p.del_flg = 0
+			INNER JOIN m_color_trans AS colortr
+				ON
+					colortr.m_lang_id = l.m_lang_id
+					AND colortr.del_flg = 0
+			INNER JOIN m_color AS color
+				ON
+					color.m_color_id = colortr.m_color_id
+					AND color.del_flg = 0
+			INNER JOIN m_option_selling_code_giesta AS option_special_proc
+				ON
+					option_special_proc.del_flg = 0
+					AND option_special_proc.option_ctg_spec_id = 92 -- Special Processing
+					-- AND option_special_proc.m_color_id = color.m_color_id
+					AND (
+							option_special_proc.m_color_id IS NULL -- TH Color trống là option Cylinder có ở toàn bộ color
+							OR option_special_proc.m_color_id = color.m_color_id
+						)
+					AND option_special_proc.product_id = p.product_id
+			INNER JOIN m_selling_code_giesta AS sc
+				ON
+					(option_special_proc.product_id IS NULL OR sc.product_id = option_special_proc.product_id )
+					AND ( option_special_proc.spec51 IS NULL OR sc.spec51 = option_special_proc.spec51 )
+					AND ( option_special_proc.spec52 IS NULL OR sc.spec52 = option_special_proc.spec52 )
+					AND ( option_special_proc.spec53 IS NULL OR sc.spec53 = option_special_proc.spec53 )
+					AND ( option_special_proc.spec54 IS NULL OR sc.spec54 = option_special_proc.spec54 )
+					AND ( option_special_proc.spec55 IS NULL OR sc.spec55 = option_special_proc.spec55 )
+					AND ( option_special_proc.spec56 IS NULL OR sc.spec56 = option_special_proc.spec56 )
+					AND ( option_special_proc.spec57 IS NULL OR sc.spec57 = option_special_proc.spec57 )
+					AND sc.del_flg = 0
+			INNER JOIN option_selling_code_price AS op_price
+				ON
+					op_price.design = option_special_proc.selling_code
+			WHERE
+				l.del_flg = 0
+				AND l.lang_code = COALESCE(:lang_code, 'en')
+				AND c.ctg_id = :ctg_id
+				AND p.product_id = :product_id
+				AND color.m_color_id = :handle_color_id
+				AND  COALESCE(sc.spec51, '') = COALESCE(:spec51, sc.spec51, '')
+				AND  COALESCE(sc.spec52, '') = COALESCE(:spec52, sc.spec52, '')
+				AND  COALESCE(sc.spec53, '') = COALESCE(:spec53, sc.spec53, '')
+				AND  COALESCE(sc.spec54, '') = COALESCE(:spec54, sc.spec54, '')
+				AND  COALESCE(sc.spec55, '') = COALESCE(:spec55, sc.spec55, '')
+				AND  COALESCE(sc.spec56, '') = COALESCE(:spec56, sc.spec56, '')
+				-- Do đi theo main nên không cần where theo spec57
+			ORDER BY option_special_proc.selling_code ASC
+		",
+
+		"SELECT_OPTION_KEYS_SET_GIESTA" => "
+			-- SELECT_OPTION_KEYS_SET_GIESTA
+			SELECT DISTINCT
+				option_keys_set.selling_code
+				, option_keys_set.description AS series_name
+				, option_keys_set.selling_code AS order_no
+				, p.product_id
+				, pt.product_name
+				, option_keys_set.m_color_id
+				, colortr.color_name
+				, color.color_code_price
+				, op_price.amount
+			FROM m_lang AS l
+			INNER JOIN ctg_trans AS ct
+				ON
+					l.m_lang_id = ct.m_lang_id
+					AND ct.del_flg = 0
+			INNER JOIN ctg AS c
+				ON
+					c.ctg_id = ct.ctg_id
+					AND c.del_flg = 0
+					AND c.ctg_type = 'prod'
+			INNER JOIN product_trans AS pt
+				ON
+					l.m_lang_id = pt.m_lang_id
+					AND pt.del_flg = 0
+			INNER JOIN product AS p
+				ON
+					p.product_id = pt.product_id
+					AND p.ctg_prod_id = c.ctg_id
+					AND p.del_flg = 0
+			INNER JOIN m_color_trans AS colortr
+				ON
+					colortr.m_lang_id = l.m_lang_id
+					AND colortr.del_flg = 0
+			INNER JOIN m_color AS color
+				ON
+					color.m_color_id = colortr.m_color_id
+					AND color.del_flg = 0
+			INNER JOIN m_option_selling_code_giesta AS option_keys_set
+				ON
+					option_keys_set.del_flg = 0
+					AND option_keys_set.option_ctg_spec_id = 91 -- Familock Keys Set
+					-- AND option_keys_set.m_color_id = color.m_color_id
+					AND (
+							option_keys_set.m_color_id IS NULL -- TH Color trống là option Cylinder có ở toàn bộ color
+							OR option_keys_set.m_color_id = color.m_color_id
+						)
+					AND option_keys_set.product_id = p.product_id
+			INNER JOIN m_selling_code_giesta AS sc
+				ON
+					(option_keys_set.product_id IS NULL OR sc.product_id = option_keys_set.product_id )
+					AND ( option_keys_set.spec51 IS NULL OR sc.spec51 = option_keys_set.spec51 )
+					AND ( option_keys_set.spec52 IS NULL OR sc.spec52 = option_keys_set.spec52 )
+					AND ( option_keys_set.spec53 IS NULL OR sc.spec53 = option_keys_set.spec53 )
+					AND ( option_keys_set.spec54 IS NULL OR sc.spec54 = option_keys_set.spec54 )
+					AND ( option_keys_set.spec55 IS NULL OR sc.spec55 = option_keys_set.spec55 )
+					AND ( option_keys_set.spec56 IS NULL OR sc.spec56 = option_keys_set.spec56 )
+					AND ( option_keys_set.spec57 IS NULL OR sc.spec57 = option_keys_set.spec57 )
+					AND sc.del_flg = 0
+			INNER JOIN option_selling_code_price AS op_price
+				ON
+					op_price.design = option_keys_set.selling_code
+			WHERE
+				l.del_flg = 0
+				AND l.lang_code = COALESCE(:lang_code, 'en')
+				AND c.ctg_id = :ctg_id
+				AND p.product_id = :product_id
+			    AND color.m_color_id = :handle_color_id
+				AND  COALESCE(sc.spec51, '') = COALESCE(:spec51, sc.spec51, '')
+				AND  COALESCE(sc.spec52, '') = COALESCE(:spec52, sc.spec52, '')
+				AND  COALESCE(sc.spec53, '') = COALESCE(:spec53, sc.spec53, '')
+				AND  COALESCE(sc.spec54, '') = COALESCE(:spec54, sc.spec54, '')
+				AND  COALESCE(sc.spec55, '') = COALESCE(:spec55, sc.spec55, '')
+				AND  COALESCE(sc.spec56, '') = COALESCE(:spec56, sc.spec56, '')
+				-- Do đi theo main nên không cần where theo spec57
+			ORDER BY option_keys_set.selling_code ASC
+		",
+
 		"SELECT_OPTION_CYLINDER_GIESTA" => "
 			-- SELECT_OPTION_CYLINDER_GIESTA
 			SELECT DISTINCT

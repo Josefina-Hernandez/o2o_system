@@ -34,26 +34,31 @@
 <template v-if="Object.keys(specs.select).length > 0">
 	<div id="list-spec-select">
 		<div v-for="(objSpec, specCode, index) in specs.select">
-			<template v-if="specCode == 'spec55'">
+			<template v-if="specCode == 'spec55'"
+			:style="specCode == 'spec55' ? 'position: relative !important;' : ''">  <!--Added this line by An Lu AKT on 2024-09-12-->
 				<div :class="['option-group', {'d-none' : objSpec.data.length == 1}]" :data-group-name="specCode">
-					<div>
+					<div class="spec55-flex-container" :style="divStyle"> <!--Added this line by An Lu AKT on 2024-09-12-->
 						<button class="btn c-btn large black c-label">
 							<span>@{{ getSpecLabel(specCode) }}</span>
 						</button>
+						<button id="btn-standard" @click="selectStandardHandler" style="background: #FFFFFF !important; color: initial !important; cursor: pointer; margin-left: 5px !important; padding: 0.2rem 0.5rem; font-size: 1.3rem; font-weight: 400; width: 12rem; border-radius: 4px; border: 0.1rem solid #ddd;">Standard</button> <!--Added this line by An Lu AKT on 2024-09-12-->
+						<button id="btn-digital" @click="selectDigitalHandler" style="background: #FFFFFF !important; color: initial !important; cursor: pointer; margin-left: 15px !important; padding: 0.2rem 0.5rem; font-size: 1.3rem; font-weight: 400; width: 12rem; border-radius: 4px; border: 0.1rem solid #ddd;">Digital</button> <!--Added this line by An Lu AKT on 2024-09-12-->
 					</div>
-					<ul class="option" style="flex-grow: 2">
-						<li
-							v-for="handle in handler_type.option4"
-							@click="selectSpec(specCode, handle.spec55, handle.option4)"
-							:data-spec-id="handle.spec55"
-							:option4="handle.option4"
-							class="frame-type-item handle-type"
-							>
-							<a v-html="getSpecImage(handle.option4, handle.name)" :class="[{'active' : Object.keys(spec_selected).includes(specCode) && handle_active == handle.option4}]">
-								@{{ getSpecImage(handle.option4) }}
-								<span>@{{ handle.name }}</span>
-							</a>
-						</li>
+					<ul class="option" style="flex-grow: 2; margin-top: 70px !important;"> <!--Added "style" by An Lu AKT on 2024-09-12-->
+						<div> <!--Added this line by An Lu AKT on 2024-09-12-->
+							<li
+								v-for="handle in target_handler_type"
+								@click="selectSpec(specCode, handle.spec55, handle.option4)"
+								:data-spec-id="handle.spec55"
+								:option4="handle.option4"
+								class="frame-type-item handle-type"
+								>
+								<a v-html="getSpecImage(handle.option4, handle.name)" :class="[{'active' : Object.keys(spec_selected).includes(specCode) && handle_active == handle.option4}]">
+									@{{ getSpecImage(handle.option4) }}
+									<span>@{{ handle.name }}</span>
+								</a>
+							</li>
+						</div> <!--Added this line by An Lu AKT on 2024-09-12-->
 					</ul>
 				</div>
 			</template> {{-- spec55 --}}
@@ -158,21 +163,26 @@
 			v-for="(objSpec, specCode, index) in specs.disable"
 			:class="['option-group', {'d-none' : objSpec.data.length == 1 && specCode != 'spec51'}]"
 			:data-group-name="specCode">
-			<template v-if="specCode == 'spec55'">
-				<div>
+			<template v-if="specCode == 'spec55'"
+			:style="specCode == 'spec55' ? 'position: relative !important;' : ''">  <!--Added this line by An Lu AKT on 2024-09-12-->
+				<div class="spec55-flex-container" :style="divStyle"> <!--Added this line by An Lu AKT on 2024-09-12-->
 					<button class="btn c-btn large black c-label">
 						<span>@{{ getSpecLabel(specCode) }}</span>
 					</button>
+					<button style="background: #FFFFFF !important; color: #787878 !important; disabled: disabled; cursor: not-allowed; margin-left: 5px !important; padding: 0.2rem 0.5rem; font-size: 1.3rem; font-weight: 400; width: 12rem; border-radius: 4px; border: 0.1rem solid #ddd;">Standard</button> <!--Added this line by An Lu AKT on 2024-09-12-->
+					<button style="background: #FFFFFF !important; color: #787878 !important; disabled: disabled; cursor: not-allowed; margin-left: 15px !important; padding: 0.2rem 0.5rem; font-size: 1.3rem; font-weight: 400; width: 12rem; border-radius: 4px; border: 0.1rem solid #ddd;">Digital</button> <!--Added this line by An Lu AKT on 2024-09-12-->
 				</div>
-				<ul class="option" style="flex-grow: 2">
-					<li
-						v-for="handle in handler_type.option4"
-						:data-spec-id="handle.spec55"
-						:option4="handle.option4"
-						class="frame-type-item handle-type"
-						>
-						<a v-html="getSpecImage(handle.option4, handle.name)"></a>
-					</li>
+				<ul class="option" style="flex-grow: 2; margin-top: 70px !important;"> <!--Added "style" by An Lu AKT on 2024-09-12-->
+					<div>  <!--Added this line by An Lu AKT on 2024-09-12-->
+						<li
+							v-for="handle in handler_type.option4"
+							:data-spec-id="handle.spec55"
+							:option4="handle.option4"
+							class="frame-type-item handle-type"
+							>
+							<a v-html="getSpecImage(handle.option4, handle.name)"></a>
+						</li>
+					</div>  <!--Added this line by An Lu AKT on 2024-09-12-->
 				</ul>
 			</template> {{-- spec55 --}}
 			<template v-else-if="specCode == 'spec53'">

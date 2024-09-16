@@ -127,6 +127,7 @@ app = new Vue({
 
             options: {},//use to foreach option of spec //có thể sẽ xóa đi
             handler_type: {},
+			target_handler_type: [],//Added by An Lu AKT on 20240916
             list_spec: [],//list spec and option in  data_option
             list_spec_trans: [],//list spec and option name
             list_spec_order: [],
@@ -164,11 +165,22 @@ app = new Vue({
             display_pitch_list: false,
             max_decimal: 0, //Add BP_O2OQ-7 hainp 20200714
             sub_menus: [], //Add BP_O2OQ-25 antran 20200622
+			divStyle: {},
         }
     },
     created () {
     	this.created()
     },
+
+	mounted() {
+		this.updateSpec55DivStyle();
+    	window.addEventListener('resize', this.updateSpec55DivStyle);
+	},
+
+	beforeDestroy() {
+		window.removeEventListener('resize', this.updateSpec55DivStyle);
+	},
+
     computed: {
     	totalPrice () {
     		//Remove Start BP_O2OQ-7 hainp 20200714
@@ -324,6 +336,64 @@ app = new Vue({
 	    }
     },
     methods: {
+		selectStandardHandler() {
+			this.target_handler_type = [];
+
+			const validHandlers = ["o4.1", "o4.2", "o4.4", "o4.5", "o4.7"];
+			for (let item of this.handler_type.option4) {
+				if (validHandlers.includes(item.option4)) {
+					this.target_handler_type.push(item);
+				}
+			}
+
+			const btn_self = document.getElementById('btn-standard');
+			const btn_other = document.getElementById('btn-digital')
+			if (btn_self) {
+			  btn_self.style.background = '#000000';
+			  btn_self.style.color = '#FFFFFF';
+			}
+			if (btn_other) {
+			  btn_other.style.background = '#FFFFFF';
+			  btn_other.style.color = 'initial';
+			}
+		},
+
+		selectDigitalHandler() {
+			this.target_handler_type = [];
+
+			const validHandlers = ["o4.3", "o4.6", "o4.8"];
+			for (let item of this.handler_type.option4) {
+				if (validHandlers.includes(item.option4)) {
+					this.target_handler_type.push(item);
+				}
+			}
+
+			const btn_self = document.getElementById('btn-digital');
+			const btn_other = document.getElementById('btn-standard')
+			if (btn_self) {
+			  btn_self.style.background = '#000000';
+			  btn_self.style.color = '#FFFFFF';
+			}
+			if (btn_other) {
+			  btn_other.style.background = '#FFFFFF';
+			  btn_other.style.color = 'initial';
+			}
+		},
+
+		updateSpec55DivStyle() {
+			if (window.innerWidth > 768) {
+				this.divStyle = {
+					position: 'absolute',
+					top: '0',
+					display: 'flex',
+					'align-items': 'center',
+					height: '60px',
+				};
+			  } else {
+				this.divStyle = {
+				};
+			  }
+		},
         reInitSlider() {
 	        this.$refs.carousel.destroy()
 	        this.$nextTick(() => {
@@ -1549,6 +1619,20 @@ app = new Vue({
         async selectSpec (specCode, specValue, option4) {
             //console.log(specCode)
             //console.log(specValue)
+
+			if (specCode == 'spec54') {
+				this.target_handler_type = [];
+				const btn_standard = document.getElementById('btn-standard');
+				const btn_digital = document.getElementById('btn-digital')
+				if (btn_standard) {
+				  btn_standard.style.background = '#FFFFFF';
+				  btn_standard.style.color = 'initial';
+				}
+				if (btn_digital) {
+				  btn_digital.style.background = '#FFFFFF';
+				  btn_digital.style.color = 'initial';
+				}
+			}
 
         	let
         		argKeySpecSelected = _.keys(this.spec_selected),
