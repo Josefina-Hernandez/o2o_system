@@ -618,8 +618,8 @@ class ProductController extends Controller
 
 		//检查spec51的值是否为51.2
 		$argSpecs = array_merge($this->giestaDefaultSpecs, $request->input('specs')); //从specs中提取数据
-		if (isset($argSpecs['spec51']) && $argSpecs['spec51'] == "51.2") {
-			// 如果spec51的值为51.2，执行新增的三个方法
+		if ((isset($argSpecs['spec51']) && $argSpecs['spec51'] == "51.2") && (isset($argSpecs['spec55']) && $argSpecs['spec55'] == "55.5")) {
+			// 如果spec51的值为51.2，并且spec55的值为55.5，执行新增的三个方法
 			$data['keys_set']       = $this->getGiestaOptionKeysSet($request);
 			$data['special_proc']   = $this->getGiestaOptionSpecialProc($request);
 			$data['cylinder_s_type'] = $this->getGiestaOptionCylinderSType($request);
@@ -642,6 +642,7 @@ class ProductController extends Controller
 			'spec53'        =>$argSpecs['spec53'],
 			'spec54'        =>$argSpecs['spec54'],
 			'spec55'        =>$argSpecs['spec55'],
+			//'spec55'        =>"55.5",     //限定只对S_Type的Handler有效， 20240925
 			'spec56'        =>$argSpecs['spec56'],
 			// 'spec57'        => $argSpecs['spec57'],
 			'ctg_id'        => $request->input('ctg_id'),
@@ -660,6 +661,7 @@ class ProductController extends Controller
 			'spec53'        =>$argSpecs['spec53'],
 			'spec54'        =>$argSpecs['spec54'],
 			'spec55'        =>$argSpecs['spec55'],
+			//'spec55'        =>"55.5",     //限定只对S_Type的Handler有效， 20240925
 			'spec56'        =>$argSpecs['spec56'],
 			// 'spec57'        => $argSpecs['spec57'],
 			'ctg_id'        => $request->input('ctg_id'),
@@ -678,6 +680,7 @@ class ProductController extends Controller
 			'spec53'        =>$argSpecs['spec53'],
 			'spec54'        =>$argSpecs['spec54'],
 			'spec55'        =>$argSpecs['spec55'],
+			//'spec55'        =>"55.5",     //限定只对S_Type的Handler有效， 20240925
 			'spec56'        =>$argSpecs['spec56'],
 			// 'spec57'        => $argSpecs['spec57'],
 			'ctg_id'        => $request->input('ctg_id'),

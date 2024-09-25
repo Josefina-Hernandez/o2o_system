@@ -498,7 +498,7 @@ class CartService
                 	$results = array_merge($results, $item_lang['hidden_option']['option_door_guard']);
                 	$results = array_merge($results, $item_lang['hidden_option']['option_closer']);
 
-                    $results = array_merge($results, $item_lang['hidden_option']['keys_set']);  //Added by An Lu AKT on 20240915
+                    $results = array_merge($results, $item_lang['hidden_option']['keys_set'] ?? []);  //Added by An Lu AKT on 20240915
                     $results = array_merge($results, $item_lang['hidden_option']['special_proc'] ?? []);  //Added by An Lu AKT on 20240915
                     $results = array_merge($results, $item_lang['hidden_option']['cylinder_s_type'] ?? []);  //Added by An Lu AKT on 20240915
 
@@ -727,7 +727,7 @@ class CartService
 	            	$results = array_merge($results, $item_lang['hidden_option']['option_door_guard']);
 	            	$results = array_merge($results, $item_lang['hidden_option']['option_closer']);
 
-	            	$results = array_merge($results, $item_lang['hidden_option']['keys_set']);   //Added by An Lu AKT on 20240915
+	            	$results = array_merge($results, $item_lang['hidden_option']['keys_set'] ?? []);   //Added by An Lu AKT on 20240915
 	            	$results = array_merge($results, $item_lang['hidden_option']['special_proc'] ?? []);    //Added by An Lu AKT on 20240915
 	            	$results = array_merge($results, $item_lang['hidden_option']['cylinder_s_type'] ?? []);   //Added by An Lu AKT on 20240915
 
