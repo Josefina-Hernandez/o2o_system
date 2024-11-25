@@ -290,7 +290,18 @@ Class PriceMaintenanceController extends Controller
                          DB::statement('UPDATE v_product_price_refer SET height = 1640 WHERE design = "DDG" AND height_org = "1700"');
                          DB::statement('UPDATE v_option_refer SET height = 1640 WHERE selling_code = "DDG" AND height = 1700');
                          DB::statement('UPDATE option_selling_code_price SET height = 1640 WHERE (design = "DYP" OR design = "DYQ") AND height_org = "1700"');
-                          //Added by An Lu AKT on 2024/07/01 -- End
+                         //Added by An Lu AKT on 2024/07/01 -- End
+
+                         //Added by An Lu AKT on 2024/11/25 -- Start
+                         DB::statement('UPDATE product_selling_code_price SET width = 3505 WHERE (design = "XA4" OR design = "XB4" OR design = "XD4" OR design = "XT4" OR design = "X4A" OR design = "X4B" OR design = "X4D" OR design = "X4T") AND width_org = "3600"');
+                         DB::statement('UPDATE v_product_price_refer SET width = 3505 WHERE (design = "XA4" OR design = "XB4" OR design = "XD4" OR design = "XT4" OR design = "X4A" OR design = "X4B" OR design = "X4D" OR design = "X4T") AND width_org = "3600"');
+                         DB::statement('UPDATE v_option_refer SET width = 3505 WHERE spec1 = "1.6" AND spec2 = "2.3" AND width = 3600');
+                         
+                         
+                         DB::statement('UPDATE product_selling_code_price SET width = 5205 WHERE (design = "XA6" OR design = "XB6" OR design = "XD6" OR design = "XJ6" OR design = "XK6" OR design = "X6A" OR design = "X6B" OR design = "X6D" OR design = "X6J" OR design = "X6K") AND width_org = "5300"');
+                         DB::statement('UPDATE v_product_price_refer SET width = 5205 WHERE (design = "XA6" OR design = "XB6" OR design = "XD6" OR design = "XJ6" OR design = "XK6" OR design = "X6A" OR design = "X6B" OR design = "X6D" OR design = "X6J" OR design = "X6K") AND width_org = "5300"');
+                         DB::statement('UPDATE v_option_refer SET width = 5205 WHERE spec1 = "1.6" AND spec2 = "2.4" AND width = 5300');
+                         //Added by An Lu AKT on 2024/11/25 -- End
 
                          $return['status'] = 'OK';
                          $_all_historys = HisImportProductSellingCodePrice::Getalldata();
